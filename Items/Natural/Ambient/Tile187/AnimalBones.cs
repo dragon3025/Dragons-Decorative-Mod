@@ -20,20 +20,19 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.maxStack = 999;
             Item.useTurn = true;
             Item.autoReuse = true;
-            Item.rare = ItemRarityID.Orange;
+            Item.rare = ItemRarityID.White;
             Item.useAnimation = 10;
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.createTile = ModContent.TileType<Tiles.Natural.AmbientObjects>();
+            Item.createTile = ModContent.TileType<Tiles.Natural.AmbientObjectsA>();
             Item.placeStyle = 17;
         }
 
         public override void OnConsumeItem(Player player)
         {
             Item.placeStyle = 17 + Main.rand.Next(3);
-            Main.NewText(Item.placeStyle.ToString());
             base.OnConsumeItem(player);
         }
 

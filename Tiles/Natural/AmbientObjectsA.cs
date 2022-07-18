@@ -8,7 +8,7 @@ using Terraria.Enums;
 
 namespace DragonsDecorativeMod.Tiles.Natural
 {
-    public class AmbientObjects : ModTile
+    public class AmbientObjectsA : ModTile
     {
         public override void SetStaticDefaults()
         {

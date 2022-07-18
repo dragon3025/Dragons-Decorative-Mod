@@ -20,7 +20,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.maxStack = 999;
             Item.useTurn = true;
             Item.autoReuse = true;
-            Item.rare = ItemRarityID.Orange;
+            Item.rare = ItemRarityID.White;
             Item.useAnimation = 45;
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
