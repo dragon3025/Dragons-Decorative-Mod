@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace DragonsDecor.Tiles
+namespace DragonsDecorativeMod.Tiles
 {
     public class StaringStatue : ModTile
 	{

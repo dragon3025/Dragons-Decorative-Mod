@@ -1,6 +1,6 @@
 author = Dragon3025
-version = 0.1
-displayName = Dragon's Decor
+version = 0.0.1
+displayName = DragonsDecorativeMod
 homepage = 
 hideCode = false
 hideResources = false

@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
 
-namespace DragonsDecor.Tiles
+namespace DragonsDecorativeMod.Tiles
 {
     public class Aquarium : ModTile
 	{
@@ -14,10 +14,12 @@ namespace DragonsDecor.Tiles
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true;
+
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
 			TileObjectData.addTile(Type);
+
 			AnimationFrameHeight = 54;
-			//Main.tileLighted[Type] = true;
+
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Aquarium");
 			AddMapEntry(new Color(127, 127, 255), name);

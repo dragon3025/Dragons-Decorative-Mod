@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
-namespace DragonsDecor.Items.Natural
+namespace DragonsDecorativeMod.Items.Natural
 {
     public class PeacefulPlanteraBulb : ModItem
 	{
@@ -26,7 +26,7 @@ namespace DragonsDecor.Items.Natural
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
 			Item.value = Item.buyPrice(0, 0, 10);
-			Item.createTile = ModContent.TileType<Tiles.PeacefulPlanteraBulb>();
+			Item.createTile = ModContent.TileType<Tiles.Natural.PeacefulPlanteraBulb>();
 		}
 	}
 }

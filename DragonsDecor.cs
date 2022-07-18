@@ -1,8 +1,8 @@
 using Terraria.ModLoader;
 
-namespace DragonsDecor
+namespace DragonsDecorativeMod
 {
-	class DragonsDecor : ModSystem
+	class DragonsDecorativeMod : ModSystem
 	{
 	}
 }

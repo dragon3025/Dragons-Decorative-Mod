@@ -1,4 +1,4 @@
-Dragon's Decor
+Dragon's Decorative Mod (ALPHA)
 
 	LINKS
 Open Source on Github: -
@@ -10,6 +10,4 @@ This is mod of various decorative items. This includes:
 [i:75] Staring Painting.
 [i:75] Staring Statue.
 [i:75] Peaceful Plantera Bulb.
-[i:75] Slime Trophy (same drop chance as Slime Staff).
-[i:75] Bestiary Trophy (sold by Zoologist if Bestiary is 100%).
 [i:75] Placeable ambient objects.

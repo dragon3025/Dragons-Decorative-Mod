@@ -2,9 +2,9 @@
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using DragonsDecor.Items;
+using DragonsDecorativeMod.Items;
 
-namespace DragonsDecor.Global
+namespace DragonsDecorativeMod.Global
 {
     public class Item : GlobalItem
     {

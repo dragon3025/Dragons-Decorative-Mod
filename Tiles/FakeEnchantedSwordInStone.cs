@@ -5,7 +5,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace DragonsDecor.Tiles
+namespace DragonsDecorativeMod.Tiles
 {
     public class FakeEnchantedSwordInStone : ModTile
 	{
@@ -28,7 +28,7 @@ namespace DragonsDecor.Tiles
 
 		public override void KillMultiTile(int x, int y, int frameX, int frameY)
 		{
-			Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Natural.Ambient.FakeEnchantedSwordInStone>());
+			Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Natural.Ambient.Tile187.FakeEnchantedSwordInStone>());
 		}
 	}
 }

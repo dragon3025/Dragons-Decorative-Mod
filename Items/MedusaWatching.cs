@@ -3,7 +3,7 @@ using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 
-namespace DragonsDecor.Items
+namespace DragonsDecorativeMod.Items
 {
     public class MedusaWatching : ModItem
 	{
