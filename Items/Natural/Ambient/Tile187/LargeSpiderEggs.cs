@@ -21,18 +21,19 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.useTurn = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.White;
-            Item.useAnimation = 45;
+            Item.useAnimation = 10;
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.DefaultToPlaceableTile(187, 10);
+            Item.createTile = ModContent.TileType<Tiles.Natural.AmbientObjectsB>();
+            Item.placeStyle = 10;
         }
 
-        public override bool? UseItem(Player player)
+        public override void OnConsumeItem(Player player)
         {
             Item.placeStyle = 10 + Main.rand.Next(3);
-            return true;
+            base.OnConsumeItem(player);
         }
 
         public override void AddRecipes()

@@ -21,21 +21,13 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.useTurn = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.White;
-            Item.useAnimation = 45;
+            Item.useAnimation = 10;
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.DefaultToPlaceableTile(187, 23);
-        }
-
-        public override void AddRecipes()
-        {
-            CreateRecipe()
-              .AddIngredient(ItemID.Minecart)
-              .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
-              .Register();
+            Item.createTile = ModContent.TileType<Tiles.Natural.AmbientObjectsC>();
+            Item.placeStyle = 5;
         }
     }
 }

@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("We Covered Skeleton");
+            DisplayName.SetDefault("Web Covered Skeleton");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -21,21 +21,13 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.useTurn = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.White;
-            Item.useAnimation = 45;
+            Item.useAnimation = 10;
             Item.useTime = 10;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.DefaultToPlaceableTile(187, 9);
-        }
-
-        public override bool? UseItem(Player player)
-        {
-            if (Main.rand.NextBool(2))
-                Item.placeStyle = 9;
-            else
-                Item.placeStyle = 13;
-            return true;
+            Item.createTile = ModContent.TileType<Tiles.Natural.AmbientObjectsB>();
+            Item.placeStyle = 9;
         }
 
         public override void AddRecipes()

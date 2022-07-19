@@ -3,13 +3,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
-namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
+namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile186
 {
-    public class BrokenChandelier : ModItem
+    public class BrokenChest : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Broken Chandelier");
+            DisplayName.SetDefault("Broken Chest");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -26,13 +26,13 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.DefaultToPlaceableTile(186, 25);
+            Item.DefaultToPlaceableTile(186, 24);
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.GoldChandelier)
+              .AddIngredient(ItemID.Chest)
               .AddIngredient(ItemID.Cobweb)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)

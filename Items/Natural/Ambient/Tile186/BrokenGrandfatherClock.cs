@@ -3,7 +3,7 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
-namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
+namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile186
 {
     public class BrokenGrandfatherClock : ModItem
     {
