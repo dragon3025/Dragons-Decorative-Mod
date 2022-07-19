@@ -1,13 +1,11 @@
-Dragon's Decorative Mod (ALPHA)
+Dragon's Decorative Mod
 
-	LINKS
-Open Source on Github: -
-Want to give Feedback / Report Bug? Post here: -
-or on the Forum Page: -
+====INFO====
 
-	INFO
-This is mod of various decorative items. This includes:
-[i:75] Staring Painting.
-[i:75] Staring Statue.
-[i:75] Peaceful Plantera Bulb.
-[i:75] Placeable ambient objects.
+Open Source at GitHub. Report issues there or at home page.
+
+This mod adds decorative items. I plan to keep adding to it. So far it has:
+
+- Placeable fake versions of large ambient objects (for example: Enchanted sword in Stone).
+- Staring Painting and Statue.
+- Aquariuum.

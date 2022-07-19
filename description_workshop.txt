@@ -1,15 +1,16 @@
-Dragon's Decorative Mod (ALPHA)
+Dragon's Decorative Mod
 
-	LINKS
-Open Source on Github: -
-Want to give Feedback / Report Bug? Post here: -
-or on the Forum Page: -
+====INFO====
 
-	INFO
-This is mod of various decorative items. This includes:
--     Staring Painting.
--     Staring Statue.
--     Peaceful Plantera Bulb.
--     Slime Trophy (same drop chance as Slime Staff).
--     Bestiary Trophy (sold by Zoologist if Bestiary is 100%).
--     Placeable ambient objects.
+Open Source at GitHub. Report issues there or at home page.
+
+This mod adds decorative items. I plan to keep adding to it. So far it has:
+
+- Placeable fake versions of large ambient objects (for example: Enchanted sword in Stone).
+- Staring Painting and Statue.
+- Aquariuum.
+
+====LINKS====
+Open Source on Github: https://github.com/dragon3025/Reduced-Grinding
+Want to give Feedback / Report Bug? Post here: https://github.com/dragon3025/Reduced-Grinding/issues
+or on the Home Page: https://forums.terraria.org/index.php?threads/reduced-grinding.51082/
