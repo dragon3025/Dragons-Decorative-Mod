@@ -40,7 +40,6 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeD
         {
             CreateRecipe()
               .AddIngredient(ItemID.StoneBlock, 20)
-              .AddIngredient(ItemID.Worm, 3)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();
