@@ -40,7 +40,6 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
         {
             CreateRecipe()
               .AddIngredient(ItemID.GraniteBlock, 20)
-              .AddIngredient(ItemID.Worm, 5) //TO-DO Temporary, until the tile style bug is fixed
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

@@ -30,6 +30,14 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.placeStyle = 9;
         }
 
+        public override void OnConsumeItem(Player player)
+        {
+            Item.placeStyle = 9;
+            if (Main.rand.NextBool(2))
+                Item.placeStyle = 13;
+            base.OnConsumeItem(player);
+        }
+
         public override void AddRecipes()
         {
             CreateRecipe()

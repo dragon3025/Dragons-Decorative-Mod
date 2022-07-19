@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -14,12 +13,15 @@ namespace DragonsDecorativeMod.Tiles
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true;
+
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 			TileObjectData.newTile.Height = 4;
 			TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 16 }; //Height of each tile.
 			TileObjectData.addTile(Type);
+
 			AnimationFrameHeight = 72;
 			Main.tileLighted[Type] = true;
+
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Medusa Watching");
 			AddMapEntry(new Color(58, 62, 53), name);

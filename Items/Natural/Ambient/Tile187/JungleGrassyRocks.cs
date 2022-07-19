@@ -41,7 +41,6 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             CreateRecipe()
               .AddIngredient(ItemID.StoneBlock, 20)
               .AddIngredient(ItemID.JungleGrassSeeds, 5)
-              .AddIngredient(ItemID.Worm, 3)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

@@ -26,7 +26,8 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.Tile187
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.createTile = ModContent.TileType<Tiles.FakeEnchantedSwordInStone>();
+            Item.createTile = ModContent.TileType<Tiles.Natural.AmbientObjectsB>();
+            Item.placeStyle = 17;
         }
 
         public override void AddRecipes()

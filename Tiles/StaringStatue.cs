@@ -14,16 +14,19 @@ namespace DragonsDecorativeMod.Tiles
 			Main.tileFrameImportant[Type] = true;
 			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true;
+			Main.tileLighted[Type] = true;
+
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 			TileObjectData.newTile.Height = 3;
 			TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 }; //Height of each tile.
 			TileObjectData.addTile(Type);
+
 			AnimationFrameHeight = 54;
-			Main.tileLighted[Type] = true;
+			DustType = DustID.Stone;
+
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Ned the Nosey");
 			AddMapEntry(new Color(120, 120, 120), name);
-			DustType = DustID.Stone;
 		}
 
 		int look_direction = 0;

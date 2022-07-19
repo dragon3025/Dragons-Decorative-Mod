@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
@@ -16,12 +15,14 @@ namespace DragonsDecorativeMod.Tiles.Natural
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
             Main.tileLighted[Type] = true;
+
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x2);
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile, TileObjectData.newTile.Width, 0);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.StyleWrapLimit = 54;
             TileObjectData.addTile(Type);
+
             AddMapEntry(new Color(127, 127, 127));
         }
 
@@ -29,24 +30,21 @@ namespace DragonsDecorativeMod.Tiles.Natural
         {
 
             int item = 0;
-            switch (frameX / 54)
-            {
-                case 17:
-                    item = ModContent.ItemType<Items.Natural.Ambient.Tile187.AnimalBones>();
-                    break;
-                case 18:
-                    item = ModContent.ItemType<Items.Natural.Ambient.Tile187.AnimalBones>();
-                    break;
-                case 19:
-                    item = ModContent.ItemType<Items.Natural.Ambient.Tile187.AnimalBones>();
-                    break;
-            }
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 54, 32, item);
-            }
+            int frame = frameX / 54;
 
-            
+            if (frame <= 5)
+                item = ModContent.ItemType<Items.Natural.Ambient.Tile187.GraniteRock>();
+            else if (frame <= 11)
+                item = ModContent.ItemType<Items.Natural.Ambient.Tile187.MarbleRock>();
+            else if (frame <= 14)
+                item = ModContent.ItemType<Items.Natural.Ambient.Tile187.LivingWoodRoots>();
+            else if (frame <= 16)
+                item = ModContent.ItemType<Items.Natural.Ambient.Tile187.LivingLeafBushes>();
+            else if (frame <= 19)
+                item = ModContent.ItemType<Items.Natural.Ambient.Tile187.AnimalBones>();
+
+            if (item > 0)
+                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 54, 32, item);
         }
     }
 }
