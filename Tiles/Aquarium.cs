@@ -1,9 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Terraria.DataStructures;
 
 namespace DragonsDecorativeMod.Tiles
 {
@@ -12,10 +13,12 @@ namespace DragonsDecorativeMod.Tiles
 		public override void SetStaticDefaults()
 		{
 			Main.tileFrameImportant[Type] = true;
-			Main.tileNoAttach[Type] = true;
 			Main.tileLavaDeath[Type] = true;
+			Main.tileSolidTop[Type] = true;
+			Main.tileTable[Type] = true;
 
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
+            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 			TileObjectData.addTile(Type);
 
 			AnimationFrameHeight = 54;

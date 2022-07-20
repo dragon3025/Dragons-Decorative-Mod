@@ -11,6 +11,6 @@ This mod adds decorative items. I plan to keep adding to it. So far it has:
 - Aquariuum.
 
 ====LINKS====
-Open Source on Github: https://github.com/dragon3025/Reduced-Grinding
-Want to give Feedback / Report Bug? Post here: https://github.com/dragon3025/Reduced-Grinding/issues
-or on the Home Page: https://forums.terraria.org/index.php?threads/reduced-grinding.51082/
+Open Source on Github: https://github.com/dragon3025/Dragons-Decorative-Mod
+Want to give Feedback / Report Bug? Post here: https://github.com/dragon3025/Dragons-Decorative-Mod/issues
+or on the Home Page: coming soon

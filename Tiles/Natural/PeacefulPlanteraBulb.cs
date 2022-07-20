@@ -1,9 +1,10 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.DataStructures;
+using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Terraria.DataStructures;
 
 namespace DragonsDecorativeMod.Tiles.Natural
 {
@@ -30,15 +31,18 @@ namespace DragonsDecorativeMod.Tiles.Natural
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
             Main.tileLighted[Type] = true;
+
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.newTile.AnchorValidTiles = new int[] { TileID.JungleGrass };
+            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
             TileObjectData.addTile(Type);
+
             AnimationFrameHeight = 36;
+            DustType = DustID.Plantera_Pink;
+
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Peaceful Plantera Bulb");
             AddMapEntry(new Color(225, 128, 206), name);
-            DustType = DustID.Plantera_Pink;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
