@@ -17,7 +17,7 @@ namespace DragonsDecorativeMod.Items
 		{
 			Item.width = 32;
 			Item.height = 32;
-			Item.maxStack = 999;
+			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.rare = ItemRarityID.White;
@@ -27,14 +27,6 @@ namespace DragonsDecorativeMod.Items
 			Item.consumable = true;
 			Item.value = 0;
 			Item.createTile = ModContent.TileType<Tiles.Aquarium>();
-		}
-
-		public override void AddRecipes()
-		{
-			Recipe recipe = CreateRecipe();
-			recipe.AddRecipeGroup(RecipeGroupID.FishForDinner);
-			recipe.AddIngredient(ItemID.Terrarium);
-			recipe.Register();
 		}
 	}
 }
