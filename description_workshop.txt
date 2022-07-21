@@ -6,11 +6,12 @@ Open Source at GitHub. Report issues there or at home page.
 
 This mod adds decorative items. I plan to keep adding to it. So far it has:
 
+- Peaceful Plantera's Bulb.
 - Placeable fake versions of large ambient objects (for example: Enchanted sword in Stone).
-- Staring Painting and Statue.
-- Aquariuum.
+- Medusa Painting and Ned the Nosey Statue. They're very nosey.
+- Aquarium.
 
 ====LINKS====
 Open Source on Github: https://github.com/dragon3025/Dragons-Decorative-Mod
 Want to give Feedback / Report Bug? Post here: https://github.com/dragon3025/Dragons-Decorative-Mod/issues
-or on the Home Page: coming soon
+or on the Home Page: https://forums.terraria.org/index.php?threads/dragons-decorative-mod.113695/
