@@ -17,11 +17,10 @@ namespace DragonsDecorativeMod.Tiles
 
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
 			TileObjectData.newTile.Height = 4;
-			TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 16 }; //Height of each tile.
+			TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 16 };
 			TileObjectData.addTile(Type);
 
 			AnimationFrameHeight = 72;
-			Main.tileLighted[Type] = true;
 
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Medusa Watching");

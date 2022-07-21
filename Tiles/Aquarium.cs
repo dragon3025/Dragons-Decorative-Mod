@@ -18,7 +18,6 @@ namespace DragonsDecorativeMod.Tiles
 			Main.tileTable[Type] = true;
 
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
-            TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
 			TileObjectData.addTile(Type);
 
 			AnimationFrameHeight = 54;

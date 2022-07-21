@@ -18,7 +18,7 @@ namespace DragonsDecorativeMod.GlobalRecipes
 
         public override void AddRecipeGroups()
         {
-            colorfulFish = new RecipeGroup(() => "Colorful Fish (Armored Cave, Chaos, Princess, Prismite, Neon Tetra, Variegated Lard, Specular, Damsel).", new int[]
+            colorfulFish = new RecipeGroup(() => "Colorful Fish (Armored Cave, Chaos, Princess, Prismite, Neon Tetra, Variegated Lard, Specular, Damsel)", new int[]
             {
                 ItemID.ArmoredCavefish,
                 ItemID.ChaosFish,

@@ -20,12 +20,12 @@ namespace DragonsDecorativeMod.Items
 			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
-			Item.rare = ItemRarityID.White;
+			Item.rare = ItemRarityID.Blue;
 			Item.useAnimation = 45;
 			Item.useTime = 45;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.value = 0;
+			Item.value = Item.buyPrice(0, 3, 75);
 			Item.createTile = ModContent.TileType<Tiles.Aquarium>();
 		}
 	}
