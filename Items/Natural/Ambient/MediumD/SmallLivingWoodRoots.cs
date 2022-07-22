@@ -3,13 +3,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
-namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumC
+namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumD
 {
-    public class SmallSandstonePiles : ModItem
+    public class SmallLivingWoodRoots : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Sandstone Piles");
+            DisplayName.SetDefault("Small Living Wood Roots");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -26,21 +26,21 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumC
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.createTile = ModContent.TileType<Tiles.Natural.Ambient.MediumC>();
-            Item.placeStyle = 3;
+            Item.createTile = ModContent.TileType<Tiles.Natural.Ambient.MediumD>();
+            Item.placeStyle = 6;
         }
 
         public override void OnConsumeItem(Player player)
         {
-            Item.placeStyle = 3 + Main.rand.Next(6);
+            Item.placeStyle = 6 + Main.rand.Next(3);
             base.OnConsumeItem(player);
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.Sandstone, 7)
-              .AddTile(TileID.HeavyWorkBench)
+              .AddIngredient(ItemID.Wood, 7)
+              .AddTile(TileID.LivingLoom)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();
         }
