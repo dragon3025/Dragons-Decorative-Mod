@@ -17,7 +17,6 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
             TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.newTile.StyleWrapLimit = 36;
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(127, 127, 127));
