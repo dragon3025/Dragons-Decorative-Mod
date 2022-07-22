@@ -3,20 +3,20 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
 
-namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeA
+namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallC
 {
-    public class GraniteRock : ModItem
+    public class BlueIceRock : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Granite Rocks");
+            DisplayName.SetDefault("Blue Ice Rock");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
         {
-            Item.width = 48;
-            Item.height = 32;
+            Item.width = 16;
+            Item.height = 16;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
@@ -26,20 +26,20 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeA
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
-            Item.createTile = ModContent.TileType<Tiles.Natural.Ambient.LargeA>();
-            Item.placeStyle = 0;
+            Item.createTile = ModContent.TileType<Tiles.Natural.Ambient.SmallC>();
+            Item.placeStyle = 6;
         }
 
         public override void OnConsumeItem(Player player)
         {
-            Item.placeStyle = 0 + Main.rand.Next(6);
+            Item.placeStyle = 6 + Main.rand.Next(6);
             base.OnConsumeItem(player);
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.GraniteBlock, 20)
+              .AddIngredient(ItemID.IceBlock)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

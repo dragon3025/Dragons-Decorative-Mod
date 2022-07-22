@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeA
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Marble Rock");
+            DisplayName.SetDefault("Marble Rocks");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
