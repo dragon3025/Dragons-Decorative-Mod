@@ -17,7 +17,7 @@ namespace DragonsDecorativeMod.Items
 		{
 			Item.width = 32;
 			Item.height = 42;
-			Item.maxStack = 99;
+			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.rare = ItemRarityID.Orange;

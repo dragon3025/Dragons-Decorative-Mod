@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -12,21 +12,6 @@ namespace DragonsDecorativeMod.Tiles.Natural
     {
         public override void SetStaticDefaults()
         {
-            //TO-DO Make this tile emit DustID.PlanteraBulb particles. From the vanilla code:
-
-            /*private void DrawTiles_EmitParticles(int j, int i, Tile tileCache, ushort typeCache, short tileFrameX, short tileFrameY, Color tileLight)
-			{
-				switch (typeCache)
-				{
-					case 238:
-						if (_rand.Next(10) == 0)
-						{
-							int num = Dust.NewDust(new Vector2(i * 16, j * 16), 16, 16, 168);
-							_dust[num].noGravity = true;
-							_dust[num].alpha = 200;
-						}
-						break;*/
-
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
@@ -65,6 +50,19 @@ namespace DragonsDecorativeMod.Tiles.Natural
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
             Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Natural.PeacefulPlanteraBulb>());
+        }
+        public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
+        {
+            if (Main.gamePaused || !Main.instance.IsActive || Lighting.UpdateEveryFrame && !Main.rand.NextBool(4))
+            {
+                return;
+            }
+
+            if (Main.rand.NextBool(10))
+            {
+                var dust = Dust.NewDustDirect(new Vector2(i * 16, j * 16), 16, 16, DustID.PlanteraBulb, Alpha: 200);
+                dust.noGravity = true;
+            }
         }
     }
 }
