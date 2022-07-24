@@ -1,4 +1,5 @@
-﻿using Terraria.ID;
+﻿using Terraria.GameContent.ItemDropRules;
+using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -6,12 +7,12 @@ namespace DragonsDecorativeMod.Global
 {
     public class Item : GlobalItem
     {
-        public override void OpenVanillaBag(string context, Terraria.Player player, int arg)
-        {
-            var source = player.GetSource_OpenItem(arg);
 
-            if (arg == ItemID.PlanteraBossBag)
-                player.QuickSpawnItem(source, ItemType<Items.Natural.PeacefulPlanteraBulb>());
+
+        public override void ModifyItemLoot(Terraria.Item item, ItemLoot itemLoot)
+        {
+            if (item.type == ItemID.PlanteraBossBag)
+                itemLoot.Add(ItemDropRule.Common(ItemType<Items.Natural.PeacefulPlanteraBulb>()));
         }
     }
 }
