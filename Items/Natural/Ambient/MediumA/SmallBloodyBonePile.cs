@@ -21,8 +21,8 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
             Item.useTurn = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.White;
-            Item.useAnimation = 10;
-            Item.useTime = 10;
+            Item.useAnimation = 15;
+            Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
@@ -30,10 +30,10 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
             Item.placeStyle = 11;
         }
 
-        public override void OnConsumeItem(Player player)
+        public override bool? UseItem(Player player)
         {
             Item.placeStyle = 11 + Main.rand.Next(5);
-            base.OnConsumeItem(player);
+            return base.UseItem(player);
         }
 
         public override void AddRecipes()

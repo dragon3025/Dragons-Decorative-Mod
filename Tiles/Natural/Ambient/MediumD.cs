@@ -3,7 +3,6 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
-using Terraria.Enums;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -36,7 +35,7 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
                 item = ModContent.ItemType<Items.Natural.Ambient.MediumD.SmallSandPiles>();
 
             if (item > 0)
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 54, 32, item);
+                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 16, item);
         }
     }
 }

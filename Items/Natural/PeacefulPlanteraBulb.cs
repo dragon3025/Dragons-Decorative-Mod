@@ -21,8 +21,8 @@ namespace DragonsDecorativeMod.Items.Natural
 			Item.useTurn = true;
 			Item.autoReuse = true;
 			Item.rare = ItemRarityID.Lime;
-			Item.useAnimation = 45;
-			Item.useTime = 10;
+			Item.useAnimation = 15;
+			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
 			Item.value = Item.buyPrice(0, 0, 10);

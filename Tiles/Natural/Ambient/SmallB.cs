@@ -3,7 +3,6 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
-using Terraria.Enums;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {

@@ -22,7 +22,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
             Item.autoReuse = true;
             Item.rare = ItemRarityID.White;
             Item.useAnimation = 45;
-            Item.useTime = 10;
+            Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = 0;
