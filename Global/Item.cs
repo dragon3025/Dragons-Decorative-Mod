@@ -8,7 +8,6 @@ namespace DragonsDecorativeMod.Global
     public class Item : GlobalItem
     {
 
-
         public override void ModifyItemLoot(Terraria.Item item, ItemLoot itemLoot)
         {
             if (item.type == ItemID.PlanteraBossBag)
