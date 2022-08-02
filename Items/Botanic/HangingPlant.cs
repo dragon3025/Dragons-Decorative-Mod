@@ -5,11 +5,11 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items.Botanic
 {
-    public class HangingFloweredAlsobia : ModItem
+    public class HangingPlant : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Hanging Flowered Alsobia");
+            DisplayName.SetDefault("Hanging Plant");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -27,7 +27,7 @@ namespace DragonsDecorativeMod.Items.Botanic
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 3);
             Item.createTile = ModContent.TileType<Tiles.Botanic.HangingPlant>();
-            Item.placeStyle = 1;
+            Item.placeStyle = 0;
         }
     }
 }

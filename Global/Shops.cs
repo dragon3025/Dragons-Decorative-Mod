@@ -16,16 +16,13 @@ namespace DragonsDecorativeMod.Global
                     shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BonsaiTree>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingAlsobia>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingPlant>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingFloweredAlsobia>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingLeafyPlant>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingPhilodendron>());
-                    nextSlot++;
-
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingBirdsNestFern>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingFernPlant>());
                     nextSlot++;
 
                     break;

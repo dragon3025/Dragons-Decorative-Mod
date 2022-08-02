@@ -5,11 +5,11 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items.Botanic
 {
-    public class HangingPhilodendron : ModItem
+    public class HangingLeafyPlant : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Hanging Philodendron");
+            DisplayName.SetDefault("Hanging Leafy Plant");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -27,7 +27,7 @@ namespace DragonsDecorativeMod.Items.Botanic
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 3);
             Item.createTile = ModContent.TileType<Tiles.Botanic.HangingPlant>();
-            Item.placeStyle = 2;
+            Item.placeStyle = 1;
         }
     }
 }
