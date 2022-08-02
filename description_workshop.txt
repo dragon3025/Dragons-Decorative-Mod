@@ -6,10 +6,11 @@ Open Source at GitHub. Report issues there or at home page.
 
 This mod adds decorative items. I plan to keep adding to it. So far it has:
 
+- Aquarium.
+- Medusa Painting and Ned the Nosey Statue. They're very nosey.
 - Peaceful Plantera's Bulb.
 - Placeable fake versions of ambient objects (for example: Enchanted sword in Stone).
-- Medusa Painting and Ned the Nosey Statue. They're very nosey.
-- Aquarium.
+- Trellis with Empty, Vine, and Flower variants. Flower variants come in 12 colors.
 
 ====LINKS====
 Open Source on Github: https://github.com/dragon3025/Dragons-Decorative-Mod

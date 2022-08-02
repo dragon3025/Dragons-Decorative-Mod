@@ -10,6 +10,7 @@ namespace DragonsDecorativeMod.Items.Botanic
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Hanging Plant");
+            Tooltip.SetDefault("NOT AFFECTED BY WIND");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
