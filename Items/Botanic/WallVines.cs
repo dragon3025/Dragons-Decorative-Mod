@@ -5,11 +5,11 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items.Botanic
 {
-    public class TrellisVines : ModItem
+    public class WallVines : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Trellis Vines");
+            DisplayName.SetDefault("Wall Vines");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -24,7 +24,7 @@ namespace DragonsDecorativeMod.Items.Botanic
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Botanic.TrellisVines>();
+            Item.createTile = ModContent.TileType<Tiles.Botanic.WallVines>();
             Item.placeStyle = 0;
         }
 
@@ -37,7 +37,6 @@ namespace DragonsDecorativeMod.Items.Botanic
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ModContent.ItemType<TrellisEmpty>())
               .AddIngredient(ItemID.VineRope)
               .AddTile(TileID.WorkBenches)
               .Register();

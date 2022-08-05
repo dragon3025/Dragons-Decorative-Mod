@@ -6,13 +6,13 @@ using Terraria.ModLoader;
 
 namespace DragonsDecorativeMod.Items.Botanic
 {
-    public class TrellisFlowerVines : ModItem
+    public class WallFlowerVines : ModItem
     {
         public int styleSecton = 0;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Trellis Flower Vines");
+            DisplayName.SetDefault("Wall Flower Vines");
             Tooltip.SetDefault("Right click to cycle between 12 colors + randomized color.");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
@@ -28,7 +28,7 @@ namespace DragonsDecorativeMod.Items.Botanic
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Botanic.TrellisFlowerVines>();
+            Item.createTile = ModContent.TileType<Tiles.Botanic.WallFlowerVines>();
             Item.placeStyle = 0;
         }
 
@@ -61,7 +61,7 @@ namespace DragonsDecorativeMod.Items.Botanic
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ModContent.ItemType<TrellisVines>())
+              .AddIngredient(ModContent.ItemType<WallVines>())
               .AddIngredient(ItemID.FlowerPacketWild)
               .AddTile(TileID.WorkBenches)
               .Register();
