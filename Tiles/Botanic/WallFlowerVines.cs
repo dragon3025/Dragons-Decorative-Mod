@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -21,6 +22,8 @@ namespace DragonsDecorativeMod.Tiles.Botanic
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(64, 128, 64));
+
+            HitSound = SoundID.Grass;
         }
 
         public override bool Drop(int i, int j)

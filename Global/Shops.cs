@@ -25,6 +25,18 @@ namespace DragonsDecorativeMod.Global
                     shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingFernPlant>());
                     nextSlot++;
 
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BleedingCrownMushroom>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BrownMushroom>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.RedMushroom>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.WhiteMushroom>());
+                    nextSlot++;
+
                     break;
             }
         }

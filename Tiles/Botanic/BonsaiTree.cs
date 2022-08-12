@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Botanic
 {
@@ -14,7 +15,7 @@ namespace DragonsDecorativeMod.Tiles.Botanic
             Main.tileLavaDeath[Type] = true;
             Main.tileNoAttach[Type] = true;
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3);
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 
