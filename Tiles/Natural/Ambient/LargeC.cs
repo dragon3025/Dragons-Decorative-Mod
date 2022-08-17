@@ -27,23 +27,25 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int item = 0;
             int frame = frameX / 54;
 
+            Main.NewText("Frame: " + frame.ToString());
+
             if (frame <= 2)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.LihzahrdRubble>();
-            if (frame <= 4)
+            else if (frame <= 4)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.UndergroundCage>();
-            if (frame <= 5)
+            else if (frame <= 5)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.RustyMinecart>();
-            if (frame <= 7)
+            else if (frame <= 6)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.Well>();
-            if (frame <= 8)
+            else if (frame <= 7)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.ShovelAndDirt>();
-            if (frame <= 9)
+            else if (frame <= 8)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.Tent>();
-            if (frame <= 10)
+            else if (frame <= 9)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.WheelbarrowOfDirt>();
-            if (frame <= 11)
+            else if (frame <= 10)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.WoodPoleWithRope>();
-            if (frame <= 17)
+            else if (frame <= 16)
                 item = ModContent.ItemType<Items.Natural.Ambient.LargeC.SandstonePiles>();
 
             if (item > 0)
