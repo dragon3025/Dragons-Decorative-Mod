@@ -8,7 +8,7 @@ using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles.Natural
 {
-    public class PeacefulPlanteraBulb : ModTile
+    public class FakeShadowOrb : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -18,15 +18,22 @@ namespace DragonsDecorativeMod.Tiles.Natural
             Main.tileLighted[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
             TileObjectData.addTile(Type);
 
-            AnimationFrameHeight = 36;
-            DustType = DustID.Plantera_Pink;
-
             ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Peaceful Plantera Bulb");
-            AddMapEntry(new Color(225, 128, 206), name);
+            name.SetDefault("Fake Shadow Orb");
+            AddMapEntry(new Color(141, 120, 168), name);
+
+            AnimationFrameHeight = 36;
+        }
+
+        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
+        {
+            float variance = Main.rand.Next(-5, 6) * 0.0025f;
+            r = 0.31f + variance;
+            g = 0.1f;
+            b = 0.44f + variance * 2f;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
@@ -36,20 +43,13 @@ namespace DragonsDecorativeMod.Tiles.Natural
             {
                 frameCounter = 0;
                 frame++;
-                frame %= 4;
+                frame %= 2;
             }
-        }
-
-        public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
-        {
-            r = 0.5f;
-            g = 0f;
-            b = 0.5f;
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Natural.PeacefulPlanteraBulb>());
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, ModContent.ItemType<Items.Natural.FakeShadowOrb>());
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)
@@ -61,7 +61,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
             if (Main.rand.NextBool(10))
             {
-                var dust = Dust.NewDustDirect(new Vector2(i * 16, j * 16), 16, 16, DustID.PlanteraBulb, Alpha: 200);
+                var dust = Dust.NewDustDirect(new Vector2(i * 16, j * 16), 16, 16, DustID.Corruption);
                 dust.noGravity = true;
             }
         }

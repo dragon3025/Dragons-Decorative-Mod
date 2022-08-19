@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items
 			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.value = Item.buyPrice(0, 0, 10);
+			Item.value = Item.sellPrice(0, 0, 2);
 			Item.createTile = ModContent.TileType<Tiles.MedusaWatching>();
 			Item.placeStyle = 0;
 		}

@@ -1,5 +1,6 @@
 using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -17,7 +18,7 @@ namespace DragonsDecorativeMod.GlobalRecipes
 
         public override void AddRecipeGroups()
         {
-            colorfulFish = new RecipeGroup(() => "Colorful Fish (Armored Cave, Chaos, Princess, Prismite, Neon Tetra, Variegated Lard, Specular, Damsel)", new int[]
+            colorfulFish = new RecipeGroup(() => Language.GetTextValue("LegacyMisc.37") + " Colorful Fish (Armored Cave, Chaos, Princess, Prismite, Neon Tetra, Variegated Lard, Specular, Damsel)", new int[]
             {
                 ItemID.ArmoredCavefish,
                 ItemID.ChaosFish,
