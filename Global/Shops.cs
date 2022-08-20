@@ -1,4 +1,5 @@
 using Terraria;
+using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
@@ -37,6 +38,14 @@ namespace DragonsDecorativeMod.Global
                     shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.WhiteMushroom>());
                     nextSlot++;
 
+                    break;
+                case NPCID.BestiaryGirl:
+                    BestiaryUnlockProgressReport bestiaryProgressReport = Main.GetBestiaryProgressReport();
+                    if (bestiaryProgressReport.CompletionPercent >= 0.5f)
+                    {
+                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.MoonGlobe>());
+                        nextSlot++;
+                    }
                     break;
             }
         }
