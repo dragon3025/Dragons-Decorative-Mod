@@ -28,5 +28,12 @@ namespace DragonsDecorativeMod.Items.Botanic
             Item.createTile = ModContent.TileType<Tiles.Botanic.Plant>();
             Item.placeStyle = 3;
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+                .AddIngredient(ModContent.ItemType<SingleTilePlant4>())
+                .Register();
+        }
     }
 }
