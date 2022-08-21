@@ -5,5 +5,5 @@ homepage = https://forums.terraria.org/index.php?threads/dragons-decorative-mod.
 hideCode = false
 hideResources = false
 includeSource = true
-buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*
+buildIgnore = *.csproj, *.user, obj\*, bin\*, .vs\*, *.aseprite
 includePDB = true

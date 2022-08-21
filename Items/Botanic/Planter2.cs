@@ -5,19 +5,18 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items.Botanic
 {
-    public class BonsaiTree : ModItem
+    public class Planter2 : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bonsai Tree");
-            Tooltip.SetDefault("'Think only tree'");
+            DisplayName.SetDefault("Planter");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
         {
-            Item.width = 32;
-            Item.height = 32;
+            Item.width = 22;
+            Item.height = 20;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
@@ -25,8 +24,9 @@ namespace DragonsDecorativeMod.Items.Botanic
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.value = Item.buyPrice(0, 3);
-            Item.createTile = ModContent.TileType<Tiles.Botanic.BonsaiTree>();
+            Item.value = Item.buyPrice(0, 1, 5);
+            Item.createTile = ModContent.TileType<Tiles.Botanic.Planter>();
+            Item.placeStyle = 1;
         }
     }
 }

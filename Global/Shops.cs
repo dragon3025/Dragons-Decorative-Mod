@@ -14,16 +14,25 @@ namespace DragonsDecorativeMod.Global
             switch (type)
             {
                 case NPCID.Dryad:
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Planter>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Planter2>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant2>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant3>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant4>());
+                    nextSlot++;
+
                     shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BonsaiTree>());
-                    nextSlot++;
-
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingPlant>());
-                    nextSlot++;
-
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingLeafyPlant>());
-                    nextSlot++;
-
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.HangingFernPlant>());
                     nextSlot++;
 
                     shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BleedingCrownMushroom>());

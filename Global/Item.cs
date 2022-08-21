@@ -12,6 +12,9 @@ namespace DragonsDecorativeMod.Global
         {
             if (item.type == ItemID.PlanteraBossBag)
                 itemLoot.Add(ItemDropRule.Common(ItemType<Items.Natural.PeacefulPlanteraBulb>()));
+
+            if (item.type == ItemID.LavaCrate || item.type == ItemID.LavaCrateHard)
+                itemLoot.Add(ItemDropRule.OneFromOptions(2, ItemType<Items.Botanic.HangingPlant>(), ItemType<Items.Botanic.HangingFernPlant>(), ItemType<Items.Botanic.HangingLeafyPlant>()));
         }
     }
 }
