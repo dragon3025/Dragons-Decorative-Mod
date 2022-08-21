@@ -16,7 +16,7 @@ namespace DragonsDecorativeMod.Items.Botanic
 
         public override void SetDefaults()
         {
-            Item.width = 28;
+            Item.width = 30;
             Item.height = 30;
             Item.maxStack = 9999;
             Item.useTurn = true;
