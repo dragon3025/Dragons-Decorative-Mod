@@ -3,6 +3,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using DragonsDecorativeMod.Items.Garden;
 
 namespace DragonsDecorativeMod.Global
 {
@@ -14,37 +15,37 @@ namespace DragonsDecorativeMod.Global
             switch (type)
             {
                 case NPCID.Dryad:
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Planter>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Planter>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Planter2>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Planter2>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Plant>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant2>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Plant2>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant3>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Plant3>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.Plant4>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Plant4>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BonsaiTree>());
+                    shop.item[nextSlot].SetDefaults(ItemType<BonsaiTree>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BleedingCrownMushroom>());
+                    shop.item[nextSlot].SetDefaults(ItemType<BleedingCrownMushroom>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.BrownMushroom>());
+                    shop.item[nextSlot].SetDefaults(ItemType<BrownMushroom>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.RedMushroom>());
+                    shop.item[nextSlot].SetDefaults(ItemType<RedMushroom>());
                     nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Botanic.WhiteMushroom>());
+                    shop.item[nextSlot].SetDefaults(ItemType<WhiteMushroom>());
                     nextSlot++;
 
                     break;
@@ -52,7 +53,7 @@ namespace DragonsDecorativeMod.Global
                     BestiaryUnlockProgressReport bestiaryProgressReport = Main.GetBestiaryProgressReport();
                     if (bestiaryProgressReport.CompletionPercent >= 0.5f)
                     {
-                        shop.item[nextSlot].SetDefaults(ModContent.ItemType<Items.MoonGlobe>());
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.MoonGlobe>());
                         nextSlot++;
                     }
                     break;
