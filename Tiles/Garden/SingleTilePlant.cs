@@ -1,11 +1,17 @@
-using System;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
-using Terraria.ID;
+using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Microsoft.Xna.Framework;
+using Terraria;
 using Terraria.DataStructures;
+using Terraria.Enums;
+using Terraria.ID;
+using Terraria.ModLoader;
+using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles.Garden
 {
@@ -28,6 +34,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Plant");
             AddMapEntry(new Color(18, 86, 30), name);
+
+            //TileID.Sets.SwaysInWindBasic[Type] = true; TO-DO This makes the whole thing swing correct, but the non-single plants don't do this, so I'm not sure what to do about it.
         }
 
         public override bool Drop(int i, int j)
@@ -49,6 +57,12 @@ namespace DragonsDecorativeMod.Tiles.Garden
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, item);
 
             return base.Drop(i, j);
+        }
+
+        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
+        {
+            if (i % 2 == 0)
+                spriteEffects = SpriteEffects.FlipHorizontally;
         }
     }
 }

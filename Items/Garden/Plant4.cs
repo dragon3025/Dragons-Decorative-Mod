@@ -15,8 +15,8 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void SetDefaults()
         {
-            Item.width = 30;
-            Item.height = 46;
+            Item.width = 22;
+            Item.height = 32;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
