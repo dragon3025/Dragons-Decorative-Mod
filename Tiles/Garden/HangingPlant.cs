@@ -1,7 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -24,6 +23,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(101, 110, 86));
+
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)

@@ -5,13 +5,6 @@ using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.DataStructures;
-using Terraria.Enums;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles.Garden
 {
@@ -35,7 +28,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             name.SetDefault("Plant");
             AddMapEntry(new Color(18, 86, 30), name);
 
-            //TileID.Sets.SwaysInWindBasic[Type] = true; TO-DO This makes the whole thing swing correct, but the non-single plants don't do this, so I'm not sure what to do about it.
+            //TileID.Sets.SwaysInWindBasic[Type] = true; TO-DO Setting this to true makes it move correctly, but the non-single tile variants will still act weird. Once tModLoader adds support for non-single wide tile swaying, set this to true (add "using Terraria.ID;").
         }
 
         public override bool Drop(int i, int j)
