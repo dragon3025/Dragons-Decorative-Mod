@@ -5,18 +5,20 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items.Garden
 {
-    public class TrellisEmpty : ModItem
+    [LegacyName("TrellisEmpty")]
+
+    public class Trellis : ModItem
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Trellis Empty");
+            DisplayName.SetDefault("Trellis");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
         {
-            Item.width = 16;
-            Item.height = 16;
+            Item.width = 24;
+            Item.height = 24;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
@@ -24,14 +26,8 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Garden.TrellisEmpty>();
-            Item.placeStyle = 0;
-        }
-
-        public override bool? UseItem(Player player)
-        {
-            Item.placeStyle = Main.rand.Next(4);
-            return base.UseItem(player);
+            Item.createWall = ModContent.WallType<Walls.Trellis>();
+            Item.rare = ItemRarityID.White;
         }
 
         public override void AddRecipes()

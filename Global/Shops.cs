@@ -15,12 +15,6 @@ namespace DragonsDecorativeMod.Global
             switch (type)
             {
                 case NPCID.Dryad:
-                    shop.item[nextSlot].SetDefaults(ItemType<Planter>());
-                    nextSlot++;
-
-                    shop.item[nextSlot].SetDefaults(ItemType<Planter2>());
-                    nextSlot++;
-
                     shop.item[nextSlot].SetDefaults(ItemType<Plant>());
                     nextSlot++;
 

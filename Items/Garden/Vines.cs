@@ -5,7 +5,12 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items.Garden
 {
-    public class WallVines : ModItem
+    [LegacyName("TrellisVines")]
+    [LegacyName("TrellisFlowerVines")]
+    [LegacyName("WallVines")]
+    [LegacyName("WallFlowerVines")]
+
+    public class Vines : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -24,8 +29,9 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Garden.WallVines>();
+            Item.createTile = ModContent.TileType<Tiles.Garden.Vines>();
             Item.placeStyle = 0;
+            Item.rare = ItemRarityID.White;
         }
 
         public override bool? UseItem(Player player)

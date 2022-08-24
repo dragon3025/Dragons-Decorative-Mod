@@ -28,6 +28,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.value = Item.buyPrice(0, 1, 5);
             Item.createTile = ModContent.TileType<Tiles.Garden.SingleTilePlant>();
             Item.placeStyle = 2;
+            Item.rare = ItemRarityID.White;
         }
 
         public override void AddRecipes()

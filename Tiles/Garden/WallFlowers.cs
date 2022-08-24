@@ -1,12 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles.Garden
 {
-    public class TrellisVines : ModTile
+    public class WallFlowers : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -16,17 +17,17 @@ namespace DragonsDecorativeMod.Tiles.Garden
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
+            TileObjectData.newTile.AnchorWall = true;
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.StyleWrapLimit = 8;
+            TileObjectData.newTile.StyleWrapLimit = 4;
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(94, 107, 98));
-        }
+            ItemDrop = ModContent.ItemType<Items.Garden.WallFlowers>();
 
-        public override bool Drop(int i, int j)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Garden.TrellisVines>());
-            return base.Drop(i, j);
+            AddMapEntry(new Color(255, 255, 255));
+
+            HitSound = SoundID.Grass;
+            DustType = DustID.Grass;
         }
     }
 }

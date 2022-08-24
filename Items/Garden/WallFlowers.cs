@@ -6,13 +6,13 @@ using Terraria.ModLoader;
 
 namespace DragonsDecorativeMod.Items.Garden
 {
-    public class WallFlowerVines : ModItem
+    public class WallFlowers : ModItem
     {
         public int styleSecton = 0;
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wall Flower Vines");
+            DisplayName.SetDefault("Wall Flowers");
             Tooltip.SetDefault("Right click to cycle between 12 colors + randomized color.");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
@@ -28,8 +28,9 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Garden.WallFlowerVines>();
+            Item.createTile = ModContent.TileType<Tiles.Garden.WallFlowers>();
             Item.placeStyle = 0;
+            Item.value = Item.sellPrice(0, 0, 5);
         }
 
         public override bool AltFunctionUse(Player player)
@@ -55,14 +56,14 @@ namespace DragonsDecorativeMod.Items.Garden
                 Item.placeStyle = Main.rand.Next(48);
             else
                 Item.placeStyle = styleSecton * 4 + Main.rand.Next(4);
+
             return base.UseItem(player);
         }
 
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ModContent.ItemType<WallVines>())
-              .AddIngredient(ItemID.FlowerPacketWild)
+              .AddIngredient(ItemID.FlowerPacketWild, 5)
               .AddTile(TileID.WorkBenches)
               .Register();
         }

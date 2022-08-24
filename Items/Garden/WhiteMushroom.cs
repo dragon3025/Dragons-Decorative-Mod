@@ -27,6 +27,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.value = Item.buyPrice(0, 0, 1);
             Item.createTile = ModContent.TileType<Tiles.Garden.Mushrooms>();
             Item.placeStyle = 15;
+            Item.rare = ItemRarityID.White;
         }
 
         public override bool? UseItem(Player player)

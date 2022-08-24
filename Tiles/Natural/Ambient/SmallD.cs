@@ -26,15 +26,19 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
         {
             Tile t = Main.tile[i, j];
             int frame = t.TileFrameX / 18;
+            int itemID = 0;
 
             if (frame <= 5)
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Natural.Ambient.SmallD.SandstoneClump>());
+                itemID = ModContent.ItemType<Items.Natural.Ambient.SmallD.SandstoneClump>();
             else if (frame <= 11)
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Natural.Ambient.SmallD.TinyGraniteRock>());
+                itemID = ModContent.ItemType<Items.Natural.Ambient.SmallD.TinyGraniteRock>();
             else if (frame <= 17)
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Natural.Ambient.SmallD.TinyMarbleRock>());
+                itemID = ModContent.ItemType<Items.Natural.Ambient.SmallD.TinyMarbleRock>();
             else if (frame <= 18)
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Natural.Ambient.SmallD.LivingWoodTreeSprout>());
+                itemID = ModContent.ItemType<Items.Natural.Ambient.SmallD.LivingWoodTreeSprout>();
+
+            if (itemID > 0)
+                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, itemID);
 
             return base.Drop(i, j);
         }
