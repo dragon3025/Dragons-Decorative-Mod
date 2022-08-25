@@ -26,6 +26,9 @@ namespace DragonsDecorativeMod.Tiles.Natural
             AddMapEntry(new Color(141, 120, 168), name);
 
             AnimationFrameHeight = 36;
+
+            HitSound = SoundID.Shatter;
+            DustType = DustID.CorruptPlants;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)

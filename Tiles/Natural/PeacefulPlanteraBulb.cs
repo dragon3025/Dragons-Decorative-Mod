@@ -27,6 +27,9 @@ namespace DragonsDecorativeMod.Tiles.Natural
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Peaceful Plantera Bulb");
             AddMapEntry(new Color(225, 128, 206), name);
+
+            HitSound = SoundID.Grass;
+            DustType = DustID.Grass;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)

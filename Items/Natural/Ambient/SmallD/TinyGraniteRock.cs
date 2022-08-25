@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallD
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.GraniteBlock)
+              .AddIngredient(ItemID.Granite)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

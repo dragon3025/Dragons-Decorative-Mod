@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeA
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.MarbleBlock, 20)
+              .AddIngredient(ItemID.Marble, 20)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

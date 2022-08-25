@@ -30,6 +30,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileID.Sets.ReplaceTileBreakUp[Type] = true;
 
             HitSound = SoundID.Grass;
+            DustType = 0;
         }
 
         public override bool Drop(int i, int j)

@@ -24,6 +24,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Fake Demon Altar");
             AddMapEntry(new Color(119, 101, 125), name);
+
+            DustType = DustID.CorruptPlants;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)

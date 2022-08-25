@@ -26,6 +26,8 @@ namespace DragonsDecorativeMod.Tiles
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Ned the Nosey");
 			AddMapEntry(new Color(120, 120, 120), name);
+
+			DustType = DustID.Stone;
 		}
 
 		int look_direction = 0;

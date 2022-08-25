@@ -15,6 +15,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             AddMapEntry(new Color(30, 94, 33));
 
             HitSound = SoundID.Grass;
+            DustType = DustID.Grass;
+
             ItemDrop = ModContent.ItemType<Items.Garden.Vines>();
         }
     }

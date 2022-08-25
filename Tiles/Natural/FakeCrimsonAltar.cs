@@ -24,6 +24,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Fake Crimson Altar");
             AddMapEntry(new Color(214, 127, 133), name);
+
+            DustType = DustID.Crimstone;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)

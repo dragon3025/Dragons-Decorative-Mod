@@ -5,6 +5,7 @@ using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Garden
 {
@@ -24,6 +25,9 @@ namespace DragonsDecorativeMod.Tiles.Garden
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Plant");
             AddMapEntry(new Color(18, 86, 30), name);
+
+            HitSound = SoundID.Grass;
+            DustType = 0;
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)

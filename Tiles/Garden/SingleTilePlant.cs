@@ -5,6 +5,7 @@ using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Garden
 {
@@ -27,6 +28,9 @@ namespace DragonsDecorativeMod.Tiles.Garden
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Plant");
             AddMapEntry(new Color(18, 86, 30), name);
+
+            HitSound = SoundID.Grass;
+            DustType = 0;
 
             //TileID.Sets.SwaysInWindBasic[Type] = true; TO-DO Setting this to true makes it move correctly, but the non-single tile variants will still act weird. Once tModLoader adds support for non-single wide tile swaying, set this to true (add "using Terraria.ID;").
         }

@@ -20,6 +20,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(83, 88, 52));
+            DustType = 0;
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)

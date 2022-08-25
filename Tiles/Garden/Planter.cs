@@ -27,6 +27,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Planter");
             AddMapEntry(new Color(99, 89, 81), name);
+
+            DustType = DustID.Clay;
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)

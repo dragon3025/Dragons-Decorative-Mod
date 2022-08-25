@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles
 {
@@ -24,6 +25,8 @@ namespace DragonsDecorativeMod.Tiles
 			ModTranslation name = CreateMapEntryName();
 			name.SetDefault("Medusa Watching");
 			AddMapEntry(new Color(58, 62, 53), name);
+
+			DustType = DustID.WoodFurniture;
 		}
 
 		int look_direction = 0;

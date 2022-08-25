@@ -25,6 +25,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Fake Larva");
             AddMapEntry(new Color(224, 194, 101), name);
+
+            DustType = 0;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
