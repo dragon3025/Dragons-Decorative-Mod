@@ -3,14 +3,6 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using Terraria;
-using Terraria.DataStructures;
-using Terraria.Enums;
-using Terraria.ModLoader;
-using Terraria.ObjectData;
-using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -22,36 +14,17 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
 
-            //newTile.Width = 1;
-            //newTile.Height = 1;
-            //newTile.Origin = new Point16(0, 0);
-            //newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, newTile.Width, 0);
-            //newTile.UsesCustomCanPlace = true;
-            //newTile.CoordinateHeights = new int[1] { 16 };
-            //newTile.CoordinateWidth = 16;
-            //newTile.CoordinatePadding = 2;
-            //newTile.LavaDeath = true;
-            //addBaseTile(out Style1x1);
-
-            //newTile.Width = 1;
-            //newTile.Height = 2;
-            //newTile.Origin = new Point16(0, 0);
-            //newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, newTile.Width, 0);
-            //newTile.UsesCustomCanPlace = true;
-            //newTile.CoordinateHeights = new int[2] { 16, 16 };
-            //newTile.CoordinateWidth = 16;
-            //newTile.CoordinatePadding = 2;
-            //newTile.LavaDeath = true;
-            //addBaseTile(out Style1x2Top);
-
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(127, 127, 127));
+        }
 
-            DustType = 0;
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
 
         public override bool Drop(int i, int j)

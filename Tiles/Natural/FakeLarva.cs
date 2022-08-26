@@ -1,8 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -25,8 +23,11 @@ namespace DragonsDecorativeMod.Tiles.Natural
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Fake Larva");
             AddMapEntry(new Color(224, 194, 101), name);
+        }
 
-            DustType = 0;
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)

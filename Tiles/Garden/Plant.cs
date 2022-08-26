@@ -1,5 +1,4 @@
 using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -27,7 +26,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             AddMapEntry(new Color(18, 86, 30), name);
 
             HitSound = SoundID.Grass;
-            DustType = 0;
+            DustType = DustID.Grass;
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)

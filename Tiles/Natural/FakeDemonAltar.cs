@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
             name.SetDefault("Fake Demon Altar");
             AddMapEntry(new Color(119, 101, 125), name);
 
-            DustType = DustID.CorruptPlants;
+            DustType = DustID.Ebonwood;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)

@@ -20,8 +20,11 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(127, 127, 127));
+        }
 
-            DustType = 0;
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
 
         public override bool Drop(int i, int j)

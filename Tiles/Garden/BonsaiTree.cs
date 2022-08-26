@@ -3,7 +3,6 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Garden
 {
@@ -20,7 +19,11 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(83, 88, 52));
-            DustType = 0;
+        }
+
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)

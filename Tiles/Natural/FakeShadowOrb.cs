@@ -28,7 +28,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
             AnimationFrameHeight = 36;
 
             HitSound = SoundID.Shatter;
-            DustType = DustID.CorruptPlants;
+            DustType = DustID.Ebonwood;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
