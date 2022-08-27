@@ -51,6 +51,14 @@ namespace DragonsDecorativeMod.Global
                         nextSlot++;
                     }
                     break;
+                case NPCID.Truffle:
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeShort>());
+                    nextSlot++;
+
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
+                    nextSlot++;
+
+                    break;
             }
         }
     }
