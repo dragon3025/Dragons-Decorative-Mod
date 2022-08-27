@@ -25,7 +25,8 @@ namespace DragonsDecorativeMod.Global
                     ItemType<Items.Garden.PottedPlants.PottedOasisPlant>(),
                     ItemType<Items.Garden.PottedPlants.PottedTallCactus>()));
 
-            if (item.type == ItemID.CorruptFishingCrate || item.type == ItemID.CorruptFishingCrate)
+            if (item.type == ItemID.CorruptFishingCrate || item.type == ItemID.CorruptFishingCrateHard)
+            {
                 itemLoot.Add(ItemDropRule.OneFromOptions(2,
                     ItemType<Items.Garden.PottedPlants.PottedCedarCorruption>(),
                     ItemType<Items.Garden.PottedPlants.PottedTreeCorruption>(),
@@ -34,8 +35,10 @@ namespace DragonsDecorativeMod.Global
                     ItemType<Items.Garden.PottedPlants.PottedSmallCactusCorruption>(),
                     ItemType<Items.Garden.PottedPlants.PottedOasisPlantCorruption>(),
                     ItemType<Items.Garden.PottedPlants.PottedTallCactusCorrupt>()));
+            }
 
-            if (item.type == ItemID.CrimsonFishingCrate || item.type == ItemID.CrimsonFishingCrate)
+            if (item.type == ItemID.CrimsonFishingCrate || item.type == ItemID.CrimsonFishingCrateHard)
+            {
                 itemLoot.Add(ItemDropRule.OneFromOptions(2,
                     ItemType<Items.Garden.PottedPlants.PottedCedarCrimson>(),
                     ItemType<Items.Garden.PottedPlants.PottedTreeCrimson>(),
@@ -44,6 +47,7 @@ namespace DragonsDecorativeMod.Global
                     ItemType<Items.Garden.PottedPlants.PottedSmallCactusCrimson>(),
                     ItemType<Items.Garden.PottedPlants.PottedOasisPlantCrimson>(),
                     ItemType<Items.Garden.PottedPlants.PottedTallCactusCrimson>()));
+            }
 
             if (item.type == ItemID.HallowedFishingCrate || item.type == ItemID.HallowedFishingCrateHard)
                 itemLoot.Add(ItemDropRule.OneFromOptions(2,
@@ -52,12 +56,14 @@ namespace DragonsDecorativeMod.Global
                     ItemType<Items.Garden.PottedPlants.PottedTallCactusHallow>()));
 
             if (item.type == ItemID.FrozenCrate || item.type == ItemID.FrozenCrateHard)
+            {
                 itemLoot.Add(ItemDropRule.OneFromOptions(2,
                     ItemType<Items.Garden.PottedPlants.PottedXMasTree>(),
                     ItemType<Items.Garden.PottedPlants.PottedXMasTreeSnowy>()));
                 itemLoot.Add(ItemDropRule.OneFromOptions(2,
                     ItemType<Items.Garden.PottedPlants.PottedCedarSnowy>(),
                     ItemType<Items.Garden.PottedPlants.PottedTreeSnowy>()));
+            }
         }
     }
 }
