@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeC
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("RustyMinecart");
+            DisplayName.SetDefault("Rusty Minecart");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
