@@ -40,6 +40,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallB
         {
             CreateRecipe()
               .AddIngredient(ItemID.Bone, 3)
+              .AddIngredient(ModContent.ItemType<Items.BloodClump>())
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

@@ -40,7 +40,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
         {
             CreateRecipe(5)
               .AddIngredient(ItemID.Bone, 35)
-              .AddIngredient(ItemID.RedDye)
+              .AddIngredient(ModContent.ItemType<Items.BloodClump>())
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

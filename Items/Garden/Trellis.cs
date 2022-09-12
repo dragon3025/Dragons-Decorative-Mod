@@ -34,7 +34,7 @@ namespace DragonsDecorativeMod.Items.Garden
         {
             CreateRecipe()
               .AddRecipeGroup(RecipeGroupID.Wood)
-              .AddTile(TileID.WorkBenches)
+              .AddTile(TileID.Sawmill)
               .Register();
         }
     }
