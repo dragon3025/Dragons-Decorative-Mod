@@ -34,7 +34,7 @@ namespace DragonsDecorativeMod.Tiles
 			{
 				frameCounter = 0;
 				frame++;
-				frame %= 21;
+				frame %= 22;
 			}
 		}
 

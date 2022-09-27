@@ -43,7 +43,7 @@ namespace DragonsDecorativeMod.Tiles
 				Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Lectern>());
 			else if (frame == 1)
             {
-				Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 16, ItemID.Book);
+				Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ItemID.Book);
 				Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Lectern>());
 			}
 		}

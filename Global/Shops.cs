@@ -14,6 +14,11 @@ namespace DragonsDecorativeMod.Global
         {
             switch (type)
             {
+                case NPCID.Merchant:
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Globe>());
+                    nextSlot++;
+
+                    break;
                 case NPCID.Dryad:
                     shop.item[nextSlot].SetDefaults(ItemType<Plant>());
                     nextSlot++;
