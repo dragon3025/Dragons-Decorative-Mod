@@ -23,7 +23,7 @@ namespace DragonsDecorativeMod.Tiles.Signs
             TileObjectData.newTile.CoordinateWidth = 16;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16 };
             TileObjectData.newTile.UsesCustomCanPlace = true;
-            TileObjectData.newTile.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 1, 0);
+            TileObjectData.newTile.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
             TileObjectData.newTile.AnchorAlternateTiles = new int[] { ItemID.WoodenBeam };
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Tiles.Signs
             TileObjectData.newAlternate.CoordinateWidth = 16;
             TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16 };
             TileObjectData.newAlternate.UsesCustomCanPlace = true;
-            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, 1, 0);
+            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
             TileObjectData.newAlternate.AnchorAlternateTiles = new int[] { ItemID.WoodenBeam };
             TileObjectData.addAlternate(1);
 
