@@ -1,14 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.ID;
-using Terraria.ModLoader;
-using Terraria.ObjectData;
-using Microsoft.Xna.Framework;
-using Terraria;
-using Terraria.DataStructures;
-using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -16,36 +8,36 @@ using Terraria.ObjectData;
 namespace DragonsDecorativeMod.Tiles
 {
     public class Lectern : ModTile
-	{
-		public override void SetStaticDefaults()
-		{
-			Main.tileFrameImportant[Type] = true;
-			Main.tileNoAttach[Type] = true;
-			Main.tileLavaDeath[Type] = true;
-			
-			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-			TileObjectData.newTile.Height = 3;
-			TileObjectData.newTile.Origin = new Point16(0, 2);
-			TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
-			TileObjectData.newTile.StyleHorizontal = true;
-			TileObjectData.newTile.DrawYOffset = 2;
+    {
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileNoAttach[Type] = true;
+            Main.tileLavaDeath[Type] = true;
 
-			TileObjectData.addTile(Type);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Height = 3;
+            TileObjectData.newTile.Origin = new Point16(0, 2);
+            TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
+            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.DrawYOffset = 2;
 
-			AddMapEntry(new Color(169, 125, 93));
-		}
+            TileObjectData.addTile(Type);
 
-		public override void KillMultiTile(int x, int y, int frameX, int frameY)
-		{
-			int frame = frameX / 36;
+            AddMapEntry(new Color(169, 125, 93));
+        }
 
-			if (frame == 0)
-				Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Lectern>());
-			else if (frame == 1)
+        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        {
+            int frame = frameX / 36;
+
+            if (frame == 0)
+                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Lectern>());
+            else if (frame == 1)
             {
-				Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ItemID.Book);
-				Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Lectern>());
-			}
-		}
-	}
+                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ItemID.Book);
+                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Lectern>());
+            }
+        }
+    }
 }
