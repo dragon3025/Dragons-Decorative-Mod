@@ -8,7 +8,7 @@ using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles.Signs
 {
-    public class SignWeightingScale : ModTile
+    public class SignBag : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -62,16 +62,14 @@ namespace DragonsDecorativeMod.Tiles.Signs
             TileObjectData.addAlternate(4);
             TileObjectData.addTile(Type);
 
-            DustType = DustID.Lead;
-
-            AddMapEntry(new Color(103, 103, 103));
+            AddMapEntry(new Color(191, 142, 111));
 
             TileID.Sets.DisableSmartCursor[Type] = true;
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Signs.SignWeightingScale>());
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Signs.SignBag>());
         }
     }
 }

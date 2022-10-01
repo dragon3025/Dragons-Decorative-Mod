@@ -5,18 +5,20 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items.Signs
 {
-    public class SignWeightingScale : ModItem
+	[LegacyName("SignWeightingScale")]
+
+	public class SignBag : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Weighted Scale Sign");
+			DisplayName.SetDefault("Bag Sign");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.width = 28;
-			Item.height = 22;
+			Item.width = 32;
+			Item.height = 32;
 			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
@@ -25,14 +27,14 @@ namespace DragonsDecorativeMod.Items.Signs
 			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Tiles.Signs.SignWeightingScale>();
+			Item.createTile = ModContent.TileType<Tiles.Signs.SignBag>();
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			  .AddRecipeGroup(RecipeGroupID.IronBar)
-			  .AddTile(TileID.Anvils)
+			  .AddRecipeGroup(RecipeGroupID.Wood, 6)
+			  .AddTile(TileID.Sawmill)
 			  .Register();
 		}
 	}

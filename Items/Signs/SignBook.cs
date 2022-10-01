@@ -15,8 +15,8 @@ namespace DragonsDecorativeMod.Items.Signs
 
 		public override void SetDefaults()
 		{
-			Item.width = 24;
-			Item.height = 28;
+			Item.width = 32;
+			Item.height = 30;
 			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
