@@ -28,7 +28,7 @@ namespace DragonsDecorativeMod.Tiles
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
-            if (frame == 0 && frameCounter == 0 && !Main.rand.NextBool(3600))
+            if (frame == 0 && frameCounter == 0 && !Main.rand.NextBool(1800)) //30 Real-Life Seconds.
                 return;
             frameCounter++;
             if (frameCounter > 9)

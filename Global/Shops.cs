@@ -3,6 +3,7 @@ using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using DragonsDecorativeMod.Items;
 using DragonsDecorativeMod.Items.Garden;
 
 namespace DragonsDecorativeMod.Global
@@ -15,7 +16,7 @@ namespace DragonsDecorativeMod.Global
             switch (type)
             {
                 case NPCID.Merchant:
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Globe>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Globe>());
                     nextSlot++;
 
                     break;
@@ -48,11 +49,16 @@ namespace DragonsDecorativeMod.Global
                     nextSlot++;
 
                     break;
+                case NPCID.Painter:
+                    shop.item[nextSlot].SetDefaults(ItemType<PaintBottleSingle>());
+                    nextSlot++;
+
+                    break;
                 case NPCID.BestiaryGirl:
                     BestiaryUnlockProgressReport bestiaryProgressReport = Main.GetBestiaryProgressReport();
                     if (bestiaryProgressReport.CompletionPercent >= 0.5f)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.MoonGlobe>());
+                        shop.item[nextSlot].SetDefaults(ItemType<MoonGlobe>());
                         nextSlot++;
                     }
                     break;

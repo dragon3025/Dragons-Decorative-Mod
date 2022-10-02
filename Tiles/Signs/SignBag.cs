@@ -23,44 +23,57 @@ namespace DragonsDecorativeMod.Tiles.Signs
             TileObjectData.newTile.CoordinateWidth = 16;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16 };
             TileObjectData.newTile.UsesCustomCanPlace = true;
-            TileObjectData.newTile.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            TileObjectData.newTile.AnchorAlternateTiles = new int[] { ItemID.WoodenBeam };
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width = 2;
-            TileObjectData.newAlternate.Height = 2;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16 };
-            TileObjectData.newAlternate.UsesCustomCanPlace = true;
-            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            TileObjectData.newAlternate.AnchorAlternateTiles = new int[] { ItemID.WoodenBeam };
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree, TileObjectData.newTile.Height, 0);
             TileObjectData.addAlternate(1);
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width = 2;
-            TileObjectData.newAlternate.Height = 2;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16 };
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
             TileObjectData.addAlternate(2);
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width = 2;
-            TileObjectData.newAlternate.Height = 2;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16 };
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
-            TileObjectData.newAlternate.AnchorBottom = AnchorData.Empty;
             TileObjectData.addAlternate(3);
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width = 2;
-            TileObjectData.newAlternate.Height = 2;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16 };
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.AnchorWall = true;
             TileObjectData.addAlternate(4);
+
+            TileObjectData.newTile.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree, TileObjectData.newTile.Height, 0);
+
             TileObjectData.addTile(Type);
+
+            /*Figuring out proper anchors
+            TileObjectData.newTile.CopyFrom(TileObjectData.StyleTorch);
+            TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.Width = 2;
+            TileObjectData.newTile.Height = 2;
+            TileObjectData.newTile.CoordinateWidth = 16;
+            TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16 };
+            TileObjectData.newTile.UsesCustomCanPlace = true;
+
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.Origin = new Point16(1, 0);
+            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree, TileObjectData.newTile.Height, 0);
+            TileObjectData.addAlternate(1);
+
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.Origin = new Point16(0, 1);
+            TileObjectData.newAlternate.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
+            TileObjectData.addAlternate(2);
+
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
+            TileObjectData.addAlternate(3);
+
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorWall = true;
+            TileObjectData.addAlternate(4);
+
+            TileObjectData.newTile.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree, TileObjectData.newTile.Height, 0);
+
+            TileObjectData.addTile(Type);*/
 
             AddMapEntry(new Color(191, 142, 111));
 

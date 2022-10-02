@@ -20,7 +20,9 @@ namespace DragonsDecorativeMod.Tiles
 
             AnimationFrameHeight = 36;
 
-            AddMapEntry(new Color(168, 145, 127));
+            ModTranslation name = CreateMapEntryName();
+            name.SetDefault("Globe");
+            AddMapEntry(new Color(168, 145, 127), name);
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)

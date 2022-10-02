@@ -18,7 +18,9 @@ namespace DragonsDecorativeMod.Tiles
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
 			TileObjectData.addTile(Type);
 
-			AddMapEntry(new Color(139, 129, 120));
+			ModTranslation name = CreateMapEntryName();
+			name.SetDefault("Box of Arrows");
+			AddMapEntry(new Color(139, 129, 120), name);
 		}
 
 		public override void KillMultiTile(int x, int y, int frameX, int frameY)

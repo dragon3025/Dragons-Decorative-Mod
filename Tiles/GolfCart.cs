@@ -7,7 +7,7 @@ using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles
 {
-    public class SkeletonModel : ModTile
+    public class GolfCart : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -15,12 +15,9 @@ namespace DragonsDecorativeMod.Tiles
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.Origin = new Point16(0, 3);
-            TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
-            TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 16 };
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style5x4);
             TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
 
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
@@ -28,13 +25,13 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.addTile(Type);
 
             ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Skeleton Model");
-            AddMapEntry(new Color(255, 255, 255), name);
+            name.SetDefault("Golf Cart");
+            AddMapEntry(new Color(228, 222, 213), name);
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.SkeletonModel>());
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 80, 64, ModContent.ItemType<Items.GolfCart>());
         }
     }
 }

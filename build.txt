@@ -1,5 +1,5 @@
 author = Dragon3025
-version = 1.16
+version = 1.17
 displayName = Dragons Decorative Mod
 homepage = https://forums.terraria.org/index.php?threads/dragons-decorative-mod.113695/
 hideCode = false
