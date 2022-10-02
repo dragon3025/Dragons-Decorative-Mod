@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items
 			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.value = Item.sellPrice(0, 3);
+			Item.value = Item.sellPrice(0, 0, 3);
 			Item.createTile = ModContent.TileType<Tiles.HorizontalBooksStacked>();
 		}
 
