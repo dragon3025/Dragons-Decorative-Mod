@@ -26,6 +26,7 @@ namespace DragonsDecorativeMod.Items
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
 			Item.createTile = ModContent.TileType<Tiles.HospitalBed>();
+			Item.value = Item.sellPrice(0, 0, 4);
 		}
 
 		public override void AddRecipes()

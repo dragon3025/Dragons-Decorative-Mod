@@ -23,8 +23,8 @@ namespace DragonsDecorativeMod.Items
             Item.useTurn = true;
             Item.autoReuse = true;
             Item.rare = ItemRarityID.Green;
-            Item.useAnimation = 15;
-            Item.useTime = 15;
+            Item.useAnimation = 20;
+            Item.useTime = 20;
             Item.useStyle = ItemUseStyleID.Shoot;
             Item.UseSound = SoundID.Item106;
             Item.consumable = true;
