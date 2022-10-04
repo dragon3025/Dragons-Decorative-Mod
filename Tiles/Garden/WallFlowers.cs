@@ -23,8 +23,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
             TileObjectData.newTile.AnchorWall = true;
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.RandomStyleRange = 4;
-            TileObjectData.newTile.StyleMultiplier = 4;
+            TileObjectData.newTile.RandomStyleRange = 5;
+            TileObjectData.newTile.StyleMultiplier = 5;
             TileObjectData.addTile(Type);
 
             ItemDrop = ModContent.ItemType<Items.Garden.WallFlowers>();
