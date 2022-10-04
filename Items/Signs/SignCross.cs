@@ -1,4 +1,3 @@
-/*
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -38,4 +37,3 @@ namespace DragonsDecorativeMod.Items.Signs
 		}
 	}
 }
-*/

@@ -1,5 +1,4 @@
-﻿/*
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
@@ -20,76 +19,57 @@ namespace DragonsDecorativeMod.Tiles.Signs
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
 
-            //newTile.Width = 1;
-            //newTile.Height = 1;
-            //newTile.Origin = new Point16(0, 0);
-            //newTile.FlattenAnchors = true;
-            //newTile.UsesCustomCanPlace = false;
-            //newTile.CoordinateHeights = new int[1] { 20 };
-            //newTile.DrawStepDown = 2;
-            //newTile.CoordinateWidth = 20;
+            /*
+            //newTile.Width = 2;
+            //newTile.Height = 2;
+            //newTile.Origin = new Point16(0, 1);
+            //newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table | AnchorType.SolidSide, newTile.Width, 0);
+            //newTile.UsesCustomCanPlace = true;
+            //newTile.CoordinateHeights = new int[2] { 16, 16 };
+            //newTile.CoordinateWidth = 16;
             //newTile.CoordinatePadding = 2;
-            //newTile.StyleMultiplier = 6;
-            //newTile.StyleWrapLimit = 6;
-            //newTile.StyleHorizontal = true;
-            //newTile.WaterPlacement = LiquidPlacement.NotAllowed;
-            //newTile.LavaPlacement = LiquidPlacement.NotAllowed;
-            //newTile.WaterDeath = true;
             //newTile.LavaDeath = true;
-            //addBaseTile(out StyleTorch);
+            //addBaseTile(out Style2x2);
+            */
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.StyleTorch);
+            // Defaults
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.Width= 3;
-            TileObjectData.newTile.Height= 3;
-            TileObjectData.newTile.CoordinateWidth = 16;
+            TileObjectData.newTile.Width = 3;
+            TileObjectData.newTile.Height = 3;
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
             TileObjectData.newTile.Origin = new Point16(0, 0);
-            TileObjectData.newTile.UsesCustomCanPlace = true;
+            TileObjectData.newTile.AnchorAlternateTiles = new int[] { 124 };
 
-            GetInstance<DragonsDecorativeMod>().Logger.Debug("TileObjectData.newTile.Height: " + TileObjectData.newTile.Height.ToString());
-
-            TileObjectData.newTile.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            TileObjectData.newTile.AnchorAlternateTiles = new int[] { ItemID.WoodenBeam };
-
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width= 3;
-            TileObjectData.newAlternate.Height= 3;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16, 16 };
-            TileObjectData.newAlternate.Origin = new Point16(2, 0);
-            TileObjectData.newAlternate.UsesCustomCanPlace = true;
-            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree | AnchorType.AlternateTile, TileObjectData.newTile.Height, 0);
-            TileObjectData.newAlternate.AnchorAlternateTiles = new int[] { ItemID.WoodenBeam };
+            // Allow hanging from ceilings
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorLeft = AnchorData.Empty;
+            TileObjectData.newAlternate.AnchorRight = AnchorData.Empty;
+            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidBottom, TileObjectData.newTile.Width, 0);
+            TileObjectData.newAlternate.AnchorBottom = AnchorData.Empty;
             TileObjectData.addAlternate(1);
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width= 3;
-            TileObjectData.newAlternate.Height= 3;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16, 16 };
-            TileObjectData.newAlternate.Origin = new Point16(1, 2);
-            TileObjectData.newAlternate.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
+            // Allow attaching to a solid object that is to the left of the sign
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorLeft = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree, TileObjectData.newTile.Height, 0);
+            TileObjectData.newAlternate.AnchorBottom = AnchorData.Empty;
             TileObjectData.addAlternate(2);
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width= 3;
-            TileObjectData.newAlternate.Height= 3;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16, 16 };
-            TileObjectData.newAlternate.Origin = new Point16(1, 0);
-            TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
+            // Allow attaching to a solid object that is to the right of the sign
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.newAlternate.AnchorRight = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.Tree, TileObjectData.newTile.Height, 0);
             TileObjectData.newAlternate.AnchorBottom = AnchorData.Empty;
             TileObjectData.addAlternate(3);
 
-            TileObjectData.newAlternate.CopyFrom(TileObjectData.StyleTorch);
-            TileObjectData.newAlternate.Width= 3;
-            TileObjectData.newAlternate.Height= 3;
-            TileObjectData.newAlternate.CoordinateWidth = 16;
-            TileObjectData.newAlternate.CoordinateHeights = new int[] { 16, 16, 16 };
-            TileObjectData.newAlternate.Origin = new Point16(1, 1);
+            // Allow attaching to a wall behind the sign
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.AnchorWall = true;
+            TileObjectData.newAlternate.AnchorBottom = AnchorData.Empty;
             TileObjectData.addAlternate(4);
+
+            // Allow attaching sign to the ground
+            TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
+            TileObjectData.addAlternate(0);
 
             TileObjectData.addTile(Type);
 
@@ -104,4 +84,3 @@ namespace DragonsDecorativeMod.Tiles.Signs
         }
     }
 }
-*/
