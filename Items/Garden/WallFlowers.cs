@@ -13,7 +13,7 @@ namespace DragonsDecorativeMod.Items.Garden
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Wall Flowers");
-            Tooltip.SetDefault("Right click to cycle between 12 colors + randomized color.");
+            Tooltip.SetDefault("Try painting them");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -31,33 +31,6 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.createTile = ModContent.TileType<Tiles.Garden.WallFlowers>();
             Item.placeStyle = 0;
             Item.value = Item.sellPrice(0, 0, 5);
-        }
-
-        public override bool AltFunctionUse(Player player)
-        {
-            styleSecton++;
-            if (styleSecton > 12)
-                styleSecton = 0;
-            Item.placeStyle = Math.Min(11, styleSecton) * 4 + Main.rand.Next(4);
-
-            return base.AltFunctionUse(player);
-        }
-
-        public override void UpdateInventory(Player player)
-        {
-            if (Main.rand.NextBool(15) && styleSecton == 12)
-                Item.placeStyle = Main.rand.Next(48);
-            base.UpdateInventory(player);
-        }
-
-        public override bool? UseItem(Player player)
-        {
-            if (styleSecton == 12)
-                Item.placeStyle = Main.rand.Next(48);
-            else
-                Item.placeStyle = styleSecton * 4 + Main.rand.Next(4);
-
-            return base.UseItem(player);
         }
 
         public override void AddRecipes()
