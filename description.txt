@@ -4,16 +4,13 @@ Dragon's Decorative Mod
 
 Open Source at GitHub. Report issues there or at home page.
 
-This mod adds decorative items. I plan to keep adding to it. So far it has:
+NOTE: "Shop Expander" mod is recommended and may be necessary for shop items to appear.
 
-- Aquarium.
-- Bonsai Tree.
-- Medusa Painting and Ned the Nosey Statue. They're very nosey.
-- Peaceful Plantera's Bulb.
-- Placeable fake versions of ambient objects (for example: Enchanted sword in Stone).
-- Plants each comes with a variant that is takes up a 1x1 tile space while being visually the same.
-- Plant Pot.
-- Potted Plants.
-- Trellis with Empty, Vine, and Flower variants. Flower variants come in 12 colors.
-- Vines and Flower Vines (12 colors).
-- Fake versions of pots + Granite Pot.
+This mod adds decorative items. I plan to keep adding to it. As of version 1.18 (Oct 4th 2022) it has:
+
+- 2 Background Blocks
+- 1 Wall
+- 40 Furniture Items
+- Support for "Wikithis" mod.
+
+You can find example pictures and a link to the wiki on the forum page.

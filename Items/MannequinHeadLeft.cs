@@ -1,22 +1,22 @@
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 
-namespace DragonsDecorativeMod.Items.Signs
+namespace DragonsDecorativeMod.Items
 {
-    public class SignCross : ModItem
+    public class MannequinHeadLeft : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Healthy Cross Sign");
+			DisplayName.SetDefault("Left Mannequin Head");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.width = 32;
-			Item.height = 40;
+			Item.width = 20;
+			Item.height = 26;
 			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
@@ -25,15 +25,20 @@ namespace DragonsDecorativeMod.Items.Signs
 			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Tiles.Signs.SignCross>();
+			Item.value = Item.buyPrice(0, 0, 25);
+			Item.createTile = ModContent.TileType<Tiles.MannequinHeadLeft>();
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			  .AddRecipeGroup(RecipeGroupID.Wood, 14)
+			  .AddIngredient(ItemID.Wood, 5)
 			  .AddTile(TileID.Sawmill)
 			  .Register();
+
+			Recipe recipe = Recipe.Create(ModContent.ItemType<MannequinHeadRight>());
+			recipe.AddIngredient(this);
+			recipe.Register();
 		}
 	}
 }

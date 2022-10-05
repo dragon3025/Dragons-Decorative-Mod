@@ -5,18 +5,18 @@ using Terraria.GameContent.Creative;
 
 namespace DragonsDecorativeMod.Items
 {
-    public class HospitalBed : ModItem
+    public class PaintBucket : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Hospital Bed");
+			DisplayName.SetDefault("Paint Bucket");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
 			Item.width = 32;
-			Item.height = 22;
+			Item.height = 26;
 			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
@@ -25,17 +25,39 @@ namespace DragonsDecorativeMod.Items
 			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Tiles.HospitalBed>();
-			Item.value = Item.sellPrice(0, 0, 4);
+			Item.value = Item.sellPrice(0, 0, 0, 5);
+			Item.createTile = ModContent.TileType<Tiles.PaintBucket>();
 		}
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
-				.AddRecipeGroup(RecipeGroupID.IronBar, 4)
-				.AddIngredient(ItemID.Silk, 5)
-				.AddTile(TileID.HeavyWorkBench)
-				.Register();
+
+			int[] paints = new int[]
+			{
+				1073,
+				1074,
+				1075,
+				1076,
+				1077,
+				1078,
+				1079,
+				1080,
+				1081,
+				1082,
+				1083,
+				1084,
+				1097,
+				1098,
+				1099,
+				1966
+			};
+
+			foreach (int i in paints)
+			{
+				Recipe recipe = Recipe.Create(Type);
+				recipe.AddIngredient(i);
+				recipe.Register();
+			}
 		}
 	}
 }

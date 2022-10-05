@@ -5,6 +5,8 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
+//TO-DO When 1.4.4 comes out for tModLoader, use the same graphic stretch affect that Terrariums have.
+
 namespace DragonsDecorativeMod.Tiles
 {
     public class Aquarium : ModTile
@@ -17,6 +19,7 @@ namespace DragonsDecorativeMod.Tiles
 			Main.tileTable[Type] = true;
 
 			TileObjectData.newTile.CopyFrom(TileObjectData.Style6x3);
+			TileObjectData.newTile.DrawYOffset = 0;
 			TileObjectData.addTile(Type);
 
 			AnimationFrameHeight = 54;
@@ -42,5 +45,5 @@ namespace DragonsDecorativeMod.Tiles
 		{
 			Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Aquarium>());
 		}
-	}
+    }
 }

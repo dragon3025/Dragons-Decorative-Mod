@@ -1,22 +1,22 @@
 using Terraria;
-using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
+using Terraria.ID;
 
-namespace DragonsDecorativeMod.Items.Signs
+namespace DragonsDecorativeMod.Items
 {
-    public class SignCross : ModItem
+    public class LargeKegRotated : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Healthy Cross Sign");
+			DisplayName.SetDefault("Large Rotated Keg");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.width = 32;
-			Item.height = 40;
+			Item.width = 22;
+			Item.height = 22;
 			Item.maxStack = 9999;
 			Item.useTurn = true;
 			Item.autoReuse = true;
@@ -25,15 +25,20 @@ namespace DragonsDecorativeMod.Items.Signs
 			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Tiles.Signs.SignCross>();
+			Item.value = Item.sellPrice(0, 0, 1, 80);
+			Item.createTile = ModContent.TileType<Tiles.LargeKegRotated>();
 		}
 
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			  .AddRecipeGroup(RecipeGroupID.Wood, 14)
+			  .AddIngredient(ItemID.Wood, 21)
 			  .AddTile(TileID.Sawmill)
 			  .Register();
+
+			Recipe recipe = Recipe.Create(ModContent.ItemType<Items.LargeKeg>());
+			recipe.AddIngredient(this);
+			recipe.Register();
 		}
 	}
 }

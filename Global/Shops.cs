@@ -70,6 +70,11 @@ namespace DragonsDecorativeMod.Global
                     nextSlot++;
 
                     break;
+                case NPCID.Stylist:
+                    shop.item[nextSlot].SetDefaults(ItemType<Shampoo>());
+                    nextSlot++;
+
+                    break;
             }
         }
     }
