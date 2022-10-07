@@ -8,7 +8,7 @@ using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles
 {
-    public class PaintBucket : ModTile
+    public class ThreadPlaceable : ModTile
     {
         private Asset<Texture2D> overlayTexture;
 
@@ -24,12 +24,12 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(255, 0, 0));
 
             if (!Main.dedServ)
-                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/PaintBucketOverlay");
+                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/ThreadPlaceableOverlay");
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.PaintBucket>());
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.ThreadPlaceable>());
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

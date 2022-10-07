@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -34,21 +35,21 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int item;
 
             if (frame < 3)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallStoneStalagmite>();
+                item = ItemID.StoneBlock;
             else if (frame < 6)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallHiveStalagmite>();
+                item = ItemID.Hive;
             else if (frame < 9)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallPearlstoneStalagmite>();
+                item = ItemID.PearlstoneBlock;
             else if (frame < 12)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallEbonstoneStalagmite>();
+                item = ItemID.EbonstoneBlock;
             else if (frame < 15)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallCrimstoneStalagmite>();
+                item = ItemID.CrimstoneBlock;
             else if (frame < 18)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallSandstoneStalagmite>();
+                item = ItemID.Sandstone;
             else if (frame < 21)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallGraniteStalagmite>();
+                item = ItemID.GraniteBlock;
             else
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalagmites.SmallMarbleStalagmite>();
+                item = ItemID.MarbleBlock;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, item);

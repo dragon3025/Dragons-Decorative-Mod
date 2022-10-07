@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.Bone, 7)
+              .AddIngredient(ItemID.Bone)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

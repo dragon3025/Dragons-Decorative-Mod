@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalactites
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.Cobweb, 7)
+                .AddIngredient(ItemID.Cobweb)
                 .AddTile(TileID.HeavyWorkBench)
                 .AddCondition(Recipe.Condition.InGraveyardBiome)
                 .Register();

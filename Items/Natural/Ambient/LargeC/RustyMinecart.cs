@@ -29,5 +29,14 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeC
             Item.createTile = ModContent.TileType<Tiles.Natural.Ambient.LargeC>();
             Item.placeStyle = 5;
         }
+
+        public override void AddRecipes()
+        {
+            CreateRecipe()
+              .AddIngredient(ItemID.Wood)
+              .AddTile(TileID.HeavyWorkBench)
+              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .Register();
+        }
     }
 }

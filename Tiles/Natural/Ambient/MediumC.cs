@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -33,11 +34,11 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 36;
 
             if (frame <= 2)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumC.SmallGrassRocks>();
+                item = ItemID.StoneBlock;
             else if (frame <= 8)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumC.SmallSandstonePiles>();
+                item = ItemID.Sandstone;
             else if (frame <= 14)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumC.SmallGraniteRocks>();
+                item = ItemID.GraniteBlock;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 16, item);

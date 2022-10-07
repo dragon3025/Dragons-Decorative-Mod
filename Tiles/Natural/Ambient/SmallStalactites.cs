@@ -4,6 +4,7 @@ using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -37,29 +38,29 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int item;
 
             if (frame < 3)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallIcicle>();
+                item = ItemID.IceBlock;
             else if (frame < 6)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallStoneStalactite>();
+                item = ItemID.StoneBlock;
             else if (frame < 9)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallHiveStalactite>();
+                item = ItemID.Hive;
             else if (frame < 12)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallPearlstoneStalactite>();
+                item = ItemID.PearlstoneBlock;
             else if (frame < 15)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallEbonstoneStalactite>();
+                item = ItemID.EbonstoneBlock;
             else if (frame < 18)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallCrimstoneStalactite>();
+                item = ItemID.CrimstoneBlock;
             else if (frame < 21)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallSandstoneStalactite>();
+                item = ItemID.Sandstone;
             else if (frame < 24)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallGraniteStalactite>();
+                item = ItemID.GraniteBlock;
             else if (frame < 27)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallMarbleStalactite>();
+                item = ItemID.MarbleBlock;
             else if (frame < 30)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallPinkIcicle>();
+                item = ItemID.PinkIceBlock;
             else if (frame < 33)
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallPurpleIcicle>();
+                item = ItemID.PurpleIceBlock;
             else
-                item = ModContent.ItemType<Items.Natural.Ambient.SmallStalactites.SmallRedIcicle>();
+                item = ItemID.RedIceBlock;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, item);

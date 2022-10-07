@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalagmites
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.PearlstoneBlock, 7)
+                .AddIngredient(ItemID.PearlstoneBlock)
                 .AddTile(TileID.HeavyWorkBench)
                 .AddCondition(Recipe.Condition.InGraveyardBiome)
                 .Register();

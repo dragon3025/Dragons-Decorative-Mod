@@ -31,8 +31,7 @@ namespace DragonsDecorativeMod.Items.Natural
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.FleshBlock, 10)
-              .AddIngredient(ItemID.SoulofNight)
+              .AddIngredient(ItemID.CrimstoneBlock)
               .AddTile(TileID.CrystalBall)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

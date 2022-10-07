@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.SilverCoin, 6)
+              .AddIngredient(ItemID.SilverCoin)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

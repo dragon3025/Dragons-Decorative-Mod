@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.ClayBlock, 10)
+              .AddIngredient(ItemID.ClayBlock)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -31,17 +32,17 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
         {
             Tile t = Main.tile[i, j];
             int frame = t.TileFrameX / 18;
-            int itemID = 0;
+            int item = 0;
 
             if (frame <= 5)
-                itemID = ModContent.ItemType<Items.Natural.Ambient.SmallC.IceRock>();
+                item = ItemID.SnowBlock;
             else if (frame <= 11)
-                itemID = ModContent.ItemType<Items.Natural.Ambient.SmallC.BlueIceRock>();
+                item = ItemID.IceBlock;
             else if (frame <= 17)
-                itemID = ModContent.ItemType<Items.Natural.Ambient.SmallC.TinySpiderEggs>();
+                item = ItemID.Cobweb;
 
-            if (itemID > 0)
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, itemID);
+            if (item > 0)
+                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, item);
 
             return base.Drop(i, j);
         }

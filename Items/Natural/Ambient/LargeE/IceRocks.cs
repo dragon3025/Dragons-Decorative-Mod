@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.IceBlock, 20)
+              .AddIngredient(ItemID.SnowBlock)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

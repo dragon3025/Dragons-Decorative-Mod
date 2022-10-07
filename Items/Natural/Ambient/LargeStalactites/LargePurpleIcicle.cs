@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalactites
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.PurpleIceBlock, 7)
+                .AddIngredient(ItemID.PurpleIceBlock)
                 .AddTile(TileID.HeavyWorkBench)
                 .AddCondition(Recipe.Condition.InGraveyardBiome)
                 .Register();

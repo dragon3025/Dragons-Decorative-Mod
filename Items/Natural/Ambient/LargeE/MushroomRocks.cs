@@ -39,8 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.StoneBlock, 20)
-              .AddIngredient(ItemID.MushroomGrassSeeds, 5)
+              .AddIngredient(ItemID.GlowingMushroom)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

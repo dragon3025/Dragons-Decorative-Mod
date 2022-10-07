@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeC
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.Sandstone, 20)
+              .AddIngredient(ItemID.Sandstone)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

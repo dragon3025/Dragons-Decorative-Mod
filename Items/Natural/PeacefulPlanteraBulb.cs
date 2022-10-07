@@ -28,5 +28,14 @@ namespace DragonsDecorativeMod.Items.Natural
 			Item.value = Item.sellPrice(0, 0, 2);
 			Item.createTile = ModContent.TileType<Tiles.Natural.PeacefulPlanteraBulb>();
 		}
+
+		public override void AddRecipes()
+		{
+			CreateRecipe()
+			  .AddIngredient(ItemID.ChlorophyteOre)
+			  .AddTile(TileID.HeavyWorkBench)
+			  .AddCondition(Recipe.Condition.InGraveyardBiome)
+			  .Register();
+		}
 	}
 }

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural
 {
@@ -43,7 +44,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 48, ModContent.ItemType<Items.Natural.FakeLarva>());
+            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 48, ItemID.BeeWax);
         }
     }
 }

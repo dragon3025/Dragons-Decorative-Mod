@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -33,23 +34,23 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 36;
 
             if (frame <= 0)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.AmethystStash>();
+                item = ItemID.Amethyst;
             else if (frame <= 1)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.TopazStash>();
+                item = ItemID.Topaz;
             else if (frame <= 2)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.SapphireStash>();
+                item = ItemID.Sapphire;
             else if (frame <= 3)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.EmeraldStash>();
+                item = ItemID.Emerald;
             else if (frame <= 4)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.RubyStash>();
+                item = ItemID.Ruby;
             else if (frame <= 5)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.DiamondStash>();
+                item = ItemID.Diamond;
             else if (frame <= 11)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.SmallIceRocks>();
+                item = ItemID.SnowBlock;
             else if (frame <= 14)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.SmallBrokenFurniture>();
+                item = ItemID.Wood;
             else if (frame <= 18)
-                item = ModContent.ItemType<Items.Natural.Ambient.MediumB.SmallSpiderEggs>();
+                item = ItemID.Cobweb;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 16, item);

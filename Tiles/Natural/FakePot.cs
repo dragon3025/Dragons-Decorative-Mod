@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural
 {
@@ -35,31 +36,31 @@ namespace DragonsDecorativeMod.Tiles.Natural
             int frame = frameY / 36;
 
             if (frame <= 3)
-                item = ModContent.ItemType<Items.Natural.Pots.ForestPot>();
+                item = ItemID.ClayBlock;
             else if (frame <= 6)
-                item = ModContent.ItemType<Items.Natural.Pots.FrozenPot>();
+                item = ItemID.IceBlock;
             else if (frame <= 9)
-                item = ModContent.ItemType<Items.Natural.Pots.JunglePot>();
+                item = ItemID.MudBlock;
             else if (frame <= 12)
-                item = ModContent.ItemType<Items.Natural.Pots.DungeonPot>();
+                item = ItemID.Bone;
             else if (frame <= 15)
-                item = ModContent.ItemType<Items.Natural.Pots.ObsidianPot>();
+                item = ItemID.Obsidian;
             else if (frame <= 18)
-                item = ModContent.ItemType<Items.Natural.Pots.CorruptionPot>();
+                item = ItemID.EbonstoneBlock;
             else if (frame <= 21)
-                item = ModContent.ItemType<Items.Natural.Pots.SpiderPot>();
+                item = ItemID.Cobweb;
             else if (frame <= 24)
-                item = ModContent.ItemType<Items.Natural.Pots.CrimsonPot>();
+                item = ItemID.CrimstoneBlock;
             else if (frame <= 27)
-                item = ModContent.ItemType<Items.Natural.Pots.PyramidPot>();
+                item = ItemID.Sandstone;
             else if (frame <= 30)
-                item = ModContent.ItemType<Items.Natural.Pots.LihzahrdPot>();
+                item = ItemID.LihzahrdBrick;
             else if (frame <= 33)
-                item = ModContent.ItemType<Items.Natural.Pots.MarblePot>();
+                item = ItemID.MarbleBlock;
             else if (frame <= 36)
-                item = ModContent.ItemType<Items.Natural.Pots.UndergroundDesertPot>();
+                item = ItemID.Sandstone;
             else if (frame <= 39)
-                item = ModContent.ItemType<Items.Natural.Pots.GranitePot>();
+                item = ItemID.GraniteBlock;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, item);

@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -34,19 +35,19 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 18;
 
             if (frame < 3)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalagmites.LargeStoneStalagmite>();
+                item = ItemID.StoneBlock;
             else if (frame < 6)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalagmites.LargePearlstoneStalagmite>();
+                item = ItemID.PearlstoneBlock;
             else if (frame < 9)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalagmites.LargeEbonstoneStalagmite>();
+                item = ItemID.EbonstoneBlock;
             else if (frame < 12)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalagmites.LargeCrimstoneStalagmite>();
+                item = ItemID.CrimstoneBlock;
             else if (frame < 15)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalagmites.LargeSandstoneStalagmite>();
+                item = ItemID.Sandstone;
             else if (frame < 18)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalagmites.LargeGraniteStalagmite>();
+                item = ItemID.GraniteBlock;
             else if (frame < 21)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalagmites.LargeMarbleStalagmite>();
+                item = ItemID.MarbleBlock;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 32, item);

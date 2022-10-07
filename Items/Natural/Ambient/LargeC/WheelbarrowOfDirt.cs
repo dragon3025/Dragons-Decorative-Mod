@@ -33,8 +33,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeC
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.DirtBlock, 20)
-              .AddRecipeGroup(RecipeGroupID.IronBar, 5)
+              .AddIngredient(ItemID.Wood)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

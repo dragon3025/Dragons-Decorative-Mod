@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalagmites
         public override void AddRecipes()
         {
             CreateRecipe()
-                .AddIngredient(ItemID.Granite, 7)
+                .AddIngredient(ItemID.Granite)
                 .AddTile(TileID.HeavyWorkBench)
                 .AddCondition(Recipe.Condition.InGraveyardBiome)
                 .Register();

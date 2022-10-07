@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -33,19 +34,19 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 54;
 
             if (frame <= 1)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeE.LargeGoldCoinStash>();
+                item = ItemID.GoldCoin;
             else if (frame <= 2)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeE.BrokenFurniture>();
+                item = ItemID.Wood;
             else if (frame <= 3)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeE.BrokenGrandfatherClock>();
+                item = ItemID.Wood;
             else if (frame <= 4)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeE.BrokenChest>();
+                item = ItemID.Wood;
             else if (frame <= 5)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeE.BrokenChandelier>();
+                item = ItemID.Wood;
             else if (frame <= 11)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeE.IceRocks>();
+                item = ItemID.SnowBlock;
             else if (frame <= 14)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeE.MushroomRocks>();
+                item = ItemID.GlowingMushroom;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, item);

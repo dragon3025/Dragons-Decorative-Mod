@@ -39,8 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
         public override void AddRecipes()
         {
             CreateRecipe(5)
-              .AddIngredient(ItemID.Bone, 35)
-              .AddIngredient(ModContent.ItemType<Items.BloodClump>())
+              .AddIngredient(ItemID.Bone)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

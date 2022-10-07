@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -32,26 +33,24 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int item = 0;
             int frame = frameX / 54;
 
-            Main.NewText("Frame: " + frame.ToString());
-
             if (frame <= 2)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.LihzahrdRubble>();
+                item = ItemID.LihzahrdBrick;
             else if (frame <= 4)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.UndergroundCage>();
+                item = ItemID.Wood;
             else if (frame <= 5)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.RustyMinecart>();
+                item = ItemID.Wood;
             else if (frame <= 6)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.Well>();
+                item = ItemID.Wood;
             else if (frame <= 7)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.ShovelAndDirt>();
+                item = ItemID.Wood;
             else if (frame <= 8)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.Tent>();
+                item = ItemID.Wood;
             else if (frame <= 9)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.WheelbarrowOfDirt>();
+                item = ItemID.Wood;
             else if (frame <= 10)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.WoodPoleWithRope>();
+                item = ItemID.Wood;
             else if (frame <= 16)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeC.SandstonePiles>();
+                item = ItemID.Wood;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, item);

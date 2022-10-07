@@ -31,8 +31,7 @@ namespace DragonsDecorativeMod.Items.Natural
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			  .AddIngredient(ItemID.Wood, 20)
-			  .AddIngredient(ItemID.PixieDust)
+			  .AddIngredient(ItemID.Wood)
 			  .AddTile(TileID.HeavyWorkBench)
 			  .AddCondition(Recipe.Condition.InGraveyardBiome)
 			  .Register();

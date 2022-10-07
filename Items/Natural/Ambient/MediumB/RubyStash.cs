@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumB
         public override void AddRecipes()
         {
             CreateRecipe()
-              .AddIngredient(ItemID.RubyStoneBlock, 2)
+              .AddIngredient(ItemID.Ruby)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Recipe.Condition.InGraveyardBiome)
               .Register();

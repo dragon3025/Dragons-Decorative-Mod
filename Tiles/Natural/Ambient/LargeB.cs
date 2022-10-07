@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -33,19 +34,19 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 54;
 
             if (frame <= 2)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeB.JungleGrassyRocks>();
+                item = ItemID.JungleGrassSeeds;
             else if (frame <= 5)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeB.JungleGrassyMudPiles>();
+                item = ItemID.JungleGrassSeeds;
             else if (frame <= 8)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeB.AshPilesWithHellstone>();
+                item = ItemID.Hellstone;
             else if (frame <= 9 || frame == 13)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeB.WebCoveredSkeleton>();
+                item = ItemID.Cobweb;
             else if (frame <= 12)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeB.LargeSpiderEggs>();
+                item = ItemID.Cobweb;
             else if (frame <= 16)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeB.GrassyRocks>();
+                item = ItemID.GrassSeeds;
             else if (frame <= 17)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeB.FakeEnchantedSwordInStone>();
+                item = ItemID.EnchantedSword;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, item);

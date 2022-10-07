@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using Terraria.DataStructures;
+using Terraria.ID;
 
 namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 {
@@ -29,34 +30,34 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-
-            int item = 0;
             int frame = frameX / 18;
 
+            int item = 0;
+
             if (frame < 3)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeIcicle>();
+                item = ItemID.IceBlock;
             else if (frame < 6)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeStoneStalactite>();
+                item = ItemID.StoneBlock;
             else if (frame < 9)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.WebHangingVictim>();
+                item = ItemID.Cobweb;
             else if (frame < 12)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargePearlstoneStalactite>();
+                item = ItemID.PearlstoneBlock;
             else if (frame < 15)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeEbonstoneStalactite>();
+                item = ItemID.EbonstoneBlock;
             else if (frame < 18)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeCrimstoneStalactite>();
+                item = ItemID.CrimstoneBlock;
             else if (frame < 21)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeSandstoneStalactite>();
+                item = ItemID.Sandstone;
             else if (frame < 24)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeGraniteStalactite>();
+                item = ItemID.GraniteBlock;
             else if (frame < 27)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeMarbleStalactite>();
+                item = ItemID.MarbleBlock;
             else if (frame < 30)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargePinkIcicle>();
+                item = ItemID.PinkIceBlock;
             else if (frame < 33)
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargePurpleIcicle>();
+                item = ItemID.PurpleIceBlock;
             else
-                item = ModContent.ItemType<Items.Natural.Ambient.LargeStalactites.LargeRedIcicle>();
+                item = ItemID.RedIceBlock;
 
             if (item > 0)
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 32, item);

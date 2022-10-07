@@ -31,10 +31,7 @@ namespace DragonsDecorativeMod.Items.Natural
 		public override void AddRecipes()
 		{
 			CreateRecipe()
-			  .AddIngredient(ItemID.Abeemination)
-			  .AddIngredient(ItemID.BottledHoney, 5)
-			  .AddIngredient(ItemID.BeeWax, 5)
-			  .AddIngredient(ItemID.Wire, 10)
+			  .AddIngredient(ItemID.BeeWax)
 			  .AddTile(TileID.HeavyWorkBench)
 			  .AddCondition(Recipe.Condition.InGraveyardBiome)
 			  .Register();

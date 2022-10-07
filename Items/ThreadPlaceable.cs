@@ -1,21 +1,22 @@
 using Terraria;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.GameContent.Creative;
-using Terraria.ID;
 
 namespace DragonsDecorativeMod.Items
 {
-    public class MannequinHeadLeft : ModItem
+    public class ThreadPlaceable : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Left Mannequin Head");
+			DisplayName.SetDefault("Placeable Thread");
+            Tooltip.SetDefault("Try painting it");
 			CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 		}
 
 		public override void SetDefaults()
 		{
-			Item.width = 20;
+			Item.width = 32;
 			Item.height = 26;
 			Item.maxStack = 9999;
 			Item.useTurn = true;
@@ -25,18 +26,22 @@ namespace DragonsDecorativeMod.Items
 			Item.useTime = 15;
 			Item.useStyle = ItemUseStyleID.HoldUp;
 			Item.consumable = true;
-			Item.createTile = ModContent.TileType<Tiles.MannequinHeadLeft>();
+			Item.value = Item.sellPrice(0, 0, 4);
+			Item.createTile = ModContent.TileType<Tiles.ThreadPlaceable>();
 		}
 
 		public override void AddRecipes()
 		{
-			CreateRecipe()
-			  .AddIngredient(ItemID.Wood, 5)
-			  .AddTile(TileID.Sawmill)
-			  .Register();
+			Recipe recipe = Recipe.Create(Type);
+			recipe.AddIngredient(ItemID.BlackThread);
+			recipe.Register();
 
-			Recipe recipe = Recipe.Create(ModContent.ItemType<MannequinHeadRight>());
-			recipe.AddIngredient(this);
+			recipe = Recipe.Create(Type);
+			recipe.AddIngredient(ItemID.GreenThread);
+			recipe.Register();
+
+			recipe = Recipe.Create(Type);
+			recipe.AddIngredient(ItemID.PinkThread);
 			recipe.Register();
 		}
 	}

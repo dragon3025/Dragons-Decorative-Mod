@@ -20,6 +20,7 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.Table, TileObjectData.newTile.Width, 0);
             TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.RandomStyleRange = 6;
             TileObjectData.newTile.StyleMultiplier = 6;
 

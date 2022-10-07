@@ -10,9 +10,6 @@ namespace DragonsDecorativeMod.Global
 
         public override void ModifyItemLoot(Terraria.Item item, ItemLoot itemLoot)
         {
-            if (item.type == ItemID.PlanteraBossBag)
-                itemLoot.Add(ItemDropRule.Common(ItemType<Items.Natural.PeacefulPlanteraBulb>()));
-
             if (item.type == ItemID.LavaCrate || item.type == ItemID.LavaCrateHard)
                 itemLoot.Add(ItemDropRule.OneFromOptions(4,
                     ItemType<Items.Garden.HangingPlant>(),
