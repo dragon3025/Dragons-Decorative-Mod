@@ -1,7 +1,8 @@
 using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Garden
 {
@@ -33,6 +34,8 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void AddRecipes()
         {
+            if (!GetInstance<BFurnitureConfig>().Plants)
+                return;
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<Plant3>())
                 .Register();

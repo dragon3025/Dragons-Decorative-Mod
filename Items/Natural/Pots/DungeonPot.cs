@@ -1,7 +1,8 @@
 ﻿using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Natural.Pots
 {
@@ -38,6 +39,9 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
 
         public override void AddRecipes()
         {
+            if (!GetInstance<BFurnitureConfig>().Pots)
+                return;
+
             CreateRecipe()
               .AddIngredient(ItemID.Bone)
               .AddTile(TileID.HeavyWorkBench)

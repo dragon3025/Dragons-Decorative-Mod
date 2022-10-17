@@ -1,8 +1,8 @@
-using System;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Garden
 {
@@ -35,6 +35,8 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void AddRecipes()
         {
+            if (!GetInstance<ABlocksWallsConfig>().WallFlowers)
+                return;
             CreateRecipe()
               .AddIngredient(ItemID.FlowerPacketWild, 5)
               .AddTile(TileID.WorkBenches)

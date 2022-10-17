@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Natural
 {
@@ -30,6 +31,9 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
+            if (!GetInstance<BFurnitureConfig>().AltarsShadowOrbAndCrimsonHeart)
+                return;
+
             CreateRecipe()
               .AddIngredient(ItemID.CrimstoneBlock)
               .AddTile(TileID.CrystalBall)

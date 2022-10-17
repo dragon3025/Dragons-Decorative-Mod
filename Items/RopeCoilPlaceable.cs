@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items
 {
@@ -31,6 +32,9 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
+            if (!GetInstance<BFurnitureConfig>().RopeCoilPlaceable)
+                return;
+
             CreateRecipe()
               .AddIngredient(ItemID.RopeCoil)
               .Register();

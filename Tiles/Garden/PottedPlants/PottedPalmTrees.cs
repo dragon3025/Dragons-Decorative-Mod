@@ -17,7 +17,7 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x4);
             TileObjectData.newTile.Height = 6;
             TileObjectData.newTile.Origin = new Point16(1, 5);
-            TileObjectData.newTile.CoordinateHeights = new int[6] { 16, 16, 16, 16, 16 , 16};
+            TileObjectData.newTile.CoordinateHeights = new int[6] { 16, 16, 16, 16, 16, 16 };
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 

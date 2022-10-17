@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
             {
                 return;
             }
-        
+
             if (Main.rand.NextBool(10))
             {
                 var dust = Dust.NewDustDirect(new Vector2(i * 16, j * 16), 16, 16, DustID.Corruption);

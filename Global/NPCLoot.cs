@@ -9,12 +9,19 @@ namespace DragonsDecorativeMod.Global
     public class NPCLoot : GlobalNPC
     {
         public override void ModifyNPCLoot(NPC npc, Terraria.ModLoader.NPCLoot npcLoot)
-		{
-			if (npc.type == NPCID.Ghost)
-				npcLoot.Add(ItemDropRule.Common(ItemType<Items.StaringStatue>(), 50));
+        {
+            if (GetInstance<BFurnitureConfig>().StaringStatue)
+                return;
+            {
+                if (npc.type == NPCID.Ghost)
+                    npcLoot.Add(ItemDropRule.Common(ItemType<Items.StaringStatue>(), 50));
+            }
 
-			if (npc.type == NPCID.Medusa)
-				npcLoot.Add(ItemDropRule.Common(ItemType<Items.MedusaWatching>(), 25));
-		}
+            if (GetInstance<BFurnitureConfig>().MedusaWatching)
+            {
+                if (npc.type == NPCID.Medusa)
+                    npcLoot.Add(ItemDropRule.Common(ItemType<Items.MedusaWatching>(), 25));
+            }
+        }
     }
 }

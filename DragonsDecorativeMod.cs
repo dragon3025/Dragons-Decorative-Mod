@@ -15,3 +15,5 @@ namespace DragonsDecorativeMod
         }
     }
 }
+
+//TO-DO When 1.4.4 comes out for tModLoader, remove ambient objects that the rubble maker already makes. Change the rest of the Ambient objects from craftable to rubblemaker-placed.

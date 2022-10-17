@@ -1,7 +1,8 @@
 ﻿using Terraria;
+using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using Terraria.GameContent.Creative;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
 {
@@ -32,6 +33,9 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
 
         public override void AddRecipes()
         {
+            if (!GetInstance<BFurnitureConfig>().OtherAmbient)
+                return;
+
             CreateRecipe()
               .AddIngredient(ItemID.SilverCoin)
               .AddTile(TileID.HeavyWorkBench)

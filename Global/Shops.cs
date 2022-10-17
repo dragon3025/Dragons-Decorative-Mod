@@ -1,10 +1,10 @@
+using DragonsDecorativeMod.Items;
+using DragonsDecorativeMod.Items.Garden;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using DragonsDecorativeMod.Items;
-using DragonsDecorativeMod.Items.Garden;
 
 namespace DragonsDecorativeMod.Global
 {
@@ -21,32 +21,41 @@ namespace DragonsDecorativeMod.Global
 
                     break;
                 case NPCID.Dryad:
-                    shop.item[nextSlot].SetDefaults(ItemType<Plant>());
-                    nextSlot++;
+                    if (GetInstance<BFurnitureConfig>().Plants)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<Plant>());
+                        nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Plant2>());
-                    nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Plant2>());
+                        nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Plant3>());
-                    nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Plant3>());
+                        nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Plant4>());
-                    nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Plant4>());
+                        nextSlot++;
+                    }
 
-                    shop.item[nextSlot].SetDefaults(ItemType<BonsaiTree>());
-                    nextSlot++;
+                    if (GetInstance<BFurnitureConfig>().BonsaiTree)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<BonsaiTree>());
+                        nextSlot++;
+                    }
 
-                    shop.item[nextSlot].SetDefaults(ItemType<BleedingCrownMushroom>());
-                    nextSlot++;
+                    if (GetInstance<BFurnitureConfig>().Mushrooms)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<BleedingCrownMushroom>());
+                        nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<BrownMushroom>());
-                    nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<BrownMushroom>());
+                        nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<RedMushroom>());
-                    nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<RedMushroom>());
+                        nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<WhiteMushroom>());
-                    nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<WhiteMushroom>());
+                        nextSlot++;
+                    }
 
                     break;
                 case NPCID.Painter:
@@ -63,11 +72,14 @@ namespace DragonsDecorativeMod.Global
                     }
                     break;
                 case NPCID.Truffle:
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeShort>());
-                    nextSlot++;
+                    if (GetInstance<BFurnitureConfig>().PottedPlants)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeShort>());
+                        nextSlot++;
 
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
-                    nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
+                        nextSlot++;
+                    }
 
                     break;
                 case NPCID.Stylist:
