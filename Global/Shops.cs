@@ -58,6 +58,24 @@ namespace DragonsDecorativeMod.Global
                     }
 
                     break;
+                case NPCID.SantaClaus:
+                    if (GetInstance<BFurnitureConfig>().ChristmasLights)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightCyan>());
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightOrange>());
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightPink>());
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightPurple>());
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightWhite>());
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightYellow>());
+                        nextSlot++;
+                    }
+
+                    break;
                 case NPCID.Painter:
                     shop.item[nextSlot].SetDefaults(ItemType<PaintBottleSingle>());
                     nextSlot++;

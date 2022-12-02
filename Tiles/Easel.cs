@@ -14,17 +14,6 @@ namespace DragonsDecorativeMod.Tiles
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
 
-            //newTile.Width = 2;
-            //newTile.Height = 3;
-            //newTile.Origin = new Point16(1, 2);
-            //newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.SolidSide, newTile.Width, 0);
-            //newTile.UsesCustomCanPlace = true;
-            //newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
-            //newTile.CoordinateWidth = 16;
-            //newTile.CoordinatePadding = 2;
-            //newTile.StyleHorizontal = true;
-            //addBaseTile(out Style2xX);
-
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
             TileObjectData.addTile(Type);
 

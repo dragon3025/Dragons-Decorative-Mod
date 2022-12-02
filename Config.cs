@@ -70,6 +70,15 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool OtherAmbient;
 
+        [Header("Christmas")]
+
+        [Label("[i:DragonsDecorativeMod/LightYellow] Christmas Lights")]
+        [Tooltip("" +
+            "Terraria has Red, Blue, and Green lights. Enabling this will add Cyan, Orange,\n" +
+            "Pink, Purple, White, and Yellow Lights")]
+        [DefaultValue(true)]
+        public bool ChristmasLights;
+
         [Header("Garden")]
 
         [Label("[i:DragonsDecorativeMod/BonsaiTree] Bonsai Tree")]
