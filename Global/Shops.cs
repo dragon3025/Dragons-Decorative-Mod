@@ -75,6 +75,20 @@ namespace DragonsDecorativeMod.Global
                         nextSlot++;
                     }
 
+                    if (GetInstance<BFurnitureConfig>().CandyCane)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.CandyCane>());
+                        nextSlot++;
+                    }
+
+                    if (GetInstance<BFurnitureConfig>().Snowman)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.SnowmanLeft>());
+                        nextSlot++;
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.SnowmanRight>());
+                        nextSlot++;
+                    }
+
                     break;
                 case NPCID.Painter:
                     shop.item[nextSlot].SetDefaults(ItemType<PaintBottleSingle>());

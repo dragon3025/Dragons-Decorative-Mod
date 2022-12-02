@@ -52,8 +52,7 @@ namespace DragonsDecorativeMod.Tiles.Christmas
 
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            AddMapEntry(new Color(0, 255, 255), name);
+            AddMapEntry(new Color(255, 0, 255));
 
             if (!Main.dedServ)
             {

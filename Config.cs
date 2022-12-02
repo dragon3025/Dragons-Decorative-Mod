@@ -79,6 +79,14 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool ChristmasLights;
 
+        [Label("[i:DragonsDecorativeMod/CandyCane] Lawn Candy Cane")]
+        [DefaultValue(true)]
+        public bool CandyCane;
+
+        [Label("[i:DragonsDecorativeMod/SnowmanLeft] Snowman")]
+        [DefaultValue(true)]
+        public bool Snowman;
+
         [Header("Garden")]
 
         [Label("[i:DragonsDecorativeMod/BonsaiTree] Bonsai Tree")]
