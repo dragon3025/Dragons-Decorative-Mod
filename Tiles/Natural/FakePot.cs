@@ -36,34 +36,62 @@ namespace DragonsDecorativeMod.Tiles.Natural
             int frame = frameY / 36;
 
             if (frame <= 3)
+            {
                 item = ItemID.ClayBlock;
+            }
             else if (frame <= 6)
+            {
                 item = ItemID.IceBlock;
+            }
             else if (frame <= 9)
+            {
                 item = ItemID.MudBlock;
+            }
             else if (frame <= 12)
+            {
                 item = ItemID.Bone;
+            }
             else if (frame <= 15)
+            {
                 item = ItemID.Obsidian;
+            }
             else if (frame <= 18)
+            {
                 item = ItemID.EbonstoneBlock;
+            }
             else if (frame <= 21)
+            {
                 item = ItemID.Cobweb;
+            }
             else if (frame <= 24)
+            {
                 item = ItemID.CrimstoneBlock;
+            }
             else if (frame <= 27)
+            {
                 item = ItemID.Sandstone;
+            }
             else if (frame <= 30)
+            {
                 item = ItemID.LihzahrdBrick;
+            }
             else if (frame <= 33)
+            {
                 item = ItemID.MarbleBlock;
+            }
             else if (frame <= 36)
+            {
                 item = ItemID.Sandstone;
+            }
             else if (frame <= 39)
+            {
                 item = ItemID.GraniteBlock;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, item);
+            }
         }
     }
 }

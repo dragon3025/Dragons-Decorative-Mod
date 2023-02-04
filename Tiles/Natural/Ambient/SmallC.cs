@@ -35,14 +35,22 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int item = 0;
 
             if (frame <= 5)
+            {
                 item = ItemID.SnowBlock;
+            }
             else if (frame <= 11)
+            {
                 item = ItemID.IceBlock;
+            }
             else if (frame <= 17)
+            {
                 item = ItemID.Cobweb;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, item);
+            }
 
             return base.Drop(i, j);
         }

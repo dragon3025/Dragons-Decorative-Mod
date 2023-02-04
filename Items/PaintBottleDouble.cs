@@ -33,7 +33,10 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().PaintBottle)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddIngredient(ModContent.ItemType<PaintBottleSingle>(), 2)
               .Register();

@@ -35,24 +35,42 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int item;
 
             if (frame < 3)
+            {
                 item = ItemID.StoneBlock;
+            }
             else if (frame < 6)
+            {
                 item = ItemID.Hive;
+            }
             else if (frame < 9)
+            {
                 item = ItemID.PearlstoneBlock;
+            }
             else if (frame < 12)
+            {
                 item = ItemID.EbonstoneBlock;
+            }
             else if (frame < 15)
+            {
                 item = ItemID.CrimstoneBlock;
+            }
             else if (frame < 18)
+            {
                 item = ItemID.Sandstone;
+            }
             else if (frame < 21)
+            {
                 item = ItemID.GraniteBlock;
+            }
             else
+            {
                 item = ItemID.MarbleBlock;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, item);
+            }
 
             return base.Drop(i, j);
         }

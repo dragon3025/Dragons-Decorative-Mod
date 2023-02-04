@@ -46,7 +46,9 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
                 b = 1f;
             }
             else
+            {
                 r = g = b = 0;
+            }
         }
     }
 }

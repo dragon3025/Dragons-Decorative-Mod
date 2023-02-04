@@ -13,19 +13,23 @@ namespace DragonsDecorativeMod.Global
             if (GetInstance<BFurnitureConfig>().HangingPlants)
             {
                 if (item.type == ItemID.LavaCrate || item.type == ItemID.LavaCrateHard)
+                {
                     itemLoot.Add(ItemDropRule.OneFromOptions(4,
                         ItemType<Items.Garden.HangingPlant>(),
                         ItemType<Items.Garden.HangingFernPlant>(),
                         ItemType<Items.Garden.HangingLeafyPlant>()));
+                }
             }
 
             if (GetInstance<BFurnitureConfig>().PottedPlants)
             {
                 if (item.type == ItemID.OasisCrateHard)
+                {
                     itemLoot.Add(ItemDropRule.OneFromOptions(2,
                         ItemType<Items.Garden.PottedPlants.PottedSmallCactus>(),
                         ItemType<Items.Garden.PottedPlants.PottedOasisPlant>(),
                         ItemType<Items.Garden.PottedPlants.PottedTallCactus>()));
+                }
 
                 if (item.type == ItemID.CorruptFishingCrateHard)
                 {
@@ -52,10 +56,12 @@ namespace DragonsDecorativeMod.Global
                 }
 
                 if (item.type == ItemID.HallowedFishingCrateHard)
+                {
                     itemLoot.Add(ItemDropRule.OneFromOptions(2,
                         ItemType<Items.Garden.PottedPlants.PottedOasisPlantHallow>(),
                         ItemType<Items.Garden.PottedPlants.PottedSmallCactusHallow>(),
                         ItemType<Items.Garden.PottedPlants.PottedTallCactusHallow>()));
+                }
 
                 if (item.type == ItemID.FrozenCrateHard)
                 {

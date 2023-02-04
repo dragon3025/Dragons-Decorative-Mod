@@ -34,7 +34,10 @@ namespace DragonsDecorativeMod.Items.Garden
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().Plants)
+            {
                 return;
+            }
+
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<SingleTilePlant4>())
                 .Register();

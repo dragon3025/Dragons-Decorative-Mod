@@ -33,7 +33,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().RopeCoilPlaceable)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.RopeCoil)

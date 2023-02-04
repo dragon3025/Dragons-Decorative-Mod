@@ -34,7 +34,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().ThreadPlaceable)
+            {
                 return;
+            }
 
             Recipe recipe = Recipe.Create(Type);
             recipe.AddIngredient(ItemID.BlackThread);

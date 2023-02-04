@@ -34,7 +34,9 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().OtherAmbient)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.Wood)

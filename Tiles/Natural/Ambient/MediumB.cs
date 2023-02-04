@@ -34,26 +34,46 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 36;
 
             if (frame <= 0)
+            {
                 item = ItemID.Amethyst;
+            }
             else if (frame <= 1)
+            {
                 item = ItemID.Topaz;
+            }
             else if (frame <= 2)
+            {
                 item = ItemID.Sapphire;
+            }
             else if (frame <= 3)
+            {
                 item = ItemID.Emerald;
+            }
             else if (frame <= 4)
+            {
                 item = ItemID.Ruby;
+            }
             else if (frame <= 5)
+            {
                 item = ItemID.Diamond;
+            }
             else if (frame <= 11)
+            {
                 item = ItemID.SnowBlock;
+            }
             else if (frame <= 14)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 18)
+            {
                 item = ItemID.Cobweb;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 16, item);
+            }
         }
     }
 }

@@ -32,9 +32,13 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().Easel)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddIngredient(ItemID.Wood, 4)
+              .AddTile(TileID.Sawmill)
               .Register();
         }
     }

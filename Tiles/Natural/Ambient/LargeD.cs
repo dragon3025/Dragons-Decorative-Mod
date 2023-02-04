@@ -34,20 +34,34 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 54;
 
             if (frame <= 5)
+            {
                 item = ItemID.Bone;
+            }
             else if (frame <= 6)
+            {
                 item = ItemID.Bone;
+            }
             else if (frame <= 12)
+            {
                 item = ItemID.StoneBlock;
+            }
             else if (frame <= 15)
+            {
                 item = ItemID.StoneBlock;
+            }
             else if (frame <= 17)
+            {
                 item = ItemID.CopperCoin;
+            }
             else if (frame <= 19)
+            {
                 item = ItemID.SilverCoin;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, item);
+            }
         }
     }
 }

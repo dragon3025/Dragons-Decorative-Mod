@@ -36,7 +36,10 @@ namespace DragonsDecorativeMod.Items.Garden
         public override void AddRecipes()
         {
             if (!GetInstance<ABlocksWallsConfig>().WallFlowers)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddIngredient(ItemID.FlowerPacketWild, 5)
               .AddTile(TileID.WorkBenches)

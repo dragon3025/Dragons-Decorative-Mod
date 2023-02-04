@@ -33,7 +33,10 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().GolfCart)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddIngredient(ItemID.GolfCart)
               .Register();

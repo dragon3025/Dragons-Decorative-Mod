@@ -33,7 +33,10 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().HorizontalBook)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddIngredient(ItemID.Book)
               .Register();

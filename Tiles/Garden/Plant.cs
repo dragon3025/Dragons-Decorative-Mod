@@ -36,16 +36,26 @@ namespace DragonsDecorativeMod.Tiles.Garden
             int frame = frameX / 36;
 
             if (frame == 0)
+            {
                 item = ModContent.ItemType<Items.Garden.Plant>();
+            }
             else if (frame == 1)
+            {
                 item = ModContent.ItemType<Items.Garden.Plant2>();
+            }
             else if (frame == 2)
+            {
                 item = ModContent.ItemType<Items.Garden.Plant3>();
+            }
             else if (frame == 3)
+            {
                 item = ModContent.ItemType<Items.Garden.Plant4>();
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 48, item);
+            }
         }
     }
 }

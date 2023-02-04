@@ -32,7 +32,10 @@ namespace DragonsDecorativeMod.Items.Signs
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().SignCross)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddRecipeGroup(RecipeGroupID.Wood, 14)
               .AddTile(TileID.Sawmill)

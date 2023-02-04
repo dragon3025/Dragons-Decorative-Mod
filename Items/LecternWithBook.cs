@@ -33,7 +33,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().Lectern)
+            {
                 return;
+            }
 
             CreateRecipe()
                 .AddIngredient(ModContent.ItemType<Items.Lectern>())

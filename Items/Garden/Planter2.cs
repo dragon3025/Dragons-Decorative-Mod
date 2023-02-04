@@ -34,7 +34,9 @@ namespace DragonsDecorativeMod.Items.Garden
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().Planters)
+            {
                 return;
+            }
 
             CreateRecipe()
                 .AddIngredient(ItemID.ClayBlock, 20)

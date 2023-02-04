@@ -33,7 +33,10 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().BoxOfArrows)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddIngredient(ItemID.Wood, 4)
               .AddIngredient(ItemID.WoodenArrow, 30)

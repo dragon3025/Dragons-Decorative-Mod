@@ -40,7 +40,9 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().Pots)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.ClayBlock)

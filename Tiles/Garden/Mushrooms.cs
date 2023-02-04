@@ -44,16 +44,26 @@ namespace DragonsDecorativeMod.Tiles.Garden
             int itemID = 0;
 
             if (frame == 0)
+            {
                 itemID = ModContent.ItemType<Items.Garden.RedMushroom>();
+            }
             else if (frame == 1)
+            {
                 itemID = ModContent.ItemType<Items.Garden.BleedingCrownMushroom>();
+            }
             else if (frame == 2)
+            {
                 itemID = ModContent.ItemType<Items.Garden.BrownMushroom>();
+            }
             else if (frame == 3)
+            {
                 itemID = ModContent.ItemType<Items.Garden.WhiteMushroom>();
+            }
 
             if (itemID > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, itemID);
+            }
 
             return base.Drop(i, j);
         }

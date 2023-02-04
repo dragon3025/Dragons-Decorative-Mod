@@ -43,7 +43,9 @@ namespace DragonsDecorativeMod.Tiles
                     for (int k = 0; k < 255; k++)
                     {
                         if (!Main.player[k].active)
+                        {
                             continue;
+                        }
 
                         if (distance == 0f || position.Distance(Main.player[k].Center) < distance)
                         {
@@ -55,11 +57,17 @@ namespace DragonsDecorativeMod.Tiles
                     Player player = Main.player[target];
                     float tile_centerx = 1.5f;
                     if (player.position.X / 16 > i - tile_centerx + 6.5f)
+                    {
                         look_direction = 1;
+                    }
                     else if (player.position.X / 16 < i - tile_centerx - 6.5f)
+                    {
                         look_direction = 2;
+                    }
                     else
+                    {
                         look_direction = 0;
+                    }
                 }
             }
         }

@@ -44,7 +44,10 @@ namespace DragonsDecorativeMod.Items.Garden
         public override void AddRecipes()
         {
             if (!GetInstance<ABlocksWallsConfig>().Vines)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddIngredient(ItemID.VineRope)
               .AddTile(TileID.WorkBenches)

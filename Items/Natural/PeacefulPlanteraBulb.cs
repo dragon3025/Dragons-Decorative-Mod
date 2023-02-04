@@ -33,7 +33,9 @@ namespace DragonsDecorativeMod.Items.Natural
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().PeacefulPlanteraBulb)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.ChlorophyteOre)

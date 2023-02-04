@@ -34,26 +34,46 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 54;
 
             if (frame <= 2)
+            {
                 item = ItemID.LihzahrdBrick;
+            }
             else if (frame <= 4)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 5)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 6)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 7)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 8)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 9)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 10)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 16)
+            {
                 item = ItemID.Wood;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, item);
+            }
         }
     }
 }

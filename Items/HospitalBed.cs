@@ -33,7 +33,10 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().HospitalBed)
+            {
                 return;
+            }
+
             CreateRecipe()
                 .AddRecipeGroup(RecipeGroupID.IronBar, 4)
                 .AddIngredient(ItemID.Silk, 5)

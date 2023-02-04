@@ -35,7 +35,9 @@ namespace DragonsDecorativeMod.Tiles.Garden
             DustType = DustID.Grass;
 
             if (!Main.dedServ)
+            {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/WallFlowersOverlay");
+            }
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
@@ -43,7 +45,9 @@ namespace DragonsDecorativeMod.Tiles.Garden
             Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
+            {
                 offScreenAdjust = Vector2.Zero;
+            }
 
             Color color = Lighting.GetColor(i, j);
 

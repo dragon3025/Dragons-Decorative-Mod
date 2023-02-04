@@ -32,7 +32,9 @@ namespace DragonsDecorativeMod.Items.Natural
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().AltarsShadowOrbAndCrimsonHeart)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.CrimstoneBlock)

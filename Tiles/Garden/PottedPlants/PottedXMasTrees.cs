@@ -27,12 +27,18 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             int frame = frameX / 54;
 
             if (frame == 0)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedXMasTree>();
+            }
             else
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedXMasTreeSnowy>();
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 80, item);
+            }
         }
 
         public override bool CreateDust(int i, int j, ref int type)

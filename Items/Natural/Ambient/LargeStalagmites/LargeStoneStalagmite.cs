@@ -40,7 +40,9 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalagmites
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().StalagmitesAndStalactites)
+            {
                 return;
+            }
 
             CreateRecipe()
                 .AddIngredient(ItemID.StoneBlock)

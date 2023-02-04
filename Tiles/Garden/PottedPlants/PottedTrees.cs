@@ -36,20 +36,35 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             int frame = frameX / 36;
 
             if (frame == 0)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarSnowy>();
+            }
+
             if (frame == 1)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeSnowy>();
+            }
             else if (frame == 2)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarCorruption>();
+            }
             else if (frame == 3)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeCorruption>();
+            }
             else if (frame == 4)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarCrimson>();
+            }
             else if (frame == 5)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeCrimson>();
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 80, item);
+            }
         }
     }
 }

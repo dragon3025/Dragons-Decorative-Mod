@@ -40,7 +40,9 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumD
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().OtherAmbient)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.SandBlock)

@@ -42,16 +42,26 @@ namespace DragonsDecorativeMod.Tiles.Garden
             int item = 0;
 
             if (frame == 0)
+            {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant>();
+            }
             else if (frame == 1)
+            {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant2>();
+            }
             else if (frame == 2)
+            {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant3>();
+            }
             else if (frame == 3)
+            {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant4>();
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, item);
+            }
 
             return base.Drop(i, j);
         }
@@ -59,7 +69,9 @@ namespace DragonsDecorativeMod.Tiles.Garden
         public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
         {
             if (i % 2 == 0)
+            {
                 spriteEffects = SpriteEffects.FlipHorizontally;
+            }
         }
     }
 }

@@ -32,7 +32,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().MannequinHead)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.Wood, 5)

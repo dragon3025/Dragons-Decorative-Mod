@@ -32,7 +32,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().Lectern)
+            {
                 return;
+            }
 
             CreateRecipe()
                 .AddRecipeGroup(RecipeGroupID.Wood, 10)

@@ -61,6 +61,11 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             }
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];

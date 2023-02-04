@@ -30,6 +30,11 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             AddMapEntry(new Color(255, 255, 255), name);
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
             Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 64, 64, ModContent.ItemType<Items.Christmas.SnowmanRight>());

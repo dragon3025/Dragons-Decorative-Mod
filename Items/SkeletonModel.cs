@@ -34,7 +34,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().SkeletonModel)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.Bone, 206)

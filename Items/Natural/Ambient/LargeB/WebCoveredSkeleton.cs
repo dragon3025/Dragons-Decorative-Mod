@@ -35,14 +35,19 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
         {
             Item.placeStyle = 9;
             if (Main.rand.NextBool(2))
+            {
                 Item.placeStyle = 13;
+            }
+
             return base.UseItem(player);
         }
 
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().OtherAmbient)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.Cobweb)

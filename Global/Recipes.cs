@@ -35,7 +35,10 @@ namespace DragonsDecorativeMod.GlobalRecipes
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().Aquarium)
+            {
                 return;
+            }
+
             Recipe recipe = Recipe.Create(ItemType<Items.Aquarium>());
             recipe.AddRecipeGroup("DragonsDecorativeMod:colorfulFish", 10);
             recipe.AddIngredient(ItemID.Terrarium);

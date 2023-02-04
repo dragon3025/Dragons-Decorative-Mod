@@ -24,7 +24,9 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(255, 0, 0));
 
             if (!Main.dedServ)
+            {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/PaintBucketOverlay");
+            }
         }
 
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
@@ -37,7 +39,9 @@ namespace DragonsDecorativeMod.Tiles
             Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
+            {
                 offScreenAdjust = Vector2.Zero;
+            }
 
             Color color = Lighting.GetColor(i, j);
 

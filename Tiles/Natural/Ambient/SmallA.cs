@@ -35,16 +35,26 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int item = 0;
 
             if (frame <= 5)
+            {
                 item = ItemID.StoneBlock;
+            }
             else if (frame <= 11)
+            {
                 item = ItemID.DirtBlock;
+            }
             else if (frame <= 15)
+            {
                 item = ItemID.Bone;
+            }
             else if (frame <= 19)
+            {
                 item = ItemID.Bone;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, item);
+            }
 
             return base.Drop(i, j);
         }

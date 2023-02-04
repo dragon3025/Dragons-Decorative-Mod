@@ -34,22 +34,38 @@ namespace DragonsDecorativeMod.Tiles.Natural.Ambient
             int frame = frameX / 54;
 
             if (frame <= 1)
+            {
                 item = ItemID.GoldCoin;
+            }
             else if (frame <= 2)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 3)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 4)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 5)
+            {
                 item = ItemID.Wood;
+            }
             else if (frame <= 11)
+            {
                 item = ItemID.SnowBlock;
+            }
             else if (frame <= 14)
+            {
                 item = ItemID.GlowingMushroom;
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, item);
+            }
         }
     }
 }

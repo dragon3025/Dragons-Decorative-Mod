@@ -32,7 +32,9 @@ namespace DragonsDecorativeMod.Items.Natural
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().FakeLarva)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.BeeWax)

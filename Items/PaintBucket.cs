@@ -34,7 +34,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().PaintBucket)
+            {
                 return;
+            }
 
             int[] paints = new int[]
             {

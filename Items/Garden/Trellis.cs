@@ -34,7 +34,10 @@ namespace DragonsDecorativeMod.Items.Garden
         public override void AddRecipes()
         {
             if (!GetInstance<ABlocksWallsConfig>().Trellis)
+            {
                 return;
+            }
+
             CreateRecipe()
               .AddRecipeGroup(RecipeGroupID.Wood)
               .AddTile(TileID.Sawmill)

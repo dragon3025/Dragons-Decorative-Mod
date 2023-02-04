@@ -33,7 +33,9 @@ namespace DragonsDecorativeMod.Items
         public override void AddRecipes()
         {
             if (!GetInstance<BFurnitureConfig>().LargeKeg)
+            {
                 return;
+            }
 
             CreateRecipe()
               .AddIngredient(ItemID.Wood, 21)

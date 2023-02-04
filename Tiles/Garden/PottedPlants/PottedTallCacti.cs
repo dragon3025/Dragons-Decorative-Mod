@@ -36,16 +36,26 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             int frame = frameX / 36;
 
             if (frame == 0)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactus>();
+            }
             else if (frame == 1)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusCorrupt>();
+            }
             else if (frame == 2)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusHallow>();
+            }
             else if (frame == 3)
+            {
                 item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusCrimson>();
+            }
 
             if (item > 0)
+            {
                 Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 80, item);
+            }
         }
     }
 }
