@@ -22,6 +22,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.CoordinateWidth = 32;
             TileObjectData.newTile.DrawYOffset = -30;
             TileObjectData.newTile.StyleHorizontal = true;
+            TileObjectData.newTile.RandomStyleRange = 2;
             TileObjectData.addTile(Type);
 
             ModTranslation name = CreateMapEntryName();
@@ -37,22 +38,22 @@ namespace DragonsDecorativeMod.Tiles.Garden
         public override bool Drop(int i, int j)
         {
             Tile t = Main.tile[i, j];
-            int frame = t.TileFrameX / 34;
+            int frame = t.TileFrameX / 36;
             int item = 0;
 
-            if (frame == 0)
+            if (frame <= 1)
             {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant>();
             }
-            else if (frame == 1)
+            else if (frame <= 3)
             {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant2>();
             }
-            else if (frame == 2)
+            else if (frame <= 5)
             {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant3>();
             }
-            else if (frame == 3)
+            else if (frame <= 7)
             {
                 item = ModContent.ItemType<Items.Garden.SingleTilePlant4>();
             }
@@ -63,14 +64,6 @@ namespace DragonsDecorativeMod.Tiles.Garden
             }
 
             return base.Drop(i, j);
-        }
-
-        public override void SetSpriteEffects(int i, int j, ref SpriteEffects spriteEffects)
-        {
-            if (i % 2 == 0)
-            {
-                spriteEffects = SpriteEffects.FlipHorizontally;
-            }
         }
     }
 }

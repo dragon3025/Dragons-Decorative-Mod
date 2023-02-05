@@ -27,7 +27,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 1, 5);
             Item.createTile = ModContent.TileType<Tiles.Garden.Plant>();
-            Item.placeStyle = 3;
+            Item.placeStyle = 6;
             Item.rare = ItemRarityID.White;
         }
 

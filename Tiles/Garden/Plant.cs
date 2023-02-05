@@ -18,6 +18,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
             TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.newTile.RandomStyleRange = 2;
             TileObjectData.addTile(Type);
 
             ModTranslation name = CreateMapEntryName();
@@ -34,19 +35,19 @@ namespace DragonsDecorativeMod.Tiles.Garden
             int item = 0;
             int frame = frameX / 36;
 
-            if (frame == 0)
+            if (frame <= 1)
             {
                 item = ModContent.ItemType<Items.Garden.Plant>();
             }
-            else if (frame == 1)
+            else if (frame <= 3)
             {
                 item = ModContent.ItemType<Items.Garden.Plant2>();
             }
-            else if (frame == 2)
+            else if (frame <= 5)
             {
                 item = ModContent.ItemType<Items.Garden.Plant3>();
             }
-            else if (frame == 3)
+            else if (frame <= 7)
             {
                 item = ModContent.ItemType<Items.Garden.Plant4>();
             }
