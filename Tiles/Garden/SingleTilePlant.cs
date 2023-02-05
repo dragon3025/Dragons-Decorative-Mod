@@ -15,7 +15,6 @@ namespace DragonsDecorativeMod.Tiles.Garden
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
-            Main.tileTable[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
             TileObjectData.newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table | AnchorType.SolidSide, TileObjectData.newTile.Width, 0);
