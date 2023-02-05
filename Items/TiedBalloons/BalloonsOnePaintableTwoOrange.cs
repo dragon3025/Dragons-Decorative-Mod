@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.TiedBalloons
 {
@@ -32,6 +33,10 @@ namespace DragonsDecorativeMod.Items.TiedBalloons
 
         public override void AddRecipes()
         {
+            if (GetInstance<BFurnitureConfig>().Balloons)
+            {
+                return;
+            }
             Recipe recipe = Recipe.Create(Type);
             recipe.AddIngredient(ItemID.PartyBundleOfBalloonTile);
             recipe.AddIngredient(ItemID.OrangePaint, 2);

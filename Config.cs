@@ -34,8 +34,9 @@ namespace DragonsDecorativeMod
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        [Header("If an item below is disabled, it wont be obtainable.\n\nAmbient Objects")]
+        [Header("If an item below is disabled, it wont be obtainable.\n\nNatural")]
 
+        #region Natural
         [Label("[i:DragonsDecorativeMod/ForestPot] Pots")]
         [DefaultValue(true)]
         public bool Pots;
@@ -65,11 +66,17 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool PeacefulPlanteraBulb;
 
+        [Label("[i:DragonsDecorativeMod/MysteriousTablet] Mysterious Tablet")]
+        [DefaultValue(true)]
+        public bool MysteriousTablet;
+
         [Label("[i:DragonsDecorativeMod/AnimalBones] Other")]
         [Tooltip("Fake version of vanilla object.")]
         [DefaultValue(true)]
         public bool OtherAmbient;
+        #endregion
 
+        #region Christmas
         [Header("Christmas")]
 
         [Label("[i:DragonsDecorativeMod/LightYellow] Christmas Lights")]
@@ -86,7 +93,9 @@ namespace DragonsDecorativeMod
         [Label("[i:DragonsDecorativeMod/SnowmanLeft] Snowman")]
         [DefaultValue(true)]
         public bool Snowman;
+        #endregion
 
+        #region Garden
         [Header("Garden")]
 
         [Label("[i:DragonsDecorativeMod/BonsaiTree] Bonsai Tree")]
@@ -112,7 +121,9 @@ namespace DragonsDecorativeMod
         [Label("[i:DragonsDecorativeMod/PottedMushroomTreeTall] Potted Plants")]
         [DefaultValue(true)]
         public bool PottedPlants;
+        #endregion
 
+        #region Signs
         [Header("Signs")]
 
         [Label("[i:DragonsDecorativeMod/SignBag] BagSign")]
@@ -134,12 +145,19 @@ namespace DragonsDecorativeMod
         [Label("[i:DragonsDecorativeMod/SignHeart] Heart Sign")]
         [DefaultValue(true)]
         public bool SignHeart;
+        #endregion
 
+        #region Other
         [Header("Other")]
 
         [Label("[i:DragonsDecorativeMod/Aquarium] Aquarium")]
         [DefaultValue(true)]
         public bool Aquarium;
+
+        [Label("[i:DragonsDecorativeMod/BalloonsOnePaintableTwoBlack] Balloons")]
+        [Tooltip("3 Balloons Tied, 2 back that come in many colors, and 1 paintable in the front.")]
+        [DefaultValue(true)]
+        public bool Balloons;
 
         [Label("[i:DragonsDecorativeMod/BoxOfArrows] Box of Arrows")]
         [DefaultValue(true)]
@@ -204,7 +222,7 @@ namespace DragonsDecorativeMod
         [Label("[i:DragonsDecorativeMod/ThreadPlaceable] Placeable Thread")]
         [DefaultValue(true)]
         public bool ThreadPlaceable;
-
+        #endregion
         public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message)
         {
             message = "Can't change settings in a server.";

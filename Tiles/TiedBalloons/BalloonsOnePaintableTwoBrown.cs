@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Tiles.TiedBalloons
             TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(0, 0, 0));
+            AddMapEntry(new Color(128, 64, 0));
 
             AnimationFrameHeight = 54;
 
@@ -43,7 +43,7 @@ namespace DragonsDecorativeMod.Tiles.TiedBalloons
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
-            if (frameCounter >= 20)
+            if (frameCounter >= 10)
             {
                 frameCounter = 0;
                 frame++;

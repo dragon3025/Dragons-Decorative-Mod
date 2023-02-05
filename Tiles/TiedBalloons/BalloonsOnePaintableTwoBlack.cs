@@ -43,7 +43,7 @@ namespace DragonsDecorativeMod.Tiles.TiedBalloons
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
-            if (frameCounter >= 20)
+            if (frameCounter >= 10)
             {
                 frameCounter = 0;
                 frame++;
@@ -71,7 +71,10 @@ namespace DragonsDecorativeMod.Tiles.TiedBalloons
 
             Texture2D texture = overlayTexture.Value;
 
-            spriteBatch.Draw(texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + offScreenAdjust, new Rectangle(frameX, frameY + frameYOffset, 16, 16), color, 0f, default, 1f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(texture,
+                new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + offScreenAdjust,
+                new Rectangle(frameX, frameY + frameYOffset, 16, 16),
+                color, 0f, default, 1f, SpriteEffects.None, 0f);
         }
     }
 }

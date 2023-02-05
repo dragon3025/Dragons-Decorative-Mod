@@ -10,6 +10,14 @@ namespace DragonsDecorativeMod.Global
 
         public override void ModifyItemLoot(Terraria.Item item, ItemLoot itemLoot)
         {
+            if (GetInstance<BFurnitureConfig>().MysteriousTablet)
+            {
+                if (item.type == ItemID.MoonLordBossBag)
+                {
+                    itemLoot.Add(ItemDropRule.Common(ItemType<Items.Natural.MysteriousTablet>(), 5));
+                }
+            }
+
             if (GetInstance<BFurnitureConfig>().HangingPlants)
             {
                 if (item.type == ItemID.LavaCrate || item.type == ItemID.LavaCrateHard)

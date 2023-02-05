@@ -16,19 +16,6 @@ namespace DragonsDecorativeMod.Tiles.Signs
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
 
-            /*
-            //newTile.Width = 2;
-            //newTile.Height = 2;
-            //newTile.Origin = new Point16(0, 1);
-            //newTile.AnchorBottom = new AnchorData(AnchorType.SolidTile | AnchorType.SolidWithTop | AnchorType.Table | AnchorType.SolidSide, newTile.Width, 0);
-            //newTile.UsesCustomCanPlace = true;
-            //newTile.CoordinateHeights = new int[2] { 16, 16 };
-            //newTile.CoordinateWidth = 16;
-            //newTile.CoordinatePadding = 2;
-            //newTile.LavaDeath = true;
-            //addBaseTile(out Style2x2);
-            */
-
             // Defaults
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.StyleHorizontal = true;
