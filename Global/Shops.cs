@@ -34,6 +34,9 @@ namespace DragonsDecorativeMod.Global
 
                         shop.item[nextSlot].SetDefaults(ItemType<Plant4>());
                         nextSlot++;
+
+                        shop.item[nextSlot].SetDefaults(ItemType<FloweryPlant>());
+                        nextSlot++;
                     }
 
                     if (GetInstance<BFurnitureConfig>().BonsaiTree)
