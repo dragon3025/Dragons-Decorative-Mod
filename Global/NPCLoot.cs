@@ -32,9 +32,12 @@ namespace DragonsDecorativeMod.Global
 
             if (GetInstance<BFurnitureConfig>().MysteriousTablet)
             {
-                LeadingConditionRule ruleNotExpert = new LeadingConditionRule(new Conditions.NotExpert());
-                ruleNotExpert.OnSuccess(ItemDropRule.Common(ItemType<Items.Natural.MysteriousTablet>(), 5));
-                npcLoot.Add(ruleNotExpert);
+				if (npc.type == 398)
+                {
+					LeadingConditionRule ruleNotExpert = new LeadingConditionRule(new Conditions.NotExpert());
+					ruleNotExpert.OnSuccess(ItemDropRule.Common(ItemType<Items.Natural.MysteriousTablet>(), 5));
+					npcLoot.Add(ruleNotExpert);
+				}
             }
         }
     }
