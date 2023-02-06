@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.value = Item.buyPrice(0, 1, 5);
+            Item.value = Item.buyPrice(0, 1, 50);
             Item.createTile = ModContent.TileType<Tiles.Garden.Plant>();
             Item.placeStyle = 6;
             Item.rare = ItemRarityID.White;

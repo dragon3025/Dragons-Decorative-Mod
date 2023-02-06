@@ -11,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Garden
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Single-Tile Flowery Plant");
-            Tooltip.SetDefault("Try painting them");
+            Tooltip.SetDefault("Try painting it");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -26,7 +26,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.value = Item.buyPrice(0, 1, 5);
+            Item.value = Item.buyPrice(0, 1, 50);
             Item.createTile = TileType<Tiles.Garden.SingleTileFloweryPlant>();
             Item.placeStyle = 0;
             Item.rare = ItemRarityID.White;

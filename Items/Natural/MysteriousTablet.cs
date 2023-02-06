@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("MysteriousTablet");
+            DisplayName.SetDefault("Mysterious Tablet");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
 
             Main.RegisterItemAnimation(Item.type, new DrawAnimationVertical(5, 4));

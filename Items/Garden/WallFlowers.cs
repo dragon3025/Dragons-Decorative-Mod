@@ -30,7 +30,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.consumable = true;
             Item.createTile = ModContent.TileType<Tiles.Garden.WallFlowers>();
             Item.placeStyle = 0;
-            Item.value = Item.sellPrice(0, 0, 5);
+            Item.value = Item.sellPrice(0, 0, 1);
         }
 
         public override void AddRecipes()

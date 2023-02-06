@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Christmas
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Lawn Candy Cane");
-            Tooltip.SetDefault("Try painting them");
+            Tooltip.SetDefault("Try painting it");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
