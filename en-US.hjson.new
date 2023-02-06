@@ -7,7 +7,7 @@ Mods: {
 
 			CandyCane: {
 				DisplayName: Lawn Candy Cane
-				Tooltip: Try painting them
+				Tooltip: Try painting it
 			}
 
 			LightCyan.DisplayName: Cyan Light
@@ -30,7 +30,7 @@ Mods: {
 
 			FloweryPlant: {
 				DisplayName: Flowery Plant
-				Tooltip: Try painting them
+				Tooltip: Try painting it
 			}
 
 			HangingFernPlant: {
@@ -82,7 +82,7 @@ Mods: {
 
 			SingleTileFloweryPlant: {
 				DisplayName: Single-Tile Flowery Plant
-				Tooltip: Try painting them
+				Tooltip: Try painting it
 			}
 
 			SingleTilePlant: {
@@ -251,7 +251,7 @@ Mods: {
 			FakeLarva.DisplayName: Fake Larva
 			FakeShadowOrb.DisplayName: Shadow Orb Object
 			FallenLog.DisplayName: Fallen Log
-			MysteriousTablet.DisplayName: MysteriousTablet
+			MysteriousTablet.DisplayName: Mysterious Tablet
 			PeacefulPlanteraBulb.DisplayName: Peaceful Plantera Bulb
 			CorruptionPot.DisplayName: Corruption Pot
 			CrimsonPot.DisplayName: Crimson Pot
