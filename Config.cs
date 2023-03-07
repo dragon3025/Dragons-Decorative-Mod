@@ -102,6 +102,10 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool BonsaiTree;
 
+        [Label("[i:DragonsDecorativeMod/Clover] Clover")]
+        [DefaultValue(true)]
+        public bool Clover;
+
         [Label("[i:DragonsDecorativeMod/HangingPlant] Hanging Plants")]
         [DefaultValue(true)]
         public bool HangingPlants;
@@ -134,11 +138,11 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool SignBook;
 
-        [Label("[i:DragonsDecorativeMod/SignHealthyCross] Healthy Cross Sign")]
+        [Label("[i:DragonsDecorativeMod/SignCross] Healthy Cross Sign")]
         [DefaultValue(true)]
         public bool SignCross;
 
-        [Label("[i:DragonsDecorativeMod/SignHealthySwiss] Healthy Swiss Sign")]
+        [Label("[i:DragonsDecorativeMod/SignSwiss] Healthy Swiss Sign")]
         [DefaultValue(true)]
         public bool SignSwiss;
 
@@ -163,6 +167,10 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool BoxOfArrows;
 
+        [Label("[i:DragonsDecorativeMod/BoxOfArrows] Clover Decal")]
+        [DefaultValue(true)]
+        public bool CloverDecal;
+
         [Label("[i:DragonsDecorativeMod/PaintBottleSingle] Paint Bottle")]
         [DefaultValue(true)]
         public bool PaintBottle;
@@ -170,6 +178,10 @@ namespace DragonsDecorativeMod
         [Label("[i:DragonsDecorativeMod/Easel] Easel")]
         [DefaultValue(true)]
         public bool Easel;
+
+        [Label("[i:DragonsDecorativeMod/Globe] Globe")]
+        [DefaultValue(true)]
+        public bool Globe;
 
         [Label("[i:DragonsDecorativeMod/GolfCart] Golf Cart")]
         [DefaultValue(true)]
@@ -187,6 +199,10 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool LargeKeg;
 
+        [Label("[i:DragonsDecorativeMod/LargePot] Large Pot")]
+        [DefaultValue(true)]
+        public bool LargePot;
+
         [Label("[i:DragonsDecorativeMod/Lectern] Lectern")]
         [DefaultValue(true)]
         public bool Lectern;
@@ -202,6 +218,10 @@ namespace DragonsDecorativeMod
         [Label("[i:DragonsDecorativeMod/StaringStatue] Ned the Nosey")]
         [DefaultValue(true)]
         public bool StaringStatue;
+
+        [Label("[i:DragonsDecorativeMod/LuringToGold] Painting, Luring To Gold")]
+        [DefaultValue(true)]
+        public bool PaintingLuringToGold;
 
         [Label("[i:DragonsDecorativeMod/PaintBucket] Paint Bucket")]
         [DefaultValue(true)]

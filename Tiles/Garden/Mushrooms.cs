@@ -24,12 +24,20 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.WaterPlacement = LiquidPlacement.NotAllowed;
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(255, 253, 252));
+            AddMapEntry(new Color(255, 56, 56));
+            AddMapEntry(new Color(173, 85, 154));
+            AddMapEntry(new Color(153, 128, 84));
+            AddMapEntry(new Color(255, 253, 250));
 
             TileID.Sets.SwaysInWindBasic[Type] = true;
             TileID.Sets.ReplaceTileBreakUp[Type] = true;
 
             HitSound = SoundID.Grass;
+        }
+
+        public override ushort GetMapOption(int i, int j)
+        {
+            return (ushort)(Main.tile[i, j].TileFrameY / 18);
         }
 
         public override bool CreateDust(int i, int j, ref int type)

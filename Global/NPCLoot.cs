@@ -32,12 +32,12 @@ namespace DragonsDecorativeMod.Global
 
             if (GetInstance<BFurnitureConfig>().MysteriousTablet)
             {
-				if (npc.type == 398)
+                if (npc.type == NPCID.MoonLordCore)
                 {
-					LeadingConditionRule ruleNotExpert = new LeadingConditionRule(new Conditions.NotExpert());
-					ruleNotExpert.OnSuccess(ItemDropRule.Common(ItemType<Items.Natural.MysteriousTablet>(), 5));
-					npcLoot.Add(ruleNotExpert);
-				}
+                    LeadingConditionRule ruleNotExpert = new LeadingConditionRule(new Conditions.NotExpert());
+                    ruleNotExpert.OnSuccess(ItemDropRule.Common(ItemType<Items.Natural.MysteriousTablet>(), 5));
+                    npcLoot.Add(ruleNotExpert);
+                }
             }
         }
     }

@@ -13,7 +13,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
         {
             Main.tileFrameImportant[Type] = true;
             Main.tileLavaDeath[Type] = true;
-			Main.tileTable[Type] = true;
+            Main.tileTable[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x1);
             TileObjectData.newTile.Height = 1;

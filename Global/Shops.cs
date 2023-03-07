@@ -1,5 +1,6 @@
 using DragonsDecorativeMod.Items;
 using DragonsDecorativeMod.Items.Garden;
+using DragonsDecorativeMod.Tiles;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
@@ -16,11 +17,23 @@ namespace DragonsDecorativeMod.Global
             switch (type)
             {
                 case NPCID.Merchant:
-                    shop.item[nextSlot].SetDefaults(ItemType<Globe>());
-                    nextSlot++;
-
+                    if (GetInstance<BFurnitureConfig>().Globe)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.Globe>());
+                        nextSlot++;
+                    }
                     break;
                 case NPCID.Dryad:
+                    if (GetInstance<BFurnitureConfig>().Clover)
+                    {
+                        Player player = Main.LocalPlayer;
+                        if (player.luckPotion > 0)
+                        {
+                            shop.item[nextSlot].SetDefaults(ItemType<Clover>());
+                            nextSlot++;
+                        }
+                    }
+
                     if (GetInstance<BFurnitureConfig>().Plants)
                     {
                         shop.item[nextSlot].SetDefaults(ItemType<Plant>());
@@ -94,9 +107,31 @@ namespace DragonsDecorativeMod.Global
 
                     break;
                 case NPCID.Painter:
-                    shop.item[nextSlot].SetDefaults(ItemType<PaintBottleSingle>());
-                    nextSlot++;
-
+                    if (GetInstance<BFurnitureConfig>().PaintingLuringToGold)
+                    {
+                        Player player = Main.LocalPlayer;
+                        if (player.luckPotion > 0)
+                        {
+                            shop.item[nextSlot].SetDefaults(ItemType<Items.LuringToGold>());
+                            nextSlot++;
+                        }
+                    }
+                    if (GetInstance<BFurnitureConfig>().PaintBottle)
+                    {
+                        shop.item[nextSlot].SetDefaults(ItemType<Items.PaintBottleSingle>());
+                        nextSlot++;
+                    }
+                    break;
+                case NPCID.PartyGirl:
+                    if (GetInstance<BFurnitureConfig>().CloverDecal)
+                    {
+                        Player player = Main.LocalPlayer;
+                        if (player.luckPotion > 0)
+                        {
+                            shop.item[nextSlot].SetDefaults(ItemType<Items.CloverDecal>());
+                            nextSlot++;
+                        }
+                    }
                     break;
                 case NPCID.BestiaryGirl:
                     BestiaryUnlockProgressReport bestiaryProgressReport = Main.GetBestiaryProgressReport();
@@ -118,9 +153,8 @@ namespace DragonsDecorativeMod.Global
 
                     break;
                 case NPCID.Stylist:
-                    shop.item[nextSlot].SetDefaults(ItemType<Shampoo>());
+                    shop.item[nextSlot].SetDefaults(ItemType<Items.Shampoo>());
                     nextSlot++;
-
                     break;
             }
         }

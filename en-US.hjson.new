@@ -18,7 +18,9 @@ Mods: {
 			LightYellow.DisplayName: Yellow Light
 			SnowmanLeft.DisplayName: Snowman Left
 			SnowmanRight.DisplayName: Snowman Right
+			CloverDecal.DisplayName: Clover Decal
 			Easel.DisplayName: Easel
+			FourLeafCloverDecal.DisplayName: Four-Leaf Clover Decal
 			BleedingCrownMushroom.DisplayName: Bleeding Crown Mushroom
 
 			BonsaiTree: {
@@ -27,11 +29,14 @@ Mods: {
 			}
 
 			BrownMushroom.DisplayName: Brown Mushroom
+			Clover.DisplayName: Clover
 
 			FloweryPlant: {
 				DisplayName: Flowery Plant
 				Tooltip: Try painting it
 			}
+
+			FourLeafClover.DisplayName: Four-Leaf Clover
 
 			HangingFernPlant: {
 				DisplayName: Hanging Fern Plant
@@ -121,8 +126,10 @@ Mods: {
 			HospitalBed.DisplayName: Hospital Bed
 			LargeKeg.DisplayName: Large Keg
 			LargeKegRotated.DisplayName: Large Rotated Keg
+			LargePot.DisplayName: Large Pot
 			Lectern.DisplayName: Lectern
 			LecternWithBook.DisplayName: Lectern with Book
+			LuringToGold.DisplayName: Luring To Gold
 			MannequinHeadLeft.DisplayName: Left Mannequin Head
 			MannequinHeadRight.DisplayName: Right Mannequin Head
 			MedusaWatching.DisplayName: Medusa Watching
@@ -372,6 +379,8 @@ Mods: {
 			HospitalBed.MapEntry: Bed
 			LargeKeg.MapEntry: Large Keg
 			LargeKegRotated.MapEntry: Large Rotated Keg
+			LargePot.MapEntry: Large Pot
+			LuringToGold.MapEntry: Luring To Gold
 			MannequinHeadLeft.MapEntry: Mannequin Head
 			MannequinHeadRight.MapEntry: Mannequin Head
 			MedusaWatching.MapEntry: Medusa Watching
