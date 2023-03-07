@@ -9,6 +9,7 @@ assignees: ''
 
 Terraria Version:
 TModLoader Version:
+Beta: (None if not using Beta):
 Dragon's Decorative Mod Version:
 
 **Mods Installed**
