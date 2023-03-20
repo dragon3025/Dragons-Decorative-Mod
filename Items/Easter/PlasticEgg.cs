@@ -37,7 +37,7 @@ namespace DragonsDecorativeMod.Items.Easter
                 return;
             }
 
-            CreateRecipe()
+            CreateRecipe(20)
               .AddIngredient(ItemID.RottenEgg, 20)
               .AddIngredient(ItemID.LifeCrystal)
               .AddTile(TileID.DemonAltar)
