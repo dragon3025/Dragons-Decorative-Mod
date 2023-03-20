@@ -127,6 +127,18 @@ namespace DragonsDecorativeMod
         public bool PottedPlants;
         #endregion
 
+        #region Paintings
+        [Header("Paintings")]
+
+        [Label("[i:DragonsDecorativeMod/LuringToGold] Painting, Luring To Gold")]
+        [DefaultValue(true)]
+        public bool PaintingLuringToGold;
+
+        [Label("[i:DragonsDecorativeMod/MedusaWatching] Medusa Watching")]
+        [DefaultValue(true)]
+        public bool MedusaWatching;
+        #endregion
+
         #region Signs
         [Header("Signs")]
 
@@ -211,17 +223,9 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool MannequinHead;
 
-        [Label("[i:DragonsDecorativeMod/MedusaWatching] Medusa Watching")]
-        [DefaultValue(true)]
-        public bool MedusaWatching;
-
         [Label("[i:DragonsDecorativeMod/StaringStatue] Ned the Nosey")]
         [DefaultValue(true)]
         public bool StaringStatue;
-
-        [Label("[i:DragonsDecorativeMod/LuringToGold] Painting, Luring To Gold")]
-        [DefaultValue(true)]
-        public bool PaintingLuringToGold;
 
         [Label("[i:DragonsDecorativeMod/PaintBucket] Paint Bucket")]
         [DefaultValue(true)]

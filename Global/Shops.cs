@@ -1,6 +1,5 @@
 using DragonsDecorativeMod.Items;
 using DragonsDecorativeMod.Items.Garden;
-using DragonsDecorativeMod.Tiles;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
