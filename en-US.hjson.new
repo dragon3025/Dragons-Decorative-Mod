@@ -20,6 +20,10 @@ Mods: {
 			SnowmanRight.DisplayName: Snowman Right
 			CloverDecal.DisplayName: Clover Decal
 			Easel.DisplayName: Easel
+			EasterBasket.DisplayName: Easter Basket
+			EasterEgg.DisplayName: Easter Egg
+			EasterEggSingleColor.DisplayName: Easter Egg (Single Color)
+			PlasticEgg.DisplayName: Plastic Egg
 			FourLeafCloverDecal.DisplayName: Four-Leaf Clover Decal
 			BleedingCrownMushroom.DisplayName: Bleeding Crown Mushroom
 
@@ -367,6 +371,10 @@ Mods: {
 			SnowmanLeft.MapEntry: Snowman Left
 			SnowmanRight.MapEntry: Snowman Right
 			Easel.MapEntry: Easel
+			EasterBasket.MapEntry: Easter Basket
+			EasterEgg.MapEntry: Easter Egg
+			EasterEggSingleColor.MapEntry: Easter Egg (Single Color)
+			PlasticEgg.MapEntry: Plastic Egg
 			FloweryPlant.MapEntry: Flowery Plant
 			Plant.MapEntry: Plant
 			Planter.MapEntry: Planter

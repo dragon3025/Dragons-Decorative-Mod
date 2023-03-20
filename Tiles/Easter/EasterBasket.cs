@@ -27,7 +27,7 @@ namespace DragonsDecorativeMod.Tiles.Easter
 
             if (!Main.dedServ)
             {
-                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/EasterBasketOverlay");
+                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Easter/EasterBasketOverlay");
             }
         }
 

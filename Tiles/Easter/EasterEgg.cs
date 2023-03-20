@@ -22,8 +22,6 @@ namespace DragonsDecorativeMod.Tiles.Easter
             ModTranslation name = CreateMapEntryName();
             name.SetDefault("Easter Egg");
             AddMapEntry(new Color(219, 219, 219), name);
-
-
         }
 
         public override bool Drop(int i, int j)

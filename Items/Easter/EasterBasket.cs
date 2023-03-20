@@ -2,6 +2,7 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Easter
 {
@@ -25,8 +26,23 @@ namespace DragonsDecorativeMod.Items.Easter
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.value = Item.sellPrice(0, 0, 75);
+            Item.value = Item.sellPrice(0, 0, 37, 50);
             Item.createTile = ModContent.TileType<Tiles.Easter.EasterBasket>();
+        }
+
+        public override void AddRecipes()
+        {
+            if (!GetInstance<BFurnitureConfig>().EasterBasket)
+            {
+                return;
+            }
+
+            CreateRecipe()
+              .AddIngredient(ModContent.ItemType<Items.Easter.EasterEgg>(), 5)
+              .AddIngredient(ItemID.FlowerPacketTallGrass)
+              .AddRecipeGroup(RecipeGroupID.Wood)
+              .AddTile(TileID.WorkBenches)
+              .Register();
         }
     }
 }

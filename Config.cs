@@ -95,6 +95,26 @@ namespace DragonsDecorativeMod
         public bool Snowman;
         #endregion
 
+        #region Easter
+        [Header("Easter")]
+
+        [Label("[i:DragonsDecorativeMod/Easter Basket] Easter Basket")]
+        [DefaultValue(true)]
+        public bool EasterBasket;
+
+        [Label("[i:DragonsDecorativeMod/Easter Egg] Easter Egg")]
+        [DefaultValue(true)]
+        public bool EasterEgg;
+
+        [Label("[i:DragonsDecorativeMod/Easter Egg (Single Color)] Easter Egg Single Color")]
+        [DefaultValue(true)]
+        public bool EasterEggSingleColor;
+
+        [Label("[i:DragonsDecorativeMod/Plastic Egg] PlasticEgg")]
+        [DefaultValue(true)]
+        public bool PlasticEgg;
+        #endregion
+
         #region Garden
         [Header("Garden")]
 
