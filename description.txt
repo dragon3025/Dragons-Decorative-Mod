@@ -6,11 +6,10 @@ Open Source at GitHub. Report issues there or at home page.
 
 NOTE: "Shop Expander" mod is recommended and may be necessary for shop items to appear.
 
-This mod adds decorative items. I plan to keep adding to it. As of version 1.18 (Oct 4th 2022) it has:
+This mod adds decorative items with configuration settings to disable them. I plan to keep adding to it. As of version 1.25 (March 20th 2023) it has:
 
-- 2 Background Blocks
-- 1 Wall
-- 40 Furniture Items
-- Support for "Wikithis" mod.
+- "WikiThis" mod support
+- Placeable versions of vanilla tiles
+- 76 Non-vanilla Tiles
 
 You can find example pictures and a link to the wiki on the forum page.
