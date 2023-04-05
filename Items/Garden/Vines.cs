@@ -15,7 +15,7 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wall Vines");
+            // DisplayName.SetDefault("Wall Vines");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

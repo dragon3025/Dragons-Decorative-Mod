@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumC
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Grass Rocks");
+            // DisplayName.SetDefault("Small Grass Rocks");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumC
             CreateRecipe()
               .AddIngredient(ItemID.StoneBlock)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

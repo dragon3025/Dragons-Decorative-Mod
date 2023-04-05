@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Garden.PottedPlants
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Potted Tall Corrupt Cactus");
+            // DisplayName.SetDefault("Potted Tall Corrupt Cactus");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

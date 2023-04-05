@@ -12,7 +12,7 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Trellis");
+            // DisplayName.SetDefault("Trellis");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

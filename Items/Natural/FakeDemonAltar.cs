@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fake Demon Altar");
+            // DisplayName.SetDefault("Fake Demon Altar");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural
             CreateRecipe()
               .AddIngredient(ItemID.EbonstoneBlock)
               .AddTile(TileID.CrystalBall)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

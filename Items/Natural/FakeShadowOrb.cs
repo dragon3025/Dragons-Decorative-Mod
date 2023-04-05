@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Shadow Orb Object");
+            // DisplayName.SetDefault("Shadow Orb Object");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural
             CreateRecipe()
               .AddIngredient(ItemID.EbonstoneBlock)
               .AddTile(TileID.CrystalBall)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

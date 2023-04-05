@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallD
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Granite Rock");
+            // DisplayName.SetDefault("Granite Rock");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallD
             CreateRecipe()
               .AddIngredient(ItemID.Granite)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -22,8 +23,8 @@ namespace DragonsDecorativeMod.Tiles.Easter
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Easter Basket");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Easter Basket");
             AddMapEntry(new Color(135, 108, 50), name);
 
             if (!Main.dedServ)

@@ -10,8 +10,8 @@ namespace DragonsDecorativeMod.Items.TiedBalloons
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Balloons (2 Yellow, 1 Paintable)");
-            Tooltip.SetDefault("Try painting it");
+            // DisplayName.SetDefault("Balloons (2 Yellow, 1 Paintable)");
+            // Tooltip.SetDefault("Try painting it");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

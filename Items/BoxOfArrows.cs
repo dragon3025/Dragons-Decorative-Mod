@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Box of Arrows");
+            // DisplayName.SetDefault("Box of Arrows");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

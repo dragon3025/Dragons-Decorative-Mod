@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Hospital Bed");
+            // DisplayName.SetDefault("Hospital Bed");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

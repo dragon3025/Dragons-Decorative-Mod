@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Large Keg");
+            // DisplayName.SetDefault("Large Keg");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

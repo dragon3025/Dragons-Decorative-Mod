@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallD
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Living Wood Tree Sprout");
+            // DisplayName.SetDefault("Living Wood Tree Sprout");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -41,7 +41,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallD
             CreateRecipe()
               .AddIngredient(ItemID.GrassSeeds)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

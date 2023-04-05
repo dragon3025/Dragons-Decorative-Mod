@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -18,8 +19,8 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Box of Arrows");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Box of Arrows");
             AddMapEntry(new Color(139, 129, 120), name);
         }
 

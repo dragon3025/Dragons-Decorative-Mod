@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fake Enchanted Sword in Stone");
+            // DisplayName.SetDefault("Fake Enchanted Sword in Stone");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -41,7 +41,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
             CreateRecipe()
               .AddIngredient(ItemID.EnchantedSword)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

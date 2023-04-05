@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Grassy Rocks");
+            // DisplayName.SetDefault("Grassy Rocks");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
             CreateRecipe()
               .AddIngredient(ItemID.StoneBlock)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -17,8 +18,8 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Easel");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Easel");
             AddMapEntry(new Color(230, 219, 212), name);
         }
 

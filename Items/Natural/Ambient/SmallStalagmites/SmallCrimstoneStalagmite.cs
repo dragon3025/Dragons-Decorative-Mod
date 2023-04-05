@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallStalagmites
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Crimstone Stalagmite");
+            // DisplayName.SetDefault("Small Crimstone Stalagmite");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallStalagmites
             CreateRecipe()
                 .AddIngredient(ItemID.CrimstoneBlock)
                 .AddTile(TileID.HeavyWorkBench)
-                .AddCondition(Recipe.Condition.InGraveyardBiome)
+                .AddCondition(Condition.InGraveyard)
                 .Register();
         }
     }

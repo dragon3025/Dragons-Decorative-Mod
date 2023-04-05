@@ -9,9 +9,9 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Moon Globe");
-            Tooltip.SetDefault("Toss it to change how the moon looks!\n" +
-                "'Time for a change of scenery'");
+            // DisplayName.SetDefault("Moon Globe");
+            /* Tooltip.SetDefault("Toss it to change how the moon looks!\n" +
+                "'Time for a change of scenery'"); */
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Large Pot");
+            // DisplayName.SetDefault("Large Pot");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

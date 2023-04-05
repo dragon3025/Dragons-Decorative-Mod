@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Easter
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Easter Basket");
+            // DisplayName.SetDefault("Easter Basket");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

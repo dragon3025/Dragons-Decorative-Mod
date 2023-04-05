@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -23,8 +24,8 @@ namespace DragonsDecorativeMod.Tiles
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Ned the Nosey");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Ned the Nosey");
             AddMapEntry(new Color(120, 120, 120), name);
 
             DustType = DustID.Stone;

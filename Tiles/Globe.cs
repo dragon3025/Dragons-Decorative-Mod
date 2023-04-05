@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -19,8 +20,8 @@ namespace DragonsDecorativeMod.Tiles
 
             AnimationFrameHeight = 36;
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Globe");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Globe");
             AddMapEntry(new Color(168, 145, 127), name);
         }
 

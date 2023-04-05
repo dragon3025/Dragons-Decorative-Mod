@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Mushroom Rocks");
+            // DisplayName.SetDefault("Mushroom Rocks");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
             CreateRecipe()
               .AddIngredient(ItemID.GlowingMushroom)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

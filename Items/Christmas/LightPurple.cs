@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Christmas
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Purple Light");
+            // DisplayName.SetDefault("Purple Light");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

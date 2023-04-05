@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -24,8 +25,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.RandomStyleRange = 2;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Plant");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Plant");
             AddMapEntry(new Color(18, 86, 30), name);
 
             HitSound = SoundID.Grass;
@@ -34,7 +35,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             //TileID.Sets.SwaysInWindBasic[Type] = true; TO-DO Setting this to true makes it move correctly, but the non-single tile variants will still act weird. Once tModLoader adds support for non-single wide tile swaying, set this to true (add "using Terraria.ID;").
         }
 
-        public override bool Drop(int i, int j)
+        public override bool Drop(int i, int j)/* tModPorter Note: Removed. Use CanDrop to decide if an item should drop. Use GetItemDrops to decide which item drops. Item drops based on placeStyle are handled automatically now, so this method might be able to be removed altogether. */
         {
             Tile t = Main.tile[i, j];
             int frame = t.TileFrameX / 36;

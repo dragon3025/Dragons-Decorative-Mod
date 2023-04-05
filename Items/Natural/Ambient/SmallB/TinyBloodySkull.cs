@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallB
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Tiny Bloody Skull");
+            // DisplayName.SetDefault("Tiny Bloody Skull");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallB
             CreateRecipe()
               .AddIngredient(ItemID.Bone)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

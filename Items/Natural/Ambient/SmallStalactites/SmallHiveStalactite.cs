@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallStalactites
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Hive Stalactite");
+            // DisplayName.SetDefault("Small Hive Stalactite");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallStalactites
             CreateRecipe()
                 .AddIngredient(ItemID.Hive)
                 .AddTile(TileID.HeavyWorkBench)
-                .AddCondition(Recipe.Condition.InGraveyardBiome)
+                .AddCondition(Condition.InGraveyard)
                 .Register();
         }
     }

@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumD
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Marble Rocks");
+            // DisplayName.SetDefault("Small Marble Rocks");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumD
             CreateRecipe()
               .AddIngredient(ItemID.Marble)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

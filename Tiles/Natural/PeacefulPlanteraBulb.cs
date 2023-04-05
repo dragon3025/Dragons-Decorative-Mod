@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -24,8 +25,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             AnimationFrameHeight = 36;
             DustType = DustID.Plantera_Pink;
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Peaceful Plantera Bulb");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Peaceful Plantera Bulb");
             AddMapEntry(new Color(225, 128, 206), name);
 
             HitSound = SoundID.Grass;

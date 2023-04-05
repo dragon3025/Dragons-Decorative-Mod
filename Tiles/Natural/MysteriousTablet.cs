@@ -4,6 +4,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -29,8 +30,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.newTile.DrawYOffset = 0;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Mysterious Tablet");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Mysterious Tablet");
             AddMapEntry(new Color(160, 122, 87), name);
             DustType = DustID.GoldFlame;
 

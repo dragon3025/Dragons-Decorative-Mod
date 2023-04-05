@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lihzahrd Pot");
+            // DisplayName.SetDefault("Lihzahrd Pot");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
             CreateRecipe()
               .AddIngredient(ItemID.LihzahrdBrick)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

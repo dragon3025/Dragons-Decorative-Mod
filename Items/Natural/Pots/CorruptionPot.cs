@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Corruption Pot");
+            // DisplayName.SetDefault("Corruption Pot");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
             CreateRecipe()
               .AddIngredient(ItemID.EbonstoneBlock)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

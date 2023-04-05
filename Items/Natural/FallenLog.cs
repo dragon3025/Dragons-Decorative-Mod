@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fallen Log");
+            // DisplayName.SetDefault("Fallen Log");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural
             CreateRecipe()
               .AddIngredient(ItemID.Wood)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

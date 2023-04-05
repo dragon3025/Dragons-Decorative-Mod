@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Garden.PottedPlants
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Potted Christmas Tree");
+            // DisplayName.SetDefault("Potted Christmas Tree");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Obsidian Pot");
+            // DisplayName.SetDefault("Obsidian Pot");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
             CreateRecipe()
               .AddIngredient(ItemID.ObsidianBrick)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

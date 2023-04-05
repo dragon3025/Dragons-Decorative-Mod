@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Copper Coin Stash");
+            // DisplayName.SetDefault("Small Copper Coin Stash");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -41,7 +41,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumA
             CreateRecipe()
               .AddIngredient(ItemID.CopperCoin)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

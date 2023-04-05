@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalactites
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Large Icicle");
+            // DisplayName.SetDefault("Large Icicle");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalactites
             CreateRecipe()
                 .AddIngredient(ItemID.IceBlock)
                 .AddTile(TileID.HeavyWorkBench)
-                .AddCondition(Recipe.Condition.InGraveyardBiome)
+                .AddCondition(Condition.InGraveyard)
                 .Register();
         }
     }

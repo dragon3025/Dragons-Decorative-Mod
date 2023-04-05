@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fake Crimson Altar");
+            // DisplayName.SetDefault("Fake Crimson Altar");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items.Natural
             CreateRecipe()
               .AddIngredient(ItemID.CrimstoneBlock)
               .AddTile(TileID.CrystalBall)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

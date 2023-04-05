@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Marble Pot");
+            // DisplayName.SetDefault("Marble Pot");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Pots
             CreateRecipe()
               .AddIngredient(ItemID.MarbleBlock)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Christmas
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Snowman Left");
+            // DisplayName.SetDefault("Snowman Left");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumB
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Amethyst Stash");
+            // DisplayName.SetDefault("Amethyst Stash");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -41,7 +41,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumB
             CreateRecipe()
               .AddIngredient(ItemID.Amethyst)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

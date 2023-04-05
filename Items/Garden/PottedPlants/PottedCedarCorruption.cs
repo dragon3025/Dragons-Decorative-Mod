@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Garden.PottedPlants
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Potted Corruption Cedar");
+            // DisplayName.SetDefault("Potted Corruption Cedar");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

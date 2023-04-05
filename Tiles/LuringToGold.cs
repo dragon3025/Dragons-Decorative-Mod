@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -21,8 +22,8 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16, 16 };
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Luring To Gold");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Luring To Gold");
             AddMapEntry(new Color(48, 194, 102), name);
 
             DustType = DustID.WoodFurniture;

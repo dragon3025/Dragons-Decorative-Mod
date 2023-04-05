@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -29,8 +30,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.StyleMultiplier = 4;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Single Tile Flowery Plant");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Single Tile Flowery Plant");
             AddMapEntry(new Color(75, 98, 37), name);
 
             HitSound = SoundID.Grass;
@@ -42,7 +43,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             }
         }
 
-        public override bool Drop(int i, int j)
+        public override bool Drop(int i, int j)/* tModPorter Note: Removed. Use CanDrop to decide if an item should drop. Use GetItemDrops to decide which item drops. Item drops based on placeStyle are handled automatically now, so this method might be able to be removed altogether. */
         {
             Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, ModContent.ItemType<Items.Garden.SingleTileFloweryPlant>());
             return base.Drop(i, j);

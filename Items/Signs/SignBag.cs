@@ -12,7 +12,7 @@ namespace DragonsDecorativeMod.Items.Signs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bag Sign");
+            // DisplayName.SetDefault("Bag Sign");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -2,6 +2,7 @@ using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -22,8 +23,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.DrawYOffset = -2;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Planter");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Planter");
             AddMapEntry(new Color(99, 89, 81), name);
 
             DustType = DustID.Clay;

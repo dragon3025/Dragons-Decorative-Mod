@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Easter
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Easter Egg");
+            // DisplayName.SetDefault("Easter Egg");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

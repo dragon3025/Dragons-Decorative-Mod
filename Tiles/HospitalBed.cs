@@ -36,8 +36,8 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.addTile(Type);
 
             // Etc
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Bed");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Bed");
             AddMapEntry(new Color(191, 142, 111), name);
         }
 

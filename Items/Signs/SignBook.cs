@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Signs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Book Sign");
+            // DisplayName.SetDefault("Book Sign");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

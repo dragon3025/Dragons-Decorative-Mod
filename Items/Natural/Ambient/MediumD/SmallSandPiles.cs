@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumD
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Sand Piles");
+            // DisplayName.SetDefault("Small Sand Piles");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumD
             CreateRecipe()
               .AddIngredient(ItemID.SandBlock)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

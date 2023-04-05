@@ -10,8 +10,8 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Single-Tile Deathbell Plant");
-            Tooltip.SetDefault("Fits in a 1x1 Space");
+            // DisplayName.SetDefault("Single-Tile Deathbell Plant");
+            // Tooltip.SetDefault("Fits in a 1x1 Space");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

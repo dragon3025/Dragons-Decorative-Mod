@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeA
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Living Wood Roots");
+            // DisplayName.SetDefault("Living Wood Roots");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeA
             CreateRecipe()
               .AddIngredient(ItemID.GrassSeeds)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Signs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Heart Sign");
+            // DisplayName.SetDefault("Heart Sign");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

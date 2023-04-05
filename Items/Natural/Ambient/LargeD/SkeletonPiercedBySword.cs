@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeD
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Skeleton Pierced by Sword");
+            // DisplayName.SetDefault("Skeleton Pierced by Sword");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -41,7 +41,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeD
             CreateRecipe()
               .AddIngredient(ItemID.Bone)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

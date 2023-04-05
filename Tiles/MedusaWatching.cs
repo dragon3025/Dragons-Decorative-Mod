@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -22,8 +23,8 @@ namespace DragonsDecorativeMod.Tiles
 
             AnimationFrameHeight = 72;
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Medusa Watching");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Medusa Watching");
             AddMapEntry(new Color(58, 62, 53), name);
 
             DustType = DustID.WoodFurniture;

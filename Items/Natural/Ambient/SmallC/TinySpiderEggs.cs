@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallC
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Tiny Spider Eggs");
+            // DisplayName.SetDefault("Tiny Spider Eggs");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallC
             CreateRecipe()
               .AddIngredient(ItemID.Cobweb)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

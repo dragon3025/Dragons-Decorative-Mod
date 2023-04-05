@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumB
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Sapphire Stash");
+            // DisplayName.SetDefault("Sapphire Stash");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -41,7 +41,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.MediumB
             CreateRecipe()
               .AddIngredient(ItemID.Sapphire)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

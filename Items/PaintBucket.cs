@@ -10,8 +10,8 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Paint Bucket");
-            Tooltip.SetDefault("Try painting it");
+            // DisplayName.SetDefault("Paint Bucket");
+            // Tooltip.SetDefault("Try painting it");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

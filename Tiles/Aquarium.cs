@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -24,8 +25,8 @@ namespace DragonsDecorativeMod.Tiles
 
             AnimationFrameHeight = 54;
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Aquarium");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Aquarium");
             AddMapEntry(new Color(127, 127, 255), name);
             DustType = DustID.Water;
         }

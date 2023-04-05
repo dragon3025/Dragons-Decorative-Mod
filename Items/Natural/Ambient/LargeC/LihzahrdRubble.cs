@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeC
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Lihzahrd Rubble");
+            // DisplayName.SetDefault("Lihzahrd Rubble");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeC
             CreateRecipe()
               .AddIngredient(ItemID.LihzahrdBrick)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

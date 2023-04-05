@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -24,8 +25,8 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.addAlternate(1);
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Golf Cart");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Golf Cart");
             AddMapEntry(new Color(228, 222, 213), name);
         }
 

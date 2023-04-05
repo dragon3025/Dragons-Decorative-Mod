@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -25,8 +26,8 @@ namespace DragonsDecorativeMod.Tiles.Christmas
 
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Lawn Candy Cane");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Lawn Candy Cane");
             AddMapEntry(new Color(255, 128, 128), name);
         }
 

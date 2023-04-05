@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bleeding Crown Mushroom");
+            // DisplayName.SetDefault("Bleeding Crown Mushroom");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

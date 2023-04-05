@@ -3,6 +3,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -27,8 +28,8 @@ namespace DragonsDecorativeMod.Tiles
 
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Large Keg");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Large Keg");
             AddMapEntry(new Color(105, 75, 38), name);
         }
 

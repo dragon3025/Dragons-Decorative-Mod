@@ -12,8 +12,8 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wall Flowers");
-            Tooltip.SetDefault("Try painting them");
+            // DisplayName.SetDefault("Wall Flowers");
+            // Tooltip.SetDefault("Try painting them");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

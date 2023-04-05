@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Broken Chandelier");
+            // DisplayName.SetDefault("Broken Chandelier");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -42,7 +42,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
                 .AddIngredient(ItemID.Wood)
                 .AddIngredient(ItemID.GoldChandelier)
                 .AddTile(TileID.HeavyWorkBench)
-                .AddCondition(Recipe.Condition.InGraveyardBiome)
+                .AddCondition(Condition.InGraveyard)
                 .Register();
         }
     }

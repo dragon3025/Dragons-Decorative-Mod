@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Broken Furniture");
+            // DisplayName.SetDefault("Broken Furniture");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -41,7 +41,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeE
             CreateRecipe()
               .AddIngredient(ItemID.Wood)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

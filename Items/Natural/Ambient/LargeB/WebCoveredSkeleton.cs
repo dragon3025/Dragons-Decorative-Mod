@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Web Covered Skeleton");
+            // DisplayName.SetDefault("Web Covered Skeleton");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -52,7 +52,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeB
             CreateRecipe()
               .AddIngredient(ItemID.Cobweb)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

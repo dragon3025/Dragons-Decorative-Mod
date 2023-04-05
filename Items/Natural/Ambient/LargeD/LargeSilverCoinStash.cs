@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeD
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Large Silver Coin Stash");
+            // DisplayName.SetDefault("Large Silver Coin Stash");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeD
             CreateRecipe()
               .AddIngredient(ItemID.SilverCoin)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

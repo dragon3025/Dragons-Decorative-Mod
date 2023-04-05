@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalactites
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Large Stone Stalactite");
+            // DisplayName.SetDefault("Large Stone Stalactite");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.LargeStalactites
             CreateRecipe()
                 .AddIngredient(ItemID.StoneBlock)
                 .AddTile(TileID.HeavyWorkBench)
-                .AddCondition(Recipe.Condition.InGraveyardBiome)
+                .AddCondition(Condition.InGraveyard)
                 .Register();
         }
     }

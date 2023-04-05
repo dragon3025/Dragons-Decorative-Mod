@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -21,8 +22,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Fake Shadow Orb");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Fake Shadow Orb");
             AddMapEntry(new Color(141, 120, 168), name);
 
             AnimationFrameHeight = 36;

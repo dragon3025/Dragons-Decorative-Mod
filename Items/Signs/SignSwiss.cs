@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Signs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Healthy Swiss Sign");
+            // DisplayName.SetDefault("Healthy Swiss Sign");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

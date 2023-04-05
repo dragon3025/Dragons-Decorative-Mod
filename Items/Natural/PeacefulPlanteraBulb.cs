@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Peaceful Plantera Bulb");
+            // DisplayName.SetDefault("Peaceful Plantera Bulb");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -40,7 +40,7 @@ namespace DragonsDecorativeMod.Items.Natural
             CreateRecipe()
               .AddIngredient(ItemID.ChlorophyteOre)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

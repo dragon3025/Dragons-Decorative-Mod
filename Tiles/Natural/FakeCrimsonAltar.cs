@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -21,8 +22,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Fake Crimson Altar");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Fake Crimson Altar");
             AddMapEntry(new Color(214, 127, 133), name);
 
             DustType = DustID.Crimstone;

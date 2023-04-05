@@ -10,7 +10,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallStalagmites
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Small Pearltone Stalagmite");
+            // DisplayName.SetDefault("Small Pearltone Stalagmite");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -47,7 +47,7 @@ namespace DragonsDecorativeMod.Items.Natural.Ambient.SmallStalagmites
             CreateRecipe()
                 .AddIngredient(ItemID.PearlstoneBlock)
                 .AddTile(TileID.HeavyWorkBench)
-                .AddCondition(Recipe.Condition.InGraveyardBiome)
+                .AddCondition(Condition.InGraveyard)
                 .Register();
         }
     }
