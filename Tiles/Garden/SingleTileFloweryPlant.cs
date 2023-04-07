@@ -43,10 +43,9 @@ namespace DragonsDecorativeMod.Tiles.Garden
             }
         }
 
-        public override bool Drop(int i, int j)/* tModPorter Note: Removed. Use CanDrop to decide if an item should drop. Use GetItemDrops to decide which item drops. Item drops based on placeStyle are handled automatically now, so this method might be able to be removed altogether. */
+        public override bool CanDrop(int i, int j)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, ModContent.ItemType<Items.Garden.SingleTileFloweryPlant>());
-            return base.Drop(i, j);
+            return true;
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

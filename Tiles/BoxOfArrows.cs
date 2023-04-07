@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -24,10 +25,10 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(139, 129, 120), name);
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ItemID.Wood, 4);
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ItemID.WoodenArrow, 30);
+            yield return new Item(ItemID.Wood, 4);
+            yield return new Item(ItemID.WoodenArrow, 30);
         }
     }
 }

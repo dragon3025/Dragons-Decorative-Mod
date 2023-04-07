@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -35,35 +36,32 @@ namespace DragonsDecorativeMod.Tiles.Garden
             //TileID.Sets.SwaysInWindBasic[Type] = true; TO-DO Setting this to true makes it move correctly, but the non-single tile variants will still act weird. Once tModLoader adds support for non-single wide tile swaying, set this to true (add "using Terraria.ID;").
         }
 
-        public override bool Drop(int i, int j)/* tModPorter Note: Removed. Use CanDrop to decide if an item should drop. Use GetItemDrops to decide which item drops. Item drops based on placeStyle are handled automatically now, so this method might be able to be removed altogether. */
+        public override bool CanDrop(int i, int j)
         {
-            Tile t = Main.tile[i, j];
-            int frame = t.TileFrameX / 36;
-            int item = 0;
+            return true;
+        }
 
-            if (frame <= 1)
-            {
-                item = ModContent.ItemType<Items.Garden.SingleTilePlant>();
-            }
-            else if (frame <= 3)
-            {
-                item = ModContent.ItemType<Items.Garden.SingleTilePlant2>();
-            }
-            else if (frame <= 5)
-            {
-                item = ModContent.ItemType<Items.Garden.SingleTilePlant3>();
-            }
-            else if (frame <= 7)
-            {
-                item = ModContent.ItemType<Items.Garden.SingleTilePlant4>();
-            }
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            if (item > 0)
+            if (style < 2)
             {
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, item);
+                yield return new Item(ModContent.ItemType<Items.Garden.SingleTilePlant>());
             }
-
-            return base.Drop(i, j);
+            else if (style < 4)
+            {
+                yield return new Item(ModContent.ItemType<Items.Garden.SingleTilePlant2>());
+            }
+            else if (style < 6)
+            {
+                yield return new Item(ModContent.ItemType<Items.Garden.SingleTilePlant3>());
+            }
+            else
+            {
+                yield return new Item(ModContent.ItemType<Items.Garden.SingleTilePlant4>());
+            }
         }
     }
 }

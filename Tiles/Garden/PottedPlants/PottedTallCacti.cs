@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
@@ -29,32 +30,26 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             return false;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            int item = 0;
-            int frame = frameX / 36;
-
-            if (frame == 0)
+            if (style == 0)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactus>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactus>());
             }
-            else if (frame == 1)
+            else if (style == 1)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusCorrupt>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusCorrupt>());
             }
-            else if (frame == 2)
+            else if (style == 2)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusHallow>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusHallow>());
             }
-            else if (frame == 3)
+            else if (style == 3)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusCrimson>();
-            }
-
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 80, item);
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusCrimson>());
             }
         }
     }

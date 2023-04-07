@@ -27,10 +27,5 @@ namespace DragonsDecorativeMod.Tiles
             // name.SetDefault("Large Rotated Keg");
             AddMapEntry(new Color(105, 75, 38), name);
         }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.LargeKegRotated>());
-        }
     }
 }

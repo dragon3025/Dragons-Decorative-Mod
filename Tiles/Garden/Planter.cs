@@ -1,4 +1,5 @@
 using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -30,24 +31,18 @@ namespace DragonsDecorativeMod.Tiles.Garden
             DustType = DustID.Clay;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            int item = 0;
-            int frame = frameX / 36;
-
-            if (frame == 0)
+            if (style == 0)
             {
-                item = ModContent.ItemType<Items.Garden.Planter>();
+                yield return new Item(ModContent.ItemType<Items.Garden.Planter>());
             }
-            else if (frame == 1)
+            else
             {
-                item = ModContent.ItemType<Items.Garden.Planter2>();
-            }
-
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 16, item);
+                yield return new Item(ModContent.ItemType<Items.Garden.Planter2>());
             }
         }
     }

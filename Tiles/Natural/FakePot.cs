@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -29,6 +30,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
             return false;
         }
 
+        //To-Do Rubblemaker is not yet supported. When support is added, this may need changed to "public override IEnumerable<Item> GetItemDrops(int i, int j)"
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
 

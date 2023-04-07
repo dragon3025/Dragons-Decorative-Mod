@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
@@ -21,23 +22,18 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             AddMapEntry(new Color(127, 127, 127));
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
-            int item;
-            int frame = frameX / 54;
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            if (frame == 0)
+            if (style == 0)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedXMasTree>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedXMasTree>());
             }
             else
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedXMasTreeSnowy>();
-            }
-
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 80, item);
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedXMasTreeSnowy>());
             }
         }
 

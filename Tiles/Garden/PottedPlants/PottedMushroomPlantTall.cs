@@ -25,11 +25,6 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             AddMapEntry(new Color(127, 127, 127));
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 80, ModContent.ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
-        }
-
         public override bool CreateDust(int i, int j, ref int type)
         {
             return false;

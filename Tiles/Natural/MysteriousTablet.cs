@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -53,10 +54,11 @@ namespace DragonsDecorativeMod.Tiles.Natural
             }
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 64, 64, ModContent.ItemType<Items.Natural.MysteriousTablet>());
-        }
+        //To-Do When rubblemaker support is added, maybe make is to this is Rubblemaker placed with something like Luminite.
+        //public override IEnumerable<Item> GetItemDrops(int i, int j)
+        //{
+        //    yield return new Item(ModContent.ItemType<Items.Natural.MysteriousTablet>());
+        //}
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {

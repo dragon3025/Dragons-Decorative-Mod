@@ -35,10 +35,5 @@ namespace DragonsDecorativeMod.Tiles
                 frame %= 9;
             }
         }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Globe>());
-        }
     }
 }

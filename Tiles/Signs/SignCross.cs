@@ -61,10 +61,5 @@ namespace DragonsDecorativeMod.Tiles.Signs
 
             TileID.Sets.DisableSmartCursor[Type] = true;
         }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 48, ModContent.ItemType<Items.Signs.SignCross>());
-        }
     }
 }

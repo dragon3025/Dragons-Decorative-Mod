@@ -11,15 +11,14 @@ namespace DragonsDecorativeMod.Global
     public class Shops : GlobalNPC
     {
 
-        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        public override void ModifyShop(NPCShop shop)
         {
-            switch (type)
+            switch (shop.NpcType)
             {
                 case NPCID.Merchant:
                     if (GetInstance<BFurnitureConfig>().Globe)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Globe>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Globe>());
                     }
                     break;
                 case NPCID.Dryad:
@@ -28,80 +27,53 @@ namespace DragonsDecorativeMod.Global
                         Player player = Main.LocalPlayer;
                         if (player.luckPotion > 0)
                         {
-                            shop.item[nextSlot].SetDefaults(ItemType<Clover>());
-                            nextSlot++;
+                            shop.Add(ItemType<Clover>());
                         }
                     }
 
                     if (GetInstance<BFurnitureConfig>().Plants)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant2>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant3>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant4>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<FloweryPlant>());
-                        nextSlot++;
+                        shop.Add(ItemType<Plant>());
+                        shop.Add(ItemType<Plant2>());
+                        shop.Add(ItemType<Plant3>());
+                        shop.Add(ItemType<Plant4>());
+                        shop.Add(ItemType<FloweryPlant>());
                     }
 
                     if (GetInstance<BFurnitureConfig>().BonsaiTree)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<BonsaiTree>());
-                        nextSlot++;
+                        shop.Add(ItemType<BonsaiTree>());
                     }
 
                     if (GetInstance<BFurnitureConfig>().Mushrooms)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<BleedingCrownMushroom>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<BrownMushroom>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<RedMushroom>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<WhiteMushroom>());
-                        nextSlot++;
+                        shop.Add(ItemType<BleedingCrownMushroom>());
+                        shop.Add(ItemType<BrownMushroom>());
+                        shop.Add(ItemType<RedMushroom>());
+                        shop.Add(ItemType<WhiteMushroom>());
                     }
 
                     break;
                 case NPCID.SantaClaus:
                     if (GetInstance<BFurnitureConfig>().ChristmasLights)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightCyan>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightOrange>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightPink>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightPurple>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightWhite>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightYellow>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Christmas.LightCyan>());
+                        shop.Add(ItemType<Items.Christmas.LightOrange>());
+                        shop.Add(ItemType<Items.Christmas.LightPink>());
+                        shop.Add(ItemType<Items.Christmas.LightPurple>());
+                        shop.Add(ItemType<Items.Christmas.LightWhite>());
+                        shop.Add(ItemType<Items.Christmas.LightYellow>());
                     }
 
                     if (GetInstance<BFurnitureConfig>().CandyCane)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.CandyCane>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Christmas.CandyCane>());
                     }
 
                     if (GetInstance<BFurnitureConfig>().Snowman)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.SnowmanLeft>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.SnowmanRight>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Christmas.SnowmanLeft>());
+                        shop.Add(ItemType<Items.Christmas.SnowmanRight>());
                     }
 
                     break;
@@ -111,14 +83,12 @@ namespace DragonsDecorativeMod.Global
                         Player player = Main.LocalPlayer;
                         if (player.luckPotion > 0)
                         {
-                            shop.item[nextSlot].SetDefaults(ItemType<Items.LuringToGold>());
-                            nextSlot++;
+                            shop.Add(ItemType<Items.LuringToGold>());
                         }
                     }
                     if (GetInstance<BFurnitureConfig>().PaintBottle)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.PaintBottleSingle>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.PaintBottleSingle>());
                     }
                     break;
                 case NPCID.PartyGirl:
@@ -127,8 +97,7 @@ namespace DragonsDecorativeMod.Global
                         Player player = Main.LocalPlayer;
                         if (player.luckPotion > 0)
                         {
-                            shop.item[nextSlot].SetDefaults(ItemType<Items.CloverDecal>());
-                            nextSlot++;
+                            shop.Add(ItemType<Items.CloverDecal>());
                         }
                     }
                     break;
@@ -136,24 +105,20 @@ namespace DragonsDecorativeMod.Global
                     BestiaryUnlockProgressReport bestiaryProgressReport = Main.GetBestiaryProgressReport();
                     if (bestiaryProgressReport.CompletionPercent >= 0.5f)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<MoonGlobe>());
-                        nextSlot++;
+                        shop.Add(ItemType<MoonGlobe>());
                     }
                     break;
                 case NPCID.Truffle:
                     if (GetInstance<BFurnitureConfig>().PottedPlants)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeShort>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeShort>());
 
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
                     }
 
                     break;
                 case NPCID.Stylist:
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Shampoo>());
-                    nextSlot++;
+                    shop.Add(ItemType<Items.Shampoo>());
                     break;
             }
         }

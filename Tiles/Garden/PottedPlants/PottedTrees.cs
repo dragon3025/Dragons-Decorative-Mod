@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
@@ -29,41 +30,35 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             return false;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            int item = 0;
-            int frame = frameX / 36;
-
-            if (frame == 0)
+            if (style == 0)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarSnowy>();
-            }
-
-            if (frame == 1)
-            {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeSnowy>();
-            }
-            else if (frame == 2)
-            {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarCorruption>();
-            }
-            else if (frame == 3)
-            {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeCorruption>();
-            }
-            else if (frame == 4)
-            {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarCrimson>();
-            }
-            else if (frame == 5)
-            {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeCrimson>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarSnowy>());
             }
 
-            if (item > 0)
+            if (style == 1)
             {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 80, item);
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeSnowy>());
+            }
+            else if (style == 2)
+            {
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarCorruption>());
+            }
+            else if (style == 3)
+            {
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeCorruption>());
+            }
+            else if (style == 4)
+            {
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedCedarCrimson>());
+            }
+            else if (style == 5)
+            {
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTreeCrimson>());
             }
         }
     }

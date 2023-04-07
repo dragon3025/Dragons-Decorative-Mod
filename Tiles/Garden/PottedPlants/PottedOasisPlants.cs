@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ModLoader;
@@ -26,48 +27,42 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             return false;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            int item = 0;
-            int frame = frameX / 54;
-
-            if (frame == 0)
+            if (style == 0)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactus>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactus>());
             }
-            else if (frame == 1)
+            else if (style == 1)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactusHallow>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactusHallow>());
             }
-            else if (frame == 2)
+            else if (style == 2)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactusCrimson>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactusCrimson>());
             }
-            else if (frame == 3)
+            else if (style == 3)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactusCorruption>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedSmallCactusCorruption>());
             }
-            else if (frame == 4)
+            else if (style == 4)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlant>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlant>());
             }
-            else if (frame == 5)
+            else if (style == 5)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlantHallow>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlantHallow>());
             }
-            else if (frame == 6)
+            else if (style == 6)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlantCrimson>();
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlantCrimson>());
             }
-            else if (frame == 7)
+            else if (style == 7)
             {
-                item = ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlantCorruption>();
-            }
-
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 64, item);
+                yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedOasisPlantCorruption>());
             }
         }
     }

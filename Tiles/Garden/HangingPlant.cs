@@ -1,6 +1,8 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -30,28 +32,22 @@ namespace DragonsDecorativeMod.Tiles.Garden
             return false;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            int item = 0;
-            int frame = frameX / 36;
-
-            if (frame == 0)
+            if (style == 0)
             {
-                item = ModContent.ItemType<Items.Garden.HangingPlant>();
+                yield return new Item(ModContent.ItemType<Items.Garden.HangingPlant>());
             }
-            else if (frame == 1)
+            else if (style == 1)
             {
-                item = ModContent.ItemType<Items.Garden.HangingLeafyPlant>();
+                yield return new Item(ModContent.ItemType<Items.Garden.HangingLeafyPlant>());
             }
-            else if (frame == 2)
+            else
             {
-                item = ModContent.ItemType<Items.Garden.HangingFernPlant>();
-            }
-
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 48, item);
+                yield return new Item(ModContent.ItemType<Items.Garden.HangingFernPlant>());
             }
         }
     }

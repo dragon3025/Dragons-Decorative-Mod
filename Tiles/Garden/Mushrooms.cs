@@ -1,10 +1,11 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Tiles.Garden
 {
@@ -45,35 +46,32 @@ namespace DragonsDecorativeMod.Tiles.Garden
             return false;
         }
 
-        public override bool Drop(int i, int j)/* tModPorter Note: Removed. Use CanDrop to decide if an item should drop. Use GetItemDrops to decide which item drops. Item drops based on placeStyle are handled automatically now, so this method might be able to be removed altogether. */
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
-            Tile t = Main.tile[i, j];
-            int frame = t.TileFrameY / 20;
-            int itemID = 0;
+            Tile tile = Main.tile[i, j];
+            int style = TileObjectData.GetTileStyle(tile);
 
-            if (frame == 0)
+            if (style < 5)
             {
-                itemID = ModContent.ItemType<Items.Garden.RedMushroom>();
+                yield return new Item(ModContent.ItemType<Items.Garden.RedMushroom>());
             }
-            else if (frame == 1)
+            else if (style < 10)
             {
-                itemID = ModContent.ItemType<Items.Garden.BleedingCrownMushroom>();
+                yield return new Item(ModContent.ItemType<Items.Garden.BleedingCrownMushroom>());
             }
-            else if (frame == 2)
+            else if (style < 15)
             {
-                itemID = ModContent.ItemType<Items.Garden.BrownMushroom>();
+                yield return new Item(ModContent.ItemType<Items.Garden.BrownMushroom>());
             }
-            else if (frame == 3)
+            else
             {
-                itemID = ModContent.ItemType<Items.Garden.WhiteMushroom>();
+                yield return new Item(ModContent.ItemType<Items.Garden.WhiteMushroom>());
             }
+        }
 
-            if (itemID > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, itemID);
-            }
-
-            return base.Drop(i, j);
+        public override bool CanDrop(int i, int j)
+        {
+            return true;
         }
     }
 }

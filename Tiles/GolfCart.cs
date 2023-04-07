@@ -29,10 +29,5 @@ namespace DragonsDecorativeMod.Tiles
             // name.SetDefault("Golf Cart");
             AddMapEntry(new Color(228, 222, 213), name);
         }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 80, 64, ModContent.ItemType<Items.GolfCart>());
-        }
     }
 }

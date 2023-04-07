@@ -77,10 +77,5 @@ namespace DragonsDecorativeMod.Tiles
         {
             frame = look_direction;
         }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 96, 64, ModContent.ItemType<Items.MedusaWatching>());
-        }
     }
 }

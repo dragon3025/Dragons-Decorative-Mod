@@ -32,10 +32,5 @@ namespace DragonsDecorativeMod.Tiles
             // name.SetDefault("Skeleton Model");
             AddMapEntry(new Color(255, 255, 255), name);
         }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.SkeletonModel>());
-        }
     }
 }
