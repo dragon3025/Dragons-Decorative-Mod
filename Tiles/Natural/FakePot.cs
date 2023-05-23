@@ -30,10 +30,19 @@ namespace DragonsDecorativeMod.Tiles.Natural
             return false;
         }
 
+        public override bool CanDrop(int i, int j)
+        {
+            return false;
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            return base.GetItemDrops(i, j);
+        }
+
         //To-Do Rubblemaker is not yet supported. When support is added, this may need changed to "public override IEnumerable<Item> GetItemDrops(int i, int j)"
         public override void KillMultiTile(int x, int y, int frameX, int frameY)
         {
-
             int item = 0;
             int frame = frameY / 36;
 
@@ -65,29 +74,25 @@ namespace DragonsDecorativeMod.Tiles.Natural
             {
                 item = ItemID.Cobweb;
             }
-            else if (frame <= 24)
+            else if (frame <= 23)
             {
                 item = ItemID.CrimstoneBlock;
             }
-            else if (frame <= 27)
+            else if (frame <= 26)
             {
                 item = ItemID.Sandstone;
             }
-            else if (frame <= 30)
+            else if (frame <= 28)
             {
                 item = ItemID.LihzahrdBrick;
             }
-            else if (frame <= 33)
+            else if (frame <= 30)
             {
-                item = ItemID.MarbleBlock;
+                item = ItemID.Marble;
             }
-            else if (frame <= 36)
+            else if (frame <= 31)
             {
-                item = ItemID.Sandstone;
-            }
-            else if (frame <= 39)
-            {
-                item = ItemID.GraniteBlock;
+                item = ItemID.Granite;
             }
 
             if (item > 0)

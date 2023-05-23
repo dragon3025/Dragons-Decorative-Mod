@@ -101,13 +101,6 @@ namespace DragonsDecorativeMod.Global
                         }
                     }
                     break;
-                case NPCID.BestiaryGirl:
-                    BestiaryUnlockProgressReport bestiaryProgressReport = Main.GetBestiaryProgressReport();
-                    if (bestiaryProgressReport.CompletionPercent >= 0.5f)
-                    {
-                        shop.Add(ItemType<MoonGlobe>());
-                    }
-                    break;
                 case NPCID.Truffle:
                     if (GetInstance<BFurnitureConfig>().PottedPlants)
                     {

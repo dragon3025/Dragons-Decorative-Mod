@@ -27,8 +27,6 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.StyleMultiplier = 5;
             TileObjectData.addTile(Type);
 
-            ItemDrop = ModContent.ItemType<Items.Garden.WallFlowers>();
-
             AddMapEntry(new Color(0, 127, 0));
 
             HitSound = SoundID.Grass;

@@ -138,15 +138,6 @@ Mods: {
 			MannequinHeadRight.DisplayName: Right Mannequin Head
 			MedusaWatching.DisplayName: Medusa Watching
 
-			MoonGlobe: {
-				DisplayName: Moon Globe
-				Tooltip:
-					'''
-					Toss it to change how the moon looks!
-					'Time for a change of scenery'
-					'''
-			}
-
 			AnimalBones.DisplayName: Animal Bones
 			GraniteRock.DisplayName: Granite Rocks
 			LivingLeafBushes.DisplayName: Living Leaf Bushes
@@ -361,8 +352,6 @@ Mods: {
 				Tooltip: Try painting it
 			}
 		}
-
-		Projectiles.MoonGlobe.DisplayName: Moon Globe
 
 		Tiles: {
 			Aquarium.MapEntry: Aquarium

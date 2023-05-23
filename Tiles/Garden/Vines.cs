@@ -16,8 +16,6 @@ namespace DragonsDecorativeMod.Tiles.Garden
 
             HitSound = SoundID.Grass;
             DustType = DustID.Grass;
-
-            ItemDrop = ModContent.ItemType<Items.Garden.Vines>();
         }
     }
 }

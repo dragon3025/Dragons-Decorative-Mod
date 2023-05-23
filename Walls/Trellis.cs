@@ -12,7 +12,6 @@ namespace DragonsDecorativeMod.Walls
             Main.wallLight[Type] = true;
             Main.wallHouse[Type] = true;
             DustType = DustID.WoodFurniture;
-            ItemDrop = ModContent.ItemType<Items.Garden.Trellis>();
             AddMapEntry(new Color(127, 97, 63));
         }
     }
