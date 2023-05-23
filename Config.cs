@@ -41,12 +41,7 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool Pots;
 
-        [Label("[i:DragonsDecorativeMod/LargeStoneStalactite] Stalagmites and Stalactites")]
-        [Tooltip("Fake version of vanilla object.")]
-        [DefaultValue(true)]
-        public bool StalagmitesAndStalactites;
-
-        [Label("[i:DragonsDecorativeMod/FakeDemonAltar] Altars Shadow Orb and Crimson Heart")]
+        [Label("[i:DragonsDecorativeMod/FakeDemonAltar] Altars, Shadow Orb, and Crimson Heart")]
         [Tooltip("Fake version of vanilla object.")]
         [DefaultValue(true)]
         public bool AltarsShadowOrbAndCrimsonHeart;
@@ -69,11 +64,6 @@ namespace DragonsDecorativeMod
         [Label("[i:DragonsDecorativeMod/MysteriousTablet] Mysterious Tablet")]
         [DefaultValue(true)]
         public bool MysteriousTablet;
-
-        [Label("[i:DragonsDecorativeMod/AnimalBones] Other")]
-        [Tooltip("Fake version of vanilla object.")]
-        [DefaultValue(true)]
-        public bool OtherAmbient;
         #endregion
 
         #region Christmas

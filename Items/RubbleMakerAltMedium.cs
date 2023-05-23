@@ -1,20 +1,28 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using Microsoft.Xna.Framework.Input;
+using ReLogic.Content;
 using Terraria;
+using Terraria.Audio;
 using Terraria.GameContent.Creative;
-using Terraria.GameInput;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items
 {
-    public class PotteryPlacer : ModItem
+    public class RubbleMakerAltMedium : ModItem
     {
+        public static Asset<Texture2D> overlayTexture;
+        readonly static BFurnitureConfig furnitureConfig = GetInstance<BFurnitureConfig>();
+
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+
+            if (!Main.dedServ)
+            {
+                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Items/RubbleMakerAltMediumMeter");
+            }
         }
 
         public override void SetDefaults()
@@ -45,7 +53,7 @@ namespace DragonsDecorativeMod.Items
                 }
             }
 
-            if (player.HeldItem.type == ItemType<PotteryPlacer>())
+            if (player.HeldItem.type == ItemType<RubbleMakerAltMedium>())
             {
                 int minStyle = 0;
                 int maxStyle = 0;
@@ -164,9 +172,32 @@ namespace DragonsDecorativeMod.Items
             }
         }
 
+        public override bool AltFunctionUse(Player player)
+        {
+            if (!furnitureConfig.AltarsShadowOrbAndCrimsonHeart &&
+                !furnitureConfig.FakeLarva && !furnitureConfig.FallenLog &&
+                !furnitureConfig.PeacefulPlanteraBulb &&
+                !furnitureConfig.MysteriousTablet)
+            {
+                return false;
+            }
+            player.releaseUseTile = false;
+            Main.mouseRightRelease = false;
+            SoundEngine.PlaySound(SoundID.Unlock);
+            player.inventory[player.selectedItem].ChangeItemType(ItemType<RubbleMakerAltLarge>());
+            return true;
+        }
+
+        public override void PostDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
+        {
+            Texture2D texture = overlayTexture.Value;
+
+            spriteBatch.Draw(texture, position + new Vector2(28, 16), new Rectangle(0, 0, 8, 20), new Color(255, 255, 255, 192), 0f, origin, scale * 1.7f, SpriteEffects.None, 0f);
+        }
+
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().Pots)
+            if (!furnitureConfig.Pots)
             {
                 return;
             }
