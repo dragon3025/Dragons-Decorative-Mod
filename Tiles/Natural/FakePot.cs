@@ -27,77 +27,113 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
         public override bool CreateDust(int i, int j, ref int type)
         {
-            return false;
-        }
+            Tile tile = Main.tile[i, j];
+            int frame = tile.TileFrameY / 36;
 
-        public override bool CanDrop(int i, int j)
-        {
-            return false;
+            if (frame < 4)
+            {
+                DustType = DustID.Clay;
+            }
+            else if (frame < 7)
+            {
+                DustType = DustID.Ice;
+            }
+            else if (frame < 10)
+            {
+                DustType = DustID.Mud;
+            }
+            else if (frame < 13)
+            {
+                DustType = DustID.Bone;
+            }
+            else if (frame < 16)
+            {
+                DustType = DustID.Obsidian;
+            }
+            else if (frame < 19)
+            {
+                DustType = DustID.CorruptGibs;
+            }
+            else if (frame < 22)
+            {
+                DustType = DustID.Web;
+            }
+            else if (frame < 23)
+            {
+                DustType = DustID.Crimstone;
+            }
+            else if (frame < 27)
+            {
+                DustType = DustID.Sand;
+            }
+            else if (frame < 29)
+            {
+                DustType = DustID.Lihzahrd;
+            }
+            else if (frame < 30)
+            {
+                DustType = DustID.Marble;
+            }
+            else
+            {
+                DustType = DustID.Granite;
+            }
+
+            return true;
         }
 
         public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
-            return base.GetItemDrops(i, j);
-        }
+            Tile tile = Main.tile[i, j];
+            int frame = tile.TileFrameY / 36;
 
-        //To-Do Rubblemaker is not yet supported. When support is added, this may need changed to "public override IEnumerable<Item> GetItemDrops(int i, int j)"
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            int item = 0;
-            int frame = frameY / 36;
-
-            if (frame <= 3)
+            if (frame < 4)
             {
-                item = ItemID.ClayBlock;
+                yield return new Item(ItemID.ClayBlock);
             }
-            else if (frame <= 6)
+            else if (frame < 7)
             {
-                item = ItemID.IceBlock;
+                yield return new Item(ItemID.IceBlock);
             }
-            else if (frame <= 9)
+            else if (frame < 10)
             {
-                item = ItemID.MudBlock;
+                yield return new Item(ItemID.MudBlock);
             }
-            else if (frame <= 12)
+            else if (frame < 13)
             {
-                item = ItemID.Bone;
+                yield return new Item(ItemID.Bone);
             }
-            else if (frame <= 15)
+            else if (frame < 16)
             {
-                item = ItemID.Obsidian;
+                yield return new Item(ItemID.Obsidian);
             }
-            else if (frame <= 18)
+            else if (frame < 19)
             {
-                item = ItemID.EbonstoneBlock;
+                yield return new Item(ItemID.EbonstoneBlock);
             }
-            else if (frame <= 21)
+            else if (frame < 22)
             {
-                item = ItemID.Cobweb;
+                yield return new Item(ItemID.Cobweb);
             }
-            else if (frame <= 23)
+            else if (frame < 23)
             {
-                item = ItemID.CrimstoneBlock;
+                yield return new Item(ItemID.CrimstoneBlock);
             }
-            else if (frame <= 26)
+            else if (frame < 27)
             {
-                item = ItemID.Sandstone;
+                yield return new Item(ItemID.Sandstone);
             }
-            else if (frame <= 28)
+            else if (frame < 29)
             {
-                item = ItemID.LihzahrdBrick;
+                yield return new Item(ItemID.LihzahrdBrick);
             }
-            else if (frame <= 30)
+            else if (frame < 30)
             {
-                item = ItemID.Marble;
+                yield return new Item(ItemID.Marble);
             }
-            else if (frame <= 31)
+            else
             {
-                item = ItemID.Granite;
-            }
-
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, item);
+                yield return new Item(ItemID.Granite);
             }
         }
     }

@@ -1,28 +1,24 @@
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using System;
 using Terraria;
 using Terraria.Audio;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
+using static Terraria.ModLoader.PlayerDrawLayer;
 
 namespace DragonsDecorativeMod.Items
 {
-    public class RubbleMakerAltMedium : ModItem
+    public class RubbleMakerPots : ModItem
     {
-        public static Asset<Texture2D> overlayTexture;
         readonly static BFurnitureConfig furnitureConfig = GetInstance<BFurnitureConfig>();
 
         public override void SetStaticDefaults()
         {
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
-
-            if (!Main.dedServ)
-            {
-                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Items/RubbleMakerAltMediumMeter");
-            }
         }
 
         public override void SetDefaults()
@@ -53,7 +49,7 @@ namespace DragonsDecorativeMod.Items
                 }
             }
 
-            if (player.HeldItem.type == ItemType<RubbleMakerAltMedium>())
+            if (player.HeldItem.type == Type)
             {
                 int minStyle = 0;
                 int maxStyle = 0;
@@ -172,27 +168,85 @@ namespace DragonsDecorativeMod.Items
             }
         }
 
-        public override bool AltFunctionUse(Player player)
+        public override bool? UseItem(Player player)
         {
-            if (!furnitureConfig.AltarsShadowOrbAndCrimsonHeart &&
-                !furnitureConfig.FakeLarva && !furnitureConfig.FallenLog &&
-                !furnitureConfig.PeacefulPlanteraBulb &&
-                !furnitureConfig.MysteriousTablet)
+            bool consumedItem = false;
+            for (int i = 0; i < player.inventory.Length; i++)
             {
-                return false;
+                if (player.inventory[i].type == ItemID.ClayBlock)
+                {
+                    player.ConsumeItem(ItemID.ClayBlock);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.IceBlock)
+                {
+                    player.ConsumeItem(ItemID.IceBlock);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.MudBlock)
+                {
+                    player.ConsumeItem(ItemID.MudBlock);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.Bone)
+                {
+                    player.ConsumeItem(ItemID.Bone);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.Obsidian)
+                {
+                    player.ConsumeItem(ItemID.Obsidian);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.EbonstoneBlock)
+                {
+                    player.ConsumeItem(ItemID.EbonstoneBlock);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.Cobweb)
+                {
+                    player.ConsumeItem(ItemID.Cobweb);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.CrimstoneBlock)
+                {
+                    player.ConsumeItem(ItemID.CrimstoneBlock);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.Sandstone)
+                {
+                    player.ConsumeItem(ItemID.Sandstone);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.LihzahrdBrick)
+                {
+                    player.ConsumeItem(ItemID.LihzahrdBrick);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.Marble)
+                {
+                    player.ConsumeItem(ItemID.Marble);
+                    consumedItem = true;
+                    break;
+                }
+                if (player.inventory[i].type == ItemID.Granite)
+                {
+                    player.ConsumeItem(ItemID.Granite);
+                    consumedItem = true;
+                    break;
+                }
             }
-            player.releaseUseTile = false;
-            Main.mouseRightRelease = false;
-            SoundEngine.PlaySound(SoundID.Unlock);
-            player.inventory[player.selectedItem].ChangeItemType(ItemType<RubbleMakerAltLarge>());
-            return true;
-        }
-
-        public override void PostDrawInInventory(SpriteBatch spriteBatch, Vector2 position, Rectangle frame, Color drawColor, Color itemColor, Vector2 origin, float scale)
-        {
-            Texture2D texture = overlayTexture.Value;
-
-            spriteBatch.Draw(texture, position + new Vector2(28, 16), new Rectangle(0, 0, 8, 20), new Color(255, 255, 255, 192), 0f, origin, scale * 1.7f, SpriteEffects.None, 0f);
+            return consumedItem;
         }
 
         public override void AddRecipes()

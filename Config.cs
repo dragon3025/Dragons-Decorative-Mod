@@ -38,6 +38,7 @@ namespace DragonsDecorativeMod
 
         #region Natural
         [Label("[i:DragonsDecorativeMod/ForestPot] Pots")]
+        [Tooltip("This is placed by a mod tool: \"Rubble Maker (Pottery)\"")]
         [DefaultValue(true)]
         public bool Pots;
 
