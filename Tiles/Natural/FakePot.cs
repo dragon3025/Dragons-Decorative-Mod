@@ -27,20 +27,30 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
         public override bool CreateDust(int i, int j, ref int type)
         {
+            //Dust from pots found at WorldGen.cs > public static int KillTile_MakeTileDust > line 59908
+
             Tile tile = Main.tile[i, j];
             int frame = tile.TileFrameY / 36;
 
-            if (frame < 4)
+            if (frame < 2)
+            {
+                DustType = DustID.Clay;
+            }
+            else if (frame < 3)
+            {
+                DustType = DustID.Stone;
+            }
+            else if (frame < 4)
             {
                 DustType = DustID.Clay;
             }
             else if (frame < 7)
             {
-                DustType = DustID.Ice;
+                DustType = DustID.Cobalt;
             }
             else if (frame < 10)
             {
-                DustType = DustID.Mud;
+                DustType = 85;
             }
             else if (frame < 13)
             {
@@ -48,37 +58,36 @@ namespace DragonsDecorativeMod.Tiles.Natural
             }
             else if (frame < 16)
             {
-                DustType = DustID.Obsidian;
-            }
-            else if (frame < 19)
-            {
-                DustType = DustID.CorruptGibs;
+                DustType = DustID.Ash;
             }
             else if (frame < 22)
             {
-                DustType = DustID.Web;
+                DustType = DustID.CorruptGibs;
             }
             else if (frame < 23)
             {
-                DustType = DustID.Crimstone;
+                DustType = DustID.Blood;
+            }
+            else if (frame < 24)
+            {
+                DustType = DustID.Dirt;
             }
             else if (frame < 27)
             {
-                DustType = DustID.Sand;
+                DustType = DustID.DesertPot;
             }
             else if (frame < 29)
             {
-                DustType = DustID.Lihzahrd;
+                DustType = DustID.t_Lihzahrd;
             }
             else if (frame < 30)
             {
-                DustType = DustID.Marble;
+                DustType = DustID.MarblePot;
             }
             else
             {
                 DustType = DustID.Granite;
             }
-
             return true;
         }
 
