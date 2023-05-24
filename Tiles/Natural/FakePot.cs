@@ -22,7 +22,24 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.newTile.StyleWrapLimit = 3;
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(127, 127, 127));
+            AddMapEntry(new Color(128, 128, 128));
+        }
+
+        public override bool KillSound(int i, int j, bool fail)
+        {
+            //Sounds from breaking pots found at WorldGen.cs > public static void CheckPot > line 48511
+            HitSound = SoundID.Shatter;
+            Tile tile = Main.tile[i, j];
+            int frame = tile.TileFrameY / 36;
+            if (frame > 6 && frame < 10)
+            {
+                HitSound = SoundID.Grass;
+            }
+            else if (frame > 15 && frame < 23)
+            {
+                HitSound = SoundID.NPCDeath1;
+            }
+            return true;
         }
 
         public override bool CreateDust(int i, int j, ref int type)
