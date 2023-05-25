@@ -1,14 +1,10 @@
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
-using System;
 using Terraria;
-using Terraria.Audio;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
-using static Terraria.ModLoader.PlayerDrawLayer;
+
+// TO-DO: If tModLoader releases support for adding to vanilla Rubble Maker, convert these into Rubble Maker placements (AS OF NOW, VANILLA "ECHO POTS" DON'T DROP ANYTHING, AND IT'S IMPOSSIBLE TO ADD DROPS TO VANILLA TILES).
 
 namespace DragonsDecorativeMod.Items
 {
