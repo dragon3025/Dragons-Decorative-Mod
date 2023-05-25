@@ -12,7 +12,7 @@ using static Terraria.ModLoader.PlayerDrawLayer;
 
 namespace DragonsDecorativeMod.Items
 {
-    public class RubbleMakerPots : ModItem
+    public class RubbleMakerPottery : ModItem
     {
         readonly static BFurnitureConfig furnitureConfig = GetInstance<BFurnitureConfig>();
 

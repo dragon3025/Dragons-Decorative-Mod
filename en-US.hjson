@@ -1,46 +1,134 @@
-
 Mods: {
 	DragonsDecorativeMod: {
 		Items: {
-			Aquarium.DisplayName: Aquarium
-			BoxOfArrows.DisplayName: Box of Arrows
+			RubbleMakerPottery: {
+				DisplayName: Rubble Maker Pottery
+				Tooltip:
+					'''
+						Used with materials to place matching pottery
+						Press Up\/Down to cycle through styles
+					'''
+			}
+
+			Aquarium: {
+				DisplayName: Aquarium
+				Tooltip: ""
+			}
+
+			BoxOfArrows: {
+				DisplayName: Box of Arrows
+				Tooltip: ""
+			}
 
 			CandyCane: {
 				DisplayName: Lawn Candy Cane
 				Tooltip: Try painting it
 			}
 
-			LightCyan.DisplayName: Cyan Light
-			LightOrange.DisplayName: Orange Light
-			LightPink.DisplayName: Pink Light
-			LightPurple.DisplayName: Purple Light
-			LightWhite.DisplayName: White Light
-			LightYellow.DisplayName: Yellow Light
-			SnowmanLeft.DisplayName: Snowman Left
-			SnowmanRight.DisplayName: Snowman Right
-			CloverDecal.DisplayName: Clover Decal
-			Easel.DisplayName: Easel
-			EasterBasket.DisplayName: Easter Basket
-			EasterEgg.DisplayName: Easter Egg
-			EasterEggSingleColor.DisplayName: Easter Egg (Single Color)
-			PlasticEgg.DisplayName: Plastic Egg
-			FourLeafCloverDecal.DisplayName: Four-Leaf Clover Decal
-			BleedingCrownMushroom.DisplayName: Bleeding Crown Mushroom
+			LightCyan: {
+				DisplayName: Cyan Light
+				Tooltip: ""
+			}
+
+			LightOrange: {
+				DisplayName: Orange Light
+				Tooltip: ""
+			}
+
+			LightPink: {
+				DisplayName: Pink Light
+				Tooltip: ""
+			}
+
+			LightPurple: {
+				DisplayName: Purple Light
+				Tooltip: ""
+			}
+
+			LightWhite: {
+				DisplayName: White Light
+				Tooltip: ""
+			}
+
+			LightYellow: {
+				DisplayName: Yellow Light
+				Tooltip: ""
+			}
+
+			SnowmanLeft: {
+				DisplayName: Snowman Left
+				Tooltip: ""
+			}
+
+			SnowmanRight: {
+				DisplayName: Snowman Right
+				Tooltip: ""
+			}
+
+			CloverDecal: {
+				DisplayName: Clover Decal
+				Tooltip: ""
+			}
+
+			Easel: {
+				DisplayName: Easel
+				Tooltip: ""
+			}
+
+			EasterBasket: {
+				DisplayName: Easter Basket
+				Tooltip: ""
+			}
+
+			EasterEgg: {
+				DisplayName: Easter Egg
+				Tooltip: ""
+			}
+
+			EasterEggSingleColor: {
+				DisplayName: Easter Egg (Single Color)
+				Tooltip: ""
+			}
+
+			PlasticEgg: {
+				DisplayName: Plastic Egg
+				Tooltip: ""
+			}
+
+			FourLeafCloverDecal: {
+				DisplayName: Four-Leaf Clover Decal
+				Tooltip: ""
+			}
+
+			BleedingCrownMushroom: {
+				DisplayName: Bleeding Crown Mushroom
+				Tooltip: ""
+			}
 
 			BonsaiTree: {
 				DisplayName: Bonsai Tree
 				Tooltip: "'Think only tree'"
 			}
 
-			BrownMushroom.DisplayName: Brown Mushroom
-			Clover.DisplayName: Clover
+			BrownMushroom: {
+				DisplayName: Brown Mushroom
+				Tooltip: ""
+			}
+
+			Clover: {
+				DisplayName: Clover
+				Tooltip: ""
+			}
 
 			FloweryPlant: {
 				DisplayName: Flowery Plant
 				Tooltip: Try painting it
 			}
 
-			FourLeafClover.DisplayName: Four-Leaf Clover
+			FourLeafClover: {
+				DisplayName: Four-Leaf Clover
+				Tooltip: ""
+			}
 
 			HangingFernPlant: {
 				DisplayName: Hanging Fern Plant
@@ -57,37 +145,160 @@ Mods: {
 				Tooltip: NOT AFFECTED BY WIND
 			}
 
-			Plant.DisplayName: Plant
-			Plant2.DisplayName: Deathbell Plant
-			Plant3.DisplayName: Plant
-			Plant4.DisplayName: Plant
-			Planter.DisplayName: Planter
-			Planter2.DisplayName: Planter
-			PottedCedarCorruption.DisplayName: Potted Corruption Cedar
-			PottedCedarCrimson.DisplayName: Potted Crimson Cedar
-			PottedCedarSnowy.DisplayName: Potted Snowy Cedar
-			PottedMushroomTreeShort.DisplayName: Potted Short Mushroom Tree
-			PottedMushroomTreeTall.DisplayName: Potted Tall Mushroom Tree
-			PottedOasisPlant.DisplayName: Potted Oasis Plant
-			PottedOasisPlantCorruption.DisplayName: Potted Corrupt Oasis Plant
-			PottedOasisPlantCrimson.DisplayName: Potted Crimson Oasis Plant
-			PottedOasisPlantHallow.DisplayName: Potted Hollow Oasis Plant
-			PottedPalmCorruption.DisplayName: Potted Corrupt Palm
-			PottedPalmCrimson.DisplayName: Potted Crimson Palm
-			PottedSmallCactus.DisplayName: Potted Small Cactus
-			PottedSmallCactusCorruption.DisplayName: Potted Small Corruption Cactus
-			PottedSmallCactusCrimson.DisplayName: Potted Small Crimson Cactus
-			PottedSmallCactusHallow.DisplayName: Potted Small Hallow Cactus
-			PottedTallCactus.DisplayName: Potted Tall Cactus
-			PottedTallCactusCorrupt.DisplayName: Potted Tall Corrupt Cactus
-			PottedTallCactusCrimson.DisplayName: Potted Tall Crimson Cactus
-			PottedTallCactusHallow.DisplayName: Potted Tall Hallow Cactus
-			PottedTreeCorruption.DisplayName: Potted Corruption Tree
-			PottedTreeCrimson.DisplayName: Potted Crimson Tree
-			PottedTreeSnowy.DisplayName: Potted Snowy Tree
-			PottedXMasTree.DisplayName: Potted Christmas Tree
-			PottedXMasTreeSnowy.DisplayName: Potted Christmas Tree Snowy
-			RedMushroom.DisplayName: Red Mushroom
+			Plant: {
+				DisplayName: Plant
+				Tooltip: ""
+			}
+
+			Plant2: {
+				DisplayName: Deathbell Plant
+				Tooltip: ""
+			}
+
+			Plant3: {
+				DisplayName: Plant
+				Tooltip: ""
+			}
+
+			Plant4: {
+				DisplayName: Plant
+				Tooltip: ""
+			}
+
+			Planter: {
+				DisplayName: Planter
+				Tooltip: ""
+			}
+
+			Planter2: {
+				DisplayName: Planter
+				Tooltip: ""
+			}
+
+			PottedCedarCorruption: {
+				DisplayName: Potted Corruption Cedar
+				Tooltip: ""
+			}
+
+			PottedCedarCrimson: {
+				DisplayName: Potted Crimson Cedar
+				Tooltip: ""
+			}
+
+			PottedCedarSnowy: {
+				DisplayName: Potted Snowy Cedar
+				Tooltip: ""
+			}
+
+			PottedMushroomTreeShort: {
+				DisplayName: Potted Short Mushroom Tree
+				Tooltip: ""
+			}
+
+			PottedMushroomTreeTall: {
+				DisplayName: Potted Tall Mushroom Tree
+				Tooltip: ""
+			}
+
+			PottedOasisPlant: {
+				DisplayName: Potted Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedOasisPlantCorruption: {
+				DisplayName: Potted Corrupt Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedOasisPlantCrimson: {
+				DisplayName: Potted Crimson Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedOasisPlantHallow: {
+				DisplayName: Potted Hollow Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedPalmCorruption: {
+				DisplayName: Potted Corrupt Palm
+				Tooltip: ""
+			}
+
+			PottedPalmCrimson: {
+				DisplayName: Potted Crimson Palm
+				Tooltip: ""
+			}
+
+			PottedSmallCactus: {
+				DisplayName: Potted Small Cactus
+				Tooltip: ""
+			}
+
+			PottedSmallCactusCorruption: {
+				DisplayName: Potted Small Corruption Cactus
+				Tooltip: ""
+			}
+
+			PottedSmallCactusCrimson: {
+				DisplayName: Potted Small Crimson Cactus
+				Tooltip: ""
+			}
+
+			PottedSmallCactusHallow: {
+				DisplayName: Potted Small Hallow Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactus: {
+				DisplayName: Potted Tall Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactusCorrupt: {
+				DisplayName: Potted Tall Corrupt Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactusCrimson: {
+				DisplayName: Potted Tall Crimson Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactusHallow: {
+				DisplayName: Potted Tall Hallow Cactus
+				Tooltip: ""
+			}
+
+			PottedTreeCorruption: {
+				DisplayName: Potted Corruption Tree
+				Tooltip: ""
+			}
+
+			PottedTreeCrimson: {
+				DisplayName: Potted Crimson Tree
+				Tooltip: ""
+			}
+
+			PottedTreeSnowy: {
+				DisplayName: Potted Snowy Tree
+				Tooltip: ""
+			}
+
+			PottedXMasTree: {
+				DisplayName: Potted Christmas Tree
+				Tooltip: ""
+			}
+
+			PottedXMasTreeSnowy: {
+				DisplayName: Potted Christmas Tree Snowy
+				Tooltip: ""
+			}
+
+			RedMushroom: {
+				DisplayName: Red Mushroom
+				Tooltip: ""
+			}
 
 			SingleTileFloweryPlant: {
 				DisplayName: Single-Tile Flowery Plant
@@ -114,29 +325,95 @@ Mods: {
 				Tooltip: Fits in a 1x1 Space
 			}
 
-			Trellis.DisplayName: Trellis
-			Vines.DisplayName: Wall Vines
+			Trellis: {
+				DisplayName: Trellis
+				Tooltip: ""
+			}
+
+			Vines: {
+				DisplayName: Wall Vines
+				Tooltip: ""
+			}
 
 			WallFlowers: {
 				DisplayName: Wall Flowers
 				Tooltip: Try painting them
 			}
 
-			WhiteMushroom.DisplayName: White Mushroom
-			Globe.DisplayName: Globe
-			GolfCart.DisplayName: Golf Cart
-			HorizontalBook.DisplayName: Horizontal Book
-			HorizontalBooksStacked.DisplayName: Horizontal Book Stacked
-			HospitalBed.DisplayName: Hospital Bed
-			LargeKeg.DisplayName: Large Keg
-			LargeKegRotated.DisplayName: Large Rotated Keg
-			LargePot.DisplayName: Large Pot
-			Lectern.DisplayName: Lectern
-			LecternWithBook.DisplayName: Lectern with Book
-			LuringToGold.DisplayName: Luring To Gold
-			MannequinHeadLeft.DisplayName: Left Mannequin Head
-			MannequinHeadRight.DisplayName: Right Mannequin Head
-			MedusaWatching.DisplayName: Medusa Watching
+			WhiteMushroom: {
+				DisplayName: White Mushroom
+				Tooltip: ""
+			}
+
+			Globe: {
+				DisplayName: Globe
+				Tooltip: ""
+			}
+
+			GolfCart: {
+				DisplayName: Golf Cart
+				Tooltip: ""
+			}
+
+			HorizontalBook: {
+				DisplayName: Horizontal Book
+				Tooltip: ""
+			}
+
+			HorizontalBooksStacked: {
+				DisplayName: Horizontal Book Stacked
+				Tooltip: ""
+			}
+
+			HospitalBed: {
+				DisplayName: Hospital Bed
+				Tooltip: ""
+			}
+
+			LargeKeg: {
+				DisplayName: Large Keg
+				Tooltip: ""
+			}
+
+			LargeKegRotated: {
+				DisplayName: Large Rotated Keg
+				Tooltip: ""
+			}
+
+			LargePot: {
+				DisplayName: Large Pot
+				Tooltip: ""
+			}
+
+			Lectern: {
+				DisplayName: Lectern
+				Tooltip: ""
+			}
+
+			LecternWithBook: {
+				DisplayName: Lectern with Book
+				Tooltip: ""
+			}
+
+			LuringToGold: {
+				DisplayName: Luring To Gold
+				Tooltip: ""
+			}
+
+			MannequinHeadLeft: {
+				DisplayName: Left Mannequin Head
+				Tooltip: ""
+			}
+
+			MannequinHeadRight: {
+				DisplayName: Right Mannequin Head
+				Tooltip: ""
+			}
+
+			MedusaWatching: {
+				DisplayName: Medusa Watching
+				Tooltip: ""
+			}
 
 			AnimalBones.DisplayName: Animal Bones
 			GraniteRock.DisplayName: Granite Rocks
@@ -247,14 +524,47 @@ Mods: {
 			SmallPearlstoneStalagmite.DisplayName: Small Pearltone Stalagmite
 			SmallSandstoneStalagmite.DisplayName: Small Sandstone Stalagmite
 			SmallStoneStalagmite.DisplayName: Small Stone Stalagmite
-			FakeCrimsonAltar.DisplayName: Fake Crimson Altar
-			FakeCrimsonHeart.DisplayName: Crimson Heart Object
-			FakeDemonAltar.DisplayName: Fake Demon Altar
-			FakeLarva.DisplayName: Fake Larva
-			FakeShadowOrb.DisplayName: Shadow Orb Object
-			FallenLog.DisplayName: Fallen Log
-			MysteriousTablet.DisplayName: Mysterious Tablet
-			PeacefulPlanteraBulb.DisplayName: Peaceful Plantera Bulb
+
+			FakeCrimsonAltar: {
+				DisplayName: Fake Crimson Altar
+				Tooltip: ""
+			}
+
+			FakeCrimsonHeart: {
+				DisplayName: Crimson Heart Object
+				Tooltip: ""
+			}
+
+			FakeDemonAltar: {
+				DisplayName: Fake Demon Altar
+				Tooltip: ""
+			}
+
+			FakeLarva: {
+				DisplayName: Fake Larva
+				Tooltip: ""
+			}
+
+			FakeShadowOrb: {
+				DisplayName: Shadow Orb Object
+				Tooltip: ""
+			}
+
+			FallenLog: {
+				DisplayName: Fallen Log
+				Tooltip: ""
+			}
+
+			MysteriousTablet: {
+				DisplayName: Mysterious Tablet
+				Tooltip: ""
+			}
+
+			PeacefulPlanteraBulb: {
+				DisplayName: Peaceful Plantera Bulb
+				Tooltip: ""
+			}
+
 			CorruptionPot.DisplayName: Corruption Pot
 			CrimsonPot.DisplayName: Crimson Pot
 			DungeonPot.DisplayName: Dungeon Pot
@@ -268,24 +578,71 @@ Mods: {
 			PyramidPot.DisplayName: Pyramid Pot
 			SpiderPot.DisplayName: Spider Pot
 			UndergroundDesertPot.DisplayName: Underground Desert Pot
-			PaintBottleDouble.DisplayName: Double Paint Bottle
-			PaintBottleSingle.DisplayName: Paint Bottle
+
+			PaintBottleDouble: {
+				DisplayName: Double Paint Bottle
+				Tooltip: ""
+			}
+
+			PaintBottleSingle: {
+				DisplayName: Paint Bottle
+				Tooltip: ""
+			}
 
 			PaintBucket: {
 				DisplayName: Paint Bucket
 				Tooltip: Try painting it
 			}
 
-			PureSpiritLamp.DisplayName: Pure Spirit Lamp
-			RopeCoilPlaceable.DisplayName: Placeable Rope Coil
-			Shampoo.DisplayName: Shampoo
-			SignBag.DisplayName: Bag Sign
-			SignBook.DisplayName: Book Sign
-			SignCross.DisplayName: Healthy Cross Sign
-			SignHeart.DisplayName: Heart Sign
-			SignSwiss.DisplayName: Healthy Swiss Sign
-			SkeletonModel.DisplayName: Skeleton Model
-			StaringStatue.DisplayName: Ned the Nosey
+			PureSpiritLamp: {
+				DisplayName: Pure Spirit Lamp
+				Tooltip: ""
+			}
+
+			RopeCoilPlaceable: {
+				DisplayName: Placeable Rope Coil
+				Tooltip: ""
+			}
+
+			Shampoo: {
+				DisplayName: Shampoo
+				Tooltip: ""
+			}
+
+			SignBag: {
+				DisplayName: Bag Sign
+				Tooltip: ""
+			}
+
+			SignBook: {
+				DisplayName: Book Sign
+				Tooltip: ""
+			}
+
+			SignCross: {
+				DisplayName: Healthy Cross Sign
+				Tooltip: ""
+			}
+
+			SignHeart: {
+				DisplayName: Heart Sign
+				Tooltip: ""
+			}
+
+			SignSwiss: {
+				DisplayName: Healthy Swiss Sign
+				Tooltip: ""
+			}
+
+			SkeletonModel: {
+				DisplayName: Skeleton Model
+				Tooltip: ""
+			}
+
+			StaringStatue: {
+				DisplayName: Ned the Nosey
+				Tooltip: ""
+			}
 
 			ThreadPlaceable: {
 				DisplayName: Placeable Thread

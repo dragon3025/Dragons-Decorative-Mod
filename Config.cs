@@ -37,8 +37,10 @@ namespace DragonsDecorativeMod
         [Header("If an item below is disabled, it wont be obtainable.\n\nNatural")]
 
         #region Natural
-        [Label("[i:DragonsDecorativeMod/ForestPot] Pots")]
-        [Tooltip("This is placed by a mod tool: \"Rubble Maker (Pottery)\"")]
+        [Label("[i:DragonsDecorativeMod/RubbleMakerPottery] Pots")]
+        [Tooltip("" +
+            "This is placed by a mod tool: \"Rubble Maker (Pottery)\",\n" +
+            "which can be crafted to and from Rubble Maker")]
         [DefaultValue(true)]
         public bool Pots;
 
@@ -89,19 +91,19 @@ namespace DragonsDecorativeMod
         #region Easter
         [Header("Easter")]
 
-        [Label("[i:DragonsDecorativeMod/Easter Basket] Easter Basket")]
+        [Label("[i:DragonsDecorativeMod/EasterBasket] Easter Basket")]
         [DefaultValue(true)]
         public bool EasterBasket;
 
-        [Label("[i:DragonsDecorativeMod/Easter Egg] Easter Egg")]
+        [Label("[i:DragonsDecorativeMod/EasterEgg] Easter Egg")]
         [DefaultValue(true)]
         public bool EasterEgg;
 
-        [Label("[i:DragonsDecorativeMod/Easter Egg (Single Color)] Easter Egg Single Color")]
+        [Label("[i:DragonsDecorativeMod/EasterEggSingleColor] Easter Egg Single Color")]
         [DefaultValue(true)]
         public bool EasterEggSingleColor;
 
-        [Label("[i:DragonsDecorativeMod/Plastic Egg] PlasticEgg")]
+        [Label("[i:DragonsDecorativeMod/PlasticEgg] PlasticEgg")]
         [DefaultValue(true)]
         public bool PlasticEgg;
         #endregion
