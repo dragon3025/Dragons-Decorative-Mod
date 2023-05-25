@@ -302,27 +302,27 @@ Mods: {
 
 			SingleTileFloweryPlant: {
 				DisplayName: Single-Tile Flowery Plant
-				Tooltip: Try painting it
+				Tooltip: ""
 			}
 
 			SingleTilePlant: {
 				DisplayName: Single-Tile Plant
-				Tooltip: Fits in a 1x1 Space
+				Tooltip: ""
 			}
 
 			SingleTilePlant2: {
 				DisplayName: Single-Tile Deathbell Plant
-				Tooltip: Fits in a 1x1 Space
+				Tooltip: ""
 			}
 
 			SingleTilePlant3: {
 				DisplayName: Single-Tile Plant
-				Tooltip: Fits in a 1x1 Space
+				Tooltip: ""
 			}
 
 			SingleTilePlant4: {
 				DisplayName: Single-Tile Plant
-				Tooltip: Fits in a 1x1 Space
+				Tooltip: ""
 			}
 
 			Trellis: {
@@ -750,6 +750,302 @@ Mods: {
 			Shampoo.MapEntry: Shampoo
 			SkeletonModel.MapEntry: Skeleton Model
 			StaringStatue.MapEntry: Ned the Nosey
+		}
+
+		Configs: {
+			ABlocksWallsConfig: {
+				Headers: {
+					Ambient: If an item below is disabled, it wont be obtainable.
+					BlocksAndWalls: Blocks And Walls Header
+				}
+
+				DisplayName: Blocks and Walls
+
+				Vines: {
+					Label: "[i:DragonsDecorativeMod/Vines] Wall Vines"
+					Tooltip: ""
+				}
+
+				WallFlowers: {
+					Label: "[i:DragonsDecorativeMod/WallFlowers] Wall Flowers"
+					Tooltip: ""
+				}
+
+				Trellis: {
+					Label: "[i:DragonsDecorativeMod/Trellis] Trellis"
+					Tooltip: ""
+				}
+			}
+
+			BFurnitureConfig: {
+				DisplayName: Furniture
+
+				Headers: {
+					Ambient:
+						'''
+						If an item below is disabled, it wont be obtainable.
+
+						Ambient Objects
+						'''
+					Christmas: Christmas
+					Easter: Easter
+					Garden: Garden
+					Signs: Signs
+					Other: Other
+					Paintings: Paintings Header
+				}
+
+				Pots: {
+					Label: "[i:DragonsDecorativeMod/RubbleMakerPottery] Fake Pots"
+					Tooltip:
+						'''
+						This is placed by a mod tool: "Rubble Maker (Pottery)",
+						which can be crafted to and from Rubble Maker.
+						'''
+				}
+
+				AltarsShadowOrbAndCrimsonHeart: {
+					Label: "[i:DragonsDecorativeMod/FakeDemonAltar] Fake Altars, Shadow Orb, and Crimson Heart"
+					Tooltip: ""
+				}
+
+				FakeLarva: {
+					Label: "[i:DragonsDecorativeMod/FakeLarva] Fake Larva"
+					Tooltip: ""
+				}
+
+				FallenLog: {
+					Label: "[i:DragonsDecorativeMod/FallenLog] Fallen Log"
+					Tooltip: Places vanilla Fallen Log
+				}
+
+				PeacefulPlanteraBulb: {
+					Label: "[i:DragonsDecorativeMod/PeacefulPlanteraBulb] Peaceful Plantera Bulb"
+					Tooltip: ""
+				}
+
+				MysteriousTablet: {
+					Label: "[i:DragonsDecorativeMod/MysteriousTablet] Mysterious Tablet"
+					Tooltip: ""
+				}
+
+				ChristmasLights: {
+					Label: "[i:DragonsDecorativeMod/LightYellow] Christmas Lights"
+					Tooltip:
+						'''
+						Terraria has Red, Blue, and Green lights. Enabling this will
+						add Cyan, Orange, Pink, Purple, White, and Yellow Lights.
+						'''
+				}
+
+				CandyCane: {
+					Label: "[i:DragonsDecorativeMod/CandyCane] Lawn Candy Cane"
+					Tooltip: ""
+				}
+
+				Snowman: {
+					Label: "[i:DragonsDecorativeMod/SnowmanLeft] Snowman"
+					Tooltip: ""
+				}
+
+				EasterBasket: {
+					Label: "[i:DragonsDecorativeMod/EasterBasket] Easter Basket"
+					Tooltip: ""
+				}
+
+				EasterEgg: {
+					Label: "[i:DragonsDecorativeMod/EasterEgg] Easter Egg"
+					Tooltip: ""
+				}
+
+				EasterEggSingleColor: {
+					Label: "[i:DragonsDecorativeMod/EasterEggSingleColor] Easter Egg Single Color"
+					Tooltip: ""
+				}
+
+				PlasticEgg: {
+					Label: "[i:DragonsDecorativeMod/PlasticEgg] PlasticEgg"
+					Tooltip: ""
+				}
+
+				BonsaiTree: {
+					Label: "[i:DragonsDecorativeMod/BonsaiTree] Bonsai Tree"
+					Tooltip: ""
+				}
+
+				Clover: {
+					Label: "[i:DragonsDecorativeMod/Clover] Clover"
+					Tooltip: ""
+				}
+
+				HangingPlants: {
+					Label: "[i:DragonsDecorativeMod/HangingPlant] Hanging Plants"
+					Tooltip:
+						'''
+						tModLoader doesn't have wind swaying support for modded
+						2+ wide tiles.
+						'''
+				}
+
+				Mushrooms: {
+					Label: "[i:DragonsDecorativeMod/RedMushroom] Mushrooms"
+					Tooltip: ""
+				}
+
+				Planters: {
+					Label: "[i:DragonsDecorativeMod/Planter] Planters"
+					Tooltip: ""
+				}
+
+				Plants: {
+					Label: "[i:DragonsDecorativeMod/Plant] Plants"
+					Tooltip: ""
+				}
+
+				PottedPlants: {
+					Label: "[i:DragonsDecorativeMod/PottedMushroomTreeTall] Potted Plants"
+					Tooltip: ""
+				}
+
+				PaintingLuringToGold: {
+					Label: "[i:DragonsDecorativeMod/LuringToGold] Painting, Luring To Gold"
+					Tooltip: ""
+				}
+
+				MedusaWatching: {
+					Label: "[i:DragonsDecorativeMod/MedusaWatching] Medusa Watching"
+					Tooltip: ""
+				}
+
+				SignBag: {
+					Label: "[i:DragonsDecorativeMod/SignBag] BagSign"
+					Tooltip: ""
+				}
+
+				SignBook: {
+					Label: "[i:DragonsDecorativeMod/SignBook] BookSign"
+					Tooltip: ""
+				}
+
+				SignCross: {
+					Label: "[i:DragonsDecorativeMod/SignCross] Healthy Cross Sign"
+					Tooltip: ""
+				}
+
+				SignSwiss: {
+					Label: "[i:DragonsDecorativeMod/SignSwiss] Healthy Swiss Sign"
+					Tooltip: ""
+				}
+
+				SignHeart: {
+					Label: "[i:DragonsDecorativeMod/SignHeart] Heart Sign"
+					Tooltip: ""
+				}
+
+				Aquarium: {
+					Label: "[i:DragonsDecorativeMod/Aquarium] Aquarium"
+					Tooltip: ""
+				}
+
+				Balloons: {
+					Label: "[i:DragonsDecorativeMod/BalloonsOnePaintableTwoBlack] Balloons"
+					Tooltip:
+						'''
+						3 Balloons Tied, 2 back that come in many colors, and 1
+						paintable in the front.
+						'''
+				}
+
+				BoxOfArrows: {
+					Label: "[i:DragonsDecorativeMod/BoxOfArrows] Box of Arrows"
+					Tooltip: ""
+				}
+
+				CloverDecal: {
+					Label: "[i:DragonsDecorativeMod/BoxOfArrows] Clover Decal"
+					Tooltip: ""
+				}
+
+				PaintBottle: {
+					Label: "[i:DragonsDecorativeMod/PaintBottleSingle] Paint Bottle"
+					Tooltip: ""
+				}
+
+				Easel: {
+					Label: "[i:DragonsDecorativeMod/Easel] Easel"
+					Tooltip: ""
+				}
+
+				Globe: {
+					Label: "[i:DragonsDecorativeMod/Globe] Globe"
+					Tooltip: ""
+				}
+
+				GolfCart: {
+					Label: "[i:DragonsDecorativeMod/GolfCart] Golf Cart"
+					Tooltip: ""
+				}
+
+				HorizontalBook: {
+					Label: "[i:DragonsDecorativeMod/HorizontalBook] Horizontal Book"
+					Tooltip: ""
+				}
+
+				HospitalBed: {
+					Label: "[i:DragonsDecorativeMod/HospitalBed] Hospital Bed"
+					Tooltip: ""
+				}
+
+				LargeKeg: {
+					Label: "[i:DragonsDecorativeMod/LargeKeg] Large Keg"
+					Tooltip: ""
+				}
+
+				LargePot: {
+					Label: "[i:DragonsDecorativeMod/LargePot] Large Pot"
+					Tooltip: ""
+				}
+
+				Lectern: {
+					Label: "[i:DragonsDecorativeMod/Lectern] Lectern"
+					Tooltip: ""
+				}
+
+				MannequinHead: {
+					Label: "[i:DragonsDecorativeMod/MannequinHeadRight] Mannequin Head"
+					Tooltip: ""
+				}
+
+				StaringStatue: {
+					Label: "[i:DragonsDecorativeMod/StaringStatue] Ned the Nosey"
+					Tooltip: ""
+				}
+
+				PaintBucket: {
+					Label: "[i:DragonsDecorativeMod/PaintBucket] Paint Bucket"
+					Tooltip: ""
+				}
+
+				PureSpiritLamp: {
+					Label: "[i:DragonsDecorativeMod/PureSpiritLamp] Pure Spirit Bottle"
+					Tooltip: ""
+				}
+
+				RopeCoilPlaceable: {
+					Label: "[i:DragonsDecorativeMod/RopeCoilPlaceable] Placeable Rope Coil"
+					Tooltip: ""
+				}
+
+				SkeletonModel: {
+					Label: "[i:DragonsDecorativeMod/SkeletonModel] Skeleton Model"
+					Tooltip: ""
+				}
+
+				ThreadPlaceable: {
+					Label: "[i:DragonsDecorativeMod/ThreadPlaceable] Placeable Thread"
+					Tooltip: ""
+				}
+			}
 		}
 	}
 }
