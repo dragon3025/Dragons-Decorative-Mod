@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -29,11 +30,12 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Lawn Candy Cane");
             AddMapEntry(new Color(255, 128, 128), name);
+            DustType = DustID.Adamantite;
         }
 
-        public override bool CreateDust(int i, int j, ref int type)
-        {
-            return false;
-        }
+        //public override bool CreateDust(int i, int j, ref int type)
+        //{
+        //    return false;
+        //}
     }
 }

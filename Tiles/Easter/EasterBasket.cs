@@ -3,6 +3,7 @@ using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -31,6 +32,9 @@ namespace DragonsDecorativeMod.Tiles.Easter
             {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Easter/EasterBasketOverlay");
             }
+
+            DustType = DustID.Grass;
+            HitSound = SoundID.Grass;
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)

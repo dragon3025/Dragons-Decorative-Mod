@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -29,11 +31,9 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Snowman Left");
             AddMapEntry(new Color(255, 255, 255), name);
-        }
 
-        public override bool CreateDust(int i, int j, ref int type)
-        {
-            return false;
+            DustType = DustID.SnowBlock;
+            HitSound = SoundID.Item48;
         }
     }
 }

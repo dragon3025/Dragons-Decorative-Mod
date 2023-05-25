@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -24,6 +25,11 @@ namespace DragonsDecorativeMod.Tiles.Easter
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Plastic Egg");
             AddMapEntry(new Color(255, 94, 94), name);
+        }
+
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
 
         public override bool CanDrop(int i, int j)

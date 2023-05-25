@@ -58,11 +58,8 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Christmas/LightOrangeOverlay");
             }
-        }
 
-        public override bool CreateDust(int i, int j, ref int type)
-        {
-            return false;
+            DustType = DustID.Mythril;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
