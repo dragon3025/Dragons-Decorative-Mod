@@ -47,9 +47,20 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            r = 0.5f;
-            g = 0f;
-            b = 0.5f;
+            Tile tile = Main.tile[i, j];
+            if (tile.TileColor == 0)
+            {
+                r = 0.5f;
+                g = 0f;
+                b = 0.5f;
+            }
+            else
+            {
+                Color color = WorldGen.paintColor(tile.TileColor);
+                r = color.R / 255f * 0.5f;
+                g = color.G / 255f * 0.5f;
+                b = color.B / 255f * 0.5f;
+            }
         }
 
         public override IEnumerable<Item> GetItemDrops(int i, int j)

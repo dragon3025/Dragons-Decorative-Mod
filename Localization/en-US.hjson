@@ -192,12 +192,12 @@ Mods: {
 
 			PottedMushroomTreeShort: {
 				DisplayName: Potted Short Mushroom Tree
-				Tooltip: ""
+				Tooltip: Glows a different color when painted
 			}
 
 			PottedMushroomTreeTall: {
 				DisplayName: Potted Tall Mushroom Tree
-				Tooltip: ""
+				Tooltip: Glows a different color when painted
 			}
 
 			PottedOasisPlant: {
@@ -527,17 +527,17 @@ Mods: {
 
 			FakeCrimsonAltar: {
 				DisplayName: Fake Crimson Altar
-				Tooltip: ""
+				Tooltip: Glows a different color when painted
 			}
 
 			FakeCrimsonHeart: {
 				DisplayName: Crimson Heart Object
-				Tooltip: ""
+				Tooltip: Glows a different color when painted
 			}
 
 			FakeDemonAltar: {
 				DisplayName: Fake Demon Altar
-				Tooltip: ""
+				Tooltip: Glows a different color when painted
 			}
 
 			FakeLarva: {
@@ -547,7 +547,7 @@ Mods: {
 
 			FakeShadowOrb: {
 				DisplayName: Shadow Orb Object
-				Tooltip: ""
+				Tooltip: Glows a different color when painted
 			}
 
 			FallenLog: {
@@ -562,7 +562,7 @@ Mods: {
 
 			PeacefulPlanteraBulb: {
 				DisplayName: Peaceful Plantera Bulb
-				Tooltip: ""
+				Tooltip: Glows a different color when painted
 			}
 
 			CorruptionPot.DisplayName: Corruption Pot
@@ -840,7 +840,7 @@ Mods: {
 
 				CandyCane: {
 					Label: "[i:DragonsDecorativeMod/CandyCane] Lawn Candy Cane"
-					Tooltip: ""
+					Tooltip: Glows a different color when painted
 				}
 
 				Snowman: {

@@ -35,10 +35,21 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
-            float variance = Main.rand.Next(-5, 6) * 0.0025f;
-            r = 0.31f + variance;
-            g = 0.1f;
-            b = 0.44f + variance * 2f;
+            Tile tile = Main.tile[i, j];
+            if (tile.TileColor == 0)
+            {
+                float variance = Main.rand.Next(-5, 6) * 0.0025f;
+                r = 0.31f + variance;
+                g = 0.1f;
+                b = 0.44f + variance * 2f;
+            }
+            else
+            {
+                Color color = WorldGen.paintColor(tile.TileColor);
+                r = color.R / 255f * 0.465f;
+                g = color.G / 255f * 0.465f;
+                b = color.B / 255f * 0.465f;
+            }
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)

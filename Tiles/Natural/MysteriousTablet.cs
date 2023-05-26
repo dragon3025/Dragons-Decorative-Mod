@@ -98,7 +98,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
                 textureOuter,
                 new Vector2(i * 16 - 2 - (int)Main.screenPosition.X, j * 16 - 36 - (int)Main.screenPosition.Y) + offScreenAdjust,
                 new Rectangle(0, 96 * frameYOffset, 66, 96),
-                new Color(255, 255, 255), 0f, default, 1f, SpriteEffects.None, 0f);
+                color, 0f, default, 1f, SpriteEffects.None, 0f);
             }
         }
     }
