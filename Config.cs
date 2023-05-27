@@ -54,9 +54,6 @@ namespace DragonsDecorativeMod
         [Header("Christmas")]
 
         [DefaultValue(true)]
-        public bool ChristmasLights;
-
-        [DefaultValue(true)]
         public bool CandyCane;
 
         [DefaultValue(true)]
@@ -174,6 +171,9 @@ namespace DragonsDecorativeMod
 
         [DefaultValue(true)]
         public bool Lectern;
+
+        [DefaultValue(true)]
+        public bool LightPaintable;
 
         [DefaultValue(true)]
         public bool MannequinHead;

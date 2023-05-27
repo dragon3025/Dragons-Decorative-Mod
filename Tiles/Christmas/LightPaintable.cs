@@ -1,16 +1,18 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Tiles.Christmas
 {
-    public class LightWhite : ModTile
+    public class LightPaintable : ModTile
     {
         private Asset<Texture2D> overlayTexture;
 
@@ -52,11 +54,11 @@ namespace DragonsDecorativeMod.Tiles.Christmas
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(255, 255, 255));
+            AddMapEntry(new Color(255, 0, 0));
 
             if (!Main.dedServ)
             {
-                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Christmas/LightWhiteOverlay");
+                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Christmas/LightPaintableOverlay");
             }
 
             DustType = DustID.Mythril;
@@ -65,16 +67,22 @@ namespace DragonsDecorativeMod.Tiles.Christmas
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             Tile tile = Main.tile[i, j];
+            int frameX = tile.TileFrameX / 18;
 
-            // If the light is on
-            if (tile.TileFrameX == 0)
+            float flicker = Main.rand.Next(970, 1031) * 0.001f;
+            if (frameX < 1)
             {
-                r = 0.25f;
-                b = 0.25f;
-                g = 0.25f;
-                r *= Main.rand.Next(970, 1031) * 0.001f;
-                b *= Main.rand.Next(970, 1031) * 0.001f;
-                g *= Main.rand.Next(970, 1031) * 0.001f;
+                if (tile.TileColor == 0)
+                {
+                    r = 1f * flicker;
+                }
+                else
+                {
+                    Color color = WorldGen.paintColor(tile.TileColor);
+                    r = color.R / 255f * flicker;
+                    g = color.G / 255f * flicker;
+                    b = color.B / 255f * flicker;
+                }
             }
         }
 
@@ -94,11 +102,6 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             {
                 NetMessage.SendTileSquare(-1, i, j, 1, TileChangeType.None);
             }
-        }
-
-        public override bool CanDrop(int i, int j)
-        {
-            return true;
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
@@ -124,6 +127,11 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             Texture2D texture = overlayTexture.Value;
 
             spriteBatch.Draw(texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + offScreenAdjust, new Rectangle(frameX, frameY, 16, 16), color, 0f, default, 1f, SpriteEffects.None, 0f);
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Items.Christmas.LightPaintable>());
         }
     }
 }

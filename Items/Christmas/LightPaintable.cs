@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace DragonsDecorativeMod.Items.Christmas
 {
-    public class LightCyan : ModItem
+    public class LightPaintable : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -26,7 +26,7 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 5);
-            Item.createTile = ModContent.TileType<Tiles.Christmas.LightCyan>();
+            Item.createTile = ModContent.TileType<Tiles.Christmas.LightPaintable>();
         }
     }
 }

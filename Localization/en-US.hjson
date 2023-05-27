@@ -25,36 +25,6 @@ Mods: {
 				Tooltip: Try painting it
 			}
 
-			LightCyan: {
-				DisplayName: Cyan Light
-				Tooltip: ""
-			}
-
-			LightOrange: {
-				DisplayName: Orange Light
-				Tooltip: ""
-			}
-
-			LightPink: {
-				DisplayName: Pink Light
-				Tooltip: ""
-			}
-
-			LightPurple: {
-				DisplayName: Purple Light
-				Tooltip: ""
-			}
-
-			LightWhite: {
-				DisplayName: White Light
-				Tooltip: ""
-			}
-
-			LightYellow: {
-				DisplayName: Yellow Light
-				Tooltip: ""
-			}
-
 			SnowmanLeft: {
 				DisplayName: Snowman Left
 				Tooltip: ""
@@ -707,6 +677,11 @@ Mods: {
 			BalloonsOnePaintableTwoYellow: {
 				DisplayName: Balloons (2 Yellow, 1 Paintable)
 				Tooltip: Try painting it
+			}
+
+			LightPaintable: {
+				DisplayName: Paintable Light
+					Tooltip: Glows a different color when painted
 			}
 		}
 

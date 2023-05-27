@@ -55,14 +55,9 @@ namespace DragonsDecorativeMod.Global
 
                     break;
                 case NPCID.SantaClaus:
-                    if (GetInstance<BFurnitureConfig>().ChristmasLights)
+                    if (GetInstance<BFurnitureConfig>().LightPaintable)
                     {
-                        shop.Add(ItemType<Items.Christmas.LightCyan>());
-                        shop.Add(ItemType<Items.Christmas.LightOrange>());
-                        shop.Add(ItemType<Items.Christmas.LightPink>());
-                        shop.Add(ItemType<Items.Christmas.LightPurple>());
-                        shop.Add(ItemType<Items.Christmas.LightWhite>());
-                        shop.Add(ItemType<Items.Christmas.LightYellow>());
+                        shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }
 
                     if (GetInstance<BFurnitureConfig>().CandyCane)
@@ -75,7 +70,6 @@ namespace DragonsDecorativeMod.Global
                         shop.Add(ItemType<Items.Christmas.SnowmanLeft>());
                         shop.Add(ItemType<Items.Christmas.SnowmanRight>());
                     }
-
                     break;
                 case NPCID.Painter:
                     if (GetInstance<BFurnitureConfig>().PaintingLuringToGold)
@@ -99,6 +93,10 @@ namespace DragonsDecorativeMod.Global
                         {
                             shop.Add(ItemType<Items.CloverDecal>());
                         }
+                    }
+                    if (GetInstance<BFurnitureConfig>().LightPaintable && Main.halloween)
+                    {
+                        shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }
                     break;
                 case NPCID.Truffle:
