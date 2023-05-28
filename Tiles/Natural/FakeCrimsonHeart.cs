@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -29,7 +28,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
             AnimationFrameHeight = 36;
 
-            HitSound = SoundID.Shatter;
+            HitSound = SoundID.NPCDeath1;
             DustType = DustID.Crimstone;
         }
 
@@ -61,11 +60,6 @@ namespace DragonsDecorativeMod.Tiles.Natural
                 frame++;
                 frame %= 2;
             }
-        }
-
-        public override IEnumerable<Item> GetItemDrops(int i, int j)
-        {
-            yield return new Item(ItemID.CrimstoneBlock);
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)

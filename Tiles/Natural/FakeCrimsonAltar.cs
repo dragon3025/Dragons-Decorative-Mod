@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -28,6 +27,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
             AddMapEntry(new Color(214, 127, 133), name);
 
             DustType = DustID.Crimstone;
+            HitSound = SoundID.NPCDeath1;
         }
 
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
@@ -47,11 +47,6 @@ namespace DragonsDecorativeMod.Tiles.Natural
                 g = color.G / 255f * 0.53f;
                 b = color.B / 255f * 0.53f;
             }
-        }
-
-        public override IEnumerable<Item> GetItemDrops(int i, int j)
-        {
-            yield return new Item(ItemID.CrimstoneBlock);
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)

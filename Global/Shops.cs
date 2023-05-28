@@ -1,7 +1,5 @@
 using DragonsDecorativeMod.Items.Garden;
-using DragonsDecorativeMod.Items.StPatricksDay;
 using Terraria;
-using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;

@@ -1,7 +1,5 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -22,8 +20,11 @@ namespace DragonsDecorativeMod.Tiles
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Large Pot");
             AddMapEntry(new Color(82, 82, 82), name);
+        }
 
-            DustType = DustID.Iron;
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
     }
 }

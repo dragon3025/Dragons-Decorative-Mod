@@ -26,7 +26,7 @@ namespace DragonsDecorativeMod.Items.Natural
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Natural.FakeLarva>();
+            Item.createTile = TileType<Tiles.Natural.FakeLarva>();
         }
 
         public override void AddRecipes()
@@ -37,6 +37,7 @@ namespace DragonsDecorativeMod.Items.Natural
             }
 
             CreateRecipe()
+              .AddIngredient(ItemID.Abeemination)
               .AddIngredient(ItemID.BeeWax)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Condition.InGraveyard)

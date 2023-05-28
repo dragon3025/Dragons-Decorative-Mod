@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -22,7 +21,6 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.addTile(Type);
 
             AnimationFrameHeight = 54;
-            DustType = DustID.Stone;
 
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Ned the Nosey");

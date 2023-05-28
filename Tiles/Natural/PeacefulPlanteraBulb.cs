@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
@@ -24,14 +23,26 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.addTile(Type);
 
             AnimationFrameHeight = 36;
-            DustType = DustID.Plantera_Pink;
 
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Peaceful Plantera Bulb");
             AddMapEntry(new Color(225, 128, 206), name);
 
             HitSound = SoundID.Grass;
-            DustType = DustID.Grass;
+        }
+
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
+        public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        {
+            for (int n = 0; n < 40; n++)
+            {
+                int dust = (!Main.rand.NextBool(3)) ? DustID.Plantera_Pink : DustID.Plantera_Green;
+                Dust.NewDustDirect(new Vector2(i * 16, j * 16), 32, 32, dust);
+            }
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
@@ -61,11 +72,6 @@ namespace DragonsDecorativeMod.Tiles.Natural
                 g = color.G / 255f * 0.5f;
                 b = color.B / 255f * 0.5f;
             }
-        }
-
-        public override IEnumerable<Item> GetItemDrops(int i, int j)
-        {
-            yield return new Item(ItemID.ChlorophyteOre);
         }
 
         public override void DrawEffects(int i, int j, SpriteBatch spriteBatch, ref TileDrawInfo drawData)

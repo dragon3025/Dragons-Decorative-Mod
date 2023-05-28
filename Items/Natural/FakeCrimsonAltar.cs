@@ -37,7 +37,7 @@ namespace DragonsDecorativeMod.Items.Natural
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.CrimstoneBlock)
+              .AddIngredient(ItemID.CrimstoneBlock, 12)
               .AddTile(TileID.CrystalBall)
               .AddCondition(Condition.InGraveyard)
               .Register();
