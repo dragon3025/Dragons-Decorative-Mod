@@ -67,13 +67,7 @@ namespace DragonsDecorativeMod
         public bool EasterBasket;
 
         [DefaultValue(true)]
-        public bool EasterEgg;
-
-        [DefaultValue(true)]
-        public bool EasterEggSingleColor;
-
-        [DefaultValue(true)]
-        public bool PlasticEgg;
+        public bool EasterEggs;
         #endregion
 
         #region Garden
@@ -102,13 +96,20 @@ namespace DragonsDecorativeMod
         #endregion
 
         #region Paintings
-        [Header("Paintings")]
-
-        [DefaultValue(true)]
-        public bool PaintingLuringToGold;
+        [Header("MiscPaintings")]
 
         [DefaultValue(true)]
         public bool MedusaWatching;
+        #endregion
+
+        #region St. Patricks Day
+        [Header("StPatricksDay")]
+
+        [DefaultValue(true)]
+        public bool CloverDecal;
+
+        [DefaultValue(true)]
+        public bool PaintingLuringToGold;
         #endregion
 
         #region Signs
@@ -141,9 +142,6 @@ namespace DragonsDecorativeMod
 
         [DefaultValue(true)]
         public bool BoxOfArrows;
-
-        [DefaultValue(true)]
-        public bool CloverDecal;
 
         [DefaultValue(true)]
         public bool PaintBottle;

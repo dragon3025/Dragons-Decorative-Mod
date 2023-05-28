@@ -26,7 +26,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 1);
-            Item.createTile = ModContent.TileType<Tiles.Garden.Clover>();
+            Item.createTile = TileType<Tiles.Garden.Clover>();
         }
 
         public override void AddRecipes()
@@ -37,7 +37,7 @@ namespace DragonsDecorativeMod.Items.Garden
             }
 
             CreateRecipe()
-              .AddIngredient(ModContent.ItemType<Items.Garden.FourLeafClover>())
+              .AddIngredient(ItemType<FourLeafClover>())
               .Register();
         }
     }

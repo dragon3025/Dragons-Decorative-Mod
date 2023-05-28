@@ -4,9 +4,9 @@ using Terraria.DataStructures;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace DragonsDecorativeMod.Tiles
+namespace DragonsDecorativeMod.Tiles.StPatricksDay
 {
-    public class FourLeafCloverDecal : ModTile
+    public class CloverDecal : ModTile
     {
         public override void SetStaticDefaults()
         {

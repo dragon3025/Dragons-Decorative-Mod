@@ -6,7 +6,7 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-namespace DragonsDecorativeMod.Tiles
+namespace DragonsDecorativeMod.Tiles.StPatricksDay
 {
     public class LuringToGold : ModTile
     {

@@ -1,0 +1,67 @@
+﻿using Terraria;
+using Terraria.GameContent.Creative;
+using Terraria.GameContent.ItemDropRules;
+using Terraria.ID;
+using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
+
+namespace DragonsDecorativeMod.Items.StPatricksDay
+{
+    public class BagOGreen : ModItem
+    {
+        public override void SetStaticDefaults()
+        {
+            CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
+        }
+
+        public override void SetDefaults()
+        {
+            Item.maxStack = 9999;
+            Item.consumable = true;
+            Item.width = 26;
+            Item.height = 34;
+            Item.rare = ItemRarityID.White;
+        }
+
+        public override bool CanRightClick()
+        {
+            return true;
+        }
+
+        public override void ModifyItemLoot(ItemLoot itemLoot)
+        {
+            if (GetInstance<BFurnitureConfig>().PaintingLuringToGold)
+            {
+                itemLoot.Add(ItemDropRule.NotScalingWithLuck(ItemType<LuringToGold>(), 10));
+            }
+
+            if (GetInstance<BFurnitureConfig>().Clover)
+            {
+                IItemDropRule[] cloverDecals = new IItemDropRule[]
+                {
+                    ItemDropRule.NotScalingWithLuck(ItemType<CloverDecal>()),
+                    ItemDropRule.NotScalingWithLuck(ItemType<FourLeafCloverDecal>())
+                };
+                itemLoot.Add(new OneFromRulesRule(1, cloverDecals));
+            }
+            else
+            {
+                itemLoot.Add(ItemDropRule.NotScalingWithLuck(ItemID.CopperCoin));
+            }
+        }
+
+        public override void AddRecipes()
+        {
+            if (!GetInstance<BFurnitureConfig>().CloverDecal && !GetInstance<BFurnitureConfig>().PaintingLuringToGold)
+            {
+                return;
+            }
+
+            CreateRecipe()
+              .AddIngredient(ItemID.GreenThread)
+              .AddIngredient(ItemID.PixieDust)
+              .AddTile(TileID.Loom)
+              .Register();
+        }
+    }
+}

@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.value = 0;
+            Item.value = Item.sellPrice(0, 0, 0, 60);
             Item.createTile = ModContent.TileType<Tiles.StaringStatue>();
             Item.placeStyle = 0;
         }

@@ -681,7 +681,17 @@ Mods: {
 
 			LightPaintable: {
 				DisplayName: Paintable Light
-					Tooltip: Glows a different color when painted
+				Tooltip: Glows a different color when painted
+			}
+
+			EasterBag: {
+				DisplayName: Easter Bag
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			BagOGreen: {
+				DisplayName: Bag o' Green
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
 			}
 		}
 
@@ -729,11 +739,12 @@ Mods: {
 
 		Configs: {
 			ABlocksWallsConfig: {
-				Headers: {
-					Ambient: If an item below is disabled, it wont be obtainable.
-					BlocksAndWalls: Blocks And Walls Header
-				}
+				Headers.BlocksAndWalls:
+					'''
+					If an item below is disabled, it wont be obtainable.
 
+					Blocks And Walls
+					'''
 				DisplayName: Blocks and Walls
 
 				Vines: {
@@ -765,9 +776,10 @@ Mods: {
 					Christmas: Christmas
 					Easter: Easter
 					Garden: Garden
+					StPatricksDay: St. Patrick's Day
 					Signs: Signs
 					Other: Other
-					Paintings: Paintings Header
+					MiscPaintings: Misc. Paintings
 				}
 
 				Pots: {
@@ -823,24 +835,9 @@ Mods: {
 					Tooltip: ""
 				}
 
-				EasterBasket: {
-					Label: "[i:DragonsDecorativeMod/EasterBasket] Easter Basket"
-					Tooltip: ""
-				}
-
-				EasterEgg: {
-					Label: "[i:DragonsDecorativeMod/EasterEgg] Easter Egg"
-					Tooltip: ""
-				}
-
-				EasterEggSingleColor: {
-					Label: "[i:DragonsDecorativeMod/EasterEggSingleColor] Easter Egg Single Color"
-					Tooltip: ""
-				}
-
-				PlasticEgg: {
-					Label: "[i:DragonsDecorativeMod/PlasticEgg] PlasticEgg"
-					Tooltip: ""
+				EasterBag: {
+					Label: "[i:DragonsDecorativeMod/EasterBag] Easter Bag"
+					Tooltip: Drops Easter Basket, Easter Egg, Easter Egg (Single Color), or Plastic Egg
 				}
 
 				BonsaiTree: {
@@ -937,7 +934,7 @@ Mods: {
 				}
 
 				CloverDecal: {
-					Label: "[i:DragonsDecorativeMod/BoxOfArrows] Clover Decal"
+					Label: "[i:DragonsDecorativeMod/CloverDecal] Clover Decal"
 					Tooltip: ""
 				}
 
@@ -1018,6 +1015,21 @@ Mods: {
 
 				ThreadPlaceable: {
 					Label: "[i:DragonsDecorativeMod/ThreadPlaceable] Placeable Thread"
+					Tooltip: ""
+				}
+
+				EasterBasket: {
+					Label: Easter Basket
+					Tooltip: ""
+				}
+
+				EasterEggs: {
+					Label: Easter Eggs
+					Tooltip: ""
+				}
+
+				LightPaintable: {
+					Label: Light Paintable
 					Tooltip: ""
 				}
 			}

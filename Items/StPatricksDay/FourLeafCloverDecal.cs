@@ -4,13 +4,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace DragonsDecorativeMod.Items
+namespace DragonsDecorativeMod.Items.StPatricksDay
 {
-    public class CloverDecal : ModItem
+    public class FourLeafCloverDecal : ModItem
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Clover Decal");
+            // DisplayName.SetDefault("Four-Leaf Clover Decal");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -27,20 +27,8 @@ namespace DragonsDecorativeMod.Items
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 10);
-            Item.createTile = ModContent.TileType<Tiles.CloverDecal>();
+            Item.createTile = TileType<Tiles.StPatricksDay.FourLeafCloverDecal>();
             Item.placeStyle = 0;
-        }
-
-        public override void AddRecipes()
-        {
-            if (!GetInstance<BFurnitureConfig>().CloverDecal)
-            {
-                return;
-            }
-
-            CreateRecipe()
-              .AddIngredient(ModContent.ItemType<Items.FourLeafCloverDecal>())
-              .Register();
         }
     }
 }

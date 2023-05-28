@@ -26,19 +26,7 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 1);
-            Item.createTile = ModContent.TileType<Tiles.Garden.FourLeafClover>();
-        }
-
-        public override void AddRecipes()
-        {
-            if (!GetInstance<BFurnitureConfig>().Clover)
-            {
-                return;
-            }
-
-            CreateRecipe()
-              .AddIngredient(ModContent.ItemType<Items.Garden.Clover>())
-              .Register();
+            Item.createTile = TileType<Tiles.Garden.FourLeafClover>();
         }
     }
 }

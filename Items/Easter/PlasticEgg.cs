@@ -26,22 +26,8 @@ namespace DragonsDecorativeMod.Items.Easter
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.value = Item.sellPrice(0, 0, 7, 50);
             Item.createTile = ModContent.TileType<Tiles.Easter.PlasticEgg>();
-        }
-
-        public override void AddRecipes()
-        {
-            if (!GetInstance<BFurnitureConfig>().PlasticEgg)
-            {
-                return;
-            }
-
-            CreateRecipe(20)
-              .AddIngredient(ItemID.RottenEgg, 20)
-              .AddIngredient(ItemID.LifeCrystal)
-              .AddTile(TileID.DemonAltar)
-              .Register();
+            Item.value = Item.sellPrice(0, 0, 0, 60);
         }
     }
 }

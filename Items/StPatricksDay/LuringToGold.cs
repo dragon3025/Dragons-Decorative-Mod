@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace DragonsDecorativeMod.Items
+namespace DragonsDecorativeMod.Items.StPatricksDay
 {
     public class LuringToGold : ModItem
     {
@@ -25,8 +25,8 @@ namespace DragonsDecorativeMod.Items
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.value = Item.buyPrice(0, 1);
-            Item.createTile = ModContent.TileType<Tiles.LuringToGold>();
+            Item.value = Item.buyPrice(0, 0, 5);
+            Item.createTile = ModContent.TileType<Tiles.StPatricksDay.LuringToGold>();
             Item.placeStyle = 0;
         }
     }

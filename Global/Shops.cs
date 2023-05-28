@@ -1,5 +1,5 @@
-using DragonsDecorativeMod.Items;
 using DragonsDecorativeMod.Items.Garden;
+using DragonsDecorativeMod.Items.StPatricksDay;
 using Terraria;
 using Terraria.GameContent.Bestiary;
 using Terraria.ID;
@@ -24,11 +24,8 @@ namespace DragonsDecorativeMod.Global
                 case NPCID.Dryad:
                     if (GetInstance<BFurnitureConfig>().Clover)
                     {
-                        Player player = Main.LocalPlayer;
-                        if (player.luckPotion > 0)
-                        {
-                            shop.Add(ItemType<Clover>());
-                        }
+                        shop.Add(ItemType<Clover>());
+                        shop.Add(ItemType<FourLeafClover>());
                     }
 
                     if (GetInstance<BFurnitureConfig>().Plants)
@@ -72,28 +69,12 @@ namespace DragonsDecorativeMod.Global
                     }
                     break;
                 case NPCID.Painter:
-                    if (GetInstance<BFurnitureConfig>().PaintingLuringToGold)
-                    {
-                        Player player = Main.LocalPlayer;
-                        if (player.luckPotion > 0)
-                        {
-                            shop.Add(ItemType<Items.LuringToGold>());
-                        }
-                    }
                     if (GetInstance<BFurnitureConfig>().PaintBottle)
                     {
                         shop.Add(ItemType<Items.PaintBottleSingle>());
                     }
                     break;
                 case NPCID.PartyGirl:
-                    if (GetInstance<BFurnitureConfig>().CloverDecal)
-                    {
-                        Player player = Main.LocalPlayer;
-                        if (player.luckPotion > 0)
-                        {
-                            shop.Add(ItemType<Items.CloverDecal>());
-                        }
-                    }
                     if (GetInstance<BFurnitureConfig>().LightPaintable && Main.halloween)
                     {
                         shop.Add(ItemType<Items.Christmas.LightPaintable>());
