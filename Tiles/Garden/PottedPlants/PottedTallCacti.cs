@@ -22,7 +22,7 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(127, 127, 127));
+            AddMapEntry(new Color(120, 110, 100));
         }
 
         public override bool CreateDust(int i, int j, ref int type)

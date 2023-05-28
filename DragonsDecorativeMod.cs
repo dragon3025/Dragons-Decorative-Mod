@@ -1,3 +1,14 @@
+/* To debug, use:
+ * using static Terraria.ModLoader.ModContent;
+ * GetInstance<DragonsDecorativeMod>().Logger.Debug("");
+ * 
+ * To turn into a string use:
+ * Value.ToString()
+ * 
+ * To show text in chat use:
+ * Main.NewText(string);
+ */
+
 using Terraria;
 using Terraria.ModLoader;
 

@@ -35,6 +35,11 @@ namespace DragonsDecorativeMod.Tiles.TiedBalloons
             }
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;
