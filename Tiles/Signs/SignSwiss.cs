@@ -15,6 +15,7 @@ namespace DragonsDecorativeMod.Tiles.Signs
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.FramesOnKillWall[Type] = true;
 
             // Defaults
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);

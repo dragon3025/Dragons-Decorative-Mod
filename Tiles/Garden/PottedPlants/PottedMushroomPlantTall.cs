@@ -44,7 +44,7 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             Tile tile = Main.tile[i, j];
             int frame = tile.TileFrameY / 18;
 
-            if (frame < 3)
+            if (frame < 4)
             {
                 float flicker = Main.rand.Next(28, 42) * 0.005f;
                 flicker += (270 - Main.mouseTextColor) / 1000f;
