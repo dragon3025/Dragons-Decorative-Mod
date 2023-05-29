@@ -629,13 +629,13 @@ Mods: {
 
 		Configs: {
 			ABlocksWallsConfig: {
+				DisplayName: Blocks and Walls
 				Headers.BlocksAndWalls:
 					'''
 					If an item below is disabled, it wont be obtainable.
 
 					Blocks And Walls
 					'''
-				DisplayName: Blocks and Walls
 
 				Vines: {
 					Label: "[i:DragonsDecorativeMod/Vines] Wall Vines"
