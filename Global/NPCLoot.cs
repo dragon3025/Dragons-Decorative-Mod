@@ -21,13 +21,6 @@ namespace DragonsDecorativeMod.Global
             {
                 npcLoot.Add(ItemDropRule.Common(ItemType<Items.MedusaWatching>(), 25));
             }
-
-            if (npc.type == NPCID.MoonLordCore && furnitureConfig.MysteriousTablet)
-            {
-                LeadingConditionRule ruleNotExpert = new LeadingConditionRule(new Conditions.NotExpert());
-                ruleNotExpert.OnSuccess(ItemDropRule.Common(ItemType<Items.Natural.MysteriousTablet>(), 5));
-                npcLoot.Add(ruleNotExpert);
-            }
         }
     }
 }

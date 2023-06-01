@@ -60,6 +60,17 @@ namespace DragonsDecorativeMod.Tiles.Natural
             b = 0.55f;
         }
 
+        public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        {
+
+            int goreIDAdjust;
+            for (int k = 0; k < 6; k = goreIDAdjust + 1)
+            {
+                Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), Vector2.UnitY.RotatedByRandom(6.2831854820251465) * 5f, 728 + k);
+                goreIDAdjust = k;
+            }
+        }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
