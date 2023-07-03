@@ -113,7 +113,20 @@ namespace DragonsDecorativeMod.Tiles
         {
             var tile = Main.tile[i, j];
 
-            Color color = Lighting.GetColor(i, j);
+            Color color = WorldGen.paintColor(tile.TileColor);
+            Color colorLight = Lighting.GetColor(i, j);
+            if (color.R > colorLight.R)
+            {
+                color.R = colorLight.R;
+            }
+            if (color.G > colorLight.G)
+            {
+                color.G = colorLight.G;
+            }
+            if (color.B > colorLight.B)
+            {
+                color.B = colorLight.B;
+            }
 
             Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
             if (Main.drawToScreen)
@@ -121,13 +134,13 @@ namespace DragonsDecorativeMod.Tiles
                 zero = Vector2.Zero;
             }
 
-            Rectangle rectangleAquariumFront = new Rectangle(tile.TileFrameX, tile.TileFrameY, 16, 16);
-            Rectangle rectangleAquariumNemo = new Rectangle(tile.TileFrameX, tile.TileFrameY + frameAquariumNemo * 54, 16, 16);
-            Rectangle rectangleAquariumPinkYellow = new Rectangle(tile.TileFrameX, tile.TileFrameY + framePinkYellow * 54, 16, 16);
-            Rectangle rectangleSchoolOfFish = new Rectangle(tile.TileFrameX, tile.TileFrameY + frameSchoolOfFish * 54, 16, 16);
-            Rectangle rectangleAquariumBottomFeederAndCoral = new Rectangle(tile.TileFrameX, tile.TileFrameY + frameAquariumBottomFeederAndCoral * 54, 16, 16);
-            Rectangle rectangleAquariumGreen = new Rectangle(tile.TileFrameX, tile.TileFrameY + frameAquariumGreen * 54, 16, 16);
-            Rectangle rectangleAquariumBlueStripe = new Rectangle(tile.TileFrameX, tile.TileFrameY + frameAquariumBlueStripe * 54, 16, 16);
+            Rectangle rectangleAquariumFront = new(tile.TileFrameX, tile.TileFrameY, 16, 16);
+            Rectangle rectangleAquariumNemo = new(tile.TileFrameX, tile.TileFrameY + frameAquariumNemo * 54, 16, 16);
+            Rectangle rectangleAquariumPinkYellow = new(tile.TileFrameX, tile.TileFrameY + framePinkYellow * 54, 16, 16);
+            Rectangle rectangleSchoolOfFish = new(tile.TileFrameX, tile.TileFrameY + frameSchoolOfFish * 54, 16, 16);
+            Rectangle rectangleAquariumBottomFeederAndCoral = new(tile.TileFrameX, tile.TileFrameY + frameAquariumBottomFeederAndCoral * 54, 16, 16);
+            Rectangle rectangleAquariumGreen = new(tile.TileFrameX, tile.TileFrameY + frameAquariumGreen * 54, 16, 16);
+            Rectangle rectangleAquariumBlueStripe = new(tile.TileFrameX, tile.TileFrameY + frameAquariumBlueStripe * 54, 16, 16);
 
             void DrawSegment(Asset<Texture2D> texture, Rectangle rectangle)
             {
