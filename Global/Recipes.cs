@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -34,7 +35,7 @@ namespace DragonsDecorativeMod.GlobalRecipes
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().Aquarium)
+            if (!GetInstance<DragonsDecoModConfig>().Aquarium)
             {
                 return;
             }

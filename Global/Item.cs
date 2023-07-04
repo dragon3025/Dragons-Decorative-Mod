@@ -1,4 +1,5 @@
-﻿using Terraria.GameContent.ItemDropRules;
+﻿using DragonsDecorativeMod.Configuration;
+using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Global
 
         public override void ModifyItemLoot(Terraria.Item item, ItemLoot itemLoot)
         {
-            if (GetInstance<BFurnitureConfig>().MysteriousTablet)
+            if (GetInstance<DragonsDecoModConfig>().MysteriousTablet)
             {
                 if (item.type == ItemID.MoonLordBossBag)
                 {
@@ -18,7 +19,7 @@ namespace DragonsDecorativeMod.Global
                 }
             }
 
-            if (GetInstance<BFurnitureConfig>().HangingPlants)
+            if (GetInstance<DragonsDecoModConfig>().Garden.HangingPlants)
             {
                 if (item.type == ItemID.LavaCrate || item.type == ItemID.LavaCrateHard)
                 {
@@ -29,7 +30,7 @@ namespace DragonsDecorativeMod.Global
                 }
             }
 
-            if (GetInstance<BFurnitureConfig>().PottedPlants)
+            if (GetInstance<DragonsDecoModConfig>().Garden.PottedPlants)
             {
                 if (item.type == ItemID.OasisCrateHard)
                 {

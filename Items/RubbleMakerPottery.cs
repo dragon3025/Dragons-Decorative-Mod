@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items
 {
     public class RubbleMakerPottery : ModItem
     {
-        readonly static BFurnitureConfig furnitureConfig = GetInstance<BFurnitureConfig>();
+        readonly static DragonsDecoModConfig furnitureConfig = GetInstance<DragonsDecoModConfig>();
 
         public override void SetStaticDefaults()
         {

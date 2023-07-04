@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -33,7 +34,7 @@ namespace DragonsDecorativeMod.Items.Signs
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().SignBag)
+            if (!GetInstance<DragonsDecoModConfig>().SignBag)
             {
                 return;
             }

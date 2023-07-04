@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using DragonsDecorativeMod.Configuration;
+using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -42,7 +43,7 @@ namespace DragonsDecorativeMod.Items.Easter
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().EasterBasket && !GetInstance<BFurnitureConfig>().EasterEggs)
+            if (!GetInstance<DragonsDecoModConfig>().EasterBasket && !GetInstance<DragonsDecoModConfig>().EasterEggs)
             {
                 return;
             }

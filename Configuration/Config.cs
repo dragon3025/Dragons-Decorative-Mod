@@ -1,31 +1,9 @@
 using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
-namespace DragonsDecorativeMod
+namespace DragonsDecorativeMod.Configuration
 {
-    public class ABlocksWallsConfig : ModConfig
-    {
-        public override ConfigScope Mode => ConfigScope.ServerSide;
-
-        [Header("BlocksAndWalls")]
-
-        [DefaultValue(true)]
-        public bool Vines;
-
-        [DefaultValue(true)]
-        public bool WallFlowers;
-
-        [DefaultValue(true)]
-        public bool Trellis;
-
-        public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message)
-        {
-            message = "Can't change settings in a server.";
-            return false;
-        }
-    }
-
-    public class BFurnitureConfig : ModConfig
+    public class DragonsDecoModConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
@@ -70,30 +48,8 @@ namespace DragonsDecorativeMod
         public bool EasterEggs;
         #endregion
 
-        #region Garden
-        [Header("Garden")]
-
-        [DefaultValue(true)]
-        public bool BonsaiTree;
-
-        [DefaultValue(true)]
-        public bool Clover;
-
-        [DefaultValue(true)]
-        public bool HangingPlants;
-
-        [DefaultValue(true)]
-        public bool Mushrooms;
-
-        [DefaultValue(true)]
-        public bool Planters;
-
-        [DefaultValue(true)]
-        public bool Plants;
-
-        [DefaultValue(true)]
-        public bool PottedPlants;
-        #endregion
+        [Expand(false)]
+        public DropDownBoxes.Garden Garden;
 
         #region Paintings
         [Header("MiscPaintings")]
@@ -194,6 +150,12 @@ namespace DragonsDecorativeMod
         [DefaultValue(true)]
         public bool ThreadPlaceable;
         #endregion
+
+        public DragonsDecoModConfig()
+        {
+            Garden = new DropDownBoxes.Garden() { };
+        }
+
         public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message)
         {
             message = "Can't change settings in a server.";

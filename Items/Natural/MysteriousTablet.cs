@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.GameContent.Creative;
@@ -41,7 +42,7 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().MysteriousTablet)
+            if (!GetInstance<DragonsDecoModConfig>().MysteriousTablet)
             {
                 return;
             }

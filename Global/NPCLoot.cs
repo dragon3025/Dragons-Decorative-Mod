@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -8,7 +9,7 @@ namespace DragonsDecorativeMod.Global
 {
     public class NPCLoot : GlobalNPC
     {
-        readonly static BFurnitureConfig furnitureConfig = GetInstance<BFurnitureConfig>();
+        readonly static DragonsDecoModConfig furnitureConfig = GetInstance<DragonsDecoModConfig>();
 
         public override void ModifyNPCLoot(NPC npc, Terraria.ModLoader.NPCLoot npcLoot)
         {

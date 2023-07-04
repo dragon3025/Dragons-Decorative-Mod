@@ -2,6 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
+using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
@@ -113,22 +114,37 @@ namespace DragonsDecorativeMod.Tiles
         {
             var tile = Main.tile[i, j];
 
-            Color color = WorldGen.paintColor(tile.TileColor);
-            Color colorLight = Lighting.GetColor(i, j);
-            if (color.R > colorLight.R)
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
             {
-                color.R = colorLight.R;
-            }
-            if (color.G > colorLight.G)
-            {
-                color.G = colorLight.G;
-            }
-            if (color.B > colorLight.B)
-            {
-                color.B = colorLight.B;
+                return;
             }
 
-            Vector2 zero = new Vector2(Main.offScreenRange, Main.offScreenRange);
+            Color color = WorldGen.paintColor(tile.TileColor);
+
+            if (tile.TileColor == PaintID.NegativePaint)
+            {
+                color = new Color(255, 255, 255);
+                //Convert texture to negative
+            }
+
+            if (!tile.IsTileFullbright)
+            {
+                Color colorLight = Lighting.GetColor(i, j);
+                if (color.R > colorLight.R)
+                {
+                    color.R = colorLight.R;
+                }
+                if (color.G > colorLight.G)
+                {
+                    color.G = colorLight.G;
+                }
+                if (color.B > colorLight.B)
+                {
+                    color.B = colorLight.B;
+                }
+            }
+
+            Vector2 zero = new(Main.offScreenRange, Main.offScreenRange);
             if (Main.drawToScreen)
             {
                 zero = Vector2.Zero;

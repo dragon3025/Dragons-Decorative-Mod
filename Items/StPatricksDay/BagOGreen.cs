@@ -1,4 +1,5 @@
-﻿using Terraria;
+﻿using DragonsDecorativeMod.Configuration;
+using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -30,12 +31,12 @@ namespace DragonsDecorativeMod.Items.StPatricksDay
 
         public override void ModifyItemLoot(ItemLoot itemLoot)
         {
-            if (GetInstance<BFurnitureConfig>().PaintingLuringToGold)
+            if (GetInstance<DragonsDecoModConfig>().PaintingLuringToGold)
             {
                 itemLoot.Add(ItemDropRule.NotScalingWithLuck(ItemType<LuringToGold>(), 10));
             }
 
-            if (GetInstance<BFurnitureConfig>().Clover)
+            if (GetInstance<DragonsDecoModConfig>().Garden.Clover)
             {
                 IItemDropRule[] cloverDecals = new IItemDropRule[]
                 {
@@ -52,7 +53,7 @@ namespace DragonsDecorativeMod.Items.StPatricksDay
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().CloverDecal && !GetInstance<BFurnitureConfig>().PaintingLuringToGold)
+            if (!GetInstance<DragonsDecoModConfig>().CloverDecal && !GetInstance<DragonsDecoModConfig>().PaintingLuringToGold)
             {
                 return;
             }

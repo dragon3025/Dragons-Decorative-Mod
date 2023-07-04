@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -32,7 +33,7 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().PeacefulPlanteraBulb)
+            if (!GetInstance<DragonsDecoModConfig>().PeacefulPlanteraBulb)
             {
                 return;
             }

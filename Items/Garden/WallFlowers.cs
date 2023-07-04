@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -35,7 +36,7 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void AddRecipes()
         {
-            if (!GetInstance<ABlocksWallsConfig>().WallFlowers)
+            if (!GetInstance<DragonsDecoModConfig>().Garden.WallFlowers)
             {
                 return;
             }

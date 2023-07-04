@@ -628,32 +628,7 @@ Mods: {
 		}
 
 		Configs: {
-			ABlocksWallsConfig: {
-				DisplayName: Blocks and Walls
-				Headers.BlocksAndWalls:
-					'''
-					If an item below is disabled, it wont be obtainable.
-
-					Blocks And Walls
-					'''
-
-				Vines: {
-					Label: "[i:DragonsDecorativeMod/Vines] Wall Vines"
-					Tooltip: ""
-				}
-
-				WallFlowers: {
-					Label: "[i:DragonsDecorativeMod/WallFlowers] Wall Flowers"
-					Tooltip: ""
-				}
-
-				Trellis: {
-					Label: "[i:DragonsDecorativeMod/Trellis] Trellis"
-					Tooltip: ""
-				}
-			}
-
-			BFurnitureConfig: {
+			DragonsDecoModConfig: {
 				DisplayName: Furniture
 
 				Headers: {
@@ -670,6 +645,12 @@ Mods: {
 					Signs: Signs
 					Other: Other
 					MiscPaintings: Misc. Paintings
+					BlocksAndWalls:
+						'''
+						If an item below is disabled, it wont be obtainable.
+
+						Blocks And Walls
+						'''
 				}
 
 				Pots: {
@@ -732,40 +713,6 @@ Mods: {
 
 				BonsaiTree: {
 					Label: "[i:DragonsDecorativeMod/BonsaiTree] Bonsai Tree"
-					Tooltip: ""
-				}
-
-				Clover: {
-					Label: "[i:DragonsDecorativeMod/Clover] Clover"
-					Tooltip: ""
-				}
-
-				HangingPlants: {
-					Label: "[i:DragonsDecorativeMod/HangingPlant] Hanging Plants"
-					Tooltip:
-						'''
-						tModLoader doesn't have wind swaying support for modded
-						2+ wide tiles.
-						'''
-				}
-
-				Mushrooms: {
-					Label: "[i:DragonsDecorativeMod/RedMushroom] Mushrooms"
-					Tooltip: ""
-				}
-
-				Planters: {
-					Label: "[i:DragonsDecorativeMod/Planter] Planters"
-					Tooltip: ""
-				}
-
-				Plants: {
-					Label: "[i:DragonsDecorativeMod/Plant] Plants"
-					Tooltip: ""
-				}
-
-				PottedPlants: {
-					Label: "[i:DragonsDecorativeMod/PottedMushroomTreeTall] Potted Plants"
 					Tooltip: ""
 				}
 
@@ -909,17 +856,85 @@ Mods: {
 				}
 
 				EasterBasket: {
-					Label: Easter Basket
+					Label: "[i:DragonsDecorativeMod/EasterBasket] Easter Basket"
 					Tooltip: ""
 				}
 
 				EasterEggs: {
-					Label: Easter Eggs
+					Label: "[i:DragonsDecorativeMod/EasterEgg] Easter Eggs"
 					Tooltip: ""
 				}
 
 				LightPaintable: {
-					Label: Light Paintable
+					Label: "[i:DragonsDecorativeMod/LightPaintable] Light Paintable"
+					Tooltip: "Glows a different color when painted"
+				}
+
+				Garden: {
+					Tooltip: ""
+					Label: Garden
+				}
+			}
+
+			Garden: {
+				Vines: {
+					Label: "[i:DragonsDecorativeMod/Vines] Wall Vines"
+					Tooltip: ""
+				}
+
+				WallFlowers: {
+					Label: "[i:DragonsDecorativeMod/WallFlowers] Wall Flowers"
+					Tooltip: ""
+				}
+
+				Trellis: {
+					Label: "[i:DragonsDecorativeMod/Trellis] Trellis"
+					Tooltip: ""
+				}
+
+				Clover: {
+					Label: "[i:DragonsDecorativeMod/Clover] Clover"
+					Tooltip: ""
+				}
+
+				HangingPlants: {
+					Label: "[i:DragonsDecorativeMod/HangingPlant] Hanging Plants"
+					Tooltip:
+						'''
+						tModLoader doesn't have wind swaying support for modded
+						2+ wide tiles.
+						'''
+				}
+
+				Mushrooms: {
+					Label: "[i:DragonsDecorativeMod/RedMushroom] Mushrooms"
+					Tooltip: ""
+				}
+
+				Planters: {
+					Label: "[i:DragonsDecorativeMod/Planter] Planters"
+					Tooltip: ""
+				}
+
+				Plants: {
+					Label: "[i:DragonsDecorativeMod/Plant] Plants"
+					Tooltip: ""
+				}
+
+				PottedPlants: {
+					Label: "[i:DragonsDecorativeMod/PottedMushroomTreeTall] Potted Plants"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+
+				Headers: {
+					BlocksAndWalls: Blocks And Walls Header
+					Other: Other Header
+				}
+
+				BonsaiTree: {
+					Label: Bonsai Tree
 					Tooltip: ""
 				}
 			}
