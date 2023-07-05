@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().PaintBottle)
+            if (!GetInstance<DragonsDecoModConfig>().Other.PaintBottle)
             {
                 return;
             }

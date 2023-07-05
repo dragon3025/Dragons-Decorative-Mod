@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().AltarsShadowOrbAndCrimsonHeart)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.AltarsShadowOrbAndCrimsonHeart)
             {
                 return;
             }

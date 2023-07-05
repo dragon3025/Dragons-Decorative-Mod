@@ -31,7 +31,7 @@ namespace DragonsDecorativeMod.Items.StPatricksDay
 
         public override void ModifyItemLoot(ItemLoot itemLoot)
         {
-            if (GetInstance<DragonsDecoModConfig>().PaintingLuringToGold)
+            if (GetInstance<DragonsDecoModConfig>().StPatricksDay.PaintingLuringToGold)
             {
                 itemLoot.Add(ItemDropRule.NotScalingWithLuck(ItemType<LuringToGold>(), 10));
             }
@@ -53,7 +53,7 @@ namespace DragonsDecorativeMod.Items.StPatricksDay
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().CloverDecal && !GetInstance<DragonsDecoModConfig>().PaintingLuringToGold)
+            if (!GetInstance<DragonsDecoModConfig>().StPatricksDay.CloverDecal && !GetInstance<DragonsDecoModConfig>().StPatricksDay.PaintingLuringToGold)
             {
                 return;
             }

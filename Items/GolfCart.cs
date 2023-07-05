@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().GolfCart)
+            if (!GetInstance<DragonsDecoModConfig>().Other.GolfCart)
             {
                 return;
             }

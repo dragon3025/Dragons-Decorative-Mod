@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items.Christmas
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().Snowman)
+            if (!GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
             {
                 return;
             }

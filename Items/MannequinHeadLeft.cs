@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().MannequinHead)
+            if (!GetInstance<DragonsDecoModConfig>().Other.MannequinHead)
             {
                 return;
             }

@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().PeacefulPlanteraBulb)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.PeacefulPlanteraBulb)
             {
                 return;
             }

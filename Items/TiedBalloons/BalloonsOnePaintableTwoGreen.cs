@@ -34,7 +34,7 @@ namespace DragonsDecorativeMod.Items.TiedBalloons
 
         public override void AddRecipes()
         {
-            if (GetInstance<DragonsDecoModConfig>().Balloons)
+            if (GetInstance<DragonsDecoModConfig>().Other.Balloons)
             {
                 return;
             }

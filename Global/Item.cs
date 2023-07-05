@@ -11,7 +11,7 @@ namespace DragonsDecorativeMod.Global
 
         public override void ModifyItemLoot(Terraria.Item item, ItemLoot itemLoot)
         {
-            if (GetInstance<DragonsDecoModConfig>().MysteriousTablet)
+            if (GetInstance<DragonsDecoModConfig>().Natural.MysteriousTablet)
             {
                 if (item.type == ItemID.MoonLordBossBag)
                 {

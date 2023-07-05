@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().BoxOfArrows)
+            if (!GetInstance<DragonsDecoModConfig>().Other.BoxOfArrows)
             {
                 return;
             }

@@ -34,7 +34,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().SkeletonModel)
+            if (!GetInstance<DragonsDecoModConfig>().Other.SkeletonModel)
             {
                 return;
             }

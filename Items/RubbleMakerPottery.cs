@@ -248,7 +248,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!furnitureConfig.Pots)
+            if (!furnitureConfig.Natural.Pots)
             {
                 return;
             }

@@ -43,7 +43,7 @@ namespace DragonsDecorativeMod.Items.Easter
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().EasterBasket && !GetInstance<DragonsDecoModConfig>().EasterEggs)
+            if (!GetInstance<DragonsDecoModConfig>().Easter.EasterBasket && !GetInstance<DragonsDecoModConfig>().Easter.EasterEggs)
             {
                 return;
             }

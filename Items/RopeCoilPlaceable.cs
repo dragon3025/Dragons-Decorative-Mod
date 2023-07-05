@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().RopeCoilPlaceable)
+            if (!GetInstance<DragonsDecoModConfig>().Other.RopeCoilPlaceable)
             {
                 return;
             }

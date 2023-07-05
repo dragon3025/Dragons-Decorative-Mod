@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().HorizontalBook)
+            if (!GetInstance<DragonsDecoModConfig>().Other.HorizontalBook)
             {
                 return;
             }

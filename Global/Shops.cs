@@ -15,7 +15,7 @@ namespace DragonsDecorativeMod.Global
             switch (shop.NpcType)
             {
                 case NPCID.Merchant:
-                    if (GetInstance<DragonsDecoModConfig>().Globe)
+                    if (GetInstance<DragonsDecoModConfig>().Other.Globe)
                     {
                         shop.Add(ItemType<Items.Globe>());
                     }
@@ -51,30 +51,30 @@ namespace DragonsDecorativeMod.Global
 
                     break;
                 case NPCID.SantaClaus:
-                    if (GetInstance<DragonsDecoModConfig>().LightPaintable)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable)
                     {
                         shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }
 
-                    if (GetInstance<DragonsDecoModConfig>().CandyCane)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.CandyCane)
                     {
                         shop.Add(ItemType<Items.Christmas.CandyCane>());
                     }
 
-                    if (GetInstance<DragonsDecoModConfig>().Snowman)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
                     {
                         shop.Add(ItemType<Items.Christmas.SnowmanLeft>());
                         shop.Add(ItemType<Items.Christmas.SnowmanRight>());
                     }
                     break;
                 case NPCID.Painter:
-                    if (GetInstance<DragonsDecoModConfig>().PaintBottle)
+                    if (GetInstance<DragonsDecoModConfig>().Other.PaintBottle)
                     {
                         shop.Add(ItemType<Items.PaintBottleSingle>());
                     }
                     break;
                 case NPCID.PartyGirl:
-                    if (GetInstance<DragonsDecoModConfig>().LightPaintable && Main.halloween)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable && Main.halloween)
                     {
                         shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }

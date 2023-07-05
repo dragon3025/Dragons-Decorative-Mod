@@ -13,12 +13,12 @@ namespace DragonsDecorativeMod.Global
 
         public override void ModifyNPCLoot(NPC npc, Terraria.ModLoader.NPCLoot npcLoot)
         {
-            if (npc.type == NPCID.Ghost && furnitureConfig.StaringStatue)
+            if (npc.type == NPCID.Ghost && furnitureConfig.Other.StaringStatue)
             {
                 npcLoot.Add(ItemDropRule.Common(ItemType<Items.StaringStatue>(), 50));
             }
 
-            if (npc.type == NPCID.Medusa && furnitureConfig.MedusaWatching)
+            if (npc.type == NPCID.Medusa && furnitureConfig.Other.MedusaWatching)
             {
                 npcLoot.Add(ItemDropRule.Common(ItemType<Items.MedusaWatching>(), 25));
             }

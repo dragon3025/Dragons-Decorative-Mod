@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().FakeLarva)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.FakeLarva)
             {
                 return;
             }

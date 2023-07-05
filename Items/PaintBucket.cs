@@ -34,7 +34,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().PaintBucket)
+            if (!GetInstance<DragonsDecoModConfig>().Other.PaintBucket)
             {
                 return;
             }

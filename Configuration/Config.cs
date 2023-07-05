@@ -7,153 +7,36 @@ namespace DragonsDecorativeMod.Configuration
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
 
-        #region Natural
-        [Header("Ambient")]
-        [DefaultValue(true)]
-        public bool Pots;
+        [Expand(false)]
+        public DropDownBoxes.Natural Natural;
 
-        [DefaultValue(true)]
-        public bool AltarsShadowOrbAndCrimsonHeart;
+        [Expand(false)]
+        public DropDownBoxes.Christmas Christmas;
 
-        [DefaultValue(true)]
-        public bool FakeLarva;
-
-        [DefaultValue(true)]
-        public bool FallenLog;
-
-        [DefaultValue(true)]
-        public bool PeacefulPlanteraBulb;
-
-        [DefaultValue(true)]
-        public bool MysteriousTablet;
-        #endregion
-
-        #region Christmas
-        [Header("Christmas")]
-
-        [DefaultValue(true)]
-        public bool CandyCane;
-
-        [DefaultValue(true)]
-        public bool Snowman;
-        #endregion
-
-        #region Easter
-        [Header("Easter")]
-
-        [DefaultValue(true)]
-        public bool EasterBasket;
-
-        [DefaultValue(true)]
-        public bool EasterEggs;
-        #endregion
+        [Expand(false)]
+        public DropDownBoxes.Easter Easter;
 
         [Expand(false)]
         public DropDownBoxes.Garden Garden;
 
-        #region Paintings
-        [Header("MiscPaintings")]
+        [Expand(false)]
+        public DropDownBoxes.StPatricksDay StPatricksDay;
 
-        [DefaultValue(true)]
-        public bool MedusaWatching;
-        #endregion
+        [Expand(false)]
+        public DropDownBoxes.Signs Signs;
 
-        #region St. Patricks Day
-        [Header("StPatricksDay")]
-
-        [DefaultValue(true)]
-        public bool CloverDecal;
-
-        [DefaultValue(true)]
-        public bool PaintingLuringToGold;
-        #endregion
-
-        #region Signs
-        [Header("Signs")]
-
-        [DefaultValue(true)]
-        public bool SignBag;
-
-        [DefaultValue(true)]
-        public bool SignBook;
-
-        [DefaultValue(true)]
-        public bool SignCross;
-
-        [DefaultValue(true)]
-        public bool SignSwiss;
-
-        [DefaultValue(true)]
-        public bool SignHeart;
-        #endregion
-
-        #region Other
-        [Header("Other")]
-
-        [DefaultValue(true)]
-        public bool Aquarium;
-
-        [DefaultValue(true)]
-        public bool Balloons;
-
-        [DefaultValue(true)]
-        public bool BoxOfArrows;
-
-        [DefaultValue(true)]
-        public bool PaintBottle;
-
-        [DefaultValue(true)]
-        public bool Easel;
-
-        [DefaultValue(true)]
-        public bool Globe;
-
-        [DefaultValue(true)]
-        public bool GolfCart;
-
-        [DefaultValue(true)]
-        public bool HorizontalBook;
-
-        [DefaultValue(true)]
-        public bool HospitalBed;
-
-        [DefaultValue(true)]
-        public bool LargeKeg;
-
-        [DefaultValue(true)]
-        public bool LargePot;
-
-        [DefaultValue(true)]
-        public bool Lectern;
-
-        [DefaultValue(true)]
-        public bool LightPaintable;
-
-        [DefaultValue(true)]
-        public bool MannequinHead;
-
-        [DefaultValue(true)]
-        public bool StaringStatue;
-
-        [DefaultValue(true)]
-        public bool PaintBucket;
-
-        [DefaultValue(true)]
-        public bool PureSpiritLamp;
-
-        [DefaultValue(true)]
-        public bool RopeCoilPlaceable;
-
-        [DefaultValue(true)]
-        public bool SkeletonModel;
-
-        [DefaultValue(true)]
-        public bool ThreadPlaceable;
-        #endregion
+        [Expand(false)]
+        public DropDownBoxes.Other Other;
 
         public DragonsDecoModConfig()
         {
+            Natural = new DropDownBoxes.Natural() { };
+            Christmas = new DropDownBoxes.Christmas() { };
+            Easter = new DropDownBoxes.Easter() { };
             Garden = new DropDownBoxes.Garden() { };
+            StPatricksDay = new DropDownBoxes.StPatricksDay() { };
+            Signs = new DropDownBoxes.Signs() { };
+            Other = new DropDownBoxes.Other() { };
         }
 
         public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message)

@@ -42,7 +42,7 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().MysteriousTablet)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.MysteriousTablet)
             {
                 return;
             }

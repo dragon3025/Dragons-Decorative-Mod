@@ -34,7 +34,7 @@ namespace DragonsDecorativeMod.Items.Signs
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().SignBag)
+            if (!GetInstance<DragonsDecoModConfig>().Signs.SignBag)
             {
                 return;
             }

@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Items.Signs
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().SignHeart)
+            if (!GetInstance<DragonsDecoModConfig>().Signs.SignHeart)
             {
                 return;
             }

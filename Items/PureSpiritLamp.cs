@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().PureSpiritLamp)
+            if (!GetInstance<DragonsDecoModConfig>().Other.PureSpiritLamp)
             {
                 return;
             }

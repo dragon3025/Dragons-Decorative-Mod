@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().HospitalBed)
+            if (!GetInstance<DragonsDecoModConfig>().Other.HospitalBed)
             {
                 return;
             }

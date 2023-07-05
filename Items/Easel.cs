@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().Easel)
+            if (!GetInstance<DragonsDecoModConfig>().Other.Easel)
             {
                 return;
             }

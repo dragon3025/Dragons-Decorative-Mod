@@ -34,7 +34,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().ThreadPlaceable)
+            if (!GetInstance<DragonsDecoModConfig>().Other.ThreadPlaceable)
             {
                 return;
             }

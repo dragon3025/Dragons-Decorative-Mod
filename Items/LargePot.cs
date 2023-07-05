@@ -33,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().LargePot)
+            if (!GetInstance<DragonsDecoModConfig>().Other.LargePot)
             {
                 return;
             }
