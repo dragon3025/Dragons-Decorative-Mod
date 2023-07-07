@@ -1,4 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
+using ReLogic.Content;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
@@ -9,6 +11,8 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
 {
     public class PottedTallCacti : ModTile
     {
+        private Asset<Texture2D> overlayTexture;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -23,6 +27,11 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(120, 110, 100));
+
+            if (!Main.dedServ)
+            {
+                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/PottedPlants/PlanterRound2Wide");
+            }
         }
 
         public override bool CreateDust(int i, int j, ref int type)
@@ -51,6 +60,39 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
             {
                 yield return new Item(ModContent.ItemType<Items.Garden.PottedPlants.PottedTallCactusCrimson>());
             }
+        }
+
+        public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+
+            short frameX = tile.TileFrameX;
+            short frameY = tile.TileFrameY;
+
+            frameX %= 36;
+
+            if (frameY < 54)
+            {
+                return;
+            }
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
+            Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
+
+            if (Main.drawToScreen)
+            {
+                offScreenAdjust = Vector2.Zero;
+            }
+
+            Color color = Lighting.GetColor(i, j);
+
+            Texture2D texture = overlayTexture.Value;
+
+            spriteBatch.Draw(texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y + 2) + offScreenAdjust, new Rectangle(frameX, frameY - 54, 16, 16), color, 0f, default, 1f, SpriteEffects.None, 0f);
         }
     }
 }

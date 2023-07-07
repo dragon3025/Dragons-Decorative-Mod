@@ -22,12 +22,27 @@ namespace DragonsDecorativeMod.Tiles
         private Asset<Texture2D> textureAquariumGreen;
         private Asset<Texture2D> textureAquariumBottomFeederAndCoral;
 
+        private Asset<Texture2D> textureAquariumFrontNegative;
+        private Asset<Texture2D> textureAquariumNemoNegative;
+        private Asset<Texture2D> texturePinkYellowNegative;
+        private Asset<Texture2D> textureSchoolOfFishNegative;
+        private Asset<Texture2D> textureAquariumBlueStripeNegative;
+        private Asset<Texture2D> textureAquariumGreenNegative;
+        private Asset<Texture2D> textureAquariumBottomFeederAndCoralNegative;
+
         private int frameAquariumNemo = Main.rand.Next(20);
         private int framePinkYellow = Main.rand.Next(19);
         private int frameSchoolOfFish = Main.rand.Next(20);
         private int frameAquariumBlueStripe = Main.rand.Next(16);
         private int frameAquariumGreen = Main.rand.Next(9);
         private int frameAquariumBottomFeederAndCoral = Main.rand.Next(16);
+
+        private int frameAquariumNemoNegative = Main.rand.Next(20);
+        private int framePinkYellowNegative = Main.rand.Next(19);
+        private int frameSchoolOfFishNegative = Main.rand.Next(20);
+        private int frameAquariumBlueStripeNegative = Main.rand.Next(16);
+        private int frameAquariumGreenNegative = Main.rand.Next(9);
+        private int frameAquariumBottomFeederAndCoralNegative = Main.rand.Next(16);
 
         public override void SetStaticDefaults()
         {
@@ -59,6 +74,14 @@ namespace DragonsDecorativeMod.Tiles
                 textureAquariumBlueStripe = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumBlueStripe");
                 textureAquariumGreen = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumGreen");
                 textureAquariumBottomFeederAndCoral = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumBottomFeederAndCoral");
+
+                textureAquariumFrontNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumFrontNegative");
+                textureAquariumNemoNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumNemoNegative");
+                texturePinkYellowNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumPinkYellowNegative");
+                textureSchoolOfFishNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumSchoolOfFishNegative");
+                textureAquariumBlueStripeNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumBlueStripeNegative");
+                textureAquariumGreenNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumGreenNegative");
+                textureAquariumBottomFeederAndCoralNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/AquariumBottomFeederAndCoralNegative");
             }
         }
 
@@ -119,12 +142,15 @@ namespace DragonsDecorativeMod.Tiles
                 return;
             }
 
-            Color color = WorldGen.paintColor(tile.TileColor);
+            Color color;
 
             if (tile.TileColor == PaintID.NegativePaint)
             {
                 color = new Color(255, 255, 255);
-                //Convert texture to negative
+            }
+            else
+            {
+                color = WorldGen.paintColor(tile.TileColor);
             }
 
             if (!tile.IsTileFullbright)
@@ -163,13 +189,26 @@ namespace DragonsDecorativeMod.Tiles
                 Main.spriteBatch.Draw(texture.Value, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y + 2) + zero, rectangle, color, 0f, Vector2.Zero, 1f, SpriteEffects.None, 0f);
             }
 
-            DrawSegment(textureAquariumFront, rectangleAquariumFront);
-            DrawSegment(textureAquariumNemo, rectangleAquariumNemo);
-            DrawSegment(texturePinkYellow, rectangleAquariumPinkYellow);
-            DrawSegment(textureSchoolOfFish, rectangleSchoolOfFish);
-            DrawSegment(textureAquariumBottomFeederAndCoral, rectangleAquariumBottomFeederAndCoral);
-            DrawSegment(textureAquariumGreen, rectangleAquariumGreen);
-            DrawSegment(textureAquariumBlueStripe, rectangleAquariumBlueStripe);
+            if (tile.TileColor != PaintID.NegativePaint)
+            {
+                DrawSegment(textureAquariumFront, rectangleAquariumFront);
+                DrawSegment(textureAquariumNemo, rectangleAquariumNemo);
+                DrawSegment(texturePinkYellow, rectangleAquariumPinkYellow);
+                DrawSegment(textureSchoolOfFish, rectangleSchoolOfFish);
+                DrawSegment(textureAquariumBottomFeederAndCoral, rectangleAquariumBottomFeederAndCoral);
+                DrawSegment(textureAquariumGreen, rectangleAquariumGreen);
+                DrawSegment(textureAquariumBlueStripe, rectangleAquariumBlueStripe);
+            }
+            else
+            {
+                DrawSegment(textureAquariumFrontNegative, rectangleAquariumFront);
+                DrawSegment(textureAquariumNemoNegative, rectangleAquariumNemo);
+                DrawSegment(texturePinkYellowNegative, rectangleAquariumPinkYellow);
+                DrawSegment(textureSchoolOfFishNegative, rectangleSchoolOfFish);
+                DrawSegment(textureAquariumBottomFeederAndCoralNegative, rectangleAquariumBottomFeederAndCoral);
+                DrawSegment(textureAquariumGreenNegative, rectangleAquariumGreen);
+                DrawSegment(textureAquariumBlueStripeNegative, rectangleAquariumBlueStripe);
+            }
         }
     }
 }

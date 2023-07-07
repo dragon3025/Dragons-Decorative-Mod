@@ -14,6 +14,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
     {
         private Asset<Texture2D> overlayInnerTexture;
         private Asset<Texture2D> overlayOuterTexture;
+        private Asset<Texture2D> overlayInnerTextureNegative;
+        private Asset<Texture2D> overlayOuterTextureNegative;
 
         public override void SetStaticDefaults()
         {
@@ -39,6 +41,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             {
                 overlayInnerTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayInner");
                 overlayOuterTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayOuter");
+                overlayInnerTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayInnerNegative");
+                overlayOuterTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayOuterNegative");
             }
         }
 
@@ -74,6 +78,12 @@ namespace DragonsDecorativeMod.Tiles.Natural
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
@@ -88,8 +98,19 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
             int frameYOffset = Main.tileFrame[ModContent.TileType<MysteriousTablet>()];
 
-            Texture2D textureInner = overlayInnerTexture.Value;
-            Texture2D textureOuter = overlayOuterTexture.Value;
+            Texture2D textureInner;
+            Texture2D textureOuter;
+
+            if (tile.TileColor == PaintID.NegativePaint)
+            {
+                textureInner = overlayInnerTextureNegative.Value;
+                textureOuter = overlayOuterTextureNegative.Value;
+            }
+            else
+            {
+                textureInner = overlayInnerTexture.Value;
+                textureOuter = overlayOuterTexture.Value;
+            }
 
             spriteBatch.Draw(textureInner,
                 new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + offScreenAdjust,

@@ -12,6 +12,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
     public class WallFlowers : ModTile
     {
         private Asset<Texture2D> overlayTexture;
+        private Asset<Texture2D> overlayTextureNegative;
 
         public override void SetStaticDefaults()
         {
@@ -36,11 +37,19 @@ namespace DragonsDecorativeMod.Tiles.Garden
             if (!Main.dedServ)
             {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/WallFlowersOverlay");
+                overlayTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/WallFlowersOverlayNegative");
             }
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            Tile tile = Main.tile[i, j];
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
             Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
@@ -49,12 +58,19 @@ namespace DragonsDecorativeMod.Tiles.Garden
             }
 
             Color color = Lighting.GetColor(i, j);
-
-            Tile tile = Main.tile[i, j];
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
-            Texture2D texture = overlayTexture.Value;
+            Texture2D texture;
+
+            if (tile.TileColor == PaintID.NegativePaint)
+            {
+                texture = overlayTextureNegative.Value;
+            }
+            else
+            {
+                texture = overlayTexture.Value;
+            }
 
             spriteBatch.Draw(texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + offScreenAdjust, new Rectangle(frameX, frameY, 16, 16), color, 0f, default, 1f, SpriteEffects.None, 0f);
         }

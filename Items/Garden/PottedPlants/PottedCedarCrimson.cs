@@ -25,8 +25,8 @@ namespace DragonsDecorativeMod.Items.Garden.PottedPlants
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.sellPrice(0, 0, 60);
-            Item.createTile = ModContent.TileType<Tiles.Garden.PottedPlants.PottedTrees>();
-            Item.placeStyle = 4;
+            Item.createTile = ModContent.TileType<Tiles.Garden.PottedPlants.PottedCedarTrees>();
+            Item.placeStyle = 2;
         }
     }
 }

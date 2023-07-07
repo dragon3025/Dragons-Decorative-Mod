@@ -60,10 +60,20 @@ namespace DragonsDecorativeMod.Tiles.Christmas
         {
             Tile tile = Main.tile[i, j];
             int frameX = tile.TileFrameX / 18;
+            int frameY = tile.TileFrameY / 18;
 
 
             float flicker = Main.rand.Next(970, 1031) * 0.001f;
-            if (frameX < 4)
+            bool light = true;
+            if (frameX >= 4)
+            {
+                light = false;
+            }
+            if (frameY >= 1 && (frameX < 1 || frameX >= 3))
+            {
+                light = false;
+            }
+            if (light)
             {
                 if (tile.TileColor == 0)
                 {
@@ -74,9 +84,18 @@ namespace DragonsDecorativeMod.Tiles.Christmas
                 else
                 {
                     Color color = WorldGen.paintColor(tile.TileColor);
-                    r = color.R / 255f * flicker;
-                    g = color.G / 255f * flicker;
-                    b = color.B / 255f * flicker;
+                    if (tile.TileColor < 13) //Paint that doesn't affect white
+                    {
+                        r = 0.5f + color.R / 510f * flicker;
+                        g = 0.5f + color.G / 510f * flicker;
+                        b = 0.5f + color.B / 510f * flicker;
+                    }
+                    else
+                    {
+                        r = color.R / 255f * flicker;
+                        g = color.G / 255f * flicker;
+                        b = color.B / 255f * flicker;
+                    }
                 }
             }
         }

@@ -106,6 +106,13 @@ namespace DragonsDecorativeMod.Tiles.Christmas
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            Tile tile = Main.tile[i, j];
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
             Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
@@ -113,9 +120,25 @@ namespace DragonsDecorativeMod.Tiles.Christmas
                 offScreenAdjust = Vector2.Zero;
             }
 
-            Color color = Lighting.GetColor(i, j);
+            Color color = WorldGen.paintColor(tile.TileColor);
 
-            Tile tile = Main.tile[i, j];
+            if (!tile.IsTileFullbright)
+            {
+                Color colorLight = Lighting.GetColor(i, j);
+                if (color.R > colorLight.R)
+                {
+                    color.R = colorLight.R;
+                }
+                if (color.G > colorLight.G)
+                {
+                    color.G = colorLight.G;
+                }
+                if (color.B > colorLight.B)
+                {
+                    color.B = colorLight.B;
+                }
+            }
+
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 

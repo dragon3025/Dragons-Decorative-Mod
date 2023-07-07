@@ -30,7 +30,7 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
 
             if (!Main.dedServ)
             {
-                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/PottedPlants/PottedMushroomPlantTallOverlay");
+                overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/PottedPlants/PlanterRound2Wide");
             }
         }
 
@@ -70,6 +70,21 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            Tile tile = Main.tile[i, j];
+
+            short frameX = tile.TileFrameX;
+            short frameY = tile.TileFrameY;
+
+            if (frameY < 54)
+            {
+                return;
+            }
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
             Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
@@ -79,13 +94,9 @@ namespace DragonsDecorativeMod.Tiles.Garden.PottedPlants
 
             Color color = Lighting.GetColor(i, j);
 
-            Tile tile = Main.tile[i, j];
-            short frameX = tile.TileFrameX;
-            short frameY = tile.TileFrameY;
-
             Texture2D texture = overlayTexture.Value;
 
-            spriteBatch.Draw(texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y + 2) + offScreenAdjust, new Rectangle(frameX, frameY, 16, 16), color, 0f, default, 1f, SpriteEffects.None, 0f);
+            spriteBatch.Draw(texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y + 2) + offScreenAdjust, new Rectangle(frameX, frameY - 54, 16, 16), color, 0f, default, 1f, SpriteEffects.None, 0f);
         }
     }
 }

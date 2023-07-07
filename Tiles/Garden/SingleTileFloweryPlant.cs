@@ -14,6 +14,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
     public class SingleTileFloweryPlant : ModTile
     {
         private Asset<Texture2D> overlayTexture;
+        private Asset<Texture2D> overlayTextureNegative;
 
         public override void SetStaticDefaults()
         {
@@ -40,6 +41,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             if (!Main.dedServ)
             {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/SingleTileFloweryPlantOverlay");
+                overlayTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/SingleTileFloweryPlantOverlayNegative");
             }
         }
 
@@ -57,13 +59,28 @@ namespace DragonsDecorativeMod.Tiles.Garden
                 offScreenAdjust = Vector2.Zero;
             }
 
+            Tile tile = Main.tile[i, j];
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
+            Texture2D texture;
+
+            if (tile.TileColor == PaintID.NegativePaint)
+            {
+                texture = overlayTextureNegative.Value;
+            }
+            else
+            {
+                texture = overlayTexture.Value;
+            }
+
             Color color = Lighting.GetColor(i, j);
 
-            Tile tile = Main.tile[i, j];
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
-
-            Texture2D texture = overlayTexture.Value;
 
             spriteBatch.Draw(texture, new Vector2(i * 16 - 8 - (int)Main.screenPosition.X, j * 16 - 30 - (int)Main.screenPosition.Y) + offScreenAdjust, new Rectangle(frameX, frameY, 32, 48), color, 0f, default, 1f, SpriteEffects.None, 0f);
         }
