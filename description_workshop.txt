@@ -1,4 +1,4 @@
-Dragon's Decorative Mod
+Dragon's Decorative Mod (Info below is for the 1.4.4+ version of tModLoader)
 
 ====INFO====
 
@@ -6,11 +6,11 @@ Open Source at GitHub. Report issues there or at home page.
 
 NOTE: "Shop Expander" mod is recommended and may be necessary for shop items to appear.
 
-This mod adds decorative items with configuration settings to disable them. I plan to keep adding to it. As of version 1.25 (March 20th 2023) it has:
+This mod adds decorative objects with configuration settings to disable them. I plan to keep adding to it. As of version 1.25 (March 20th 2023) it has:
 
 - "WikiThis" mod support
-- Placeable versions of vanilla tiles
-- 76 Non-vanilla Tiles
+- Placeable versions of non-placeable vanilla tiles
+- Many other tiles.
 
 ====LINKS====
 Open Source on Github: https://github.com/dragon3025/Dragons-Decorative-Mod
