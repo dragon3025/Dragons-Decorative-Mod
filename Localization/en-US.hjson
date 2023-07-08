@@ -479,8 +479,8 @@ Mods: {
 				Tooltip: ""
 			}
 
-			SignCross: {
-				DisplayName: Healthy Cross Sign
+			SignGreenCross: {
+				DisplayName: Green Cross Sign
 				Tooltip: ""
 			}
 
@@ -780,8 +780,8 @@ Mods: {
 					Tooltip: ""
 				}
 
-				SignCross: {
-					Label: "[i:DragonsDecorativeMod/SignCross] Healthy Cross Sign"
+				SignGreenCross: {
+					Label: "[i:DragonsDecorativeMod/SignGreenCross] Green Cross Sign"
 					Tooltip: ""
 				}
 

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -8,7 +9,7 @@ using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Tiles.Signs
 {
-    public class SignCross : ModTile
+    public class SignGreenCross : ModTile
     {
         public override void SetStaticDefaults()
         {
@@ -20,9 +21,6 @@ namespace DragonsDecorativeMod.Tiles.Signs
             // Defaults
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.newTile.StyleHorizontal = true;
-            TileObjectData.newTile.Width = 3;
-            TileObjectData.newTile.Height = 3;
-            TileObjectData.newTile.CoordinateHeights = new int[] { 16, 16, 16 };
             TileObjectData.newTile.Origin = new Point16(0, 0);
             TileObjectData.newTile.AnchorAlternateTiles = new int[] { 124 };
 
@@ -58,9 +56,14 @@ namespace DragonsDecorativeMod.Tiles.Signs
 
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(127, 127, 127));
+            AddMapEntry(new Color(191, 142, 111));
 
             TileID.Sets.DisableSmartCursor[Type] = true;
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ModContent.ItemType<Items.Signs.SignGreenCross>());
         }
     }
 }

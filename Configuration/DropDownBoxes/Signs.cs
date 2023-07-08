@@ -4,7 +4,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
     {
         public bool SignBag;
         public bool SignBook;
-        public bool SignCross;
+        public bool SignGreenCross;
         public bool SignSwiss;
         public bool SignHeart;
 
@@ -13,7 +13,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
 
             SignBag = true;
             SignBook = true;
-            SignCross = true;
+            SignGreenCross = true;
             SignSwiss = true;
             SignHeart = true;
         }
@@ -23,7 +23,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
             if (obj is Signs other)
                 return SignBag == other.SignBag &&
                     SignBook == other.SignBook &&
-                    SignCross == other.SignCross &&
+                    SignGreenCross == other.SignGreenCross &&
                     SignSwiss == other.SignSwiss &&
                     SignHeart == other.SignHeart;
             return base.Equals(obj);
@@ -35,7 +35,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
             {
                 SignBag,
                 SignBook,
-                SignCross,
+                SignGreenCross,
                 SignSwiss,
                 SignHeart
             }.GetHashCode();

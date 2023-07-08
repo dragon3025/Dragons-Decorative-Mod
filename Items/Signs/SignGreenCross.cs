@@ -7,7 +7,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Signs
 {
-    public class SignCross : ModItem
+    public class SignGreenCross : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -17,8 +17,8 @@ namespace DragonsDecorativeMod.Items.Signs
 
         public override void SetDefaults()
         {
-            Item.width = 32;
-            Item.height = 40;
+            Item.width = 28;
+            Item.height = 30;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
@@ -27,12 +27,12 @@ namespace DragonsDecorativeMod.Items.Signs
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Signs.SignCross>();
+            Item.createTile = ModContent.TileType<Tiles.Signs.SignGreenCross>();
         }
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().Signs.SignCross)
+            if (!GetInstance<DragonsDecoModConfig>().Signs.SignGreenCross)
             {
                 return;
             }

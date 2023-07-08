@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -58,6 +59,11 @@ namespace DragonsDecorativeMod.Tiles.Signs
             AddMapEntry(new Color(191, 142, 111));
 
             TileID.Sets.DisableSmartCursor[Type] = true;
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ModContent.ItemType<Items.Signs.SignBook>());
         }
     }
 }
