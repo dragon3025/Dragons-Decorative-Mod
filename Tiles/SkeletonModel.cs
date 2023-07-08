@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -31,6 +32,16 @@ namespace DragonsDecorativeMod.Tiles
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Skeleton Model");
             AddMapEntry(new Color(255, 255, 255), name);
+        }
+
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ModContent.ItemType<Items.SkeletonModel>());
         }
     }
 }

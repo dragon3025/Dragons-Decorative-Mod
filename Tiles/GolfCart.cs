@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.Enums;
 using Terraria.Localization;
@@ -27,6 +28,16 @@ namespace DragonsDecorativeMod.Tiles
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Golf Cart");
             AddMapEntry(new Color(228, 222, 213), name);
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ModContent.ItemType<Items.GolfCart>());
+        }
+
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
     }
 }

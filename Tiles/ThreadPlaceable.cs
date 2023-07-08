@@ -31,6 +31,11 @@ namespace DragonsDecorativeMod.Tiles
             }
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];

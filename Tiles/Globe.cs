@@ -24,6 +24,11 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(168, 145, 127), name);
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frameCounter++;

@@ -39,6 +39,11 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(255, 255, 255), name);
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override ushort GetMapOption(int i, int j)
         {
             return (ushort)(Main.tile[i, j].TileFrameX / 18);

@@ -28,5 +28,10 @@ namespace DragonsDecorativeMod.Tiles
             // name.SetDefault("Mannequin Head");
             AddMapEntry(new Color(255, 255, 255), name);
         }
+
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
     }
 }

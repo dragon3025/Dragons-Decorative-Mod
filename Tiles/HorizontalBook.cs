@@ -31,6 +31,11 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(170, 48, 114), name);
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override bool CanDrop(int i, int j)
         {
             return true;

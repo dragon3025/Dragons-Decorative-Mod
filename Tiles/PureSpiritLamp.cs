@@ -25,6 +25,11 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(168, 145, 127));
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             if (frame == 0 && frameCounter == 0 && !Main.rand.NextBool(1800)) //30 Real-Life Seconds.

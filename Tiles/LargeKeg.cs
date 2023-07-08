@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.Enums;
 using Terraria.ID;
@@ -30,6 +31,11 @@ namespace DragonsDecorativeMod.Tiles
             LocalizedText name = CreateMapEntryName();
             // name.SetDefault("Large Keg");
             AddMapEntry(new Color(105, 75, 38), name);
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ModContent.ItemType<Items.LargeKeg>());
         }
     }
 }

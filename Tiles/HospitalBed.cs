@@ -41,6 +41,11 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(191, 142, 111), name);
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
         {
             return true;
@@ -55,11 +60,6 @@ namespace DragonsDecorativeMod.Tiles
         public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
         {
             info.VisualOffset.Y += 0f;
-        }
-
-        public override void NumDust(int i, int j, bool fail, ref int num)
-        {
-            num = 1;
         }
 
         public override bool RightClick(int i, int j)
