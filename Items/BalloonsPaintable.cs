@@ -5,13 +5,13 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace DragonsDecorativeMod.Items.TiedBalloons
+namespace DragonsDecorativeMod.Items
 {
-    public class BalloonsOnePaintableTwoGreen : ModItem
+    public class BalloonsPaintable : ModItem
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Balloons (2 Green, 1 Paintable)");
+            // DisplayName.SetDefault("Balloons (2 Red, 1 Paintable)");
             // Tooltip.SetDefault("Try painting it");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
@@ -29,7 +29,7 @@ namespace DragonsDecorativeMod.Items.TiedBalloons
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = Item.sellPrice(0, 0, 4);
-            Item.createTile = ModContent.TileType<Tiles.TiedBalloons.BalloonsOnePaintableTwoGreen>();
+            Item.createTile = ModContent.TileType<Tiles.BalloonsPaintable>();
         }
 
         public override void AddRecipes()
@@ -40,7 +40,6 @@ namespace DragonsDecorativeMod.Items.TiedBalloons
             }
             Recipe recipe = Recipe.Create(Type);
             recipe.AddIngredient(ItemID.PartyBundleOfBalloonTile);
-            recipe.AddIngredient(ItemID.GreenPaint, 2);
             recipe.Register();
         }
     }

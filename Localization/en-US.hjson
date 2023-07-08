@@ -509,66 +509,6 @@ Mods: {
 				Tooltip: Try painting it
 			}
 
-			BalloonsOnePaintableTwoBlack: {
-				DisplayName: Balloons (2 Black, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoBlue: {
-				DisplayName: Balloons (2 Blue, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoBrown: {
-				DisplayName: Balloons (2 Brown, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoCyan: {
-				DisplayName: Balloons (2 Cyan, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoGray: {
-				DisplayName: Balloons (2 Gray, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoGreen: {
-				DisplayName: Balloons (2 Green, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoOrange: {
-				DisplayName: Balloons (2 Orange, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoPink: {
-				DisplayName: Balloons (2 Pink, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoPurple: {
-				DisplayName: Balloons (2 Purple, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoRed: {
-				DisplayName: Balloons (2 Red, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoWhite: {
-				DisplayName: Balloons (2 White, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
-			BalloonsOnePaintableTwoYellow: {
-				DisplayName: Balloons (2 Yellow, 1 Paintable)
-				Tooltip: Try painting it
-			}
-
 			LightPaintable: {
 				DisplayName: Paintable Light
 				Tooltip: Glows a different color when painted
@@ -582,6 +522,15 @@ Mods: {
 			BagOGreen: {
 				DisplayName: Bag o' Green
 				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			BalloonsPaintable: {
+				DisplayName: Paintable Balloons
+				Tooltip:
+					'''
+					Paint the bottom left tile to change the color of the center
+					balloon.
+					'''
 			}
 		}
 
@@ -856,12 +805,8 @@ Mods: {
 				}
 
 				Balloons: {
-					Label: "[i:DragonsDecorativeMod/BalloonsOnePaintableTwoBlack] Balloons"
-					Tooltip:
-						'''
-						3 Balloons Tied, 2 back that come in many colors, and 1
-						paintable in the front.
-						'''
+					Label: "[i:DragonsDecorativeMod/BalloonsPaintable] Paintable Balloons"
+					Tooltip: Each balloon can be painted a different color.
 				}
 
 				BoxOfArrows: {

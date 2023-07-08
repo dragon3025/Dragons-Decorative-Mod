@@ -44,18 +44,18 @@ namespace DragonsDecorativeMod.Tiles.Garden
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
-            Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
-
-            if (Main.drawToScreen)
-            {
-                offScreenAdjust = Vector2.Zero;
-            }
-
             Tile tile = Main.tile[i, j];
 
             if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
             {
                 return;
+            }
+
+            Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
+
+            if (Main.drawToScreen)
+            {
+                offScreenAdjust = Vector2.Zero;
             }
 
             Texture2D texture;
