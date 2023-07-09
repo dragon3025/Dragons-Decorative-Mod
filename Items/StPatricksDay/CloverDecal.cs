@@ -16,8 +16,8 @@ namespace DragonsDecorativeMod.Items.StPatricksDay
 
         public override void SetDefaults()
         {
-            Item.width = 42;
-            Item.height = 38;
+            Item.width = 30;
+            Item.height = 30;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
