@@ -16,7 +16,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
 
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
-            TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
+            TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.RandomStyleRange = 6;

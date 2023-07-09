@@ -3,13 +3,13 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace DragonsDecorativeMod.Items.Garden
+namespace DragonsDecorativeMod.Items.Garden.Mushrooms
 {
-    public class WhiteMushroom : ModItem
+    public class RedMushroom : ModItem
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("White Mushroom");
+            // DisplayName.SetDefault("Red Mushroom");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -25,15 +25,8 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 1);
-            Item.createTile = ModContent.TileType<Tiles.Garden.Mushrooms>();
-            Item.placeStyle = 15;
+            Item.createTile = ModContent.TileType<Tiles.Garden.Mushrooms.RedMushroom>();
             Item.rare = ItemRarityID.White;
-        }
-
-        public override bool? UseItem(Player player)
-        {
-            Item.placeStyle = Main.rand.Next(15, 20);
-            return base.UseItem(player);
         }
     }
 }

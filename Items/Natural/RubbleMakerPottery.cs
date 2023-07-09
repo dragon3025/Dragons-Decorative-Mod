@@ -7,7 +7,7 @@ using static Terraria.ModLoader.ModContent;
 
 // TO-DO: If tModLoader releases support for adding to vanilla Rubble Maker, convert these into Rubble Maker placements (AS OF NOW, VANILLA "ECHO POTS" DON'T DROP ANYTHING, AND IT'S IMPOSSIBLE TO ADD DROPS TO VANILLA TILES).
 
-namespace DragonsDecorativeMod.Items
+namespace DragonsDecorativeMod.Items.Natural
 {
     public class RubbleMakerPottery : ModItem
     {
@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Items
             Item.value = Item.buyPrice(0, 25);
         }
 
-        public override void UpdateInventory(Player player)
+        public override void HoldItem(Player player)
         {
             bool hasValidBlock = false;
 
@@ -145,7 +145,6 @@ namespace DragonsDecorativeMod.Items
                 {
                     if (player.controlDown && player.releaseDown)
                     {
-                        GetInstance<DragonsDecorativeMod>().Logger.Debug("Pressed Down");
                         Item.placeStyle--;
                         if (Item.placeStyle < minStyle)
                         {
@@ -154,7 +153,6 @@ namespace DragonsDecorativeMod.Items
                     }
                     if (player.controlUp && player.releaseUp)
                     {
-                        GetInstance<DragonsDecorativeMod>().Logger.Debug("Pressed Up");
                         Item.placeStyle++;
                         if (Item.placeStyle > maxStyle)
                         {

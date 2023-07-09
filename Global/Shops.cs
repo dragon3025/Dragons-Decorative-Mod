@@ -1,5 +1,6 @@
 using DragonsDecorativeMod.Configuration;
 using DragonsDecorativeMod.Items.Garden;
+using DragonsDecorativeMod.Items.Garden.Mushrooms;
 using Terraria;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -63,8 +64,7 @@ namespace DragonsDecorativeMod.Global
 
                     if (GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
                     {
-                        shop.Add(ItemType<Items.Christmas.SnowmanLeft>());
-                        shop.Add(ItemType<Items.Christmas.SnowmanRight>());
+                        shop.Add(ItemType<Items.Christmas.Snowman>());
                     }
                     break;
                 case NPCID.Painter:

@@ -1,4 +1,4 @@
-using DragonsDecorativeMod.Configuration;
+using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -7,11 +7,10 @@ using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Christmas
 {
-    public class SnowmanLeft : ModItem
+    public class Snowman : ModItem
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Snowman Left");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -28,19 +27,7 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 25);
-            Item.createTile = ModContent.TileType<Tiles.Christmas.SnowmanLeft>();
-        }
-
-        public override void AddRecipes()
-        {
-            if (!GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
-            {
-                return;
-            }
-
-            Recipe recipe = Recipe.Create(ItemType<SnowmanRight>());
-            recipe.AddIngredient(this);
-            recipe.Register();
+            Item.createTile = ModContent.TileType<Tiles.Christmas.Snowman>();
         }
     }
 }

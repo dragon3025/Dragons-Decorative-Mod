@@ -3,7 +3,7 @@ using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
 
-namespace DragonsDecorativeMod.Items.Garden
+namespace DragonsDecorativeMod.Items.Garden.Mushrooms
 {
     public class BrownMushroom : ModItem
     {
@@ -25,14 +25,8 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 1);
-            Item.createTile = ModContent.TileType<Tiles.Garden.Mushrooms>();
-            Item.placeStyle = 10;
-        }
-
-        public override bool? UseItem(Player player)
-        {
-            Item.placeStyle = Main.rand.Next(10, 15);
-            return base.UseItem(player);
+            Item.createTile = ModContent.TileType<Tiles.Garden.Mushrooms.BrownMushroom>();
+            Item.rare = ItemRarityID.White;
         }
     }
 }

@@ -5,20 +5,19 @@ using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
-namespace DragonsDecorativeMod.Items.Christmas
+namespace DragonsDecorativeMod.Items
 {
-    public class SnowmanRight : ModItem
+    public class MannequinHead : ModItem
     {
         public override void SetStaticDefaults()
         {
-            // DisplayName.SetDefault("Snowman Right");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
         {
-            Item.width = 28;
-            Item.height = 32;
+            Item.width = 20;
+            Item.height = 26;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
@@ -27,20 +26,20 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.value = Item.buyPrice(0, 0, 25);
-            Item.createTile = ModContent.TileType<Tiles.Christmas.SnowmanRight>();
+            Item.createTile = ModContent.TileType<Tiles.MannequinHead>();
         }
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
+            if (!GetInstance<DragonsDecoModConfig>().Other.MannequinHead)
             {
                 return;
             }
 
-            Recipe recipe = Recipe.Create(ItemType<SnowmanLeft>());
-            recipe.AddIngredient(this);
-            recipe.Register();
+            CreateRecipe()
+              .AddIngredient(ItemID.Wood, 5)
+              .AddTile(TileID.Sawmill)
+              .Register();
         }
     }
 }

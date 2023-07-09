@@ -5,8 +5,8 @@ Mods: {
 				DisplayName: Rubble Maker Pottery
 				Tooltip:
 					'''
-						Used with materials to place matching pottery
-						Press Up\/Down to cycle through styles
+					Used with materials to place matching pottery
+					Press Up/Down to cycle through styles
 					'''
 			}
 
@@ -25,13 +25,8 @@ Mods: {
 				Tooltip: Try painting it
 			}
 
-			SnowmanLeft: {
-				DisplayName: Snowman Left
-				Tooltip: ""
-			}
-
-			SnowmanRight: {
-				DisplayName: Snowman Right
+			Snowman: {
+				DisplayName: Snowman
 				Tooltip: ""
 			}
 
@@ -370,13 +365,8 @@ Mods: {
 				Tooltip: ""
 			}
 
-			MannequinHeadLeft: {
-				DisplayName: Left Mannequin Head
-				Tooltip: ""
-			}
-
-			MannequinHeadRight: {
-				DisplayName: Right Mannequin Head
+			MannequinHead: {
+				DisplayName: Mannequin Head
 				Tooltip: ""
 			}
 
@@ -538,8 +528,7 @@ Mods: {
 			Aquarium.MapEntry: Aquarium
 			BoxOfArrows.MapEntry: Box of Arrows
 			CandyCane.MapEntry: Lawn Candy Cane
-			SnowmanLeft.MapEntry: Snowman Left
-			SnowmanRight.MapEntry: Snowman Right
+			Snowman.MapEntry: Snowman
 			Easel.MapEntry: Easel
 			EasterBasket.MapEntry: Easter Basket
 			EasterEgg.MapEntry: Easter Egg
@@ -559,8 +548,7 @@ Mods: {
 			LargeKegRotated.MapEntry: Large Rotated Keg
 			LargePot.MapEntry: Large Pot
 			LuringToGold.MapEntry: Luring To Gold
-			MannequinHeadLeft.MapEntry: Mannequin Head
-			MannequinHeadRight.MapEntry: Mannequin Head
+			MannequinHead.MapEntry: Mannequin Head
 			MedusaWatching.MapEntry: Medusa Watching
 			FakeCrimsonAltar.MapEntry: Fake Crimson Altar
 			FakeCrimsonHeart.MapEntry: Fake Crimson Heart
@@ -729,7 +717,7 @@ Mods: {
 				}
 
 				Snowman: {
-					Label: "[i:DragonsDecorativeMod/SnowmanLeft] Snowman"
+					Label: "[i:DragonsDecorativeMod/Snowman] Snowman"
 					Tooltip: ""
 				}
 
@@ -860,7 +848,7 @@ Mods: {
 				}
 
 				MannequinHead: {
-					Label: "[i:DragonsDecorativeMod/MannequinHeadRight] Mannequin Head"
+					Label: "[i:DragonsDecorativeMod/MannequinHead] Mannequin Head"
 					Tooltip: ""
 				}
 
