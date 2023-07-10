@@ -35,7 +35,7 @@ namespace DragonsDecorativeMod.GlobalRecipes
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().Other.Aquarium)
+            if (!GetInstance<DragonsDecoModConfig>().Pets.Aquarium)
             {
                 return;
             }

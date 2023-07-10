@@ -2,7 +2,6 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
 {
     public class Other
     {
-        public bool Aquarium;
         public bool Balloons;
         public bool BoxOfArrows;
         public bool PaintBottle;
@@ -25,7 +24,6 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
 
         public Other()
         {
-            Aquarium = true;
             Balloons = true;
             BoxOfArrows = true;
             PaintBottle = true;
@@ -50,8 +48,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
         public override bool Equals(object obj)
         {
             if (obj is Other other)
-                return Aquarium == other.Aquarium &&
-                    Balloons == other.Balloons &&
+                return Balloons == other.Balloons &&
                     BoxOfArrows == other.BoxOfArrows &&
                     PaintBottle == other.PaintBottle &&
                     Easel == other.Easel &&
@@ -77,7 +74,6 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
         {
             return new
             {
-                Aquarium,
                 Balloons,
                 BoxOfArrows,
                 PaintBottle,

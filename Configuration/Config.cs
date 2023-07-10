@@ -20,6 +20,9 @@ namespace DragonsDecorativeMod.Configuration
         public DropDownBoxes.Garden Garden;
 
         [Expand(false)]
+        public DropDownBoxes.Pets Pets;
+
+        [Expand(false)]
         public DropDownBoxes.StPatricksDay StPatricksDay;
 
         [Expand(false)]
@@ -34,6 +37,7 @@ namespace DragonsDecorativeMod.Configuration
             Christmas = new DropDownBoxes.Christmas() { };
             Easter = new DropDownBoxes.Easter() { };
             Garden = new DropDownBoxes.Garden() { };
+            Pets = new DropDownBoxes.Pets() { };
             StPatricksDay = new DropDownBoxes.StPatricksDay() { };
             Signs = new DropDownBoxes.Signs() { };
             Other = new DropDownBoxes.Other() { };

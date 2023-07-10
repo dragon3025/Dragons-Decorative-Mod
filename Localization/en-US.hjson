@@ -522,6 +522,11 @@ Mods: {
 					balloon.
 					'''
 			}
+
+			OwlStand: {
+				DisplayName: Owl Stand
+				Tooltip: ""
+			}
 		}
 
 		Tiles: {
@@ -562,6 +567,7 @@ Mods: {
 			Shampoo.MapEntry: Shampoo
 			SkeletonModel.MapEntry: Skeleton Model
 			StaringStatue.MapEntry: Ned the Nosey
+			OwlStand.MapEntry: Owl Stand
 		}
 
 		Configs: {
@@ -605,6 +611,11 @@ Mods: {
 
 				Other: {
 					Label: Other
+					Tooltip: ""
+				}
+
+				Pets: {
+					Label: Pets
 					Tooltip: ""
 				}
 			}
@@ -787,11 +798,6 @@ Mods: {
 			}
 
 			Other: {
-				Aquarium: {
-					Label: "[i:DragonsDecorativeMod/Aquarium] Aquarium"
-					Tooltip: ""
-				}
-
 				Balloons: {
 					Label: "[i:DragonsDecorativeMod/BalloonsPaintable] Paintable Balloons"
 					Tooltip: Each balloon can be painted a different color.
@@ -884,6 +890,20 @@ Mods: {
 
 				MedusaWatching: {
 					Label: "[i:DragonsDecorativeMod/MedusaWatching] Medusa Watching"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+			}
+
+			Pets: {
+				Aquarium: {
+					Label: "[i:DragonsDecorativeMod/Aquarium] Aquarium"
+					Tooltip: ""
+				}
+
+				OwlStand: {
+					Label: "[i:DragonsDecorativeMod/OwlStand] Owl Stand"
 					Tooltip: ""
 				}
 
