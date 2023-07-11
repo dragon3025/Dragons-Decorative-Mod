@@ -40,7 +40,7 @@ namespace DragonsDecorativeMod.GlobalRecipes
                 return;
             }
 
-            Recipe recipe = Recipe.Create(ItemType<Items.Aquarium>());
+            Recipe recipe = Recipe.Create(ItemType<Items.Pets.Aquarium>());
             recipe.AddRecipeGroup("DragonsDecorativeMod:colorfulFish", 10);
             recipe.AddIngredient(ItemID.Terrarium);
             recipe.Register();
