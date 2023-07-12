@@ -32,7 +32,7 @@ namespace DragonsDecorativeMod.Items.Natural
             Item.value = Item.buyPrice(0, 25);
         }
 
-        public override void HoldItem(Player player)
+        public override void UpdateInventory(Player player)
         {
             bool hasValidBlock = false;
 
