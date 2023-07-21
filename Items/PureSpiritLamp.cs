@@ -30,19 +30,5 @@ namespace DragonsDecorativeMod.Items
             Item.value = Item.buyPrice(0, 0, 74);
             Item.createTile = ModContent.TileType<Tiles.PureSpiritLamp>();
         }
-
-        public override void AddRecipes()
-        {
-            if (!GetInstance<DragonsDecoModConfig>().Other.PureSpiritLamp)
-            {
-                return;
-            }
-
-            CreateRecipe()
-                .AddIngredient(ItemID.DjinnLamp)
-                .AddIngredient(ItemID.SoulofLight, 12)
-                .AddTile(TileID.MythrilAnvil)
-                .Register();
-        }
     }
 }

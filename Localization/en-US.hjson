@@ -2,7 +2,7 @@ Mods: {
 	DragonsDecorativeMod: {
 		Items: {
 			RubbleMakerPottery: {
-				DisplayName: Rubble Maker Pottery
+				DisplayName: Rubblemaker Pottery
 				Tooltip:
 					'''
 					Used with materials to place matching pottery
@@ -130,13 +130,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Planter: {
-				DisplayName: Planter
+			PlanterRound: {
+				DisplayName: Round Planter
 				Tooltip: ""
 			}
 
-			Planter2: {
-				DisplayName: Planter
+			PlanterLarge: {
+				DisplayName: Large Planter
 				Tooltip: ""
 			}
 
@@ -661,7 +661,7 @@ Mods: {
 				}
 
 				Planters: {
-					Label: "[i:DragonsDecorativeMod/Planter] Planters"
+					Label: "[i:DragonsDecorativeMod/PlanterRound] Planters"
 					Tooltip: ""
 				}
 
@@ -688,8 +688,8 @@ Mods: {
 					Label: "[i:DragonsDecorativeMod/RubbleMakerPottery] Fake Pots"
 					Tooltip:
 						'''
-						This is placed by a mod tool: "Rubble Maker (Pottery)",
-						which can be crafted to and from Rubble Maker.
+						This is placed by a mod tool: "Rubblemaker (Pottery)",
+						which can be crafted to and from Rubblemaker.
 						'''
 				}
 
