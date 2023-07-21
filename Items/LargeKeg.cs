@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Items
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.Wood, 21)
+              .AddRecipeGroup(RecipeGroupID.Wood, 21)
               .AddTile(TileID.Sawmill)
               .Register();
 
