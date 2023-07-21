@@ -7,7 +7,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Garden
 {
-    public class Planter2 : ModItem
+    public class PlanterLarge : ModItem
     {
         public override void SetStaticDefaults()
         {

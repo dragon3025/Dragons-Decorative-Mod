@@ -130,13 +130,13 @@ Mods: {
 				Tooltip: ""
 			}
 
-			Planter: {
-				DisplayName: Planter
+			PlanterRound: {
+				DisplayName: Round Planter
 				Tooltip: ""
 			}
 
-			Planter2: {
-				DisplayName: Planter
+			PlanterLarge: {
+				DisplayName: Large Planter
 				Tooltip: ""
 			}
 
@@ -661,7 +661,7 @@ Mods: {
 				}
 
 				Planters: {
-					Label: "[i:DragonsDecorativeMod/Planter] Planters"
+					Label: "[i:DragonsDecorativeMod/PlanterRound] Planters"
 					Tooltip: ""
 				}
 

@@ -37,11 +37,11 @@ namespace DragonsDecorativeMod.Tiles.Garden
 
             if (style == 0)
             {
-                yield return new Item(ModContent.ItemType<Items.Garden.Planter>());
+                yield return new Item(ModContent.ItemType<Items.Garden.PlanterRound>());
             }
             else
             {
-                yield return new Item(ModContent.ItemType<Items.Garden.Planter2>());
+                yield return new Item(ModContent.ItemType<Items.Garden.PlanterLarge>());
             }
         }
     }
