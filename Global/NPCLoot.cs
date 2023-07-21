@@ -22,6 +22,11 @@ namespace DragonsDecorativeMod.Global
             {
                 npcLoot.Add(ItemDropRule.Common(ItemType<Items.MedusaWatching>(), 25));
             }
+
+            if (npc.type == NPCID.DesertSpirit && furnitureConfig.Other.PureSpiritLamp)
+            {
+                npcLoot.Add(ItemDropRule.Common(ItemType<Items.PureSpiritLamp>(), 40));
+            }
         }
     }
 }
