@@ -39,8 +39,8 @@ namespace DragonsDecorativeMod.Items.Natural
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.ChlorophyteOre)
-              .AddTile(TileID.HeavyWorkBench)
+              .AddIngredient(ItemID.ChlorophyteOre, 10)
+              .AddTile(TileID.CrystalBall)
               .AddCondition(Condition.InGraveyard)
               .Register();
         }

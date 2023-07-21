@@ -38,7 +38,7 @@ namespace DragonsDecorativeMod.Items.Natural
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.Wood)
+              .AddRecipeGroup(RecipeGroupID.Wood, 10)
               .AddTile(TileID.HeavyWorkBench)
               .AddCondition(Condition.InGraveyard)
               .Register();
