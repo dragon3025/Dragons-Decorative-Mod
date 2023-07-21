@@ -184,23 +184,23 @@ namespace DragonsDecorativeMod.Tiles.Pets
 
             if (tile.TileColor != PaintID.NegativePaint)
             {
-                DrawSegment(textureAquariumFront, rectangleAquariumFront);
-                DrawSegment(textureAquariumNemo, rectangleAquariumNemo);
+                DrawSegment(textureAquariumBottomFeederAndCoral, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(texturePinkYellow, rectangleAquariumPinkYellow);
                 DrawSegment(textureSchoolOfFish, rectangleSchoolOfFish);
-                DrawSegment(textureAquariumBottomFeederAndCoral, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(textureAquariumGreen, rectangleAquariumGreen);
                 DrawSegment(textureAquariumBlueStripe, rectangleAquariumBlueStripe);
+                DrawSegment(textureAquariumNemo, rectangleAquariumNemo);
+                DrawSegment(textureAquariumFront, rectangleAquariumFront);
             }
             else
             {
-                DrawSegment(textureAquariumFrontNegative, rectangleAquariumFront);
-                DrawSegment(textureAquariumNemoNegative, rectangleAquariumNemo);
+                DrawSegment(textureAquariumBottomFeederAndCoralNegative, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(texturePinkYellowNegative, rectangleAquariumPinkYellow);
                 DrawSegment(textureSchoolOfFishNegative, rectangleSchoolOfFish);
-                DrawSegment(textureAquariumBottomFeederAndCoralNegative, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(textureAquariumGreenNegative, rectangleAquariumGreen);
                 DrawSegment(textureAquariumBlueStripeNegative, rectangleAquariumBlueStripe);
+                DrawSegment(textureAquariumNemoNegative, rectangleAquariumNemo);
+                DrawSegment(textureAquariumFrontNegative, rectangleAquariumFront);
             }
         }
     }
