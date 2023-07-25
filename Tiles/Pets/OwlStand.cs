@@ -22,6 +22,8 @@ namespace DragonsDecorativeMod.Tiles.Pets
             TileObjectData.newTile.Origin = new Point16(0, 2);
             TileObjectData.newTile.CoordinateHeights = new int[3] { 16, 16, 16 };
             TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.newTile.RandomStyleRange = 4;
+            TileObjectData.newTile.StyleMultiplier = 4;
             TileObjectData.addTile(Type);
 
             AnimationFrameHeight = 54;
@@ -88,6 +90,12 @@ namespace DragonsDecorativeMod.Tiles.Pets
                     } 
                 }
             }
+        }
+
+        public override bool PreDraw(int i, int j, SpriteBatch spriteBatch)
+        {
+            Tile tile = Main.tile[i, j];
+            tile.TileFrameX %= 36;
         }
     }
 }

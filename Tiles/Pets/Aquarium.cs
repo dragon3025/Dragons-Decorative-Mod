@@ -8,8 +8,6 @@ using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
-//TO-DO When 1.4.4 comes out for tModLoader, use the same graphic stretch affect that Terrariums have.
-
 namespace DragonsDecorativeMod.Tiles.Pets
 {
     public class Aquarium : ModTile
