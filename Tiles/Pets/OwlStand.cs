@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Graphics;
 using Terraria;
 using Terraria.Audio;
 using Terraria.DataStructures;
@@ -96,6 +97,7 @@ namespace DragonsDecorativeMod.Tiles.Pets
         {
             Tile tile = Main.tile[i, j];
             tile.TileFrameX %= 36;
+            return true;
         }
     }
 }
