@@ -38,7 +38,7 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override bool? UseItem(Player player)
         {
-            Item.placeStyle = Main.rand.Next(4);
+            Item.placeStyle = Main.rand.Next(4); //TO-DO Is this necessary?
             return base.UseItem(player);
         }
 

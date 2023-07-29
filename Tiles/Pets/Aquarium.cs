@@ -2,13 +2,10 @@
 using Microsoft.Xna.Framework.Graphics;
 using ReLogic.Content;
 using Terraria;
-using Terraria.GameContent.Drawing;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
-
-//TO-DO When 1.4.4 comes out for tModLoader, use the same graphic stretch affect that Terrariums have.
 
 namespace DragonsDecorativeMod.Tiles.Pets
 {
@@ -184,23 +181,23 @@ namespace DragonsDecorativeMod.Tiles.Pets
 
             if (tile.TileColor != PaintID.NegativePaint)
             {
-                DrawSegment(textureAquariumFront, rectangleAquariumFront);
-                DrawSegment(textureAquariumNemo, rectangleAquariumNemo);
+                DrawSegment(textureAquariumBottomFeederAndCoral, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(texturePinkYellow, rectangleAquariumPinkYellow);
                 DrawSegment(textureSchoolOfFish, rectangleSchoolOfFish);
-                DrawSegment(textureAquariumBottomFeederAndCoral, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(textureAquariumGreen, rectangleAquariumGreen);
                 DrawSegment(textureAquariumBlueStripe, rectangleAquariumBlueStripe);
+                DrawSegment(textureAquariumNemo, rectangleAquariumNemo);
+                DrawSegment(textureAquariumFront, rectangleAquariumFront);
             }
             else
             {
-                DrawSegment(textureAquariumFrontNegative, rectangleAquariumFront);
-                DrawSegment(textureAquariumNemoNegative, rectangleAquariumNemo);
+                DrawSegment(textureAquariumBottomFeederAndCoralNegative, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(texturePinkYellowNegative, rectangleAquariumPinkYellow);
                 DrawSegment(textureSchoolOfFishNegative, rectangleSchoolOfFish);
-                DrawSegment(textureAquariumBottomFeederAndCoralNegative, rectangleAquariumBottomFeederAndCoral);
                 DrawSegment(textureAquariumGreenNegative, rectangleAquariumGreen);
                 DrawSegment(textureAquariumBlueStripeNegative, rectangleAquariumBlueStripe);
+                DrawSegment(textureAquariumNemoNegative, rectangleAquariumNemo);
+                DrawSegment(textureAquariumFrontNegative, rectangleAquariumFront);
             }
         }
     }

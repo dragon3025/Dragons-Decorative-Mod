@@ -20,7 +20,7 @@ namespace DragonsDecorativeMod
             ModLoader.TryGetMod("Wikithis", out Mod wikithis);
             if (wikithis != null && !Main.dedServ)
             {
-                wikithis.Call("AddModURL", this, "https://terrariamods.fandom.com/wiki/Dragon%27s_Decorative_Mod/{}");
+                wikithis.Call("AddModURL", this, "https://terrariamods.wiki.gg/wiki/Dragon%27s_Decorative_Mod/{}");
             }
         }
     }
