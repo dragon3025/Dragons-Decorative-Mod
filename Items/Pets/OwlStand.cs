@@ -27,7 +27,27 @@ namespace DragonsDecorativeMod.Items.Pets
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
             Item.value = Item.sellPrice(0, 0, 10);
-            Item.createTile = ModContent.TileType<Tiles.Pets.OwlStand>();
+            Item.createTile = TileType<Tiles.Pets.OwlStand>();
+        }
+
+        public override bool CanUseItem(Player player)
+        {
+            switch (Main.rand.Next(4))
+            {
+                case 1:
+                    Item.createTile = TileType<Tiles.Pets.OwlStand>();
+                    break;
+                case 2:
+                    Item.createTile = TileType<Tiles.Pets.OwlStand2>();
+                    break;
+                case 3:
+                    Item.createTile = TileType<Tiles.Pets.OwlStand3>();
+                    break;
+                default:
+                    Item.createTile = TileType<Tiles.Pets.OwlStand4>();
+                    break;
+            }
+            return true;
         }
 
         public override void AddRecipes()

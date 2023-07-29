@@ -568,6 +568,9 @@ Mods: {
 			SkeletonModel.MapEntry: Skeleton Model
 			StaringStatue.MapEntry: Ned the Nosey
 			OwlStand.MapEntry: Owl Stand
+			OwlStand2.MapEntry: Owl Stand
+			OwlStand3.MapEntry: Owl Stand
+			OwlStand4.MapEntry: Owl Stand
 		}
 
 		Configs: {
