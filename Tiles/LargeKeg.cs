@@ -1,8 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -27,14 +28,14 @@ namespace DragonsDecorativeMod.Tiles
 
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Large Keg");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Large Keg");
             AddMapEntry(new Color(105, 75, 38), name);
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 32, ModContent.ItemType<Items.LargeKeg>());
+            yield return new Item(ModContent.ItemType<Items.LargeKeg>());
         }
     }
 }

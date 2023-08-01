@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -13,6 +14,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
     public class SingleTileFloweryPlant : ModTile
     {
         private Asset<Texture2D> overlayTexture;
+        private Asset<Texture2D> overlayTextureNegative;
 
         public override void SetStaticDefaults()
         {
@@ -29,8 +31,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.StyleMultiplier = 4;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Single Tile Flowery Plant");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Single Tile Flowery Plant");
             AddMapEntry(new Color(75, 98, 37), name);
 
             HitSound = SoundID.Grass;
@@ -39,13 +41,13 @@ namespace DragonsDecorativeMod.Tiles.Garden
             if (!Main.dedServ)
             {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/SingleTileFloweryPlantOverlay");
+                overlayTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/SingleTileFloweryPlantOverlayNegative");
             }
         }
 
-        public override bool Drop(int i, int j)
+        public override bool CanDrop(int i, int j)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 32, 48, ModContent.ItemType<Items.Garden.SingleTileFloweryPlant>());
-            return base.Drop(i, j);
+            return true;
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
@@ -57,13 +59,28 @@ namespace DragonsDecorativeMod.Tiles.Garden
                 offScreenAdjust = Vector2.Zero;
             }
 
+            Tile tile = Main.tile[i, j];
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
+            Texture2D texture;
+
+            if (tile.TileColor == PaintID.NegativePaint)
+            {
+                texture = overlayTextureNegative.Value;
+            }
+            else
+            {
+                texture = overlayTexture.Value;
+            }
+
             Color color = Lighting.GetColor(i, j);
 
-            Tile tile = Main.tile[i, j];
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
-
-            Texture2D texture = overlayTexture.Value;
 
             spriteBatch.Draw(texture, new Vector2(i * 16 - 8 - (int)Main.screenPosition.X, j * 16 - 30 - (int)Main.screenPosition.Y) + offScreenAdjust, new Rectangle(frameX, frameY, 32, 48), color, 0f, default, 1f, SpriteEffects.None, 0f);
         }

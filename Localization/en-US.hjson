@@ -1,0 +1,917 @@
+Mods: {
+	DragonsDecorativeMod: {
+		Items: {
+			RubbleMakerPottery: {
+				DisplayName: Rubblemaker Pottery
+				Tooltip:
+					'''
+					Used with materials to place matching pottery
+					Press Up/Down to cycle through styles
+					'''
+			}
+
+			Aquarium: {
+				DisplayName: Aquarium
+				Tooltip: ""
+			}
+
+			BoxOfArrows: {
+				DisplayName: Box of Arrows
+				Tooltip: ""
+			}
+
+			CandyCane: {
+				DisplayName: Lawn Candy Cane
+				Tooltip: Try painting it
+			}
+
+			Snowman: {
+				DisplayName: Snowman
+				Tooltip: ""
+			}
+
+			CloverDecal: {
+				DisplayName: Clover Decal
+				Tooltip: ""
+			}
+
+			Easel: {
+				DisplayName: Easel
+				Tooltip: ""
+			}
+
+			EasterBasket: {
+				DisplayName: Easter Basket
+				Tooltip: ""
+			}
+
+			EasterEgg: {
+				DisplayName: Easter Egg
+				Tooltip: ""
+			}
+
+			EasterEggSingleColor: {
+				DisplayName: Easter Egg (Single Color)
+				Tooltip: ""
+			}
+
+			PlasticEgg: {
+				DisplayName: Plastic Egg
+				Tooltip: ""
+			}
+
+			FourLeafCloverDecal: {
+				DisplayName: Four-Leaf Clover Decal
+				Tooltip: ""
+			}
+
+			BleedingCrownMushroom: {
+				DisplayName: Bleeding Crown Mushroom
+				Tooltip: ""
+			}
+
+			BonsaiTree: {
+				DisplayName: Bonsai Tree
+				Tooltip: "'Think only tree'"
+			}
+
+			BrownMushroom: {
+				DisplayName: Brown Mushroom
+				Tooltip: ""
+			}
+
+			Clover: {
+				DisplayName: Clover
+				Tooltip: ""
+			}
+
+			FloweryPlant: {
+				DisplayName: Flowery Plant
+				Tooltip: Try painting it
+			}
+
+			FourLeafClover: {
+				DisplayName: Four-Leaf Clover
+				Tooltip: ""
+			}
+
+			HangingFernPlant: {
+				DisplayName: Hanging Fern Plant
+				Tooltip: NOT AFFECTED BY WIND
+			}
+
+			HangingLeafyPlant: {
+				DisplayName: Hanging Leafy Plant
+				Tooltip: NOT AFFECTED BY WIND
+			}
+
+			HangingPlant: {
+				DisplayName: Hanging Plant
+				Tooltip: NOT AFFECTED BY WIND
+			}
+
+			Plant: {
+				DisplayName: Plant
+				Tooltip: ""
+			}
+
+			Plant2: {
+				DisplayName: Deathbell Plant
+				Tooltip: ""
+			}
+
+			Plant3: {
+				DisplayName: Plant
+				Tooltip: ""
+			}
+
+			Plant4: {
+				DisplayName: Plant
+				Tooltip: ""
+			}
+
+			PlanterRound: {
+				DisplayName: Round Planter
+				Tooltip: ""
+			}
+
+			PlanterLarge: {
+				DisplayName: Large Planter
+				Tooltip: ""
+			}
+
+			PottedCedarCorruption: {
+				DisplayName: Potted Corruption Cedar
+				Tooltip: ""
+			}
+
+			PottedCedarCrimson: {
+				DisplayName: Potted Crimson Cedar
+				Tooltip: ""
+			}
+
+			PottedCedarSnowy: {
+				DisplayName: Potted Snowy Cedar
+				Tooltip: ""
+			}
+
+			PottedMushroomTreeShort: {
+				DisplayName: Potted Short Mushroom Tree
+				Tooltip: Glows a different color when painted
+			}
+
+			PottedMushroomTreeTall: {
+				DisplayName: Potted Tall Mushroom Tree
+				Tooltip: Glows a different color when painted
+			}
+
+			PottedOasisPlant: {
+				DisplayName: Potted Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedOasisPlantCorruption: {
+				DisplayName: Potted Corrupt Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedOasisPlantCrimson: {
+				DisplayName: Potted Crimson Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedOasisPlantHallow: {
+				DisplayName: Potted Hollow Oasis Plant
+				Tooltip: ""
+			}
+
+			PottedPalmCorruption: {
+				DisplayName: Potted Corrupt Palm
+				Tooltip: ""
+			}
+
+			PottedPalmCrimson: {
+				DisplayName: Potted Crimson Palm
+				Tooltip: ""
+			}
+
+			PottedSmallCactus: {
+				DisplayName: Potted Small Cactus
+				Tooltip: ""
+			}
+
+			PottedSmallCactusCorruption: {
+				DisplayName: Potted Small Corruption Cactus
+				Tooltip: ""
+			}
+
+			PottedSmallCactusCrimson: {
+				DisplayName: Potted Small Crimson Cactus
+				Tooltip: ""
+			}
+
+			PottedSmallCactusHallow: {
+				DisplayName: Potted Small Hallow Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactus: {
+				DisplayName: Potted Tall Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactusCorrupt: {
+				DisplayName: Potted Tall Corrupt Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactusCrimson: {
+				DisplayName: Potted Tall Crimson Cactus
+				Tooltip: ""
+			}
+
+			PottedTallCactusHallow: {
+				DisplayName: Potted Tall Hallow Cactus
+				Tooltip: ""
+			}
+
+			PottedTreeCorruption: {
+				DisplayName: Potted Corruption Tree
+				Tooltip: ""
+			}
+
+			PottedTreeCrimson: {
+				DisplayName: Potted Crimson Tree
+				Tooltip: ""
+			}
+
+			PottedTreeSnowy: {
+				DisplayName: Potted Snowy Tree
+				Tooltip: ""
+			}
+
+			PottedXMasTree: {
+				DisplayName: Potted Christmas Tree
+				Tooltip: ""
+			}
+
+			PottedXMasTreeSnowy: {
+				DisplayName: Potted Christmas Tree Snowy
+				Tooltip: ""
+			}
+
+			RedMushroom: {
+				DisplayName: Red Mushroom
+				Tooltip: ""
+			}
+
+			SingleTileFloweryPlant: {
+				DisplayName: Single-Tile Flowery Plant
+				Tooltip: ""
+			}
+
+			SingleTilePlant: {
+				DisplayName: Single-Tile Plant
+				Tooltip: ""
+			}
+
+			SingleTilePlant2: {
+				DisplayName: Single-Tile Deathbell Plant
+				Tooltip: ""
+			}
+
+			SingleTilePlant3: {
+				DisplayName: Single-Tile Plant
+				Tooltip: ""
+			}
+
+			SingleTilePlant4: {
+				DisplayName: Single-Tile Plant
+				Tooltip: ""
+			}
+
+			Trellis: {
+				DisplayName: Trellis
+				Tooltip: ""
+			}
+
+			Vines: {
+				DisplayName: Wall Vines
+				Tooltip: ""
+			}
+
+			WallFlowers: {
+				DisplayName: Wall Flowers
+				Tooltip: Try painting them
+			}
+
+			WhiteMushroom: {
+				DisplayName: White Mushroom
+				Tooltip: ""
+			}
+
+			Globe: {
+				DisplayName: Globe
+				Tooltip: ""
+			}
+
+			GolfCart: {
+				DisplayName: Golf Cart
+				Tooltip: ""
+			}
+
+			HorizontalBook: {
+				DisplayName: Horizontal Book
+				Tooltip: ""
+			}
+
+			HorizontalBooksStacked: {
+				DisplayName: Horizontal Book Stacked
+				Tooltip: ""
+			}
+
+			HospitalBed: {
+				DisplayName: Hospital Bed
+				Tooltip: ""
+			}
+
+			LargeKeg: {
+				DisplayName: Large Keg
+				Tooltip: ""
+			}
+
+			LargeKegRotated: {
+				DisplayName: Large Rotated Keg
+				Tooltip: ""
+			}
+
+			LargePot: {
+				DisplayName: Large Pot
+				Tooltip: ""
+			}
+
+			Lectern: {
+				DisplayName: Lectern
+				Tooltip: ""
+			}
+
+			LecternWithBook: {
+				DisplayName: Lectern with Book
+				Tooltip: ""
+			}
+
+			LuringToGold: {
+				DisplayName: Luring To Gold
+				Tooltip: ""
+			}
+
+			MannequinHead: {
+				DisplayName: Mannequin Head
+				Tooltip: ""
+			}
+
+			MedusaWatching: {
+				DisplayName: Medusa Watching
+				Tooltip: ""
+			}
+
+			FakeCrimsonAltar: {
+				DisplayName: Fake Crimson Altar
+				Tooltip: Glows a different color when painted
+			}
+
+			FakeCrimsonHeart: {
+				DisplayName: Crimson Heart Object
+				Tooltip: Glows a different color when painted
+			}
+
+			FakeDemonAltar: {
+				DisplayName: Fake Demon Altar
+				Tooltip: Glows a different color when painted
+			}
+
+			FakeLarva: {
+				DisplayName: Fake Larva
+				Tooltip: ""
+			}
+
+			FakeShadowOrb: {
+				DisplayName: Shadow Orb Object
+				Tooltip: Glows a different color when painted
+			}
+
+			FallenLog: {
+				DisplayName: Fallen Log
+				Tooltip: ""
+			}
+
+			MysteriousTablet: {
+				DisplayName: Mysterious Tablet
+				Tooltip: ""
+			}
+
+			PeacefulPlanteraBulb: {
+				DisplayName: Peaceful Plantera Bulb
+				Tooltip: Glows a different color when painted
+			}
+
+			CorruptionPot.DisplayName: Corruption Pot
+			CrimsonPot.DisplayName: Crimson Pot
+			DungeonPot.DisplayName: Dungeon Pot
+			ForestPot.DisplayName: Forest Pot
+			FrozenPot.DisplayName: Frozen Pot
+			GranitePot.DisplayName: Granite Pot
+			JunglePot.DisplayName: Jungle Pot
+			LihzahrdPot.DisplayName: Lihzahrd Pot
+			MarblePot.DisplayName: Marble Pot
+			ObsidianPot.DisplayName: Obsidian Pot
+			PyramidPot.DisplayName: Pyramid Pot
+			SpiderPot.DisplayName: Spider Pot
+			UndergroundDesertPot.DisplayName: Underground Desert Pot
+
+			PaintBottleDouble: {
+				DisplayName: Double Paint Bottle
+				Tooltip: ""
+			}
+
+			PaintBottleSingle: {
+				DisplayName: Paint Bottle
+				Tooltip: ""
+			}
+
+			PaintBucket: {
+				DisplayName: Paint Bucket
+				Tooltip: Try painting it
+			}
+
+			PureSpiritLamp: {
+				DisplayName: Pure Spirit Lamp
+				Tooltip: ""
+			}
+
+			RopeCoilPlaceable: {
+				DisplayName: Placeable Rope Coil
+				Tooltip: ""
+			}
+
+			Shampoo: {
+				DisplayName: Shampoo
+				Tooltip: ""
+			}
+
+			SignBag: {
+				DisplayName: Bag Sign
+				Tooltip: ""
+			}
+
+			SignBook: {
+				DisplayName: Book Sign
+				Tooltip: ""
+			}
+
+			SignGreenCross: {
+				DisplayName: Green Cross Sign
+				Tooltip: ""
+			}
+
+			SignHeart: {
+				DisplayName: Heart Sign
+				Tooltip: ""
+			}
+
+			SignSwiss: {
+				DisplayName: Healthy Swiss Sign
+				Tooltip: ""
+			}
+
+			SkeletonModel: {
+				DisplayName: Skeleton Model
+				Tooltip: ""
+			}
+
+			StaringStatue: {
+				DisplayName: Ned the Nosey
+				Tooltip: ""
+			}
+
+			ThreadPlaceable: {
+				DisplayName: Placeable Thread
+				Tooltip: Try painting it
+			}
+
+			LightPaintable: {
+				DisplayName: Paintable Light
+				Tooltip: Glows a different color when painted
+			}
+
+			EasterBag: {
+				DisplayName: Easter Bag
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			BagOGreen: {
+				DisplayName: Bag o' Green
+				Tooltip: "{$CommonItemTooltip.RightClickToOpen}"
+			}
+
+			BalloonsPaintable: {
+				DisplayName: Paintable Balloons
+				Tooltip:
+					'''
+					Paint the bottom left tile to change the color of the center
+					balloon.
+					'''
+			}
+
+			OwlStand: {
+				DisplayName: Owl Stand
+				Tooltip: ""
+			}
+		}
+
+		Tiles: {
+			Aquarium.MapEntry: Aquarium
+			BoxOfArrows.MapEntry: Box of Arrows
+			CandyCane.MapEntry: Lawn Candy Cane
+			Snowman.MapEntry: Snowman
+			Easel.MapEntry: Easel
+			EasterBasket.MapEntry: Easter Basket
+			EasterEgg.MapEntry: Easter Egg
+			EasterEggSingleColor.MapEntry: Easter Egg (Single Color)
+			PlasticEgg.MapEntry: Plastic Egg
+			FloweryPlant.MapEntry: Flowery Plant
+			Plant.MapEntry: Plant
+			Planter.MapEntry: Planter
+			SingleTileFloweryPlant.MapEntry: Single Tile Flowery Plant
+			SingleTilePlant.MapEntry: Plant
+			Globe.MapEntry: Globe
+			GolfCart.MapEntry: Golf Cart
+			HorizontalBook.MapEntry: Book
+			HorizontalBooksStacked.MapEntry: Book
+			HospitalBed.MapEntry: Bed
+			LargeKeg.MapEntry: Large Keg
+			LargeKegRotated.MapEntry: Large Rotated Keg
+			LargePot.MapEntry: Large Pot
+			LuringToGold.MapEntry: Luring To Gold
+			MannequinHead.MapEntry: Mannequin Head
+			MedusaWatching.MapEntry: Medusa Watching
+			FakeCrimsonAltar.MapEntry: Fake Crimson Altar
+			FakeCrimsonHeart.MapEntry: Fake Crimson Heart
+			FakeDemonAltar.MapEntry: Fake Demon Altar
+			FakeLarva.MapEntry: Fake Larva
+			FakeShadowOrb.MapEntry: Fake Shadow Orb
+			MysteriousTablet.MapEntry: Mysterious Tablet
+			PeacefulPlanteraBulb.MapEntry: Peaceful Plantera Bulb
+			PaintBottleDouble.MapEntry: Paint Bottle
+			PaintBottleSingle.MapEntry: Paint Bottle
+			Shampoo.MapEntry: Shampoo
+			SkeletonModel.MapEntry: Skeleton Model
+			StaringStatue.MapEntry: Ned the Nosey
+			OwlStand.MapEntry: Owl Stand
+			OwlStand2.MapEntry: Owl Stand
+			OwlStand3.MapEntry: Owl Stand
+			OwlStand4.MapEntry: Owl Stand
+		}
+
+		Configs: {
+			DragonsDecoModConfig: {
+				DisplayName: Furniture
+
+				Garden: {
+					Tooltip: ""
+					Label: Garden
+				}
+
+				Natural: {
+					Label: Natural
+					Tooltip: ""
+				}
+
+				Christmas: {
+					Label: Christmas
+					Tooltip: ""
+				}
+
+				Easter: {
+					Label: Easter
+					Tooltip: ""
+				}
+
+				Paintings: {
+					Label: Miscellaneous Paintings
+					Tooltip: ""
+				}
+
+				StPatricksDay: {
+					Label: St Patricks Day
+					Tooltip: ""
+				}
+
+				Signs: {
+					Label: Signs
+					Tooltip: ""
+				}
+
+				Other: {
+					Label: Other
+					Tooltip: ""
+				}
+
+				Pets: {
+					Label: Pets
+					Tooltip: ""
+				}
+			}
+
+			Garden: {
+				BonsaiTree: {
+					Label: "[i:DragonsDecorativeMod/BonsaiTree] Bonsai Tree"
+					Tooltip: ""
+				}
+
+				Vines: {
+					Label: "[i:DragonsDecorativeMod/Vines] Wall Vines"
+					Tooltip: ""
+				}
+
+				WallFlowers: {
+					Label: "[i:DragonsDecorativeMod/WallFlowers] Wall Flowers"
+					Tooltip: ""
+				}
+
+				Trellis: {
+					Label: "[i:DragonsDecorativeMod/Trellis] Trellis"
+					Tooltip: ""
+				}
+
+				Clover: {
+					Label: "[i:DragonsDecorativeMod/Clover] Clover"
+					Tooltip: ""
+				}
+
+				HangingPlants: {
+					Label: "[i:DragonsDecorativeMod/HangingPlant] Hanging Plants"
+					Tooltip:
+						'''
+						tModLoader doesn't have wind swaying support for modded
+						2+ wide tiles.
+						'''
+				}
+
+				Mushrooms: {
+					Label: "[i:DragonsDecorativeMod/RedMushroom] Mushrooms"
+					Tooltip: ""
+				}
+
+				Planters: {
+					Label: "[i:DragonsDecorativeMod/PlanterRound] Planters"
+					Tooltip: ""
+				}
+
+				Plants: {
+					Label: "[i:DragonsDecorativeMod/Plant] Plants"
+					Tooltip: ""
+				}
+
+				PottedPlants: {
+					Label: "[i:DragonsDecorativeMod/PottedMushroomTreeTall] Potted Plants"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+
+				Headers: {
+					BlocksAndWalls: Blocks And Walls
+					Other: Other
+				}
+			}
+
+			Natural: {
+				Pots: {
+					Label: "[i:DragonsDecorativeMod/RubbleMakerPottery] Fake Pots"
+					Tooltip:
+						'''
+						This is placed by a mod tool: "Rubblemaker (Pottery)",
+						which can be crafted to and from Rubblemaker.
+						'''
+				}
+
+				AltarsShadowOrbAndCrimsonHeart: {
+					Label: "[i:DragonsDecorativeMod/FakeDemonAltar] Fake Altars, Shadow Orb, and Crimson Heart"
+					Tooltip: ""
+				}
+
+				FakeLarva: {
+					Label: "[i:DragonsDecorativeMod/FakeLarva] Fake Larva"
+					Tooltip: ""
+				}
+
+				FallenLog: {
+					Label: "[i:DragonsDecorativeMod/FallenLog] Fallen Log"
+					Tooltip: Places vanilla Fallen Log
+				}
+
+				PeacefulPlanteraBulb: {
+					Label: "[i:DragonsDecorativeMod/PeacefulPlanteraBulb] Peaceful Plantera Bulb"
+					Tooltip: ""
+				}
+
+				MysteriousTablet: {
+					Label: "[i:DragonsDecorativeMod/MysteriousTablet] Mysterious Tablet"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+			}
+
+			Christmas: {
+				CandyCane: {
+					Label: "[i:DragonsDecorativeMod/CandyCane] Lawn Candy Cane"
+					Tooltip: Glows a different color when painted
+				}
+
+				Snowman: {
+					Label: "[i:DragonsDecorativeMod/Snowman] Snowman"
+					Tooltip: ""
+				}
+
+				LightPaintable: {
+					Label: "[i:DragonsDecorativeMod/LightPaintable] Light Paintable"
+					Tooltip: Glows a different color when painted
+				}
+
+				Tooltip: ""
+			}
+
+			Easter: {
+				EasterBasket: {
+					Label: "[i:DragonsDecorativeMod/EasterBasket] Easter Basket"
+					Tooltip: ""
+				}
+
+				EasterEggs: {
+					Label: "[i:DragonsDecorativeMod/EasterEgg] Easter Eggs"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+			}
+
+			StPatricksDay: {
+				CloverDecal: {
+					Label: "[i:DragonsDecorativeMod/CloverDecal] Clover Decal"
+					Tooltip: ""
+				}
+
+				PaintingLuringToGold: {
+					Label: "[i:DragonsDecorativeMod/LuringToGold] Painting, Luring To Gold"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+			}
+
+			Signs: {
+				SignBag: {
+					Label: "[i:DragonsDecorativeMod/SignBag] BagSign"
+					Tooltip: ""
+				}
+
+				SignBook: {
+					Label: "[i:DragonsDecorativeMod/SignBook] BookSign"
+					Tooltip: ""
+				}
+
+				SignGreenCross: {
+					Label: "[i:DragonsDecorativeMod/SignGreenCross] Green Cross Sign"
+					Tooltip: ""
+				}
+
+				SignSwiss: {
+					Label: "[i:DragonsDecorativeMod/SignSwiss] Healthy Swiss Sign"
+					Tooltip: ""
+				}
+
+				SignHeart: {
+					Label: "[i:DragonsDecorativeMod/SignHeart] Heart Sign"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+			}
+
+			Other: {
+				Balloons: {
+					Label: "[i:DragonsDecorativeMod/BalloonsPaintable] Paintable Balloons"
+					Tooltip: Each balloon can be painted a different color.
+				}
+
+				BoxOfArrows: {
+					Label: "[i:DragonsDecorativeMod/BoxOfArrows] Box of Arrows"
+					Tooltip: ""
+				}
+
+				PaintBottle: {
+					Label: "[i:DragonsDecorativeMod/PaintBottleSingle] Paint Bottle"
+					Tooltip: ""
+				}
+
+				Easel: {
+					Label: "[i:DragonsDecorativeMod/Easel] Easel"
+					Tooltip: ""
+				}
+
+				Globe: {
+					Label: "[i:DragonsDecorativeMod/Globe] Globe"
+					Tooltip: ""
+				}
+
+				GolfCart: {
+					Label: "[i:DragonsDecorativeMod/GolfCart] Golf Cart"
+					Tooltip: ""
+				}
+
+				HorizontalBook: {
+					Label: "[i:DragonsDecorativeMod/HorizontalBook] Horizontal Book"
+					Tooltip: ""
+				}
+
+				HospitalBed: {
+					Label: "[i:DragonsDecorativeMod/HospitalBed] Hospital Bed"
+					Tooltip: ""
+				}
+
+				LargeKeg: {
+					Label: "[i:DragonsDecorativeMod/LargeKeg] Large Keg"
+					Tooltip: ""
+				}
+
+				LargePot: {
+					Label: "[i:DragonsDecorativeMod/LargePot] Large Pot"
+					Tooltip: ""
+				}
+
+				Lectern: {
+					Label: "[i:DragonsDecorativeMod/Lectern] Lectern"
+					Tooltip: ""
+				}
+
+				MannequinHead: {
+					Label: "[i:DragonsDecorativeMod/MannequinHead] Mannequin Head"
+					Tooltip: ""
+				}
+
+				StaringStatue: {
+					Label: "[i:DragonsDecorativeMod/StaringStatue] Ned the Nosey"
+					Tooltip: ""
+				}
+
+				PaintBucket: {
+					Label: "[i:DragonsDecorativeMod/PaintBucket] Paint Bucket"
+					Tooltip: ""
+				}
+
+				PureSpiritLamp: {
+					Label: "[i:DragonsDecorativeMod/PureSpiritLamp] Pure Spirit Bottle"
+					Tooltip: ""
+				}
+
+				RopeCoilPlaceable: {
+					Label: "[i:DragonsDecorativeMod/RopeCoilPlaceable] Placeable Rope Coil"
+					Tooltip: ""
+				}
+
+				SkeletonModel: {
+					Label: "[i:DragonsDecorativeMod/SkeletonModel] Skeleton Model"
+					Tooltip: ""
+				}
+
+				ThreadPlaceable: {
+					Label: "[i:DragonsDecorativeMod/ThreadPlaceable] Placeable Thread"
+					Tooltip: ""
+				}
+
+				MedusaWatching: {
+					Label: "[i:DragonsDecorativeMod/MedusaWatching] Medusa Watching"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+			}
+
+			Pets: {
+				Aquarium: {
+					Label: "[i:DragonsDecorativeMod/Aquarium] Aquarium"
+					Tooltip: ""
+				}
+
+				OwlStand: {
+					Label: "[i:DragonsDecorativeMod/OwlStand] Owl Stand"
+					Tooltip: ""
+				}
+
+				Tooltip: ""
+			}
+		}
+	}
+}

@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
@@ -15,6 +16,7 @@ namespace DragonsDecorativeMod.Tiles.Signs
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.FramesOnKillWall[Type] = true;
 
             // Defaults
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
@@ -59,9 +61,9 @@ namespace DragonsDecorativeMod.Tiles.Signs
             TileID.Sets.DisableSmartCursor[Type] = true;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Signs.SignHeart>());
+            yield return new Item(ModContent.ItemType<Items.Signs.SignHeart>());
         }
     }
 }

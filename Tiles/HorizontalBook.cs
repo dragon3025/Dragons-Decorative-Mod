@@ -2,7 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
-using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -26,14 +26,18 @@ namespace DragonsDecorativeMod.Tiles
 
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Book");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Book");
             AddMapEntry(new Color(170, 48, 114), name);
         }
 
-        public override bool Drop(int i, int j)
+        public override bool CreateDust(int i, int j, ref int type)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ItemID.Book);
+            return false;
+        }
+
+        public override bool CanDrop(int i, int j)
+        {
             return true;
         }
     }

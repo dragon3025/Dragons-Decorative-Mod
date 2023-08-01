@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,14 +11,14 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Placeable Rope Coil");
+            // DisplayName.SetDefault("Placeable Rope Coil");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
         public override void SetDefaults()
         {
-            Item.width = 30;
-            Item.height = 26;
+            Item.width = 32;
+            Item.height = 24;
             Item.maxStack = 9999;
             Item.useTurn = true;
             Item.autoReuse = true;
@@ -32,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().RopeCoilPlaceable)
+            if (!GetInstance<DragonsDecoModConfig>().Other.RopeCoilPlaceable)
             {
                 return;
             }

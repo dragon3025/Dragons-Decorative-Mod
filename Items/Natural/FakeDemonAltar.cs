@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fake Demon Altar");
+            // DisplayName.SetDefault("Fake Demon Altar");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -31,15 +32,15 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().AltarsShadowOrbAndCrimsonHeart)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.AltarsShadowOrbAndCrimsonHeart)
             {
                 return;
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.EbonstoneBlock)
+              .AddIngredient(ItemID.EbonstoneBlock, 12)
               .AddTile(TileID.CrystalBall)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

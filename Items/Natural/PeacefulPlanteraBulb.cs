@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Peaceful Plantera Bulb");
+            // DisplayName.SetDefault("Peaceful Plantera Bulb");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -32,15 +33,15 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().PeacefulPlanteraBulb)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.PeacefulPlanteraBulb)
             {
                 return;
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.ChlorophyteOre)
-              .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddIngredient(ItemID.ChlorophyteOre, 10)
+              .AddTile(TileID.CrystalBall)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

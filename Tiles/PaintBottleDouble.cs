@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -24,8 +25,8 @@ namespace DragonsDecorativeMod.Tiles
 
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Paint Bottle");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Paint Bottle");
             AddMapEntry(new Color(255, 64, 0), name);
             AddMapEntry(new Color(127, 255, 0), name);
             AddMapEntry(new Color(0, 127, 255), name);
@@ -33,14 +34,18 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(127, 127, 127), name);
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override ushort GetMapOption(int i, int j)
         {
             return (ushort)(Main.tile[i, j].TileFrameX / 18);
         }
 
-        public override bool Drop(int i, int j)
+        public override bool CanDrop(int i, int j)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.PaintBottleDouble>());
             return true;
         }
     }

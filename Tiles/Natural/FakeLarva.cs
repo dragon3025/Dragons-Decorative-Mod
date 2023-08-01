@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -21,14 +21,30 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
             AnimationFrameHeight = 54;
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Fake Larva");
+            LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(224, 194, 101), name);
+            HitSound = SoundID.NPCDeath1;
         }
 
         public override bool CreateDust(int i, int j, ref int type)
         {
             return false;
+        }
+
+        public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        {
+            for (int n = 0; n < 90; n++)
+            {
+                int dust = 153;
+                if (Main.rand.NextBool(3))
+                {
+                    dust = 26;
+                }
+                Dust.NewDustDirect(new Vector2(i * 16, j * 16), 48, 48, dust);
+            }
+            Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), default, 300);
+            Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), default, 301);
+            Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), default, 302);
         }
 
         public override void AnimateTile(ref int frame, ref int frameCounter)
@@ -40,11 +56,6 @@ namespace DragonsDecorativeMod.Tiles.Natural
                 frame++;
                 frame %= 4;
             }
-        }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 48, 48, ItemID.BeeWax);
         }
     }
 }

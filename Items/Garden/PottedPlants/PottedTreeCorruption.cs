@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Garden.PottedPlants
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Potted Corruption Tree");
+            // DisplayName.SetDefault("Potted Corruption Tree");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -26,7 +26,7 @@ namespace DragonsDecorativeMod.Items.Garden.PottedPlants
             Item.consumable = true;
             Item.value = Item.sellPrice(0, 0, 60);
             Item.createTile = ModContent.TileType<Tiles.Garden.PottedPlants.PottedTrees>();
-            Item.placeStyle = 3;
+            Item.placeStyle = 1;
         }
     }
 }

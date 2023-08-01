@@ -5,6 +5,7 @@ using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -13,6 +14,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
     public class FloweryPlant : ModTile
     {
         private Asset<Texture2D> overlayTexture;
+        private Asset<Texture2D> overlayTextureNegative;
 
         public override void SetStaticDefaults()
         {
@@ -27,8 +29,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
             TileObjectData.newTile.StyleMultiplier = 4;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Flowery Plant");
+            LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(75, 98, 37), name);
 
             HitSound = SoundID.Grass;
@@ -37,16 +38,19 @@ namespace DragonsDecorativeMod.Tiles.Garden
             if (!Main.dedServ)
             {
                 overlayTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/FloweryPlantOverlay");
+                overlayTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Garden/FloweryPlantOverlayNegative");
             }
-        }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.Garden.FloweryPlant>());
         }
 
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
+            Tile tile = Main.tile[i, j];
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
             Vector2 offScreenAdjust = new(Main.offScreenRange, Main.offScreenRange);
 
             if (Main.drawToScreen)
@@ -54,13 +58,21 @@ namespace DragonsDecorativeMod.Tiles.Garden
                 offScreenAdjust = Vector2.Zero;
             }
 
+            Texture2D texture;
+
+            if (tile.TileColor == PaintID.NegativePaint)
+            {
+                texture = overlayTextureNegative.Value;
+            }
+            else
+            {
+                texture = overlayTexture.Value;
+            }
+
             Color color = Lighting.GetColor(i, j);
 
-            Tile tile = Main.tile[i, j];
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
-
-            Texture2D texture = overlayTexture.Value;
 
             spriteBatch.Draw(texture, new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 + 2 - (int)Main.screenPosition.Y) + offScreenAdjust, new Rectangle(frameX, frameY, 16, 16), color, 0f, default, 1f, SpriteEffects.None, 0f);
         }

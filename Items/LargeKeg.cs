@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Large Keg");
+            // DisplayName.SetDefault("Large Keg");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -32,13 +33,13 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().LargeKeg)
+            if (!GetInstance<DragonsDecoModConfig>().Other.LargeKeg)
             {
                 return;
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.Wood, 21)
+              .AddRecipeGroup(RecipeGroupID.Wood, 21)
               .AddTile(TileID.Sawmill)
               .Register();
 

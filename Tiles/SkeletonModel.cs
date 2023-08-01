@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -27,14 +29,19 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.addAlternate(1);
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Skeleton Model");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Skeleton Model");
             AddMapEntry(new Color(255, 255, 255), name);
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override bool CreateDust(int i, int j, ref int type)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.SkeletonModel>());
+            return false;
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ModContent.ItemType<Items.SkeletonModel>());
         }
     }
 }

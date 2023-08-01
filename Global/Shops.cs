@@ -1,7 +1,7 @@
-using DragonsDecorativeMod.Items;
+using DragonsDecorativeMod.Configuration;
 using DragonsDecorativeMod.Items.Garden;
+using DragonsDecorativeMod.Items.Garden.Mushrooms;
 using Terraria;
-using Terraria.GameContent.Bestiary;
 using Terraria.ID;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
@@ -11,149 +11,85 @@ namespace DragonsDecorativeMod.Global
     public class Shops : GlobalNPC
     {
 
-        public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        public override void ModifyShop(NPCShop shop)
         {
-            switch (type)
+            switch (shop.NpcType)
             {
                 case NPCID.Merchant:
-                    if (GetInstance<BFurnitureConfig>().Globe)
+                    if (GetInstance<DragonsDecoModConfig>().Other.Globe)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Globe>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Globe>());
                     }
                     break;
                 case NPCID.Dryad:
-                    if (GetInstance<BFurnitureConfig>().Clover)
+                    if (GetInstance<DragonsDecoModConfig>().Garden.Clover)
                     {
-                        Player player = Main.LocalPlayer;
-                        if (player.luckPotion > 0)
-                        {
-                            shop.item[nextSlot].SetDefaults(ItemType<Clover>());
-                            nextSlot++;
-                        }
+                        shop.Add(ItemType<Clover>());
+                        shop.Add(ItemType<FourLeafClover>());
                     }
 
-                    if (GetInstance<BFurnitureConfig>().Plants)
+                    if (GetInstance<DragonsDecoModConfig>().Garden.Plants)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant2>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant3>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<Plant4>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<FloweryPlant>());
-                        nextSlot++;
+                        shop.Add(ItemType<Plant>());
+                        shop.Add(ItemType<Plant2>());
+                        shop.Add(ItemType<Plant3>());
+                        shop.Add(ItemType<Plant4>());
+                        shop.Add(ItemType<FloweryPlant>());
                     }
 
-                    if (GetInstance<BFurnitureConfig>().BonsaiTree)
+                    if (GetInstance<DragonsDecoModConfig>().Garden.BonsaiTree)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<BonsaiTree>());
-                        nextSlot++;
+                        shop.Add(ItemType<BonsaiTree>());
                     }
 
-                    if (GetInstance<BFurnitureConfig>().Mushrooms)
+                    if (GetInstance<DragonsDecoModConfig>().Garden.Mushrooms)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<BleedingCrownMushroom>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<BrownMushroom>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<RedMushroom>());
-                        nextSlot++;
-
-                        shop.item[nextSlot].SetDefaults(ItemType<WhiteMushroom>());
-                        nextSlot++;
+                        shop.Add(ItemType<BleedingCrownMushroom>());
+                        shop.Add(ItemType<BrownMushroom>());
+                        shop.Add(ItemType<RedMushroom>());
+                        shop.Add(ItemType<WhiteMushroom>());
                     }
 
                     break;
                 case NPCID.SantaClaus:
-                    if (GetInstance<BFurnitureConfig>().ChristmasLights)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightCyan>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightOrange>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightPink>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightPurple>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightWhite>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.LightYellow>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }
 
-                    if (GetInstance<BFurnitureConfig>().CandyCane)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.CandyCane)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.CandyCane>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Christmas.CandyCane>());
                     }
 
-                    if (GetInstance<BFurnitureConfig>().Snowman)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.SnowmanLeft>());
-                        nextSlot++;
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Christmas.SnowmanRight>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Christmas.Snowman>());
                     }
-
                     break;
                 case NPCID.Painter:
-                    if (GetInstance<BFurnitureConfig>().PaintingLuringToGold)
+                    if (GetInstance<DragonsDecoModConfig>().Other.PaintBottle)
                     {
-                        Player player = Main.LocalPlayer;
-                        if (player.luckPotion > 0)
-                        {
-                            shop.item[nextSlot].SetDefaults(ItemType<Items.LuringToGold>());
-                            nextSlot++;
-                        }
-                    }
-                    if (GetInstance<BFurnitureConfig>().PaintBottle)
-                    {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.PaintBottleSingle>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.PaintBottleSingle>());
                     }
                     break;
                 case NPCID.PartyGirl:
-                    if (GetInstance<BFurnitureConfig>().CloverDecal)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable && Main.halloween)
                     {
-                        Player player = Main.LocalPlayer;
-                        if (player.luckPotion > 0)
-                        {
-                            shop.item[nextSlot].SetDefaults(ItemType<Items.CloverDecal>());
-                            nextSlot++;
-                        }
-                    }
-                    break;
-                case NPCID.BestiaryGirl:
-                    BestiaryUnlockProgressReport bestiaryProgressReport = Main.GetBestiaryProgressReport();
-                    if (bestiaryProgressReport.CompletionPercent >= 0.5f)
-                    {
-                        shop.item[nextSlot].SetDefaults(ItemType<MoonGlobe>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }
                     break;
                 case NPCID.Truffle:
-                    if (GetInstance<BFurnitureConfig>().PottedPlants)
+                    if (GetInstance<DragonsDecoModConfig>().Garden.PottedPlants)
                     {
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeShort>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeShort>());
 
-                        shop.item[nextSlot].SetDefaults(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
-                        nextSlot++;
+                        shop.Add(ItemType<Items.Garden.PottedPlants.PottedMushroomTreeTall>());
                     }
 
                     break;
                 case NPCID.Stylist:
-                    shop.item[nextSlot].SetDefaults(ItemType<Items.Shampoo>());
-                    nextSlot++;
+                    shop.Add(ItemType<Items.Shampoo>());
                     break;
             }
         }

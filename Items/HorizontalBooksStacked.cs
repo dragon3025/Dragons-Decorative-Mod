@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Horizontal Book Stacked");
+            // DisplayName.SetDefault("Horizontal Book Stacked");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -32,7 +33,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().HorizontalBook)
+            if (!GetInstance<DragonsDecoModConfig>().Other.HorizontalBook)
             {
                 return;
             }

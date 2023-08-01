@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Signs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Book Sign");
+            // DisplayName.SetDefault("Book Sign");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -31,7 +32,7 @@ namespace DragonsDecorativeMod.Items.Signs
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().SignBook)
+            if (!GetInstance<DragonsDecoModConfig>().Signs.SignBook)
             {
                 return;
             }

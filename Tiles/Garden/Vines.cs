@@ -10,14 +10,11 @@ namespace DragonsDecorativeMod.Tiles.Garden
         public override void SetStaticDefaults()
         {
             Main.tileLavaDeath[Type] = true;
-            DustType = DustID.Grass;
 
             AddMapEntry(new Color(30, 94, 33));
 
             HitSound = SoundID.Grass;
             DustType = DustID.Grass;
-
-            ItemDrop = ModContent.ItemType<Items.Garden.Vines>();
         }
     }
 }

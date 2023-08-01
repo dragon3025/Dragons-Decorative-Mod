@@ -9,7 +9,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Ned the Nosey");
+            // DisplayName.SetDefault("Ned the Nosey");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.value = 0;
+            Item.value = Item.sellPrice(0, 0, 0, 60);
             Item.createTile = ModContent.TileType<Tiles.StaringStatue>();
             Item.placeStyle = 0;
         }

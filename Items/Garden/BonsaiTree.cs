@@ -9,8 +9,8 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bonsai Tree");
-            Tooltip.SetDefault("'Think only tree'");
+            // DisplayName.SetDefault("Bonsai Tree");
+            // Tooltip.SetDefault("'Think only tree'");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -12,7 +13,7 @@ namespace DragonsDecorativeMod.Items.Signs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Bag Sign");
+            // DisplayName.SetDefault("Bag Sign");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -33,7 +34,7 @@ namespace DragonsDecorativeMod.Items.Signs
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().SignBag)
+            if (!GetInstance<DragonsDecoModConfig>().Signs.SignBag)
             {
                 return;
             }

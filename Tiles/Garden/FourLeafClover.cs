@@ -1,6 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -17,7 +16,7 @@ namespace DragonsDecorativeMod.Tiles.Garden
 
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style1x1);
-            TileObjectData.newTile.CoordinateHeights = new int[1] { 18 };
+            TileObjectData.newTile.CoordinateHeights = new int[1] { 16 };
             TileObjectData.newTile.StyleHorizontal = true;
             TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.newTile.RandomStyleRange = 6;
@@ -34,9 +33,8 @@ namespace DragonsDecorativeMod.Tiles.Garden
             DustType = DustID.Grass;
         }
 
-        public override bool Drop(int i, int j)
+        public override bool CanDrop(int i, int j)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Garden.FourLeafClover>());
             return true;
         }
     }

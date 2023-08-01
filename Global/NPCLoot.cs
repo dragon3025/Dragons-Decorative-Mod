@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.ItemDropRules;
 using Terraria.ID;
@@ -8,36 +9,23 @@ namespace DragonsDecorativeMod.Global
 {
     public class NPCLoot : GlobalNPC
     {
+        readonly static DragonsDecoModConfig furnitureConfig = GetInstance<DragonsDecoModConfig>();
+
         public override void ModifyNPCLoot(NPC npc, Terraria.ModLoader.NPCLoot npcLoot)
         {
-            if (GetInstance<BFurnitureConfig>().StaringStatue)
+            if (npc.type == NPCID.Ghost && furnitureConfig.Other.StaringStatue)
             {
-                return;
+                npcLoot.Add(ItemDropRule.Common(ItemType<Items.StaringStatue>(), 50));
             }
 
+            if (npc.type == NPCID.Medusa && furnitureConfig.Other.MedusaWatching)
             {
-                if (npc.type == NPCID.Ghost)
-                {
-                    npcLoot.Add(ItemDropRule.Common(ItemType<Items.StaringStatue>(), 50));
-                }
+                npcLoot.Add(ItemDropRule.Common(ItemType<Items.MedusaWatching>(), 25));
             }
 
-            if (GetInstance<BFurnitureConfig>().MedusaWatching)
+            if (npc.type == NPCID.DesertDjinn && furnitureConfig.Other.PureSpiritLamp)
             {
-                if (npc.type == NPCID.Medusa)
-                {
-                    npcLoot.Add(ItemDropRule.Common(ItemType<Items.MedusaWatching>(), 25));
-                }
-            }
-
-            if (GetInstance<BFurnitureConfig>().MysteriousTablet)
-            {
-                if (npc.type == NPCID.MoonLordCore)
-                {
-                    LeadingConditionRule ruleNotExpert = new LeadingConditionRule(new Conditions.NotExpert());
-                    ruleNotExpert.OnSuccess(ItemDropRule.Common(ItemType<Items.Natural.MysteriousTablet>(), 5));
-                    npcLoot.Add(ruleNotExpert);
-                }
+                npcLoot.Add(ItemDropRule.Common(ItemType<Items.PureSpiritLamp>(), 40));
             }
         }
     }

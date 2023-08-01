@@ -2,7 +2,6 @@ using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
-using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Easter
 {
@@ -10,7 +9,7 @@ namespace DragonsDecorativeMod.Items.Easter
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Easter Egg");
+            // DisplayName.SetDefault("Easter Egg");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -26,22 +25,8 @@ namespace DragonsDecorativeMod.Items.Easter
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.value = Item.sellPrice(0, 0, 7, 50);
             Item.createTile = ModContent.TileType<Tiles.Easter.EasterEgg>();
-        }
-
-        public override void AddRecipes()
-        {
-            if (!GetInstance<BFurnitureConfig>().EasterEgg)
-            {
-                return;
-            }
-
-            CreateRecipe(20)
-              .AddIngredient(ItemID.RottenEgg, 20)
-              .AddIngredient(ItemID.LifeCrystal)
-              .AddTile(TileID.DemonAltar)
-              .Register();
+            Item.value = Item.sellPrice(0, 0, 0, 60);
         }
     }
 }

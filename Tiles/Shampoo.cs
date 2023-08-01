@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -26,8 +27,8 @@ namespace DragonsDecorativeMod.Tiles
 
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Shampoo");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Shampoo");
             AddMapEntry(new Color(255, 89, 248), name);
             AddMapEntry(new Color(255, 89, 132), name);
             AddMapEntry(new Color(255, 118, 89), name);
@@ -38,14 +39,14 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(99, 89, 255), name);
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override ushort GetMapOption(int i, int j)
         {
             return (ushort)(Main.tile[i, j].TileFrameX / 18);
-        }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 16, 32, ModContent.ItemType<Items.Shampoo>());
         }
     }
 }

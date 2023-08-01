@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Easel");
+            // DisplayName.SetDefault("Easel");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -31,7 +32,7 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().Easel)
+            if (!GetInstance<DragonsDecoModConfig>().Other.Easel)
             {
                 return;
             }

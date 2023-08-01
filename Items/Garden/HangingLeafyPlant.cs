@@ -9,8 +9,8 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Hanging Leafy Plant");
-            Tooltip.SetDefault("NOT AFFECTED BY WIND");
+            // DisplayName.SetDefault("Hanging Leafy Plant");
+            // Tooltip.SetDefault("NOT AFFECTED BY WIND");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 

@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Clover");
+            // DisplayName.SetDefault("Clover");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -26,18 +27,18 @@ namespace DragonsDecorativeMod.Items.Garden
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 1);
-            Item.createTile = ModContent.TileType<Tiles.Garden.Clover>();
+            Item.createTile = TileType<Tiles.Garden.Clover>();
         }
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().Clover)
+            if (!GetInstance<DragonsDecoModConfig>().Garden.Clover)
             {
                 return;
             }
 
             CreateRecipe()
-              .AddIngredient(ModContent.ItemType<Items.Garden.FourLeafClover>())
+              .AddIngredient(ItemType<FourLeafClover>())
               .Register();
         }
     }

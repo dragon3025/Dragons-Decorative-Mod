@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Pure Spirit Lamp");
+            // DisplayName.SetDefault("Pure Spirit Lamp");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -28,20 +29,6 @@ namespace DragonsDecorativeMod.Items
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 74);
             Item.createTile = ModContent.TileType<Tiles.PureSpiritLamp>();
-        }
-
-        public override void AddRecipes()
-        {
-            if (!GetInstance<BFurnitureConfig>().PureSpiritLamp)
-            {
-                return;
-            }
-
-            CreateRecipe()
-                .AddIngredient(ItemID.DjinnLamp)
-                .AddIngredient(ItemID.SoulofLight, 12)
-                .AddTile(TileID.MythrilAnvil)
-                .Register();
         }
     }
 }

@@ -6,10 +6,10 @@ Open Source at GitHub. Report issues there or at home page.
 
 NOTE: "Shop Expander" mod is recommended and may be necessary for shop items to appear.
 
-This mod adds decorative items with configuration settings to disable them. I plan to keep adding to it. As of version 1.25 (March 20th 2023) it has:
+This mod adds decorative objects with configuration settings to disable them. I plan to keep adding to it. As of version 1.25 (March 20th 2023) it has:
 
 - "WikiThis" mod support
-- Placeable versions of vanilla tiles
-- 76 Non-vanilla Tiles
+- Placeable versions of non-placeable vanilla tiles
+- Many other tiles.
 
 You can find example pictures and a link to the wiki on the forum page.

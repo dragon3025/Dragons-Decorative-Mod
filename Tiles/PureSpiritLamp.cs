@@ -25,6 +25,11 @@ namespace DragonsDecorativeMod.Tiles
             AddMapEntry(new Color(168, 145, 127));
         }
 
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
+        }
+
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             if (frame == 0 && frameCounter == 0 && !Main.rand.NextBool(1800)) //30 Real-Life Seconds.
@@ -39,11 +44,6 @@ namespace DragonsDecorativeMod.Tiles
                 frame++;
                 frame %= 11;
             }
-        }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, ModContent.ItemType<Items.PureSpiritLamp>());
         }
     }
 }

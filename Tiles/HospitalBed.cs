@@ -36,9 +36,14 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.addTile(Type);
 
             // Etc
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Bed");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Bed");
             AddMapEntry(new Color(191, 142, 111), name);
+        }
+
+        public override bool CreateDust(int i, int j, ref int type)
+        {
+            return false;
         }
 
         public override bool HasSmartInteract(int i, int j, SmartInteractScanSettings settings)
@@ -55,16 +60,6 @@ namespace DragonsDecorativeMod.Tiles
         public override void ModifySleepingTargetInfo(int i, int j, ref TileRestingInfo info)
         {
             info.VisualOffset.Y += 0f;
-        }
-
-        public override void NumDust(int i, int j, bool fail, ref int num)
-        {
-            num = 1;
-        }
-
-        public override void KillMultiTile(int i, int j, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 64, 32, ModContent.ItemType<Items.HospitalBed>());
         }
 
         public override bool RightClick(int i, int j)

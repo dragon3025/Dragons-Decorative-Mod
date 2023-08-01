@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Signs
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Healthy Swiss Sign");
+            // DisplayName.SetDefault("Healthy Swiss Sign");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -31,7 +32,7 @@ namespace DragonsDecorativeMod.Items.Signs
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().SignSwiss)
+            if (!GetInstance<DragonsDecoModConfig>().Signs.SignSwiss)
             {
                 return;
             }

@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,8 +11,8 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Single-Tile Plant");
-            Tooltip.SetDefault("Fits in a 1x1 Space");
+            // DisplayName.SetDefault("Single-Tile Plant");
+            // Tooltip.SetDefault("Fits in a 1x1 Space");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -34,7 +35,7 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().Plants)
+            if (!GetInstance<DragonsDecoModConfig>().Garden.Plants)
             {
                 return;
             }

@@ -1,6 +1,6 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
@@ -21,76 +21,144 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.newTile.StyleWrapLimit = 3;
             TileObjectData.addTile(Type);
 
-            AddMapEntry(new Color(127, 127, 127));
+            AddMapEntry(new Color(128, 128, 128));
+        }
+
+        public override bool KillSound(int i, int j, bool fail)
+        {
+            //Sounds from breaking pots found at WorldGen.cs > public static void CheckPot > line 48511
+            HitSound = SoundID.Shatter;
+            Tile tile = Main.tile[i, j];
+            int frame = tile.TileFrameY / 36;
+            if (frame > 6 && frame < 10)
+            {
+                HitSound = SoundID.Grass;
+            }
+            else if (frame > 15 && frame < 23)
+            {
+                HitSound = SoundID.NPCDeath1;
+            }
+            return true;
         }
 
         public override bool CreateDust(int i, int j, ref int type)
         {
-            return false;
+            //Dust from pots found at WorldGen.cs > public static int KillTile_MakeTileDust > line 59908
+
+            Tile tile = Main.tile[i, j];
+            int frame = tile.TileFrameY / 36;
+
+            if (frame < 2)
+            {
+                DustType = DustID.Clay;
+            }
+            else if (frame < 3)
+            {
+                DustType = DustID.Stone;
+            }
+            else if (frame < 4)
+            {
+                DustType = DustID.Clay;
+            }
+            else if (frame < 7)
+            {
+                DustType = DustID.Cobalt;
+            }
+            else if (frame < 10)
+            {
+                DustType = 85;
+            }
+            else if (frame < 13)
+            {
+                DustType = DustID.Bone;
+            }
+            else if (frame < 16)
+            {
+                DustType = DustID.Ash;
+            }
+            else if (frame < 22)
+            {
+                DustType = DustID.CorruptGibs;
+            }
+            else if (frame < 23)
+            {
+                DustType = DustID.Blood;
+            }
+            else if (frame < 24)
+            {
+                DustType = DustID.Dirt;
+            }
+            else if (frame < 27)
+            {
+                DustType = DustID.DesertPot;
+            }
+            else if (frame < 29)
+            {
+                DustType = DustID.t_Lihzahrd;
+            }
+            else if (frame < 30)
+            {
+                DustType = DustID.MarblePot;
+            }
+            else
+            {
+                DustType = DustID.Granite;
+            }
+            return true;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
+            Tile tile = Main.tile[i, j];
+            int frame = tile.TileFrameY / 36;
 
-            int item = 0;
-            int frame = frameY / 36;
-
-            if (frame <= 3)
+            if (frame < 4)
             {
-                item = ItemID.ClayBlock;
+                yield return new Item(ItemID.ClayBlock);
             }
-            else if (frame <= 6)
+            else if (frame < 7)
             {
-                item = ItemID.IceBlock;
+                yield return new Item(ItemID.IceBlock);
             }
-            else if (frame <= 9)
+            else if (frame < 10)
             {
-                item = ItemID.MudBlock;
+                yield return new Item(ItemID.MudBlock);
             }
-            else if (frame <= 12)
+            else if (frame < 13)
             {
-                item = ItemID.Bone;
+                yield return new Item(ItemID.Bone);
             }
-            else if (frame <= 15)
+            else if (frame < 16)
             {
-                item = ItemID.Obsidian;
+                yield return new Item(ItemID.Obsidian);
             }
-            else if (frame <= 18)
+            else if (frame < 19)
             {
-                item = ItemID.EbonstoneBlock;
+                yield return new Item(ItemID.EbonstoneBlock);
             }
-            else if (frame <= 21)
+            else if (frame < 22)
             {
-                item = ItemID.Cobweb;
+                yield return new Item(ItemID.Cobweb);
             }
-            else if (frame <= 24)
+            else if (frame < 23)
             {
-                item = ItemID.CrimstoneBlock;
+                yield return new Item(ItemID.CrimstoneBlock);
             }
-            else if (frame <= 27)
+            else if (frame < 27)
             {
-                item = ItemID.Sandstone;
+                yield return new Item(ItemID.Sandstone);
             }
-            else if (frame <= 30)
+            else if (frame < 29)
             {
-                item = ItemID.LihzahrdBrick;
+                yield return new Item(ItemID.LihzahrdBrick);
             }
-            else if (frame <= 33)
+            else if (frame < 30)
             {
-                item = ItemID.MarbleBlock;
+                yield return new Item(ItemID.Marble);
             }
-            else if (frame <= 36)
+            else
             {
-                item = ItemID.Sandstone;
-            }
-            else if (frame <= 39)
-            {
-                item = ItemID.GraniteBlock;
-            }
-
-            if (item > 0)
-            {
-                Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 32, item);
+                yield return new Item(ItemID.Granite);
             }
         }
     }

@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -12,7 +13,7 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Trellis");
+            // DisplayName.SetDefault("Trellis");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -33,7 +34,7 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void AddRecipes()
         {
-            if (!GetInstance<ABlocksWallsConfig>().Trellis)
+            if (!GetInstance<DragonsDecoModConfig>().Garden.Trellis)
             {
                 return;
             }

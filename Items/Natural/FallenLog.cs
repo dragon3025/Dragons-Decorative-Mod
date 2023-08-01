@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fallen Log");
+            // DisplayName.SetDefault("Fallen Log");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -31,15 +32,15 @@ namespace DragonsDecorativeMod.Items.Natural
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().FallenLog)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.FallenLog)
             {
                 return;
             }
 
             CreateRecipe()
-              .AddIngredient(ItemID.Wood)
+              .AddRecipeGroup(RecipeGroupID.Wood, 10)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

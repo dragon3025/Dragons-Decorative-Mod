@@ -4,6 +4,7 @@ using ReLogic.Content;
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -13,6 +14,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
     {
         private Asset<Texture2D> overlayInnerTexture;
         private Asset<Texture2D> overlayOuterTexture;
+        private Asset<Texture2D> overlayInnerTextureNegative;
+        private Asset<Texture2D> overlayOuterTextureNegative;
 
         public override void SetStaticDefaults()
         {
@@ -29,8 +32,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.newTile.DrawYOffset = 0;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Mysterious Tablet");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Mysterious Tablet");
             AddMapEntry(new Color(160, 122, 87), name);
             DustType = DustID.GoldFlame;
 
@@ -38,6 +41,8 @@ namespace DragonsDecorativeMod.Tiles.Natural
             {
                 overlayInnerTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayInner");
                 overlayOuterTexture = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayOuter");
+                overlayInnerTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayInnerNegative");
+                overlayOuterTextureNegative = ModContent.Request<Texture2D>("DragonsDecorativeMod/Tiles/Natural/MysteriousTabletOverlayOuterNegative");
             }
         }
 
@@ -52,11 +57,6 @@ namespace DragonsDecorativeMod.Tiles.Natural
             }
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 64, 64, ModContent.ItemType<Items.Natural.MysteriousTablet>());
-        }
-
         public override void ModifyLight(int i, int j, ref float r, ref float g, ref float b)
         {
             r = 0.8f;
@@ -64,9 +64,26 @@ namespace DragonsDecorativeMod.Tiles.Natural
             b = 0.55f;
         }
 
+        public override void KillMultiTile(int i, int j, int frameX, int frameY)
+        {
+
+            int goreIDAdjust;
+            for (int k = 0; k < 6; k = goreIDAdjust + 1)
+            {
+                Gore.NewGore(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i * 16, j * 16), Vector2.UnitY.RotatedByRandom(6.2831854820251465) * 5f, 728 + k);
+                goreIDAdjust = k;
+            }
+        }
+
         public override void PostDraw(int i, int j, SpriteBatch spriteBatch)
         {
             Tile tile = Main.tile[i, j];
+
+            if (tile.IsTileInvisible && !Main.ShouldShowInvisibleWalls())
+            {
+                return;
+            }
+
             short frameX = tile.TileFrameX;
             short frameY = tile.TileFrameY;
 
@@ -81,8 +98,19 @@ namespace DragonsDecorativeMod.Tiles.Natural
 
             int frameYOffset = Main.tileFrame[ModContent.TileType<MysteriousTablet>()];
 
-            Texture2D textureInner = overlayInnerTexture.Value;
-            Texture2D textureOuter = overlayOuterTexture.Value;
+            Texture2D textureInner;
+            Texture2D textureOuter;
+
+            if (tile.TileColor == PaintID.NegativePaint)
+            {
+                textureInner = overlayInnerTextureNegative.Value;
+                textureOuter = overlayOuterTextureNegative.Value;
+            }
+            else
+            {
+                textureInner = overlayInnerTexture.Value;
+                textureOuter = overlayOuterTexture.Value;
+            }
 
             spriteBatch.Draw(textureInner,
                 new Vector2(i * 16 - (int)Main.screenPosition.X, j * 16 - (int)Main.screenPosition.Y) + offScreenAdjust,
@@ -95,7 +123,7 @@ namespace DragonsDecorativeMod.Tiles.Natural
                 textureOuter,
                 new Vector2(i * 16 - 2 - (int)Main.screenPosition.X, j * 16 - 36 - (int)Main.screenPosition.Y) + offScreenAdjust,
                 new Rectangle(0, 96 * frameYOffset, 66, 96),
-                new Color(255, 255, 255), 0f, default, 1f, SpriteEffects.None, 0f);
+                color, 0f, default, 1f, SpriteEffects.None, 0f);
             }
         }
     }

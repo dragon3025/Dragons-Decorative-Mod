@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -15,7 +16,7 @@ namespace DragonsDecorativeMod.Items.Garden
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wall Vines");
+            // DisplayName.SetDefault("Wall Vines");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -37,13 +38,12 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override bool? UseItem(Player player)
         {
-            Item.placeStyle = Main.rand.Next(4);
             return base.UseItem(player);
         }
 
         public override void AddRecipes()
         {
-            if (!GetInstance<ABlocksWallsConfig>().Vines)
+            if (!GetInstance<DragonsDecoModConfig>().Garden.Vines)
             {
                 return;
             }

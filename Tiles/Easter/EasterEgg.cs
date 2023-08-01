@@ -2,6 +2,7 @@
 using Terraria;
 using Terraria.DataStructures;
 using Terraria.Enums;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -23,14 +24,18 @@ namespace DragonsDecorativeMod.Tiles.Easter
             TileObjectData.newTile.StyleMultiplier = 8;
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Easter Egg");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Easter Egg");
             AddMapEntry(new Color(219, 219, 219), name);
         }
 
-        public override bool Drop(int i, int j)
+        public override bool CreateDust(int i, int j, ref int type)
         {
-            Item.NewItem(new EntitySource_TileBreak(i, j), i * 16, j * 16, 16, 16, ModContent.ItemType<Items.Easter.EasterEgg>());
+            return false;
+        }
+
+        public override bool CanDrop(int i, int j)
+        {
             return true;
         }
     }

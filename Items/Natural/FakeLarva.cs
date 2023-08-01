@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -10,7 +11,7 @@ namespace DragonsDecorativeMod.Items.Natural
     {
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Fake Larva");
+            // DisplayName.SetDefault("Fake Larva");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -26,20 +27,21 @@ namespace DragonsDecorativeMod.Items.Natural
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.HoldUp;
             Item.consumable = true;
-            Item.createTile = ModContent.TileType<Tiles.Natural.FakeLarva>();
+            Item.createTile = TileType<Tiles.Natural.FakeLarva>();
         }
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().FakeLarva)
+            if (!GetInstance<DragonsDecoModConfig>().Natural.FakeLarva)
             {
                 return;
             }
 
             CreateRecipe()
+              .AddIngredient(ItemID.Abeemination)
               .AddIngredient(ItemID.BeeWax)
               .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Recipe.Condition.InGraveyardBiome)
+              .AddCondition(Condition.InGraveyard)
               .Register();
         }
     }

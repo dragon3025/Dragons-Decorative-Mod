@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
@@ -34,12 +35,12 @@ namespace DragonsDecorativeMod.GlobalRecipes
 
         public override void AddRecipes()
         {
-            if (!GetInstance<BFurnitureConfig>().Aquarium)
+            if (!GetInstance<DragonsDecoModConfig>().Pets.Aquarium)
             {
                 return;
             }
 
-            Recipe recipe = Recipe.Create(ItemType<Items.Aquarium>());
+            Recipe recipe = Recipe.Create(ItemType<Items.Pets.Aquarium>());
             recipe.AddRecipeGroup("DragonsDecorativeMod:colorfulFish", 10);
             recipe.AddIngredient(ItemID.Terrarium);
             recipe.Register();

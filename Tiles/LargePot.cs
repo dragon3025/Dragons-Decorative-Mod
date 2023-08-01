@@ -1,7 +1,6 @@
 using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
-using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -18,16 +17,14 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
             TileObjectData.addTile(Type);
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Large Pot");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Large Pot");
             AddMapEntry(new Color(82, 82, 82), name);
-
-            DustType = DustID.Iron;
         }
 
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
+        public override bool CreateDust(int i, int j, ref int type)
         {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 32, 16, ModContent.ItemType<Items.LargePot>());
+            return false;
         }
     }
 }

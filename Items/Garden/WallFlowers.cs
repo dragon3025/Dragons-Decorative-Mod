@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
@@ -12,8 +13,8 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void SetStaticDefaults()
         {
-            DisplayName.SetDefault("Wall Flowers");
-            Tooltip.SetDefault("Try painting them");
+            // DisplayName.SetDefault("Wall Flowers");
+            // Tooltip.SetDefault("Try painting them");
             CreativeItemSacrificesCatalog.Instance.SacrificeCountNeededByItemId[Type] = 1;
         }
 
@@ -35,7 +36,7 @@ namespace DragonsDecorativeMod.Items.Garden
 
         public override void AddRecipes()
         {
-            if (!GetInstance<ABlocksWallsConfig>().WallFlowers)
+            if (!GetInstance<DragonsDecoModConfig>().Garden.WallFlowers)
             {
                 return;
             }

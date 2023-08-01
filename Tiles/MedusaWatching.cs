@@ -1,7 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
-using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 
@@ -14,6 +14,7 @@ namespace DragonsDecorativeMod.Tiles
             Main.tileFrameImportant[Type] = true;
             Main.tileNoAttach[Type] = true;
             Main.tileLavaDeath[Type] = true;
+            TileID.Sets.FramesOnKillWall[Type] = true;
 
             TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
             TileObjectData.newTile.Height = 4;
@@ -22,8 +23,8 @@ namespace DragonsDecorativeMod.Tiles
 
             AnimationFrameHeight = 72;
 
-            ModTranslation name = CreateMapEntryName();
-            name.SetDefault("Medusa Watching");
+            LocalizedText name = CreateMapEntryName();
+            // name.SetDefault("Medusa Watching");
             AddMapEntry(new Color(58, 62, 53), name);
 
             DustType = DustID.WoodFurniture;
@@ -75,11 +76,6 @@ namespace DragonsDecorativeMod.Tiles
         public override void AnimateTile(ref int frame, ref int frameCounter)
         {
             frame = look_direction;
-        }
-
-        public override void KillMultiTile(int x, int y, int frameX, int frameY)
-        {
-            Item.NewItem(new EntitySource_TileBreak(x, y), x * 16, y * 16, 96, 64, ModContent.ItemType<Items.MedusaWatching>());
         }
     }
 }
