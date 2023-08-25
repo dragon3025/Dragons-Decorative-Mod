@@ -2,7 +2,7 @@ Mods: {
 	DragonsDecorativeMod: {
 		Items: {
 			RubbleMakerPottery: {
-				DisplayName: Rubblemaker Pottery
+				DisplayName: Rubblemaker (Pottery)
 				Tooltip:
 					'''
 					Used with materials to place matching pottery
@@ -46,12 +46,12 @@ Mods: {
 			}
 
 			EasterEgg: {
-				DisplayName: Easter Egg
+				DisplayName: Colorful Easter Egg
 				Tooltip: ""
 			}
 
 			EasterEggSingleColor: {
-				DisplayName: Easter Egg (Single Color)
+				DisplayName: Easter Egg
 				Tooltip: ""
 			}
 
@@ -256,7 +256,7 @@ Mods: {
 			}
 
 			PottedXMasTreeSnowy: {
-				DisplayName: Potted Christmas Tree Snowy
+				DisplayName: Potted Snowy Christmas Tree
 				Tooltip: ""
 			}
 
@@ -326,7 +326,7 @@ Mods: {
 			}
 
 			HorizontalBooksStacked: {
-				DisplayName: Horizontal Book Stacked
+				DisplayName: Horizontal Stacked Books
 				Tooltip: ""
 			}
 
@@ -356,7 +356,7 @@ Mods: {
 			}
 
 			LecternWithBook: {
-				DisplayName: Lectern with Book
+				DisplayName: Lectern with a Book
 				Tooltip: ""
 			}
 
@@ -536,8 +536,8 @@ Mods: {
 			Snowman.MapEntry: Snowman
 			Easel.MapEntry: Easel
 			EasterBasket.MapEntry: Easter Basket
-			EasterEgg.MapEntry: Easter Egg
-			EasterEggSingleColor.MapEntry: Easter Egg (Single Color)
+			EasterEgg.MapEntry: Colorful Easter Egg
+			EasterEggSingleColor.MapEntry: Easter Egg
 			PlasticEgg.MapEntry: Plastic Egg
 			FloweryPlant.MapEntry: Flowery Plant
 			Plant.MapEntry: Plant
