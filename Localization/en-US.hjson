@@ -450,7 +450,7 @@ Mods: {
 			}
 
 			RopeCoilPlaceable: {
-				DisplayName: Placeable Rope Coil
+				DisplayName: Decorative Rope Coil
 				Tooltip: ""
 			}
 
@@ -495,7 +495,7 @@ Mods: {
 			}
 
 			ThreadPlaceable: {
-				DisplayName: Placeable Thread
+				DisplayName: Decorative Thread
 				Tooltip: Try painting it
 			}
 
@@ -877,7 +877,7 @@ Mods: {
 				}
 
 				RopeCoilPlaceable: {
-					Label: "[i:DragonsDecorativeMod/RopeCoilPlaceable] Placeable Rope Coil"
+					Label: "[i:DragonsDecorativeMod/RopeCoilPlaceable] Decorative Rope Coil"
 					Tooltip: ""
 				}
 
@@ -887,7 +887,7 @@ Mods: {
 				}
 
 				ThreadPlaceable: {
-					Label: "[i:DragonsDecorativeMod/ThreadPlaceable] Placeable Thread"
+					Label: "[i:DragonsDecorativeMod/ThreadPlaceable] Decorative Thread"
 					Tooltip: ""
 				}
 
