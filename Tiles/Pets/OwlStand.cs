@@ -39,7 +39,7 @@ namespace DragonsDecorativeMod.Tiles.Pets
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            if (closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
+            if (!Main.gamePaused && Main.instance.IsActive && closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
             {
                 SoundEngine.PlaySound(SoundID.Owl, new Vector2(i, j).ToWorldCoordinates());
             }
@@ -126,7 +126,7 @@ namespace DragonsDecorativeMod.Tiles.Pets
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            if (closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
+            if (!Main.gamePaused && Main.instance.IsActive && closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
             {
                 SoundEngine.PlaySound(SoundID.Owl, new Vector2(i, j).ToWorldCoordinates());
             }
@@ -213,7 +213,7 @@ namespace DragonsDecorativeMod.Tiles.Pets
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            if (closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
+            if (!Main.gamePaused && Main.instance.IsActive && closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
             {
                 SoundEngine.PlaySound(SoundID.Owl, new Vector2(i, j).ToWorldCoordinates());
             }
@@ -300,7 +300,7 @@ namespace DragonsDecorativeMod.Tiles.Pets
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            if (closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
+            if (!Main.gamePaused && Main.instance.IsActive && closer && Main.rand.NextBool(36000)) //About 1 every 10 real minutes.
             {
                 SoundEngine.PlaySound(SoundID.Owl, new Vector2(i, j).ToWorldCoordinates());
             }
