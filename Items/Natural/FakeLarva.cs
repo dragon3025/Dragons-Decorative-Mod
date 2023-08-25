@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items.Natural
             Item.rare = ItemRarityID.Blue;
             Item.useAnimation = 15;
             Item.useTime = 15;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.createTile = TileType<Tiles.Natural.FakeLarva>();
         }

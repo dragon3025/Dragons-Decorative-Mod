@@ -24,7 +24,7 @@ namespace DragonsDecorativeMod.Items.StPatricksDay
             Item.rare = ItemRarityID.White;
             Item.useAnimation = 15;
             Item.useTime = 15;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 0, 50);
             Item.createTile = TileType<Tiles.StPatricksDay.CloverDecal>();

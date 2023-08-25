@@ -23,7 +23,7 @@ namespace DragonsDecorativeMod.Items.Easter
             Item.rare = ItemRarityID.White;
             Item.useAnimation = 15;
             Item.useTime = 15;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<Tiles.Easter.PlasticEgg>();
             Item.value = Item.sellPrice(0, 0, 0, 60);

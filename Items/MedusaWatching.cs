@@ -23,7 +23,7 @@ namespace DragonsDecorativeMod.Items
             Item.rare = ItemRarityID.Orange;
             Item.useAnimation = 15;
             Item.useTime = 15;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.sellPrice(0, 0, 2);
             Item.createTile = ModContent.TileType<Tiles.MedusaWatching>();

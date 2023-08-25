@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items.Natural
             Item.rare = ItemRarityID.White;
             Item.useAnimation = 15;
             Item.useTime = 15;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.createTile = ModContent.TileType<Tiles.Natural.FakeShadowOrb>();
         }

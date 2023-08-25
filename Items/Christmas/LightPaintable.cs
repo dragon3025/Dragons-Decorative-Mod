@@ -23,7 +23,7 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.rare = ItemRarityID.White;
             Item.useAnimation = 15;
             Item.useTime = 15;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 5);
             Item.createTile = ModContent.TileType<Tiles.Christmas.LightPaintable>();

@@ -29,7 +29,7 @@ namespace DragonsDecorativeMod.Items.Natural
             Item.rare = ItemRarityID.Red;
             Item.useAnimation = 15;
             Item.useTime = 15;
-            Item.useStyle = ItemUseStyleID.HoldUp;
+            Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = 0;
             Item.createTile = ModContent.TileType<Tiles.Natural.MysteriousTablet>();
