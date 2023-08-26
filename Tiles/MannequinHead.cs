@@ -26,7 +26,6 @@ namespace DragonsDecorativeMod.Tiles
             TileObjectData.newTile.StyleMultiplier = 7;
             TileObjectData.newTile.Direction = TileObjectDirection.PlaceLeft;
 
-
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.Direction = TileObjectDirection.PlaceRight;
             TileObjectData.addAlternate(7);
