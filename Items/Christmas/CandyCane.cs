@@ -28,6 +28,7 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 10);
             Item.createTile = ModContent.TileType<Tiles.Christmas.CandyCane>();
+            Item.mech = true;
         }
     }
 }

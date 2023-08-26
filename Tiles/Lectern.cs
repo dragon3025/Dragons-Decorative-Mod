@@ -1,6 +1,7 @@
 ﻿using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.Audio;
 using Terraria.DataStructures;
 using Terraria.ID;
 using Terraria.ModLoader;
@@ -31,17 +32,65 @@ namespace DragonsDecorativeMod.Tiles
         public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
             Tile tile = Main.tile[i, j];
-            int style = TileObjectData.GetTileStyle(tile);
+            int tileFrameX = tile.TileFrameX / 36;
 
-            if (style == 0)
+            yield return new Item(ModContent.ItemType<Items.Lectern>());
+            if (tileFrameX > 0)
             {
-                yield return new Item(ModContent.ItemType<Items.Lectern>());
-            }
-            else
-            {
-                yield return new Item(ModContent.ItemType<Items.Lectern>());
                 yield return new Item(ItemID.Book);
             }
+        }
+
+        public override bool RightClick(int i, int j)
+        {
+            Player player = Main.LocalPlayer;
+            bool toggleStyle = false;
+
+            Tile tile = Main.tile[i, j];
+            int tileFrameX = tile.TileFrameX / 36;
+
+            if (tileFrameX == 0 && player.HasItem(ItemID.Book))
+            {
+                player.ConsumeItem(ItemID.Book, true);
+                toggleStyle = true;
+            }
+            else if (tileFrameX == 1)
+            {
+                Item.NewItem(WorldGen.GetItemSource_FromTileBreak(i, j), new Vector2(i, j) * 16, ItemID.Book);
+                SoundEngine.PlaySound(SoundID.Dig, new Vector2(i, j).ToWorldCoordinates());
+                toggleStyle = true;
+            }
+
+            if (toggleStyle)
+            {
+                int topX = i - tile.TileFrameX % 36 / 18;
+                int topY = j - tile.TileFrameY % 54 / 18;
+
+                short frameAdjustment = (short)(tile.TileFrameX >= 36 ? -36 : 36);
+
+                for (int x = topX; x < topX + 2; x++)
+                {
+                    for (int y = topY; y < topY + 3; y++)
+                    {
+                        Main.tile[x, y].TileFrameX += frameAdjustment;
+                    }
+                }
+
+                if (Main.netMode != NetmodeID.SinglePlayer)
+                {
+                    NetMessage.SendTileSquare(-1, topX, topY, 2, 3);
+                }
+            }
+
+            return toggleStyle;
+        }
+
+        public override void MouseOver(int i, int j)
+        {
+            Player player = Main.LocalPlayer;
+            player.noThrow = 2;
+            player.cursorItemIconEnabled = true;
+            player.cursorItemIconID = ItemID.Book;
         }
     }
 }

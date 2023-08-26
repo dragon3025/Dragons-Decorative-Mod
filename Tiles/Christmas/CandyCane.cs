@@ -38,21 +38,37 @@ namespace DragonsDecorativeMod.Tiles.Christmas
         public override void HitWire(int i, int j)
         {
             Tile tile = Main.tile[i, j];
-            int topY = j - tile.TileFrameY / 18 % 3;
-            short frameAdjustment = (short)(tile.TileFrameX > 71 ? -72 : 72);
 
-            Main.tile[i, topY].TileFrameX += frameAdjustment;
-            Main.tile[i, topY + 1].TileFrameX += frameAdjustment;
-            Main.tile[i, topY + 2].TileFrameX += frameAdjustment;
+            if (tile.TileFrameY >= 18)
+            {
+                int tileFrameX = tile.TileFrameX / 18;
+                if (tileFrameX == 0 || tileFrameX == 3 || tileFrameX == 4 || tileFrameX == 7)
+                {
+                    return;
+                }
+            }
 
-            Wiring.SkipWire(i, topY);
-            Wiring.SkipWire(i, topY + 1);
-            Wiring.SkipWire(i, topY + 2);
+            int topX = i - tile.TileFrameX % 36 / 18;
+            int topY = j - tile.TileFrameY % 54 / 18;
 
-            // Avoid trying to send packets in singleplayer.
+            short frameAdjustment = (short)(tile.TileFrameX >= 72 ? -72 : 72);
+
+            for (int x = topX; x < topX + 2; x++)
+            {
+                for (int y = topY; y < topY + 3; y++)
+                {
+                    Main.tile[x, y].TileFrameX += frameAdjustment;
+
+                    if (Wiring.running)
+                    {
+                        Wiring.SkipWire(x, y);
+                    }
+                }
+            }
+
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
-                NetMessage.SendTileSquare(-1, i, topY + 1, 3, TileChangeType.None);
+                NetMessage.SendTileSquare(-1, topX, topY, 2, 3);
             }
         }
 
