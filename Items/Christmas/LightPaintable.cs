@@ -1,7 +1,9 @@
+using DragonsDecorativeMod.Configuration;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
 using Terraria.ModLoader;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Items.Christmas
 {
@@ -27,6 +29,26 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 5);
             Item.createTile = ModContent.TileType<Tiles.Christmas.LightPaintable>();
+        }
+
+        public override void AddRecipes()
+        {
+            if (!GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable)
+            {
+                return;
+            }
+
+            Recipe recipe = Recipe.Create(ItemType<LightPaintable>());
+            recipe.AddIngredient(ItemID.RedLight);
+            recipe.Register();
+
+            recipe = Recipe.Create(ItemType<LightPaintable>());
+            recipe.AddIngredient(ItemID.GreenLight);
+            recipe.Register();
+
+            recipe = Recipe.Create(ItemType<LightPaintable>());
+            recipe.AddIngredient(ItemID.BlueLight);
+            recipe.Register();
         }
     }
 }

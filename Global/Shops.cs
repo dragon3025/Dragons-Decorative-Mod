@@ -1,8 +1,8 @@
 using DragonsDecorativeMod.Configuration;
 using DragonsDecorativeMod.Items.Garden;
 using DragonsDecorativeMod.Items.Garden.Mushrooms;
-using Terraria;
 using Terraria.ID;
+using Terraria.Localization;
 using Terraria.ModLoader;
 using static Terraria.ModLoader.ModContent;
 
@@ -56,25 +56,19 @@ namespace DragonsDecorativeMod.Global
                     {
                         shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }
-
                     if (GetInstance<DragonsDecoModConfig>().Christmas.CandyCane)
                     {
                         shop.Add(ItemType<Items.Christmas.CandyCane>());
                     }
-
-                    if (GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
-                    {
-                        shop.Add(ItemType<Items.Christmas.Snowman>());
-                    }
                     break;
                 case NPCID.Painter:
-                    if (GetInstance<DragonsDecoModConfig>().Other.PaintBottle)
+                    if (GetInstance<DragonsDecoModConfig>().Other.PaintBottle && shop.Name == Language.GetTextValue("GameUI.PainterDecor"))
                     {
                         shop.Add(ItemType<Items.PaintBottleSingle>());
                     }
                     break;
                 case NPCID.PartyGirl:
-                    if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable && Main.halloween)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable)
                     {
                         shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }

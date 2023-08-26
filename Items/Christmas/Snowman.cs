@@ -1,3 +1,4 @@
+using DragonsDecorativeMod.Configuration;
 using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
@@ -28,6 +29,18 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 25);
             Item.createTile = ModContent.TileType<Tiles.Christmas.Snowman>();
+        }
+
+        public override void AddRecipes()
+        {
+            if (!GetInstance<DragonsDecoModConfig>().Christmas.Snowman)
+            {
+                return;
+            }
+
+            Recipe recipe = Recipe.Create(ItemType<Snowman>());
+            recipe.AddIngredient(ItemID.SnowBlock, 30);
+            recipe.Register();
         }
     }
 }
