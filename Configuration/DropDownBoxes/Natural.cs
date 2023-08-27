@@ -1,5 +1,3 @@
-using Terraria.ModLoader.Config;
-
 namespace DragonsDecorativeMod.Configuration.DropDownBoxes
 {
     public class Natural

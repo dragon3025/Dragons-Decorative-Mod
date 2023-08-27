@@ -1,5 +1,3 @@
-using System.ComponentModel;
-
 namespace DragonsDecorativeMod.Configuration.DropDownBoxes
 {
     public class StPatricksDay

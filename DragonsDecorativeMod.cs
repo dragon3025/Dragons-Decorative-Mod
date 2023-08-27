@@ -2,7 +2,7 @@
  * Terraria.ModLoader.ModContent.GetInstance<DragonsDecorativeMod>().Logger.Debug("");
  * 
  * To turn into a string use:
- * Value.ToString()
+ * $"text {variable}"
  * 
  * To show text in chat use:
  * Main.NewText(string);

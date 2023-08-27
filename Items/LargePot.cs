@@ -38,10 +38,13 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-                .AddRecipeGroup(RecipeGroupID.IronBar, 10)
-                .AddTile(TileID.Anvils)
-                .Register();
+            Recipe recipe = Recipe.Create(ItemType<LargePot>());
+            recipe.AddIngredient(ItemID.CookingPot);
+            recipe.Register();
+
+            recipe = Recipe.Create(ItemID.CookingPot);
+            recipe.AddIngredient(ItemType<LargePot>());
+            recipe.Register();
         }
     }
 }

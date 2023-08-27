@@ -1,5 +1,4 @@
 using DragonsDecorativeMod.Configuration;
-using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.GameContent.Creative;
 using Terraria.ID;
