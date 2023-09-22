@@ -37,10 +37,14 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-                .AddRecipeGroup(RecipeGroupID.Wood, 10)
-                .AddTile(TileID.Sawmill)
-                .Register();
+            Recipe recipe = Recipe.Create(ItemType<Lectern>());
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 10);
+            recipe.AddTile(TileID.Sawmill);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

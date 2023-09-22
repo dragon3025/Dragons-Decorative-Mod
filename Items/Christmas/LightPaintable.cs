@@ -40,14 +40,26 @@ namespace DragonsDecorativeMod.Items.Christmas
 
             Recipe recipe = Recipe.Create(ItemType<LightPaintable>());
             recipe.AddIngredient(ItemID.RedLight);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
 
             recipe = Recipe.Create(ItemType<LightPaintable>());
             recipe.AddIngredient(ItemID.GreenLight);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
 
             recipe = Recipe.Create(ItemType<LightPaintable>());
             recipe.AddIngredient(ItemID.BlueLight);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

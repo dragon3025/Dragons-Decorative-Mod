@@ -38,9 +38,13 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ModContent.ItemType<PaintBottleSingle>(), 2)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<PaintBottleDouble>());
+            recipe.AddIngredient(ModContent.ItemType<PaintBottleSingle>(), 2);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

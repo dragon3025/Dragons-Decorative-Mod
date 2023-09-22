@@ -39,11 +39,15 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.Bone, 206)
-              .AddRecipeGroup(RecipeGroupID.IronBar)
-              .AddTile(TileID.HeavyWorkBench)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<SkeletonModel>());
+            recipe.AddIngredient(ItemID.Bone, 206);
+            recipe.AddRecipeGroup(RecipeGroupID.IronBar);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

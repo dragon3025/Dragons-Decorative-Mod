@@ -1,3 +1,4 @@
+using System.ComponentModel;
 using Terraria.ModLoader.Config;
 
 namespace DragonsDecorativeMod.Configuration
@@ -5,6 +6,9 @@ namespace DragonsDecorativeMod.Configuration
     public class DragonsDecoModConfig : ModConfig
     {
         public override ConfigScope Mode => ConfigScope.ServerSide;
+
+        [DefaultValue(false)]
+        public bool RequireCraftingKey;
 
         [Expand(false)]
         public DropDownBoxes.Natural Natural;

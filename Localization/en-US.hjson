@@ -1,5 +1,7 @@
 Mods: {
 	DragonsDecorativeMod: {
+		Conditions.HasCraftingKey: Crafting Key in Inventory
+
 		Items: {
 			Aquarium: {
 				DisplayName: Aquarium
@@ -518,6 +520,11 @@ Mods: {
 				DisplayName: Owl Stand
 				Tooltip: ""
 			}
+
+			CraftingKey: {
+				DisplayName: Crafting Key
+				Tooltip: If you enabled "Require Crafting Key", you will need this in your inventory to craft items from Dragon's Decorative Mod
+			}
 		}
 
 		Tiles: {
@@ -611,6 +618,15 @@ Mods: {
 				Pets: {
 					Label: Pets
 					Tooltip: ""
+				}
+
+				RequireCraftingKey: {
+					Label: Require Crafting Key
+					Tooltip:
+						'''
+						If enabled, crafting items from this mod requires having "Crafting
+						Key", an item crafted out of Workbench.
+						'''
 				}
 			}
 

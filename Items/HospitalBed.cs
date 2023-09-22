@@ -38,11 +38,15 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-                .AddRecipeGroup(RecipeGroupID.IronBar, 4)
-                .AddIngredient(ItemID.Silk, 5)
-                .AddTile(TileID.HeavyWorkBench)
-                .Register();
+            Recipe recipe = Recipe.Create(ItemType<HospitalBed>());
+            recipe.AddRecipeGroup(RecipeGroupID.IronBar, 4);
+            recipe.AddIngredient(ItemID.Silk, 5);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

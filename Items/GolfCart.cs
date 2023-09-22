@@ -38,12 +38,20 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.GolfCart)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<GolfCart>());
+            recipe.AddIngredient(ItemID.GolfCart);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
 
-            Recipe recipe = Recipe.Create(ItemID.GolfCart);
+            recipe = Recipe.Create(ItemID.GolfCart);
             recipe.AddIngredient(this);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

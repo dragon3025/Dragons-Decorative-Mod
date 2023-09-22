@@ -37,10 +37,14 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.Wood, 4)
-              .AddTile(TileID.Sawmill)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Easel>());
+            recipe.AddIngredient(ItemID.Wood, 4);
+            recipe.AddTile(TileID.Sawmill);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

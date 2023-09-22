@@ -58,11 +58,15 @@ namespace DragonsDecorativeMod.Items.StPatricksDay
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.GreenThread)
-              .AddIngredient(ItemID.PixieDust)
-              .AddTile(TileID.Loom)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<StPatricksDay.BagOGreen>());
+            recipe.AddIngredient(ItemID.GreenThread);
+            recipe.AddIngredient(ItemID.PixieDust);
+            recipe.AddTile(TileID.Loom);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

@@ -41,14 +41,26 @@ namespace DragonsDecorativeMod.Items
 
             Recipe recipe = Recipe.Create(Type);
             recipe.AddIngredient(ItemID.BlackThread);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
 
             recipe = Recipe.Create(Type);
             recipe.AddIngredient(ItemID.GreenThread);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
 
             recipe = Recipe.Create(Type);
             recipe.AddIngredient(ItemID.PinkThread);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

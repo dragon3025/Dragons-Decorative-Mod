@@ -38,16 +38,28 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.Book)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<HorizontalBook>());
+            recipe.AddIngredient(ItemID.Book);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
 
-            Recipe recipe = Recipe.Create(ItemID.Book);
+            recipe = Recipe.Create(ItemID.Book);
             recipe.AddIngredient(this);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
 
             recipe = Recipe.Create(ModContent.ItemType<Items.HorizontalBooksStacked>());
             recipe.AddIngredient(this);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

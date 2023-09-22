@@ -38,6 +38,10 @@ namespace DragonsDecorativeMod.Items.Christmas
 
             Recipe recipe = Recipe.Create(ItemType<Snowman>());
             recipe.AddIngredient(ItemID.SnowBlock, 30);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

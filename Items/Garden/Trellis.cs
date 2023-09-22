@@ -39,10 +39,14 @@ namespace DragonsDecorativeMod.Items.Garden
                 return;
             }
 
-            CreateRecipe()
-              .AddRecipeGroup(RecipeGroupID.Wood)
-              .AddTile(TileID.Sawmill)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Garden.Trellis>());
+            recipe.AddRecipeGroup(RecipeGroupID.Wood);
+            recipe.AddTile(TileID.Sawmill);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

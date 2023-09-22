@@ -38,11 +38,15 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.Wood, 4)
-              .AddIngredient(ItemID.WoodenArrow, 30)
-              .AddTile(TileID.WorkBenches)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<BoxOfArrows>());
+            recipe.AddIngredient(ItemID.Wood, 4);
+            recipe.AddIngredient(ItemID.WoodenArrow, 30);
+            recipe.AddTile(TileID.WorkBenches);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

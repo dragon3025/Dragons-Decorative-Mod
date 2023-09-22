@@ -40,10 +40,18 @@ namespace DragonsDecorativeMod.Items
 
             Recipe recipe = Recipe.Create(ItemType<LargePot>());
             recipe.AddIngredient(ItemID.CookingPot);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
 
             recipe = Recipe.Create(ItemID.CookingPot);
             recipe.AddIngredient(ItemType<LargePot>());
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

@@ -38,13 +38,21 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddRecipeGroup(RecipeGroupID.Wood, 21)
-              .AddTile(TileID.Sawmill)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<LargeKegRotated>());
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 21);
+            recipe.AddTile(TileID.Sawmill);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
 
-            Recipe recipe = Recipe.Create(ModContent.ItemType<Items.LargeKeg>());
+            recipe = Recipe.Create(ModContent.ItemType<Items.LargeKeg>());
             recipe.AddIngredient(this);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

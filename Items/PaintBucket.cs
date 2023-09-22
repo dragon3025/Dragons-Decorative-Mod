@@ -63,6 +63,10 @@ namespace DragonsDecorativeMod.Items
             {
                 Recipe recipe = Recipe.Create(Type);
                 recipe.AddIngredient(i);
+                if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+                {
+                    recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+                }
                 recipe.Register();
             }
         }

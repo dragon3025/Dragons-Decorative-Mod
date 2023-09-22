@@ -41,10 +41,14 @@ namespace DragonsDecorativeMod.Items.Garden
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.FlowerPacketWild, 5)
-              .AddTile(TileID.WorkBenches)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Garden.WallFlowers>());
+            recipe.AddIngredient(ItemID.FlowerPacketWild, 5);
+            recipe.AddTile(TileID.WorkBenches);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

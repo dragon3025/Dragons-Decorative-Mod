@@ -43,6 +43,10 @@ namespace DragonsDecorativeMod.GlobalRecipes
             Recipe recipe = Recipe.Create(ItemType<Items.Pets.Aquarium>());
             recipe.AddRecipeGroup("DragonsDecorativeMod:colorfulFish", 10);
             recipe.AddIngredient(ItemID.Terrarium);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

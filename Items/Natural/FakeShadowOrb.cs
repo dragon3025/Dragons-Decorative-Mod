@@ -37,11 +37,15 @@ namespace DragonsDecorativeMod.Items.Natural
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.EbonstoneBlock, 8)
-              .AddTile(TileID.CrystalBall)
-              .AddCondition(Condition.InGraveyard)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Natural.FakeShadowOrb>());
+            recipe.AddIngredient(ItemID.EbonstoneBlock, 8);
+            recipe.AddTile(TileID.CrystalBall);
+            recipe.AddCondition(Condition.InGraveyard);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

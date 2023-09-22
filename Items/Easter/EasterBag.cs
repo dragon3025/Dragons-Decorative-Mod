@@ -48,11 +48,15 @@ namespace DragonsDecorativeMod.Items.Easter
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.PinkThread)
-              .AddIngredient(ItemID.PixieDust)
-              .AddTile(TileID.Loom)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Easter.EasterBag>());
+            recipe.AddIngredient(ItemID.PinkThread);
+            recipe.AddIngredient(ItemID.PixieDust);
+            recipe.AddTile(TileID.Loom);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

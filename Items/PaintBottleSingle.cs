@@ -40,6 +40,10 @@ namespace DragonsDecorativeMod.Items
 
             Recipe recipe = Recipe.Create(ModContent.ItemType<PaintBottleSingle>(), 2);
             recipe.AddIngredient(ModContent.ItemType<PaintBottleDouble>());
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

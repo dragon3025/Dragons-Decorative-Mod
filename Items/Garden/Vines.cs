@@ -48,10 +48,15 @@ namespace DragonsDecorativeMod.Items.Garden
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.VineRope)
-              .AddTile(TileID.WorkBenches)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Garden.Vines>());
+            recipe.AddIngredient(ItemID.VineRope);
+            recipe.AddTile(TileID.WorkBenches);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(
+                Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

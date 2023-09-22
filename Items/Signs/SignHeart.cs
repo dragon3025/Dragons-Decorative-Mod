@@ -37,10 +37,14 @@ namespace DragonsDecorativeMod.Items.Signs
                 return;
             }
 
-            CreateRecipe()
-              .AddRecipeGroup(RecipeGroupID.Wood, 6)
-              .AddTile(TileID.Sawmill)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Signs.SignHeart>());
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 6);
+            recipe.AddTile(TileID.Sawmill);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

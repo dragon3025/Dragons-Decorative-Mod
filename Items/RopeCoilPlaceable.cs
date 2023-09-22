@@ -38,12 +38,20 @@ namespace DragonsDecorativeMod.Items
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.RopeCoil)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<RopeCoilPlaceable>());
+            recipe.AddIngredient(ItemID.RopeCoil);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
 
-            Recipe recipe = Recipe.Create(ItemID.RopeCoil);
+            recipe = Recipe.Create(ItemID.RopeCoil);
             recipe.AddIngredient(this);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

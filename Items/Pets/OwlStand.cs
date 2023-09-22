@@ -61,6 +61,10 @@ namespace DragonsDecorativeMod.Items.Pets
             recipe.AddIngredient(ItemID.Owl);
             recipe.AddRecipeGroup(RecipeGroupID.Wood, 2);
             recipe.AddTile(TileID.WorkBenches);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

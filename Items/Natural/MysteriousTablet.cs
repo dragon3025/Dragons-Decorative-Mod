@@ -51,12 +51,20 @@ namespace DragonsDecorativeMod.Items.Natural
             recipe.AddIngredient(ItemID.CelestialSigil);
             recipe.AddCondition(Condition.NearShimmer);
             recipe.AddCondition(Condition.DownedMoonLord);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
 
             recipe = Recipe.Create(ItemID.CelestialSigil);
             recipe.AddIngredient(Type);
             recipe.AddCondition(Condition.NearShimmer);
             recipe.AddCondition(Condition.DownedMoonLord);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
             recipe.Register();
         }
     }

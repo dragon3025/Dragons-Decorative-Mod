@@ -37,12 +37,16 @@ namespace DragonsDecorativeMod.Items.Natural
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemID.Abeemination)
-              .AddIngredient(ItemID.BeeWax)
-              .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Condition.InGraveyard)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Natural.FakeLarva>());
+            recipe.AddIngredient(ItemID.Abeemination);
+            recipe.AddIngredient(ItemID.BeeWax);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.AddCondition(Condition.InGraveyard);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

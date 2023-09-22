@@ -37,9 +37,13 @@ namespace DragonsDecorativeMod.Items.Garden
                 return;
             }
 
-            CreateRecipe()
-              .AddIngredient(ItemType<FourLeafClover>())
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Garden.Clover>());
+            recipe.AddIngredient(ItemType<FourLeafClover>());
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

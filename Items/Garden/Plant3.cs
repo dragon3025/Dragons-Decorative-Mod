@@ -39,9 +39,13 @@ namespace DragonsDecorativeMod.Items.Garden
                 return;
             }
 
-            CreateRecipe()
-                .AddIngredient(ModContent.ItemType<SingleTilePlant3>())
-                .Register();
+            Recipe recipe = Recipe.Create(ItemType<Garden.Plant3>());
+            recipe.AddIngredient(ModContent.ItemType<SingleTilePlant3>());
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

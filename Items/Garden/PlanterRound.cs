@@ -39,10 +39,14 @@ namespace DragonsDecorativeMod.Items.Garden
                 return;
             }
 
-            CreateRecipe()
-                .AddIngredient(ItemID.ClayBlock, 20)
-                .AddTile(TileID.Furnaces)
-                .Register();
+            Recipe recipe = Recipe.Create(ItemType<Garden.PlanterRound>());
+            recipe.AddIngredient(ItemID.ClayBlock, 20);
+            recipe.AddTile(TileID.Furnaces);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }

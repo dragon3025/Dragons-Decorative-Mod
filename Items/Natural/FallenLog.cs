@@ -37,11 +37,15 @@ namespace DragonsDecorativeMod.Items.Natural
                 return;
             }
 
-            CreateRecipe()
-              .AddRecipeGroup(RecipeGroupID.Wood, 10)
-              .AddTile(TileID.HeavyWorkBench)
-              .AddCondition(Condition.InGraveyard)
-              .Register();
+            Recipe recipe = Recipe.Create(ItemType<Natural.FallenLog>());
+            recipe.AddRecipeGroup(RecipeGroupID.Wood, 10);
+            recipe.AddTile(TileID.HeavyWorkBench);
+            recipe.AddCondition(Condition.InGraveyard);
+            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
+            {
+                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
+            }
+            recipe.Register();
         }
     }
 }
