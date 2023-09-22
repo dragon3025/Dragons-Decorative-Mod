@@ -1,15 +1,6 @@
 Mods: {
 	DragonsDecorativeMod: {
 		Items: {
-			RubbleMakerPottery: {
-				DisplayName: Rubblemaker (Pottery)
-				Tooltip:
-					'''
-					Used with materials to place matching pottery
-					Press Up/Down to cycle through styles
-					'''
-			}
-
 			Aquarium: {
 				DisplayName: Aquarium
 				Tooltip: ""
@@ -688,12 +679,8 @@ Mods: {
 
 			Natural: {
 				Pots: {
-					Label: "[i:DragonsDecorativeMod/RubbleMakerPottery] Fake Pots"
-					Tooltip:
-						'''
-						This is placed by a mod tool: "Rubblemaker (Pottery)",
-						which can be crafted to and from Rubblemaker.
-						'''
+					Label: "[i:5329] Fake Pots"
+					Tooltip: This is placed by the RubbleMaker on medium setting.
 				}
 
 				AltarsShadowOrbAndCrimsonHeart: {

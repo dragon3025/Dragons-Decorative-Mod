@@ -26,7 +26,6 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.useTime = 15;
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
-            Item.value = Item.buyPrice(0, 0, 25);
             Item.createTile = ModContent.TileType<Tiles.Christmas.Snowman>();
         }
 

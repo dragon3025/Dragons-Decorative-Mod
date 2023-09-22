@@ -1,14 +1,19 @@
-﻿using Microsoft.Xna.Framework;
+﻿using DragonsDecorativeMod.Configuration;
+using Microsoft.Xna.Framework;
 using System.Collections.Generic;
 using Terraria;
+using Terraria.GameContent;
 using Terraria.ID;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Tiles.Natural
 {
     public class FakePot : ModTile
     {
+        readonly static DragonsDecoModConfig furnitureConfig = GetInstance<DragonsDecoModConfig>();
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
@@ -22,6 +27,25 @@ namespace DragonsDecorativeMod.Tiles.Natural
             TileObjectData.addTile(Type);
 
             AddMapEntry(new Color(128, 128, 128));
+
+
+            if (!furnitureConfig.Natural.Pots)
+            {
+                return;
+            }
+
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.ClayBlock, Type, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.IceBlock, Type, 12, 13, 14, 15, 16, 17, 18, 19, 20);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.MudBlock, Type, 21, 22, 23, 24, 25, 26, 27, 28, 29);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.Bone, Type, 30, 31, 32, 33, 34, 35, 36, 37, 38);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.Obsidian, Type, 39, 40, 41, 42, 43, 44, 45, 46, 47);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.EbonstoneBlock, Type, 48, 49, 50, 51, 52, 53, 54, 55, 56);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.Cobweb, Type, 57, 58, 59, 60, 61, 62, 63, 64, 65);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.CrimstoneBlock, Type, 66, 67, 68);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.Sandstone, Type, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.LihzahrdBrick, Type, 81, 82, 83, 84, 85, 86);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.Marble, Type, 87, 88, 89);
+            FlexibleTileWand.RubblePlacementMedium.AddVariations(ItemID.Granite, Type, 90, 91, 92);
         }
 
         public override bool KillSound(int i, int j, bool fail)
