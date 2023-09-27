@@ -25,17 +25,13 @@ namespace DragonsDecorativeMod.Items
 
         public override void AddRecipes()
         {
-            if (!GetInstance<DragonsDecoModConfig>().Other.BoxOfArrows)
+            if (!GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
             {
                 return;
             }
 
             Recipe recipe = Recipe.Create(ItemType<CraftingKey>());
             recipe.AddIngredient(ItemID.WorkBench);
-            if (GetInstance<DragonsDecoModConfig>().RequireCraftingKey)
-            {
-                recipe.AddCondition(Global.CraftingKeyCondition.HasCraftingKey);
-            }
             recipe.Register();
         }
     }
