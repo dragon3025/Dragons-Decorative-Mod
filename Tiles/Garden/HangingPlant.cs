@@ -20,15 +20,13 @@ namespace DragonsDecorativeMod.Tiles.Garden
             Main.tileLavaDeath[Type] = true;
             TileID.Sets.MultiTileSway[Type] = true;
 
-            // This default style defaults to 2x3, despite the name.
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX); //is 2x3
             TileObjectData.newTile.LavaDeath = true;
             TileObjectData.newTile.Origin = Point16.Zero;
             TileObjectData.newTile.AnchorBottom = AnchorData.Empty;
             TileObjectData.newTile.AnchorTop = new AnchorData(AnchorType.SolidTile | AnchorType.SolidSide | AnchorType.SolidBottom | AnchorType.PlanterBox, TileObjectData.newTile.Width, 0);
             TileObjectData.newTile.DrawYOffset = -2;
 
-            // This alternate allows for placing the banner on platforms, just like in vanilla.
             TileObjectData.newAlternate.CopyFrom(TileObjectData.newTile);
             TileObjectData.newAlternate.AnchorTop = new AnchorData(AnchorType.Platform, TileObjectData.newTile.Width, 0);
             TileObjectData.newAlternate.DrawYOffset = -10;
@@ -43,11 +41,9 @@ namespace DragonsDecorativeMod.Tiles.Garden
 
             if (TileObjectData.IsTopLeft(tile))
             {
-                // Makes this tile sway in the wind and with player interaction when used with TileID.Sets.MultiTileSway
                 Main.instance.TilesRenderer.AddSpecialPoint(i, j, TileDrawing.TileCounterType.MultiTileVine);
             }
 
-            // We must return false here to prevent the normal tile drawing code from drawing the default static tile. Without this a duplicate tile will be drawn.
             return false;
         }
 
