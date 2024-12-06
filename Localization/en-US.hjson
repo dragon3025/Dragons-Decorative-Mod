@@ -1,5 +1,6 @@
 Mods: {
 	DragonsDecorativeMod: {
+		ConfigFail: Can't change settings in a server.
 		Conditions.HasCraftingKey: Crafting Key in Inventory
 
 		Items: {
@@ -90,17 +91,17 @@ Mods: {
 
 			HangingFernPlant: {
 				DisplayName: Hanging Fern Plant
-				Tooltip: NOT AFFECTED BY WIND
+				Tooltip: ""
 			}
 
 			HangingLeafyPlant: {
 				DisplayName: Hanging Leafy Plant
-				Tooltip: NOT AFFECTED BY WIND
+				Tooltip: ""
 			}
 
 			HangingPlant: {
 				DisplayName: Hanging Plant
-				Tooltip: NOT AFFECTED BY WIND
+				Tooltip: ""
 			}
 
 			Plant: {
@@ -658,11 +659,7 @@ Mods: {
 
 				HangingPlants: {
 					Label: "[i:DragonsDecorativeMod/HangingPlant] Hanging Plants"
-					Tooltip:
-						'''
-						tModLoader doesn't have wind swaying support for modded
-						2+ wide tiles.
-						'''
+					Tooltip: ""
 				}
 
 				Mushrooms: {

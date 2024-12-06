@@ -1,4 +1,5 @@
 using System.ComponentModel;
+using Terraria.Localization;
 using Terraria.ModLoader.Config;
 
 namespace DragonsDecorativeMod.Configuration
@@ -44,12 +45,6 @@ namespace DragonsDecorativeMod.Configuration
             StPatricksDay = new DropDownBoxes.StPatricksDay() { };
             Signs = new DropDownBoxes.Signs() { };
             Other = new DropDownBoxes.Other() { };
-        }
-
-        public override bool AcceptClientChanges(ModConfig pendingConfig, int whoAmI, ref string message)
-        {
-            message = "Can't change settings in a server.";
-            return false;
         }
     }
 }
