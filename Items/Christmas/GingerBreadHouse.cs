@@ -5,7 +5,7 @@ using Terraria.ModLoader;
 
 namespace DragonsDecorativeMod.Items.Christmas
 {
-    public class GingerBreadHouse : ModItem
+    public class GingerbreadHouse : ModItem
     {
         public override void SetStaticDefaults()
         {
@@ -25,7 +25,7 @@ namespace DragonsDecorativeMod.Items.Christmas
             Item.useStyle = ItemUseStyleID.Swing;
             Item.consumable = true;
             Item.value = Item.buyPrice(0, 0, 10);
-            Item.createTile = ModContent.TileType<Tiles.Christmas.GingerBreadHouse>();
+            Item.createTile = ModContent.TileType<Tiles.Christmas.GingerbreadHouse>();
             Item.mech = true;
         }
     }

@@ -1,31 +1,13 @@
 ﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
-using ReLogic.Content;
 using System.Collections.Generic;
 using Terraria;
 using Terraria.DataStructures;
-using Terraria.Enums;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
-using Microsoft.Xna.Framework;
-using Microsoft.Xna.Framework.Graphics;
-using System;
-using System.Collections.Generic;
-using System.Diagnostics;
-using System.Threading;
-using Terraria.DataStructures;
-using Terraria.GameContent.Events;
-using Terraria.GameContent.Liquid;
-using Terraria.GameContent.Tile_Entities;
-using Terraria.Graphics;
-using Terraria.Graphics.Capture;
-using Terraria.ID;
-using Terraria.ObjectData;
-using Terraria.UI;
-using Terraria.Utilities;
 
 namespace DragonsDecorativeMod.Tiles.Christmas
 {

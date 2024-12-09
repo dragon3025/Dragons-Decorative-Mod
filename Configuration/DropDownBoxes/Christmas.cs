@@ -1,12 +1,10 @@
-using DragonsDecorativeMod.Items.Christmas;
-
 namespace DragonsDecorativeMod.Configuration.DropDownBoxes
 {
     public class Christmas
     {
         public bool CandyCane;
         public bool ChristmasStocking;
-        public bool GingerBreadHouse;
+        public bool GingerbreadHouse;
         public bool LightPaintable;
         public bool Mistletoe;
         public bool SnowGlobe;
@@ -17,7 +15,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
         {
             CandyCane = true;
             ChristmasStocking = true;
-            GingerBreadHouse = true;
+            GingerbreadHouse = true;
             LightPaintable = true;
             Mistletoe = true;
             SnowGlobe = true;
@@ -30,7 +28,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
             if (obj is Christmas other)
                 return CandyCane == other.CandyCane &&
                     ChristmasStocking == other.ChristmasStocking &&
-                    GingerBreadHouse == other.GingerBreadHouse &&
+                    GingerbreadHouse == other.GingerbreadHouse &&
                     LightPaintable == other.LightPaintable &&
                     Mistletoe == other.Mistletoe &&
                     SnowGlobe == other.SnowGlobe &&
@@ -45,7 +43,7 @@ namespace DragonsDecorativeMod.Configuration.DropDownBoxes
             {
                 CandyCane,
                 ChristmasStocking,
-                GingerBreadHouse,
+                GingerbreadHouse,
                 LightPaintable,
                 Mistletoe,
                 SnowGlobe,

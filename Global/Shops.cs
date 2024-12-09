@@ -56,9 +56,9 @@ namespace DragonsDecorativeMod.Global
                     {
                         shop.Add(ItemType<Items.Christmas.CandyCane>());
                     }
-                    if (GetInstance<DragonsDecoModConfig>().Christmas.GingerBreadHouse)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.GingerbreadHouse)
                     {
-                        shop.Add(ItemType<Items.Christmas.GingerBreadHouse>());
+                        shop.Add(ItemType<Items.Christmas.GingerbreadHouse>());
                     }
                     if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable)
                     {
