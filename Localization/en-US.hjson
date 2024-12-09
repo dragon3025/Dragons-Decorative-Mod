@@ -1,6 +1,5 @@
 Mods: {
 	DragonsDecorativeMod: {
-		ConfigFail: Can't change settings in a server.
 		Conditions.HasCraftingKey: Crafting Key in Inventory
 
 		Items: {
