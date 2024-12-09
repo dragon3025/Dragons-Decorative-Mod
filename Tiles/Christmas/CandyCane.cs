@@ -78,40 +78,37 @@ namespace DragonsDecorativeMod.Tiles.Christmas
             int frameX = tile.TileFrameX / 18;
             int frameY = tile.TileFrameY / 18;
 
-
-            float flicker = Main.rand.Next(970, 1031) * 0.001f;
-            bool light = true;
             if (frameX >= 4)
             {
-                light = false;
+                return;
             }
             if (frameY >= 1 && (frameX < 1 || frameX >= 3))
             {
-                light = false;
+                return;
             }
-            if (light)
+
+            float flicker = Main.rand.Next(970, 1031) * 0.001f;
+
+            if (tile.TileColor == 0)
             {
-                if (tile.TileColor == 0)
+                g = 0.5f * flicker;
+                b = 0.5f * flicker;
+                r = 1f * flicker;
+            }
+            else
+            {
+                Color color = WorldGen.paintColor(tile.TileColor);
+                if (tile.TileColor < 13) //Paint that doesn't affect white
                 {
-                    g = 0.5f * flicker;
-                    b = 0.5f * flicker;
-                    r = 1f * flicker;
+                    r = 0.5f + color.R / 510f * flicker;
+                    g = 0.5f + color.G / 510f * flicker;
+                    b = 0.5f + color.B / 510f * flicker;
                 }
                 else
                 {
-                    Color color = WorldGen.paintColor(tile.TileColor);
-                    if (tile.TileColor < 13) //Paint that doesn't affect white
-                    {
-                        r = 0.5f + color.R / 510f * flicker;
-                        g = 0.5f + color.G / 510f * flicker;
-                        b = 0.5f + color.B / 510f * flicker;
-                    }
-                    else
-                    {
-                        r = color.R / 255f * flicker;
-                        g = color.G / 255f * flicker;
-                        b = color.B / 255f * flicker;
-                    }
+                    r = color.R / 255f * flicker;
+                    g = color.G / 255f * flicker;
+                    b = color.B / 255f * flicker;
                 }
             }
         }

@@ -52,13 +52,21 @@ namespace DragonsDecorativeMod.Global
 
                     break;
                 case NPCID.SantaClaus:
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.CandyCane)
+                    {
+                        shop.Add(ItemType<Items.Christmas.CandyCane>());
+                    }
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.GingerBreadHouse)
+                    {
+                        shop.Add(ItemType<Items.Christmas.GingerBreadHouse>());
+                    }
                     if (GetInstance<DragonsDecoModConfig>().Christmas.LightPaintable)
                     {
                         shop.Add(ItemType<Items.Christmas.LightPaintable>());
                     }
-                    if (GetInstance<DragonsDecoModConfig>().Christmas.CandyCane)
+                    if (GetInstance<DragonsDecoModConfig>().Christmas.Mistletoe)
                     {
-                        shop.Add(ItemType<Items.Christmas.CandyCane>());
+                        shop.Add(ItemType<Items.Christmas.Mistletoe>());
                     }
                     break;
                 case NPCID.Painter:

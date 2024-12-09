@@ -525,6 +525,31 @@ Mods: {
 				DisplayName: Crafting Key
 				Tooltip: If you enabled "Require Crafting Key", you will need this in your inventory to craft items from Dragon's Decorative Mod
 			}
+
+			ChristmasStocking: {
+				DisplayName: Christmas Stocking
+				Tooltip: ""
+			}
+
+			GingerBreadHouse: {
+				DisplayName: Ginger Bread House
+				Tooltip: ""
+			}
+
+			Mistletoe: {
+				DisplayName: Mistletoe
+				Tooltip: ""
+			}
+
+			SnowGlobe: {
+				DisplayName: Decorative Snow Globe
+				Tooltip: ""
+			}
+
+			StarSnowGlobe: {
+				DisplayName: Star Snow Globe
+				Tooltip: ""
+			}
 		}
 
 		Tiles: {
@@ -569,6 +594,10 @@ Mods: {
 			OwlStand2.MapEntry: Owl Stand
 			OwlStand3.MapEntry: Owl Stand
 			OwlStand4.MapEntry: Owl Stand
+			ChristmasStocking.MapEntry: Christmas Stocking
+			GingerBreadHouse.MapEntry: Ginger Bread House
+			SnowGlobe.MapEntry: Snow Globe
+			StarSnowGlobe.MapEntry: Star Snow Globe
 		}
 
 		Configs: {
@@ -740,6 +769,31 @@ Mods: {
 				}
 
 				Tooltip: ""
+
+				ChristmasStocking: {
+					Label: "[i:DragonsDecorativeMod/ChristmasStocking] Christmas Stocking"
+					Tooltip: ""
+				}
+
+				GingerBreadHouse: {
+					Label: "[i:DragonsDecorativeMod/GingerBreadHouse] Ginger Bread House"
+					Tooltip: ""
+				}
+
+				Mistletoe: {
+					Label: "[i:DragonsDecorativeMod/Mistletoe] Mistletoe"
+					Tooltip: ""
+				}
+
+				SnowGlobe: {
+					Label: "[i:DragonsDecorativeMod/SnowGlobe] Snow Globe"
+					Tooltip: ""
+				}
+
+				StarSnowGlobe: {
+					Label: Star Snow Globe
+					Tooltip: ""
+				}
 			}
 
 			Easter: {
