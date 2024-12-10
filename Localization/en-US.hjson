@@ -532,7 +532,7 @@ Mods: {
 			}
 
 			GingerbreadHouse: {
-				DisplayName: Ginger Bread House
+				DisplayName: Gingerbread House
 				Tooltip: ""
 			}
 
@@ -595,7 +595,7 @@ Mods: {
 			OwlStand3.MapEntry: Owl Stand
 			OwlStand4.MapEntry: Owl Stand
 			ChristmasStocking.MapEntry: Christmas Stocking
-			GingerbreadHouse.MapEntry: Ginger Bread House
+			GingerbreadHouse.MapEntry: Gingerbread House
 			SnowGlobe.MapEntry: Snow Globe
 			StarSnowGlobe.MapEntry: Star Snow Globe
 		}
@@ -776,7 +776,7 @@ Mods: {
 				}
 
 				GingerbreadHouse: {
-					Label: "[i:DragonsDecorativeMod/GingerbreadHouse] Ginger Bread House"
+					Label: "[i:DragonsDecorativeMod/GingerbreadHouse] Gingerbread House"
 					Tooltip: ""
 				}
 
