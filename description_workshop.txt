@@ -1,17 +1,23 @@
-====INFO====
+[h1]INFO[/h1]
 
-Open Source at GitHub. Report issues there or at home page.
+Open Source at GitHub. Report issues there or at forum page.
 
 NOTE: "Shop Expander" mod is recommended and may be necessary for shop items to appear.
+[h1]Features[/h1]
 
-This mod adds decorative objects with configuration settings to disable them. I plan to keep adding to it. As of version 1.25 (March 20th 2023) it has:
+[list]
+[*]"WikiThis" mod support.
+[*]Furniture.
+[*]Placeable versions of non-placeable vanilla tiles.
+[*]Inclinometer: Smooths nearby terrain using your 1st Hammer. Can be reversed to un-smooth terrain.
+[*]Nature Globe: Prevents you from destroying plants nearby (similar to Guide of Environmental Preservation.
+[/list]
 
-- "WikiThis" mod support
-- Placeable versions of non-placeable vanilla tiles
-- Many other tiles.
+[h1]Links[/h1]
 
-====LINKS====
-Open Source on Github: https://github.com/dragon3025/Dragons-Decorative-Mod
-Want to give Feedback / Report Bug? Post here: https://github.com/dragon3025/Dragons-Decorative-Mod/issues
-or on the Home Page: https://forums.terraria.org/index.php?threads/dragons-decorative-mod.113695/
-Wiki Page: https://terrariamods.fandom.com/wiki/Dragon%27s_Decorative_Mod
+[list]
+[*][url=https://github.com/dragon3025/Dragons-Decorative-Mod]Open Source Code on Github[/url]
+[*][url=https://github.com/dragon3025/Dragons-Decorative-Mod/issues]Issue Tracker[/url]
+[*][url=https://forums.terraria.org/index.php?threads/dragons-decorative-mod.113695/]Forum Page[/url]
+[*][url=https://terrariamods.fandom.com/wiki/Dragon%27s_Decorative_Mod]Wiki[/url]
+[/list]

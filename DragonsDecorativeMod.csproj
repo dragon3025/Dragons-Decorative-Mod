@@ -6,14 +6,12 @@
     <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <ItemGroup>
-    <AdditionalFiles Remove="Tiles\TiedBalloons\**" />
-    <Compile Remove="Tiles\TiedBalloons\**" />
-    <EmbeddedResource Remove="Tiles\TiedBalloons\**" />
-    <None Remove="Tiles\TiedBalloons\**" />
+    <AdditionalFiles Remove="Content\Tiles\TiedBalloons\**" />
+    <Compile Remove="Content\Tiles\TiedBalloons\**" />
+    <EmbeddedResource Remove="Content\Tiles\TiedBalloons\**" />
+    <None Remove="Content\Tiles\TiedBalloons\**" />
   </ItemGroup>
   <ItemGroup>
     <AdditionalFiles Remove="en-US.hjson" />
-  </ItemGroup>
-  <ItemGroup>
   </ItemGroup>
 </Project>

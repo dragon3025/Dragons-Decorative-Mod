@@ -9,11 +9,12 @@
  */
 
 using Terraria;
+using Terraria.Localization;
 using Terraria.ModLoader;
 
 namespace DragonsDecorativeMod
 {
-    class DragonsDecorativeMod : Mod
+    internal class DragonsDecorativeMod : Mod
     {
         public override void Load()
         {
@@ -22,6 +23,11 @@ namespace DragonsDecorativeMod
             {
                 wikithis.Call("AddModURL", this, "https://terrariamods.wiki.gg/wiki/Dragon%27s_Decorative_Mod/{}");
             }
+        }
+
+        public static string GetText(string key)
+        {
+            return Language.GetOrRegister("Mods.DragonsDecorativeMod." + key).ToString();
         }
     }
 }

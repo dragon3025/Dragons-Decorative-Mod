@@ -1,5 +1,14 @@
 Mods: {
 	DragonsDecorativeMod: {
+		Misc: {
+			CycleStyles: Press Up/Down to cycle through styles
+
+			CraftingKey: {
+				NotConsumed: This isn't consumed when used as a crafting ingredient
+				ToggleWithWire: Activate with wiring to disable/enable
+			}
+		}
+
 		Conditions.HasCraftingKey: Crafting Key in Inventory
 
 		Items: {
@@ -20,7 +29,7 @@ Mods: {
 
 			Snowman: {
 				DisplayName: Snowman
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			CloverDecal: {
@@ -40,7 +49,7 @@ Mods: {
 
 			EasterEgg: {
 				DisplayName: Colorful Easter Egg
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			EasterEggSingleColor: {
@@ -315,12 +324,12 @@ Mods: {
 
 			HorizontalBook: {
 				DisplayName: Horizontal Book
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			HorizontalBooksStacked: {
 				DisplayName: Horizontal Stacked Books
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			HospitalBed: {
@@ -360,7 +369,7 @@ Mods: {
 
 			MannequinHead: {
 				DisplayName: Mannequin Head
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			MedusaWatching: {
@@ -424,12 +433,12 @@ Mods: {
 
 			PaintBottleDouble: {
 				DisplayName: Double Paint Bottle
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			PaintBottleSingle: {
 				DisplayName: Paint Bottle
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			PaintBucket: {
@@ -449,7 +458,7 @@ Mods: {
 
 			Shampoo: {
 				DisplayName: Shampoo
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			SignBag: {
@@ -479,7 +488,7 @@ Mods: {
 
 			SkeletonModel: {
 				DisplayName: Skeleton Model
-				Tooltip: ""
+				Tooltip: "{$Misc.CycleStyles}"
 			}
 
 			StaringStatue: {
@@ -523,7 +532,7 @@ Mods: {
 
 			CraftingKey: {
 				DisplayName: Crafting Key
-				Tooltip: If you enabled "Require Crafting Key", you will need this in your inventory to craft items from Dragon's Decorative Mod
+				Tooltip: ""
 			}
 
 			ChristmasStocking: {
@@ -549,6 +558,46 @@ Mods: {
 			StarSnowGlobe: {
 				DisplayName: Star Snow Globe
 				Tooltip: ""
+			}
+
+			NatureGlobe: {
+				DisplayName: Nature Globe
+				Tooltip: Prevents you from accidentally destroying the environment while nearby
+			}
+
+			StepStoolPlaceable: {
+				DisplayName: Step Stool Placeable
+				Tooltip: ""
+			}
+
+			BestiaryTrophy: {
+				DisplayName: Bestiary Trophy
+				Tooltip: ""
+			}
+
+			SlimeTrophy: {
+				DisplayName: Slime Trophy
+				Tooltip: ""
+			}
+
+			Inclinometer: {
+				DisplayName: Inclinometer
+				Tooltip:
+					'''
+					Uses the first Hammer in your inventory to smooth terrain
+					While in reverse mode, it will unsmooth terrain
+					Right click to toggle reverse mode
+					'''
+			}
+
+			InclinometerReversed: {
+				DisplayName: Inclinometer Reversed
+				Tooltip:
+					'''
+					Uses the first Hammer in your inventory to smooth terrain
+					While in reverse mode, it will unsmooth terrain
+					Right click to toggle reverse mode
+					'''
 			}
 		}
 
@@ -598,6 +647,9 @@ Mods: {
 			GingerbreadHouse.MapEntry: Gingerbread House
 			SnowGlobe.MapEntry: Snow Globe
 			StarSnowGlobe.MapEntry: Star Snow Globe
+			NatureGlobe.MapEntry: Nature Globe
+			CraftingKeyBench.MapEntry: Crafting Key Bench
+			CraftingKeyBenchDisabled.MapEntry: Crafting Key Bench Disabled
 		}
 
 		Configs: {
@@ -662,7 +714,7 @@ Mods: {
 			Garden: {
 				BonsaiTree: {
 					Label: "[i:DragonsDecorativeMod/BonsaiTree] Bonsai Tree"
-					Tooltip: ""
+					Tooltip: Sold by the Dryad.
 				}
 
 				Vines: {
@@ -682,7 +734,7 @@ Mods: {
 
 				Clover: {
 					Label: "[i:DragonsDecorativeMod/Clover] Clover"
-					Tooltip: ""
+					Tooltip: Sold by the Dryad.
 				}
 
 				HangingPlants: {
@@ -692,7 +744,7 @@ Mods: {
 
 				Mushrooms: {
 					Label: "[i:DragonsDecorativeMod/RedMushroom] Mushrooms"
-					Tooltip: ""
+					Tooltip: Sold by the Dryad.
 				}
 
 				Planters: {
@@ -702,12 +754,12 @@ Mods: {
 
 				Plants: {
 					Label: "[i:DragonsDecorativeMod/Plant] Plants"
-					Tooltip: ""
+					Tooltip: Sold by the Dryad.
 				}
 
 				PottedPlants: {
 					Label: "[i:DragonsDecorativeMod/PottedMushroomTreeTall] Potted Plants"
-					Tooltip: ""
+					Tooltip: Mushroom variants sold by the Truffle. All others are found in Biome Crates.
 				}
 
 				Tooltip: ""
@@ -716,14 +768,20 @@ Mods: {
 					BlocksAndWalls: Blocks And Walls
 					Other: Other
 				}
+
+				NatureGlobe: {
+					Label: "[i:DragonsDecorativeMod/NatureGlobe] Nature Globe"
+					Tooltip:
+						'''
+						Prevents you from accidentally destroying the
+						environment while nearby. Sold by the Dryad.
+						'''
+				}
+
+				DisplayName: 03 [i:DragonsDecorativeMod/Plant] Garden
 			}
 
 			Natural: {
-				Pots: {
-					Label: "[i:5329] Fake Pots"
-					Tooltip: This is placed by the RubbleMaker on medium setting.
-				}
-
 				AltarsShadowOrbAndCrimsonHeart: {
 					Label: "[i:DragonsDecorativeMod/FakeDemonAltar] Fake Altars, Shadow Orb, and Crimson Heart"
 					Tooltip: ""
@@ -750,12 +808,19 @@ Mods: {
 				}
 
 				Tooltip: ""
+
+				GranitePots: {
+					Label: "[i:Granite] Granite Pots"
+					Tooltip: This is placed with the Rubblemaker set to Medium
+				}
+
+				DisplayName: 04 [i:DragonsDecorativeMod/MysteriousTablet] Natural
 			}
 
 			Christmas: {
 				CandyCane: {
 					Label: "[i:DragonsDecorativeMod/CandyCane] Lawn Candy Cane"
-					Tooltip: Glows a different color when painted
+					Tooltip: Glows a different color when painted. Sold by Santa.
 				}
 
 				Snowman: {
@@ -765,7 +830,7 @@ Mods: {
 
 				LightPaintable: {
 					Label: "[i:DragonsDecorativeMod/LightPaintable] Light Paintable"
-					Tooltip: Glows a different color when painted
+					Tooltip: Glows a different color when painted. Sold by Santa and Party Girl.
 				}
 
 				Tooltip: ""
@@ -777,12 +842,12 @@ Mods: {
 
 				GingerbreadHouse: {
 					Label: "[i:DragonsDecorativeMod/GingerbreadHouse] Gingerbread House"
-					Tooltip: ""
+					Tooltip: Sold by Santa.
 				}
 
 				Mistletoe: {
 					Label: "[i:DragonsDecorativeMod/Mistletoe] Mistletoe"
-					Tooltip: ""
+					Tooltip: Sold by Santa.
 				}
 
 				SnowGlobe: {
@@ -791,9 +856,11 @@ Mods: {
 				}
 
 				StarSnowGlobe: {
-					Label: Star Snow Globe
+					Label: "[i:DragonsDecorativeMod/StarSnowGlobe] Star Snow Globe"
 					Tooltip: ""
 				}
+
+				DisplayName: 01 [i:DragonsDecorativeMod/CandyCane] Christmas
 			}
 
 			Easter: {
@@ -808,6 +875,7 @@ Mods: {
 				}
 
 				Tooltip: ""
+				DisplayName: 02 [i:DragonsDecorativeMod/EasterEgg] Easter
 			}
 
 			StPatricksDay: {
@@ -822,6 +890,7 @@ Mods: {
 				}
 
 				Tooltip: ""
+				DisplayName: 06 [i:DragonsDecorativeMod/CloverDecal] St Patricks Day
 			}
 
 			Signs: {
@@ -851,6 +920,7 @@ Mods: {
 				}
 
 				Tooltip: ""
+				DisplayName: 05 [i:DragonsDecorativeMod/SignSwiss] Signs
 			}
 
 			Other: {
@@ -866,7 +936,7 @@ Mods: {
 
 				PaintBottle: {
 					Label: "[i:DragonsDecorativeMod/PaintBottleSingle] Paint Bottle"
-					Tooltip: ""
+					Tooltip: Sold by the Painter.
 				}
 
 				Easel: {
@@ -876,7 +946,7 @@ Mods: {
 
 				Globe: {
 					Label: "[i:DragonsDecorativeMod/Globe] Globe"
-					Tooltip: ""
+					Tooltip: Sold by the Merchant.
 				}
 
 				GolfCart: {
@@ -950,12 +1020,39 @@ Mods: {
 				}
 
 				Tooltip: ""
+				DisplayName: 08 [i:DragonsDecorativeMod/PaintBucket] Other
+
+				StepStoolPlaceable: {
+					Label: "[i:DragonsDecorativeMod/StepStoolPlaceable] Step Stool Placeable"
+					Tooltip: ""
+				}
+
+				Headers: {
+					CraftedWithWood: Crafted With Wood
+					Other: Other
+					Trophies: Trophies
+				}
+
+				BestiaryTrophy: {
+					Label: "[i:DragonsDecorativeMod/BestiaryTrophy] Bestiary Trophy"
+					Tooltip: Sold by Zoologist when the Bestiary rate is 100%.
+				}
+
+				SlimeTrophy: {
+					Label: "[i:DragonsDecorativeMod/SlimeTrophy] Slime Trophy"
+					Tooltip: Very rare drop by Slimes that drop Slime Staff.
+				}
+
+				Shampoo: {
+					Label: "[i:DragonsDecorativeMod/Shampoo] Shampoo"
+					Tooltip: ""
+				}
 			}
 
 			Pets: {
 				Aquarium: {
 					Label: "[i:DragonsDecorativeMod/Aquarium] Aquarium"
-					Tooltip: ""
+					Tooltip: Sold by the Pirate.
 				}
 
 				OwlStand: {
@@ -964,6 +1061,53 @@ Mods: {
 				}
 
 				Tooltip: ""
+				DisplayName: 07 [i:DragonsDecorativeMod/Aquarium] Pets
+			}
+
+			GeneralConfig: {
+				DisplayName: 00 [i:DragonsDecorativeMod/CraftingKey] General
+
+				RequireCraftingKey: {
+					Label: "[i:DragonsDecorativeMod/CraftingKey] Require Crafting Key"
+					Tooltip:
+						'''
+						This can be good if you want a way to filter this mod's content from
+						other content or filter other content from this mod's content.
+						'''
+				}
+
+				Inclinometer: {
+					Label: "[i:DragonsDecorativeMod/Inclinometer] Inclinometer"
+					Tooltip:
+						'''
+						Uses the first Hammer in your inventory to
+						smooth Terrain. It's sold by the Mechanic.
+						'''
+				}
+			}
+
+			CraftingKeyEnums: {
+				Tooltip: ""
+
+				Disabled: {
+					Label: Disabled
+					Tooltip: Don't require.
+				}
+
+				Ingredient: {
+					Label: Ingredient
+					Tooltip: Require as an ingredient (it isn't consumed).
+				}
+
+				Tile: {
+					Label: Crafting Station
+					Tooltip: Require as a crafting station.
+				}
+
+				Both: {
+					Label: Both
+					Tooltip: Require as both.
+				}
 			}
 		}
 	}
