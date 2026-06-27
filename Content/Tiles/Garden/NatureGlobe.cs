@@ -27,11 +27,17 @@ namespace DragonsDecorativeMod.Content.Tiles.Garden
 
         public override void Load()
         {
-            On_Player.GetTileCutIgnorance += On_Player_GetTileCutIgnorance;
+            On_Player.RefreshMechanicalAccsFromItemType += On_Player_RefreshMechanicalAccsFromItemType;
         }
 
-        private bool[] On_Player_GetTileCutIgnorance(On_Player.orig_GetTileCutIgnorance orig, Player self, bool allowRegrowth, bool fromTrap)
+        private void On_Player_RefreshMechanicalAccsFromItemType(On_Player.orig_RefreshMechanicalAccsFromItemType orig, Player self, int accType)
         {
+            orig(self, accType);
+            if (self.dontHurtNature)
+            {
+                return;
+            }
+
             Point position = self.position.ToTileCoordinates();
             int x_distance = 169 / 2;
             int y_distance = 124 / 2;
@@ -47,12 +53,11 @@ namespace DragonsDecorativeMod.Content.Tiles.Garden
 
                     if (tile.TileType == Type)
                     {
-                        return TileID.Sets.TileCutIgnore.IgnoreDontHurtNature;
+                        self.dontHurtNature = true;
+                        return;
                     }
                 }
             }
-
-            return orig(self, allowRegrowth, fromTrap);
         }
     }
 }
