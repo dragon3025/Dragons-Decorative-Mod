@@ -33,42 +33,41 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            if (closer)
+            if (!closer)
             {
-                float distance = 0f;
-                Vector2 position = new Vector2(i, j);
-                int target = 0;
-                if (closer)
+                return;
+            }
+
+            float distance = 0f;
+            Vector2 position = new(i, j);
+            int target = 0;
+            for (int k = 0; k < 255; k++)
+            {
+                if (!Main.player[k].active)
                 {
-                    for (int k = 0; k < 255; k++)
-                    {
-                        if (!Main.player[k].active)
-                        {
-                            continue;
-                        }
-
-                        if (distance == 0f || position.Distance(Main.player[k].Center) < distance)
-                        {
-                            distance = position.Distance(Main.player[k].Center);
-                            target = k;
-                        }
-                    }
-
-                    Player player = Main.player[target];
-                    float tile_centerx = 1.5f;
-                    if (player.position.X / 16 > i - tile_centerx + 6.5f)
-                    {
-                        look_direction = 1;
-                    }
-                    else if (player.position.X / 16 < i - tile_centerx - 6.5f)
-                    {
-                        look_direction = 2;
-                    }
-                    else
-                    {
-                        look_direction = 0;
-                    }
+                    continue;
                 }
+
+                if (distance == 0f || position.Distance(Main.player[k].Center) < distance)
+                {
+                    distance = position.Distance(Main.player[k].Center);
+                    target = k;
+                }
+            }
+
+            Player player = Main.player[target];
+            float tile_centerx = 1.5f;
+            if (player.position.X / 16 > i - tile_centerx + 6.5f)
+            {
+                look_direction = 1;
+            }
+            else if (player.position.X / 16 < i - tile_centerx - 6.5f)
+            {
+                look_direction = 2;
+            }
+            else
+            {
+                look_direction = 0;
             }
         }
 
