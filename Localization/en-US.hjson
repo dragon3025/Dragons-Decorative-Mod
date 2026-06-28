@@ -639,10 +639,18 @@ Mods: {
 			Shampoo.MapEntry: Shampoo
 			SkeletonModel.MapEntry: Skeleton Model
 			StaringStatue.MapEntry: Ned the Nosey
+			StaringStatueDown.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
+			StaringStatueDownLeft.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
+			StaringStatueDownRight.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
+			StaringStatueLeft.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
+			StaringStatueRight.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
+			StaringStatueUp.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
+			StaringStatueUpLeft.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
+			StaringStatueUpRight.MapEntry: "{$Tiles.StaringStatue.MapEntry}"
 			OwlStand.MapEntry: Owl Stand
-			OwlStand2.MapEntry: Owl Stand
-			OwlStand3.MapEntry: Owl Stand
-			OwlStand4.MapEntry: Owl Stand
+			OwlStand2.MapEntry: "{$Tiles.OwlStand.MapEntry}"
+			OwlStand3.MapEntry: "{$Tiles.OwlStand.MapEntry}"
+			OwlStand4.MapEntry: "{$Tiles.OwlStand.MapEntry}"
 			ChristmasStocking.MapEntry: Christmas Stocking
 			GingerbreadHouse.MapEntry: Gingerbread House
 			SnowGlobe.MapEntry: Snow Globe

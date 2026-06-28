@@ -1,88 +1,329 @@
 ﻿using Microsoft.Xna.Framework;
+using System.Collections.Generic;
 using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Content.Tiles.Other
 {
     public class StaringStatue : ModTile
     {
+        private Vector2 look_direction = Vector2.Zero;
+
         public override void SetStaticDefaults()
         {
             Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
             Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
 
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
-            TileObjectData.newTile.Height = 3;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16];
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
             TileObjectData.addTile(Type);
 
             AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
 
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
-
-            DustType = DustID.Stone;
         }
-
-        private int look_direction = 0;
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            if (!closer)
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
             {
                 return;
             }
+        }
+    }
 
-            float distance = 0f;
-            Vector2 position = new(i, j);
-            int target = 0;
-            for (int k = 0; k < 255; k++)
-            {
-                if (!Main.player[k].active)
-                {
-                    continue;
-                }
+    public class StaringStatueUpLeft : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueUpLeft";
+        private Vector2 look_direction = Vector2.Zero;
 
-                if (distance == 0f || position.Distance(Main.player[k].Center) < distance)
-                {
-                    distance = position.Distance(Main.player[k].Center);
-                    target = k;
-                }
-            }
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
 
-            Player player = Main.player[target];
-            float tile_centerx = 1f;
-            float tile_centery = 1.5f;
-            if (player.position.X / 16 > i - tile_centerx + 6.5f)
-            {
-                look_direction = 1;
-            }
-            else if (player.position.X / 16 < i - tile_centerx - 6.5f)
-            {
-                look_direction = 2;
-            }
-            else
-            {
-                look_direction = 0;
-            }
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
 
-            if (player.position.Y / 16 > j - tile_centery + 6.5f)
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
             {
-                look_direction += 6;
-            }
-            else if (player.position.Y / 16 < j - tile_centery - 6.5f)
-            {
-                look_direction += 3;
+                return;
             }
         }
 
-        public override void AnimateTile(ref int frame, ref int frameCounter)
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
         {
-            frame = look_direction;
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
+        }
+    }
+
+    public class StaringStatueUp : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueUp";
+        private Vector2 look_direction = Vector2.Zero;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
+            {
+                return;
+            }
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
+        }
+    }
+
+    public class StaringStatueUpRight : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueUpRight";
+        private Vector2 look_direction = Vector2.Zero;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
+            {
+                return;
+            }
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
+        }
+    }
+
+    public class StaringStatueLeft : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueLeft";
+        private Vector2 look_direction = Vector2.Zero;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
+            {
+                return;
+            }
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
+        }
+    }
+
+    public class StaringStatueRight : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueRight";
+        private Vector2 look_direction = Vector2.Zero;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
+            {
+                return;
+            }
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
+        }
+    }
+
+    public class StaringStatueDownLeft : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueDownLeft";
+        private Vector2 look_direction = Vector2.Zero;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
+            {
+                return;
+            }
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
+        }
+    }
+
+    public class StaringStatueDown : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueDown";
+        private Vector2 look_direction = Vector2.Zero;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
+            {
+                return;
+            }
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
+        }
+    }
+
+    public class StaringStatueDownRight : ModTile
+    {
+        public override string Texture => "DragonsDecorativeMod/Content/Tiles/Other/StaringStatueDownRight";
+        private Vector2 look_direction = Vector2.Zero;
+
+        public override void SetStaticDefaults()
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+
+            AnimationFrameHeight = 54;
+            DustType = DustID.Stone;
+
+            LocalizedText name = CreateMapEntryName();
+            AddMapEntry(new Color(120, 120, 120), name);
+        }
+
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (!StaringStatueHelpers.NearbyEffects(i, j, closer, ref look_direction))
+            {
+                return;
+            }
+        }
+
+        public override IEnumerable<Item> GetItemDrops(int i, int j)
+        {
+            yield return new Item(ItemType<Content.Items.Placeable.Other.StaringStatue>());
         }
     }
 }
