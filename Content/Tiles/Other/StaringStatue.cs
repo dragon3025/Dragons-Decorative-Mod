@@ -4,7 +4,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Content.Tiles.Other
@@ -15,17 +14,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -46,17 +37,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -82,17 +65,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -118,17 +93,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -154,17 +121,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -190,17 +149,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -226,17 +177,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -262,17 +205,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }
@@ -298,17 +233,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileObsidianKill[Type] = true;
-            Main.tileNoAttach[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
-            TileObjectData.newTile.DrawYOffset = 2;
-            TileObjectData.addTile(Type);
-
+            StaringStatueHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 54;
             DustType = DustID.Stone;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(120, 120, 120), name);
         }

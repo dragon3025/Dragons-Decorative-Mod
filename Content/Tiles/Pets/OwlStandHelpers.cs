@@ -1,7 +1,9 @@
 ﻿using Microsoft.Xna.Framework;
 using Terraria;
 using Terraria.Audio;
+using Terraria.DataStructures;
 using Terraria.ID;
+using Terraria.ObjectData;
 
 namespace DragonsDecorativeMod.Content.Tiles.Pets
 {
@@ -51,6 +53,20 @@ namespace DragonsDecorativeMod.Content.Tiles.Pets
             {
                 SoundEngine.PlaySound(SoundID.Owl, new Vector2(i, j).ToWorldCoordinates());
             }
+        }
+
+        internal static void SetTileInfo(ushort Type)
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileNoAttach[Type] = true;
+            Main.tileLavaDeath[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2x2);
+            TileObjectData.newTile.Height = 3;
+            TileObjectData.newTile.Origin = new Point16(0, 2);
+            TileObjectData.newTile.CoordinateHeights = [16, 16, 16];
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
         }
     }
 }

@@ -4,7 +4,6 @@ using Terraria;
 using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
-using Terraria.ObjectData;
 using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Content.Tiles.Other
@@ -15,21 +14,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -49,21 +37,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -88,21 +65,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -127,21 +93,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -166,21 +121,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -205,21 +149,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -244,21 +177,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -283,21 +205,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 
@@ -322,21 +233,10 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
 
         public override void SetStaticDefaults()
         {
-            Main.tileFrameImportant[Type] = true;
-            Main.tileNoAttach[Type] = true;
-            Main.tileLavaDeath[Type] = true;
-            TileID.Sets.FramesOnKillWall[Type] = true;
-
-            TileObjectData.newTile.CopyFrom(TileObjectData.Style3x3Wall);
-            TileObjectData.newTile.Height = 4;
-            TileObjectData.newTile.CoordinateHeights = [16, 16, 16, 16];
-            TileObjectData.addTile(Type);
-
+            MedusaWatchingHelpers.SetTileInfo(Type);
             AnimationFrameHeight = 72;
-
             LocalizedText name = CreateMapEntryName();
             AddMapEntry(new Color(156, 155, 173), name);
-
             DustType = DustID.WoodFurniture;
         }
 

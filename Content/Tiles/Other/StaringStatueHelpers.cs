@@ -20,6 +20,17 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             return true;
         }
 
+        internal static void SetTileInfo(ushort Type)
+        {
+            Main.tileFrameImportant[Type] = true;
+            Main.tileObsidianKill[Type] = true;
+            Main.tileNoAttach[Type] = true;
+
+            TileObjectData.newTile.CopyFrom(TileObjectData.Style2xX);
+            TileObjectData.newTile.DrawYOffset = 2;
+            TileObjectData.addTile(Type);
+        }
+
         internal static void TestTypeAndDirection(int i, int j, Vector2 look_direction)
         {
             if (look_direction.X < 0)
