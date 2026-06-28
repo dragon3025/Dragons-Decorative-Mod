@@ -28,7 +28,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Garden
 
         public override void NearbyEffects(int i, int j, bool closer)
         {
-            if (closer)
+            if (!closer)
             {
                 Main.LocalPlayer.AddBuff(BuffType<Buffs.NatureGlobe>(), 15);
             }
