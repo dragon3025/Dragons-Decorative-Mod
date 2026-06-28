@@ -4,6 +4,7 @@ using Terraria.ID;
 using Terraria.Localization;
 using Terraria.ModLoader;
 using Terraria.ObjectData;
+using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Content.Tiles.Garden
 {
@@ -25,9 +26,17 @@ namespace DragonsDecorativeMod.Content.Tiles.Garden
             HitSound = SoundID.Shatter;
         }
 
+        public override void NearbyEffects(int i, int j, bool closer)
+        {
+            if (closer)
+            {
+                Main.LocalPlayer.AddBuff(BuffType<Buffs.NatureGlobe>(), 15);
+            }
+        }
+
         public override void Load()
         {
-            //On_Player.RefreshMechanicalAccsFromItemType += On_Player_RefreshMechanicalAccsFromItemType;
+            On_Player.RefreshMechanicalAccsFromItemType += On_Player_RefreshMechanicalAccsFromItemType;
         }
 
         private void On_Player_RefreshMechanicalAccsFromItemType(On_Player.orig_RefreshMechanicalAccsFromItemType orig, Player self, int accType)
@@ -37,26 +46,9 @@ namespace DragonsDecorativeMod.Content.Tiles.Garden
             {
                 return;
             }
-
-            Point position = self.position.ToTileCoordinates();
-            int x_distance = 169 / 2;
-            int y_distance = 124 / 2;
-            for (int x = position.X - x_distance; x <= position.X + x_distance; x++)
+            if (self.HasBuff(BuffType<Buffs.NatureGlobe>()))
             {
-                for (int y = position.Y - y_distance; y <= position.Y + y_distance; y++)
-                {
-                    Tile tile = Framing.GetTileSafely(x, y);
-                    if (!tile.HasTile)
-                    {
-                        continue;
-                    }
-
-                    if (tile.TileType == Type)
-                    {
-                        self.dontHurtNature = true;
-                        return;
-                    }
-                }
+                self.dontHurtNature = true;
             }
         }
     }

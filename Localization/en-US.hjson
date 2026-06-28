@@ -1127,5 +1127,12 @@ Mods: {
 				}
 			}
 		}
+
+		Buffs: {
+			NatureGlobe: {
+				DisplayName: Nature Globe
+				Description: You can't destroy the environment
+			}
+		}
 	}
 }
