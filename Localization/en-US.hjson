@@ -562,7 +562,7 @@ Mods: {
 
 			NatureGlobe: {
 				DisplayName: Nature Globe
-				Tooltip: Prevents you from accidentally destroying the environment while nearby
+				Tooltip: "" //Prevents you from accidentally destroying the environment while nearby
 			}
 
 			StepStoolPlaceable: {
@@ -789,6 +789,7 @@ Mods: {
 					Label: "[i:DragonsDecorativeMod/NatureGlobe] Nature Globe"
 					Tooltip:
 						'''
+						TEMPORARILY DISABLED
 						Prevents you from accidentally destroying the
 						environment while nearby. Sold by the Dryad.
 						'''
