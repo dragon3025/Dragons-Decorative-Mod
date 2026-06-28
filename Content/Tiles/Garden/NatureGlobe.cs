@@ -27,7 +27,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Garden
 
         public override void Load()
         {
-            On_Player.RefreshMechanicalAccsFromItemType += On_Player_RefreshMechanicalAccsFromItemType;
+            //On_Player.RefreshMechanicalAccsFromItemType += On_Player_RefreshMechanicalAccsFromItemType;
         }
 
         private void On_Player_RefreshMechanicalAccsFromItemType(On_Player.orig_RefreshMechanicalAccsFromItemType orig, Player self, int accType)
