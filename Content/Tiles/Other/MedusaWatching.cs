@@ -28,7 +28,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -62,7 +62,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -101,7 +101,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -140,7 +140,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -179,7 +179,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -218,7 +218,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -257,7 +257,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -296,7 +296,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
@@ -335,7 +335,7 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             AnimationFrameHeight = 72;
 
             LocalizedText name = CreateMapEntryName();
-            AddMapEntry(new Color(58, 62, 53), name);
+            AddMapEntry(new Color(156, 155, 173), name);
 
             DustType = DustID.WoodFurniture;
         }
