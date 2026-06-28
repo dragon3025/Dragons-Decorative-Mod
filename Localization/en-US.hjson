@@ -627,6 +627,14 @@ Mods: {
 			LuringToGold.MapEntry: Luring To Gold
 			MannequinHead.MapEntry: Mannequin Head
 			MedusaWatching.MapEntry: Medusa Watching
+			MedusaWatchingDown.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
+			MedusaWatchingDownLeft.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
+			MedusaWatchingDownRight.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
+			MedusaWatchingLeft.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
+			MedusaWatchingRight.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
+			MedusaWatchingUp.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
+			MedusaWatchingUpLeft.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
+			MedusaWatchingUpRight.MapEntry: "{$Tiles.MedusaWatching.MapEntry}"
 			FakeCrimsonAltar.MapEntry: Fake Crimson Altar
 			FakeCrimsonHeart.MapEntry: Fake Crimson Heart
 			FakeDemonAltar.MapEntry: Fake Demon Altar

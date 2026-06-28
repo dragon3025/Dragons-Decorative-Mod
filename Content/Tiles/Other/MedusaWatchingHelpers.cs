@@ -6,7 +6,7 @@ using static Terraria.ModLoader.ModContent;
 
 namespace DragonsDecorativeMod.Content.Tiles.Other
 {
-    internal static class StaringStatueHelpers
+    internal static class MedusaWatchingHelpers
     {
         internal static bool NearbyEffects(int i, int j, bool closer, ref Vector2 look_direction)
         {
@@ -27,13 +27,13 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
                 switch (look_direction.Y)
                 {
                     case < 0:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueUpLeft>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingUpLeft>());
                         break;
                     case > 0:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueDownLeft>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingDownLeft>());
                         break;
                     default:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueLeft>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingLeft>());
                         break;
                 }
             }
@@ -42,13 +42,13 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
                 switch (look_direction.Y)
                 {
                     case < 0:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueUp>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingUp>());
                         break;
                     case > 0:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueDown>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingDown>());
                         break;
                     default:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatue>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatching>());
                         break;
                 }
             }
@@ -57,13 +57,13 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
                 switch (look_direction.Y)
                 {
                     case < 0:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueUpRight>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingUpRight>());
                         break;
                     case > 0:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueDownRight>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingDownRight>());
                         break;
                     default:
-                        TryTypeChange(i, j, (ushort)TileType<StaringStatueRight>());
+                        TryTypeChange(i, j, (ushort)TileType<MedusaWatchingRight>());
                         break;
                 }
             }
@@ -79,9 +79,15 @@ namespace DragonsDecorativeMod.Content.Tiles.Other
             Main.tile[i, j].TileType = tileType;
             Main.tile[i, j + 1].TileType = tileType;
             Main.tile[i, j + 2].TileType = tileType;
+            Main.tile[i, j + 3].TileType = tileType;
             Main.tile[i + 1, j].TileType = tileType;
             Main.tile[i + 1, j + 1].TileType = tileType;
             Main.tile[i + 1, j + 2].TileType = tileType;
+            Main.tile[i + 1, j + 3].TileType = tileType;
+            Main.tile[i + 2, j].TileType = tileType;
+            Main.tile[i + 2, j + 1].TileType = tileType;
+            Main.tile[i + 2, j + 2].TileType = tileType;
+            Main.tile[i + 2, j + 3].TileType = tileType;
 
             if (Main.netMode != NetmodeID.SinglePlayer)
             {
